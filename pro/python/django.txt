@@ -1,0 +1,155 @@
+pip install virtualenv
+virtualenv test					create virtual envirenment 
+test\Scripts\activate				activate the virtual envirenment 
+pip install django				install django in the virtual envirenment 
+cd test 
+django-admin startproject projectname		create project
+cd projectname
+python manage.py migrate			migrate
+code .						open vscode here
+python manage.py createsuperuser		create admin
+
+python manage.py runserver			start server
+
+------------------------------------------create app-------------------------------------------------
+python manage.py startapp appname		create app on our project
+// than we should add this app to our project, in project/setting.py ,on installed app add:
+'appname.apps.AppnameConfig',			parex test :'test.apps.TestConfig',
+// then create urls.py on ur application folder,and on  project/urls.py add 
+from django.urls import path,include
+//then on urlpatterns add:
+path('appname/',include('appname.urls')),
+------------------------------------------------------------------------------------------------------
+
+---------------------------------------------views----------------------------------------------------
+
+from django.http import HttpResponse
+// then create tis func 
+
+def example(request):
+    return HttpResponse('hello world')
+
+// and add it on urls of app :
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.example,name='appname'),
+]
+
+def product(request):
+    return render(request,'products/product.html') 		to select page from template
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//to send data to page html u can use this :
+
+def product(request):
+    return render(request,'',{'name':'ali'})
+
+//here we send the variable name to page html , to use and print his value we can use :
+{{name}}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------template-----------------------------------------------------------
+//create new folder asmo "templates"
+//then on setting : 
+import os
+//then on templates do this :
+'DIRS': [os.path.join(BASE_DIR,'templates')],
+
+//now t9dr trbt view m3a template
+//create example.html f templates or templates/pages
+//then fl view ,fl function ta3na rj3ha hka :
+def index(request):
+    return render(request,'pages/index.html')
+        
+
+
+
+--------------------------------------------tags(dtl or html)-----------------------------------------------------------
+{% extends 'example.html' %}
+{% block content %}html code {% endblock content %}
+{% include 'example.html' %}
+{% if ex==ex %}html code{% else %}html code{% endif %}
+{% comment %} comment {% endcomment %}
+{% for i in example %}html code{% endfor %}
+
+++++++++++++import css or js or picture(after did static methods)+++++++++++++
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+{% url 'name_of_page_on_urls.py' %} 		example: <a href="{% url 'about' %}">about</a>
+
+
+
+
+--------------------------------------------static(css,js,pictures....)---------------------------------------------------------//
+//create new folder on projectname asmo static 
+// and create on them css folder ,js folder ....
+//and on setting win static add:
+
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'projectname/static')
+]
+//then run the command:
+python manage.py collectstatic 
+
+
+--------------------------------------------models---------------------------------------------------------//
+
+# Create your class (class example here):
+
+class Product (models.Model):
+    name = models.CharField(max_length=50)
+    content = models.TextField()
+    price = models.DecimalField(max_digits=6,decimal_places=3)
+    image = models.ImageField(upload_to='photos/%y/%m/%d')
+    active = models.BooleanField(default=True)
+
+// then do :
+python manage.py makemigritions
+python manage.py migrate
+
++++++++++++++++++++++++++++++++admin pannel+++++++++++++++++++++++++++++++++
+//then on app/admin :
+from .models import Product
+admin.site.register(Product)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++views++++++++++++++++++++++++++++++++++++++
+from .models import Product
+// then to send all objects to html page we can use "Product.objects.all()" like that :
+def products(request):
+    return render(request,'products/products.html',{'pro':Product.objects.all()})
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++templates++++++++++++++++++++++++++++++++++++++
+//u can justuse loop like that:
+	{% for i in pro %}
+        	<h2>{{i.name}}</h2>
+    	{% endfor %}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+//on class u can use this function:
+def __str__(self):			
+        return self.name			this function to select what can u display in admin page
+
+// and this class:
+class Meta:
+        verbose_name = 'ModelName'		to change model (or class) name 	
+        ordering = ['name']			to order objects with name 
+//u can use this paaramatre on Field like that:
+category = models.CharField(, blank=True, null=True)     	   
+//and for choices u can use that :
+x=[
+	('phone','phone'),			first 'phone' is for display on admin page and second 'phone' is fore name on database
+ 	('computer','computer'),
+]
+category = models.CharField(,choices=x) 
+
+ 

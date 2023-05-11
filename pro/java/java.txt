@@ -1,0 +1,78 @@
+ctrl+f    ááÈÍË İÇáßæÏ
+------------------------------------------------------------
+public static void main(String[] args)
+--------------------------------------------------------
+Scanner input=new Scanner(System.in);
+System.out.println
+--------------------------scanner------------------------
+String firstname = inpute.next();
+next()  ßáãÉ
+nextLine()  ÓØÑ
+nextInt()   ÚÏÏint
+--------------------------------------------------------
+and &&
+or ||  (alt+6)
+not !
+------------------------------------------------------------
+ÇÎÊÕÇÑ if
+if(1>2)
+   char time='Õ';
+else
+   char time='Ó';
+åæ
+char time= (1>2)? 'Ó' : 'Õ'
+---------------------------------------------------------
+break ááÎÑæÌ ãä ÇáÌãáÉ 
+-----------------------------------------------------------------
+ArrayList
+
+import java.util.ArrayList
+ArrayList<Integer> arrayList=new ArrayList<Integer>();
+arrayList.add(21)  ááÇÖÇİÉ
+arrayList.get()  áÇíÌÇÏ
+arrayList.remove() áÍĞİ
+--------------------------------------------------------------
+for(String a:names){
+    System.java.println(a)
+}
+----------------------------------------------------------------
+HashMap
+
+import java.util.HashMap
+HashMap<String,Integer> hash=new HashMap<String,Integer>();
+hash.put("key 1",12); ááÇÖÇİÉ
+----------------------------------------------------------
+extends    ááæÑíË
+@Override  áÊÚÏíá ÇáÏÇáÉ 
+abstract   ÇáÊÌÑíÏ
+------String------------------------------------------------------
+s1.concat(s2)             s1 s2 ãÊÈæÚ È 
+s1.replace('a','b')        ÇÓÊÈÏÇá ÇáÍÑİ a Èb
+s1.capacity();             ÚÏÏ ÇáÇÍÑİ+16=áÇÙåÇÑ ÇáÓÚÉ
+s1.setLenght(4);            ÌÚá ÚÏÏ ÇáÇÍÑİ 4
+s1.ensureCapacity(70);       ÌÚá ÇáÓÚÉ 70
+s1.getChars(ÈÏÇíÉ ÇáãäÓæÎ İíå,ÇáãäÓæÎ İíå,ÚÏÏ ÇáÚäÇÕÑ ÇáãäÓæÎÉ,ÈÏÇíÉ ÇáäÓÎ)     s1 áäÓÎ ÇáÌÏæá 
+s1.setCharAt(2,'a')      aÇÓÊÈÏÇá ÇáÍÑİ Ğæ ÇáÑÊÈÉ 2È
+s1.reverse();         ÊÚßÓ ÇáÌÏæá
+s1.append(s2)      ÏãÌ s1 æ s2
+s1.insert(2,s2)    ÏãÌ ÇáäÕæÕ ãÚ ÇáÑÊÈÉ
+---------------------------GUI--------------------------------
+setLayout(new FlowLayout());    ãä ÇáíÓÇÑ ááíãíä
+JComboBox     ŞÇÆãÉ ãäÓÏáÉ
+JCheckBox     ÚÏÉ ÎíÇÑÇÊ 
+JLabel        ááäÕæÕ æÇáÕæÑ
+JRadioButton  ÎíÇÑ ÕÍíÍ
+JOptionPane.showInputDialog("ÇÏÎá ÇáÑŞã ÇáÇæá :")    aááÇÏÎÇá 
+JOptionPane.showMessageDialog(null,ÇáãÎÑÌÇÊa,ÚäæÇä ÇáäÇİĞÉ,JOptionPane.ÇáäæÚ);   aááÇÎÑÇÌ
+add()     ááÇÖÇİÉ Çáì ÇáÊØÈíŞ
+.addItemListener(new ItemListener()       áÇÖÇİÉ ÇãÑ ÚäÏ ÇáÇÎÊíÇÑ
+.setForeground(Color.RED);      ááÊÍæíá ÇáÎáİíÉ Çáì ÇáÇÍãÑ
+.setHorizontalAlignment(____.RIGHT);   ãä Çáíãíä ááíÓÇÑ
+.setEditable(false);//ÛíÑ ŞÇÈáÉ ááÊÛííÑ
+--------------------Layout-------------------------------
+FlowLayout()         ÓØÑ
+BorderLayout()        ßá ÇáÇÊÌÇåÇÊ
+GridLayout()         ÌÏæá(ÔÈßÉ)æ
+---------------------------JPanel------------------------------
+
+

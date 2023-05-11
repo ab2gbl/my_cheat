@@ -1,0 +1,83 @@
+#include<stdio.h> 
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+#include<time.h>
+
+
+break ááÎÑæÌ ãä ÇáÌãáÉ 
+
+
+ÇÎÊÕÇÑ if
+if(1>2)
+   char time='Õ';
+else
+   char time='Ó';
+åæ
+char time= (1>2)? 'Ó' : 'Õ'
+
+
+% ÈÇŞí ÇáŞÓãÉ
+
+#include<string.h> ÇáÌÏÇæá æ ÇáäÕæÕ
+strlen ÚÏÏ ÇáÚäÇÕÑ
+strcmp ÇáãŞÇÑäÉ Èíä ÌÏæáíä
+strcat ÏãÌ ÌÏæá ËÇäí İí ÇÎÑ ÇáÇæá
+
+
+#include<math.h>
+pow ÇáÇÓ
+sqrt ÇáÌĞÑ 
+ceil ÇáÊŞÑíÈ ÈÇáÒíÇÏÉ 
+floor ÇáÊŞÑíÈ ÈÇáäŞÕÇä
+% ÈÇŞí ÇáŞÓãÉ
+
+
+#include<time.h>
+time_t äæÚ ÇáãÊÛíÑ
+time(0)  ÚÏÏ ÇáËæÇäí ãäĞ 1970
+ctime(&t) ÇáæŞÊ ÇáÍÇáí(ÇáÊÍæíá ãä ÇáËæÇäí)Ñ
+difftime(t2,t1)   t2-t1
+
+free()  libere
+malloc()
+realloc()  ÊÛííÑ ÍÌã ÇáãÕİæİÉ 
+
+
+#include<stdlib.h> 
+rand()  ÚÏÏ ÚÔæÇÆí ÈÇáäÓÈÉ ás
+srand() ŞíãÉ Çás 
+int x= start + rand %(end -start +1)
+sizeof İÔÍÇá ãä ÈíÊ
+
+
+
+
+ÇáãáİÇÊ
+FILE *f=fopen("Çáãáİ","w/r")
+  WRITE
+fwrite(ÇáäÕ ÇáĞí ÓíßÊÈh , Çáãáİ  ,  ÚÏÏ ÇáÚäÇÕÑ   , ÇÍÌã ßá äÕ  )
+fwrite(s,sizeof(char),strlen(s),f)  /* char *s="ÇáäÕ" */
+  READ
+fseek(Çáãáİ , ÚÏÏ ÇáÎØæÇÊÉ, SEEK_SET/CUR/END)
+ftell(f)    ÚÏÏ ÇáÈÊÇÊ
+fread(ÇáäÕ ÇáĞí ÓíßÊÈh , Çáãáİ  ,  ÚÏÏ ÇáÚäÇÕÑ   , ÇÍÌã ßá äÕ  )
+fclose(f)
+
+fgetc(f)='o'  ÇáÈÍË ÈÇáÍÑİ Úä ÇáÍÑİ o
+EOF     end of file
+
+
+
+ÇáåíÇßá
+struct   åíßá
+typedef     ÇÎÊÕÇÑ ÇáÊÚÑíİÇÊ
+
+
+unions
+åíßá İíå ŞÚ íÊÓæÇæ
+
+
+enum gender{
+   male=1,female=2
+};

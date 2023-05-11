@@ -1,0 +1,120 @@
+--------------------new project-----------------------
+1/vue create PROJECTNAME 
+2/manual
+3/babel+router+linter/formatter
+4/ x2
+5/ y + ESLint with error prevention only 
+6/ lint on save
+7/ In dedicated config files 
+8/ n (or y)
+---------------------------------------------------------
+
+--------------------components-----------------------------
+template + script + style
+
+++++++++++++++++++++++++use components+++++++++++++++++++++++++
+//use components, on script:
+
+import FirstName from '@/components/FirstName.vue';
+export default {
+  components: {
+    FirstName
+  }
+}
+// then on template :
+<Firstname/>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++props+++++++++++++++++++++++++++++++
+//props, like components ,but bach jib les parametre ,par ex on script:
+export default {
+    props:{
+        msg:String
+    }
+}
+// then on template u can use this parametre like this:{{msg}}
+//and on father page, we can call it like that
+<Firstname msg="am msg"/>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++DataTypes+++++++++++++++++++++++++
+//DataTypes
+export default {
+    data(){
+        return{
+            num:100,
+            name:"mohamed",
+            country:["alg","tun","mar"]
+        }
+    }
+}
+// template u can just call them with : {{name}}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++Methods++++++++++++++++++++++++++++
+
+export default {
+    methods:{
+        methodName(){
+            return "channel test"
+        }
+    }
+}
+// template u can just call them with : {{methodName()}}
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+v-bind:class="var"(or just :class="var") 		variable like class(or href....)
+v-on:click="methodname"(or just @click="methodname") 	
+<input type="text" v-model="num">			if input changed, salary ytchanja        
+for more: https://vuejs.org/guide/essentials/event-handling.html#method-handlers			
+
++++++++++++++++++++++++++if++++++++++++++++++++++++++++
+<h3 v-if="A" > A </h3>
+<h3 v-else-if="B"> B </h3>
+<h3 v-else> C </h3>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++for++++++++++++++++++++++++++++
+// we have this objects like data:
+data(){
+        return{
+            obj:[
+                {id:1,name:"a"},
+                {id:2,name:"b"},
+                {id:3,name:"c"},
+            ]
+        }
+    }
+//so
+<li v-for="i in obj" v-bind:key="i.id">{{ i.id }} : {{ i.name }}</li>
+// we can use v-bind:key or :key 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------------------
+
+----------------------------------index--------------------------------------
++++++++++++ nrml loading +++++++++++++++++++++++++++++++ lazy loading(the best)+++++
+						+
+//hda yrj3 lprojet t9il				+//hda khfif 
+						+
+import HomeView from '../views/HomeView.vue'	+//bla import
+ 						+
+const routes = [				+const routes = [
+  {						+  {
+    path: '/',					+     path: '/',
+    name: 'home',				+     name: 'home',
+    component: HomeView				+     component: () => import('../views/AboutView.vue')
+  }]						+  }]
+						+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<router-link to="/about">About</router-link> 		like <a> without reload the page
+
+
+
+
+
+
+
+  ___
+ /   \
+{ - - }
+ \   /
+  '-'

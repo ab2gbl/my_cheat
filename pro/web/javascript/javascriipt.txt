@@ -1,0 +1,15 @@
+<script src="main.js"></script>				يجي فلخر تاع الصفحة
+----------------------------------------------------------------------------------------------------------------------------------------------------
+var 			variable(ex var a="hello";)
+console.log()		pour afficher
+a=parseInt/Float(b)		string to int
+a=b.indexOf("_")		اندكس كلمة او حرف داخل النص b
+a=str.replace("_1","_2")	تغيير _1 ب_2
+&&			e-t
+----------------------------------------------------------------------------------------------------------------------------------------------------
+if( ){ }	elseif( ){ }		else{ }
+switch(x){ case 1: break;	case 2: break;	case 3: break;	default: ;}
+while/for/do while
+fonction _(_,_){	return _;}
+var table=[_,_,_];
+var matrice=[[_,_,_],[_,_,_,_],_];		(pr affiche   	console.log(matrice[0][2]);	)

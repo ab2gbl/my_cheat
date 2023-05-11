@@ -1,0 +1,13 @@
+enable dsable
+configure terminal
+hostname ___
+
+new vlan
+Switch-A(config)#vlan 2
+Switch-A(config-vlan)#name sales
+Switch-A(config-vlan)#exit
+
+
+Switch-A(config)#interface fastEthernet0/3
+Switch-A(config-if)#switchport acces vlan 3
+Switch-A(config-if)#exit

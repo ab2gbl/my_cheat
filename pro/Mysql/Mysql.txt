@@ -1,0 +1,263 @@
+samy
+services -----> Mysql-----> starting
+system cls		clear screen;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+dbs(databases)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+show databases;		اضهار كل dbs
+descibe ___;		وصف 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+create table ____(
+name1 typedata,
+name2 typedata,
+.....);	      				انشاء جدول
+create database ____;			انشاء database
+use ______;			لاستعمال الdatabse
+drop database ____;			حذف database
+create/drop database if does not exist ____   	انشاء database إذا لم كن موجودة
+----------------------------------------------------------------------------------------------------------------------------------------------------
+name1 typedata not null,		نضيف not null من اجل الخانات الواجب ملأها وعدم تركها null
+salary decimal(5,2) check (salary>100),	اقل قيمة لل salary 100$هي	
+dep varchar(40) default 'se',		القيمة الافتراضية ل dep هي se
+++++++++++++++++++++++++++++++++++++++++++key+++++++++++++++++++++++++++++++++++++++++++++++
+name datatype primary key,
+or	constraint tableName_pk primary key(name),
+
+FOREIGN KEY (colonne1, colonne2,...)REFERENCES NomTableEtrangere(colonne1,colonne2,...)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+varchar(20)	charcter
+decimal((3,2)	#,##
+---------------------------------------------------------------------------ملئ الجدول--------------------------------------------------------------
+insert into _____(
+___,	الخانات
+___,
+___...) values(
+___,	القيم
+___,
+___...);
+----------------------------------------------------------------------------------------------------------------------------------------------------
+select name from tableName where الشرط
+ex	select firstname,salary from employee where salay<200;
+++++++++++++++++++++++++++++++++++++++++++like++++++++++++++++++++++++++++++++++++++++++++++
+like تستعمل داخل where من اجل البحث
+select * from employee where fistname like 'h%';		fiirsname يبدأ بحرف h
+select * from employee where fistname like '%h%';		fiirsname يحتوي على حرف h
+select * from employee where fistname like '_h%';		fiirsname حرفه الثاني هو h
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+----------------------------------------------------------------------------------------------------------------------------------------------------
+source  				لملف note
+
+
+
+
+
+
+-----------------------------------------------------------------mod colones------------------------------------------------------------------
+ALTER TABLE ___  		للتغيير في جدول
+DROP 			حذف check or colone or key....
+ADD 			اضافة check or colone or key....
++++++++++++++++++++++++++++++++++Ajouter une colonne++++++++++++++++++++++++++++++++++++++++
+ALTER TABLE nom_table 
+ADD nom_colonne  type_donnees
+++++++++++++++++++++++++++++++++++Supprimer une colonne++++++++++++++++++++++++++++++++++++++
+ALTER TABLE nom_table 
+DROP nom_colonne 
+++++++++++++++++++++++++++Modifier une colonne (type de données)++++++++++++++++++++++++++++++++
+ALTER TABLE nom_table 
+MODIFY nom_colonne type_donnees
++++++++++++++++++++++++++++++++++++Renommer une colonne++++++++++++++++++++++++++++++++++++
+ALTER TABLE nom_table 
+CHANGE colonne_ancien_nom 
+colonne_nouveau_nom 
+type_donnees 
+++++++++++++++++++++++++++++++++++contraintes de non nullité+++++++++++++++++++++++++++++++++++++
+ALTER TABLE maTable 
+ALTER COLUMN maColonne memeType NOT NULL
+++++++++++++++++++++++++++++++++++contraintes de clé primaire++++++++++++++++++++++++++++++++++++
+ALTER TABLE maTable 
+ADD CONSTRAINT PK_maTable 
+  PRIMARY KEY (colonnesConstituantLaCléPrimaire)
+++++++++++++++++++++++++++++++++++contraintes de valeur par défaut++++++++++++++++++++++++++++++++
+ALTER TABLE maTable 
+ADD CONSTRAINT DF_maTable_maColonne 
+  DEFAULT (uneValeur) FOR (maColonne)
+++++++++++++++++++++++++++++++++++contraintes de domaine (CHECK)++++++++++++++++++++++++++++++
+ALTER TABLE maTable
+
+ADD CONSTRAINT CHK_maTable_maColonne
+CHECK(maColonne [formuleDeVerification]
++++++++++++++++++++++++++++++++++++++supp de domaine (CHECK)+++++++++++++++++++++++++++++++++
+ALTER TABLE maTable
+
+DROP CONSTRAINT CHK_maTable_maColonne;
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------------------mod lignes------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++change++++++++++++++++++++++++++++++++++++++++++++++
+UPDATE NomTable 
+SET nom_colonne_1 = 'nouvelle valeur' 
+WHERE condition 
+
+EX		UPDATE client 
+SET rue = '49 Rue Ameline', 
+ville = 'Saint-Eustache-la-Forêt',
+ code_postal = '76210' 
+WHERE id = 2 
+++++++++++++++++++++++++++++++++++++++++supp++++++++++++++++++++++++++++++++++++++++++++++++
+DELETE FROM NomTable
+WHERE condition
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-----------------------------------------------------------------الترتيب بالحروف------------------------------------------------------------------
+select * from __ order by الخانات الذي يتم الترتيب حسبهم asc(or desc);	الترتيب حسب الحروف
+-----------------------------------------------------------------group by-------------------------------------------------------------------
+group by name 		حسب الname
+having (age>18)		شرط لديه العمر اكثر من 18
+
+
+
+---------------------------------------------------------------------string func------------------------------------------------------------------
+يجو مور select
+
+left(string,lenght)			ال5 احرف الاولى مثلا
+right(string,lenght)			ال5 احرف الاخيرة مثلا
+mid(string,index,lenght)			ال5 احرف بعد i مثلا
+
+lenght(string)
+char_lenght(string)			عدد الاحرف
+
+ucase(string)				uper
+lcase(string)				lower
+
+repeat(string,nbr of repeat)		تكرار الكلمة عدة مرات
+replace(string,'a','@')			تغيير كل a ب @
+reverse(string)				عكس الكلمة
+
+concat(string,string,string..) as mytext	جمع النصوص وتلسيقها ببعضها البعض
+concat_ws(separing,string,string) as mytext	جمع النصوص وتلسيقها ببعضها البعض مع وضع فاصل بينهم
+
+insert(string,position,lenght,new string) 	يستبدل جزء من الكلمة
+
+
+trim((leading/training/both) (remove string(space) الحرف المحذوف) from (sting))  		يحذف الفراغ او الحرف المتكرر في الأول والاخير 	
+	- (def)both		في الاول و الاخير
+	- leading  		في الاول
+	- training		في الاخير		
+ltrim((remove string(space) الحرف المحذوف) from (sting))
+rtrim((remove string(space) الحرف المحذوف) from (sting))
+
+rpad/lpad(string,lenght,padded sting(بما يكمل النص اذا كان طوله اقل من ال lenght))		يرجعنا الكلمات بطول معين	
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------numeric func------------------------------------------------------------------
+ceil(number)					التدوير بالزيادة
+floor(number)					التدوير بالنقصان
+round(number,decimal عدد الارقام بعد الفاصلة)		التدوير
+
+Truncate(number,decimal عدد الارقام بعد الفاصلة)		يضهر عدد ب 5 أرقام بعد الفاصلة مثلا دون تدوير
+Mod(number,mod)					باقي القسمة
+Pow(number,powered الاس)				الاس
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------date func------------------------------------------------------------------
+select curtime()			الوقت الحالي
+select curdate()			التاريخ الحالي
+select now()/current_times()			التاريخ و الوقت الحالي
+
+dayname(date)				الاحد او الاثنين ....
+dayofmonth(date)			اليوم كم من الشهر
+dayofweek(date)				اليوم كم من الاسبوع
+dayofyear(date)				اليوم كم من السنة
+
+month(date)				رقم الشهر
+monthname(date)				اسم الشهر
+hour(date)				الساعة
+minute(date)				الدقيقة
+
+datedif(date1,date2)			الفرق بين التريخين كم يوم
+
+last_day(date)				اخر يوم في هذا الشهر
+date_add(date ,Interval (الفترة e) (الوحدة))		التاريخ بعد 3 أيام مثلا			
+date_sub(date ,Interval (الفترة e) (الوحدة))		التاريخ قبل 3 أيام مثلا			
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------comparison func---------------------------------------------------------------------
+(not) between _ and _				بين قيمتين
+(not)in _						موجود في _
+
+++++++++++++++++++++++++++++++++++++++++++like++++++++++++++++++++++++++++++++++++++++++++++
+(not) like تستعمل داخل where من اجل البحث
+select * from employee where fistname like 'h%';		fiirsname يبدأ بحرف h
+select * from employee where fistname like '%h%';		fiirsname يحتوي على حرف h
+select * from employee where fistname like '_h%';		fiirsname حرفه الثاني هو h
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------control flow func---------------------------------------------------------------------
+if(condition, true, false)			example: ex1- SELECT number,if(number>=10,"congrate","hard luck") from students;
+							 ex2- UPDATE try SET if(number<10,number=+10,number);
+
+//switch syntexe 					  syntexe2 
+case							| case	(expretion)
+	whene (expretion) = (value) then (result)	| 	whene (value) then (result)
+	whene (expretion) = (value) then (result)	|	whene (value) then (result)
+	whene (expretion) = (value) then (result)	|	whene (value) then (result)
+	else (result)					|	else (result)
+end							|end
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------information func---------------------------------------------------------------------
+user			username and hostname
+version			الاصدار
+charset(var)		ترميز شيء ما
+CONVERT(var USING الترميز)	تغيير الترميز
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------inner join---------------------------------------------------------------------
+التقاطع
+SELECT _ 
+FROM table1 
+INNER JOIN table2
+ON table1._ = table2._	
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------left/right join---------------------------------------------------------------------
+التقاطع + احد الجدولين 
+SELECT _ 
+FROM table1 
+left/right JOIN table2
+ON table1._ = table2._	
+
+
+select * from _ limit 2;		ال2 سطر لولين برك
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

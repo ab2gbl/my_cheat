@@ -1,0 +1,100 @@
+------------------------------------------------------------------------MYSQLI-----------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++connection+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+$host="localhost";
+$user="root";
+$password="";
+$database="admins";
+
+$connect= mysqli_connect($host, $user, $password, $database);
+if(mysqli_connect_errno( ) ){
+	die("cannot connect to database field". mysqli_connect_cerror());
+}else{
+	echo 'database is connected';
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++deconnection+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+mysqli_close($connect)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++read+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+$query="SELECT * FROM logins";
+$result=mysqli_query($connect,$query);
+
+//print result
+echo "<ul>";
+while($row= mysqli_fetch_assoc($result) ){
+	echo "<li>".$row["username"]."</li>"
+}
+echo "</ul>";
+
+//clear after any cammand
+mysqli_free_result($result)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++arabic+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Change character set to utf8
+$connet -> set_charset("utf8");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------PDO------------------------------------------------------------------------
+//data source name
+$dsn = 'mysql:host=localhost;dbname=products'; 
+
+// user name to connect
+$user = 'root';   
+
+// password of mysql 
+$pass='';	
+
+// for arabic language
+$options =array(
+	PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
+);	
+
+try{
+	//start a new connection with PDO class
+	$db = new PDO($dsn, $user, $pass, $options);
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+	//work on database
+	$q=" INSERT INTO items (name) VALUES ('aeae4')"	//cammand line
+	$db->exec($q)	//execution	
+	//نفس الخدمة لي فوقها
+	$q=$db->prepare(" INSERT INTO items (name) VALUES ('aeae4')");
+	$q->execute()
+	
+}
+catch(PDOException $e){
+	// can't connect
+	echo 'failed '.$e->getMessage();  
+}
+
+
+-----------------------------------------------------------------------------------------------------
