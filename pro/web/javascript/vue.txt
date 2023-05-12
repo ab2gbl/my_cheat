@@ -107,6 +107,93 @@ const routes = [				+const routes = [
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 <router-link to="/about">About</router-link> 		like <a> without reload the page
 
++++++++++++++++++++++++++++++++++ Params(ychbh lel git) ++++++++++++++++++++++
+ // in index.js :
+{
+    path: '/user/:id',
+    ...
+  }
+
+// so the url should be par ex :aaaaaa/user/18
+// and to get this id , u can use the variables:
+
+{{ $route.params.id }}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
++++++++++++++++++++++++++++++++++ children +++++++++++++++++++++++++++++++++++
+//on index.js , we can add children like that: 
+{
+    path: '/contactus',
+    name: 'contactus',
+    component: () => import('../views/ContactUs.vue'),
+    children: [
+      {
+        path: 'details',
+        name: 'details',
+        component: () => import('../views/DetailsTest.vue')
+      }
+    ]  
+}
+// and we should add this on parent page (contactus on this example) to call the child:
+<router-view></router-view>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++ push +++++++++++++++++++++++++++++++++++
+// button send us to another page with specific data:
+
+import router from '../router';
+export default {
+    methods:{
+        details(){
+            router.push({name:'user',params:{id:50}})
+	    //router.push({path:'/user/'+'50'})	  //this is true also
+        }
+    }
+}
+// this will send us to the site 'aaaa/user/50' , page user and id=50
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++ redirect +++++++++++++++++++++++++++++++++++
+
+{
+    path: '/user/:id',
+    redirect: '/contactus'
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------------------------------------------
+
+---------------------------------- axios --------------------------------------------------
+npm i axios vue-axios				//install axios
+
+import Vue from 'vue';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+Vue.use(VueAxios,axios)
+
+export default {
+    name: 'UserDetails',
+    data(){
+        return{
+            list: undefined 
+        }
+    },
+    created(){
+        Vue.axios.get('https://jsonplaceholder.typicode.com/posts').then(resp=>{
+            this.list=resp.data
+        })
+    }
+}
+-------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -116,5 +203,22 @@ const routes = [				+const routes = [
   ___
  /   \
 { - - }
- \   /
+ \ _ /
+  '-'
+
+
+
+
+
+
+
+
+
+
+   ;
+  { }
+ {   }
+{_____}
+{ - - }
+ \ _ /
   '-'
