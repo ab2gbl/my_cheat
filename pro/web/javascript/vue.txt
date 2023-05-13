@@ -187,38 +187,81 @@ export default {
 }
 -------------------------------------------------------------------------------------------
 
+---------------------------------- Vuex --------------------------------------------------
+// check picture on the folder
+
++++++++++++++++++++++++++++++++++++state+++++++++++++++++++++++++++++++++++++++++++++
+
+// fiha data , and ji hka :
+  state: {
+    count: 0,
+    name:'samy',
+    ...
+  },
+// u can call var from store.state by :
+this.$store.state.varname
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++ Getters +++++++++++++++++++++++++++++++++++++++++++++
+// fiha functions and filters, and ji hka
+getters: {
+    double:(state)=>{
+      return state.count*3
+    }
+  },
+// u can call func from store.getters by :
+this.$store.getters.double
+
+// if ur function need parameters, ji hka:
+    double:(state)=>(id){			//id is parameter
+      return state.count*id
+    } 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++ mutations +++++++++++++++++++++++++++++++++++++++++++++
+
+// yjo fiha lfunction li ymodifiw f les variable ta3 state, wjihka:
+mutations: {
+    add(state){
+      return state.count++
+    }
+  },
+// u can call funct by store.commit :
+     this.$store.commit("add")
+
+// if ur function need parameters, ji hka: add(state,id) //id is parameter
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++ action +++++++++++++++++++++++++++++++++++++++++++++
+// kit7b tmodifier fl mutations, par ex func dir retard 1s wtmchi
+// fnrml ji hka :
+add_A ({ commit }) {
+        commit('add')
+}
+// lokan n7b ndiro  retard n5dmo b settimeout ,wji hka:
+add_A ({ commit }) {
+      setTimeout(() => {
+        commit('add')
+      }, 1000);
+}
+// u can call func by store.dispatch :
+this.$store.dispatch("add_A")
 
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
++++++++++++++++++++++++++++++++++++ action +++++++++++++++++++++++++++++++++++++++++++++
 
+// lmodule yji 5arj store , wyji hka (kima store):
+const moduleA = {
+  state: () => ({ ... }),
+  mutations: { ... },
+  actions: { ... },
+  getters: { ... }
+}
+// wmba3d lzm declarih da5l store.modules 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+-------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-  ___
- /   \
-{ - - }
- \ _ /
-  '-'
-
-
-
-
-
-
-
-
-
-
-   ;
-  { }
- {   }
-{_____}
-{ - - }
- \ _ /
-  '-'
