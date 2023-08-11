@@ -1,6 +1,7 @@
 pip install virtualenv
 virtualenv test					create virtual envirenment 
 test\Scripts\activate				activate the virtual envirenment 
+python.exe -m pip install --upgrade pip		upgrade pip
 pip install django				install django in the virtual envirenment 
 cd test 
 django-admin startproject projectname		create project
@@ -273,6 +274,14 @@ def no_rest_from_model(request):
 ++++++++ method:3 ++++++++++++++++++++
 Rest framework
 
+
+
+
+
+
+
+
+
 -------------------------------------------------- Rest framework ----------------------------------------------------------------------------------------
 // by using rest framework
 pip install djangorestframework			install
@@ -288,10 +297,24 @@ from rest_framework import serializers
 from tickets.models import Guest,Movie,Reservation
 
 class MovieSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = Movie
         fields = '__all__'
 
+// there is this too on serializers :
+
+class MovieSerializer(serializers.ModelSerializer):
+    #test = serializers.IntegerField(default=1)
+    #courses=CoursesSerializer(many=True, read_only=True,source='fk_related_name')
+    #instructor = serializers.SerializerMethodField()				#this one related with the method after class meta (get_instructor)
+
+    class Meta:
+        model = Movie
+        fields = '__all__'
+
+    #def get_instructor(self, instance):
+    #   return instance.instructor.username
 // now we can work on view
 
 from rest_framework.decorators import api_view
@@ -477,3 +500,175 @@ urlpatterns = [
   	path('viewsets/',include(router.urls))
 ]
 
+++++++++++++++++++++++++++++++++++++++++++++++++ examples ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# func find movie
+@api_view(['GET'])
+def find_movie(request):
+    mov = Movie.objects.all() 
+    movies = mov.filter(
+        movie = request.query_params.get('movie'),
+    )
+    serializer= MovieSerializer(movies,many=True)
+    return Response(serializer.data)
+
+# create reservation
+@api_view(['POST'])
+def reserve(request):
+    movie = Movie.objects.get(
+        movie = request.query_params.get('movie'),
+        hall = request.query_params.get('hall')
+    )
+    guest = Guest.objects.get(
+        pk = request.query_params.get('pk')
+    )
+    reservation = Reservation()
+    reservation.guest = guest
+    reservation.movie = movie
+    reservation.save()
+    return Response(status = status.HTTP_201_CREATED)
+
+
+-------------------------------------------------- Token & Permissions ----------------------------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++ Basic AUTHENTICATION  ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//u should add this url
+
+"path('api-auth',include('rest_framework.urls'))"
+
+// global AUTHENTICATION , AUTHENTICATION to all apis, in settings:
+
+INSTALLED_APPS = [ ... ]
+REST_FRAMEWORK = {
+	'DEFAULT_AUTHENTICATION_CLASSES': [
+		'rest_framework.authentication.BasicAuthentication',
+	],
+    'DEFAULT_PERMISSION_CLASSES':
+        ['rest_framework.permissions.IsAuthenticated'],
+}
+# AllowAny // IsAuthenticated // IsAdminuser // IsAuthenticatedReadOnly
+
+// AUTHENTICATION to one class (API) :
+
+from rest_framework.authentication import BasicAuthentication
+from rest_framework.permissions import IsAuthenticated 
+
+class example():
+    ...
+    authentication_classes = [BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
+++++++++++++++++++++++++++++++++++++++++++++++++ Token ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// on setting:
+INSTALLED_APPS = [
+    ...
+    'rest_framework.authtoken'
+]
+REST_FRAMEWORK = {
+	 'DEFAULT_AUTHENTICATION_CLASSES': [
+	 	'rest_framework.authentication.TokenAuthentication',
+	 ],
+    # 'DEFAULT_PERMISSION_CLASSES':
+    #     ['rest_framework.permissions.IsAuthenticated'],
+}
+
+//u should add this on urls:
+
+from rest_framework.authtoken.views import obtain_auth_token
+
+"path('api-token/',obtain_auth_token)"				// post username and password and response token
+
+
+// AUTHENTICATION to one class (API) :
+
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated 
+
+class example():
+    ...
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
+************ use token *******************************************
+// u need to send this on headers
+"Authorization" : "token 72a9a9276f0d3a907586a832a2bbc0d3216eba89"
+******************************************************************
+
+// to create the token automatic when we create a user we need to add this on models 
+
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+from django.conf import settings
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def TokenCreate(sender, instance, created, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
+    
+++++++++++++++++++++++++++++++++++++++++++++++++ Permissions ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/* first if u search on google "django rest framework github" and open the first result , then on 
+"/rest_framework/permissions.py" u can get the code of default permission (AllowAny // IsAuthenticated // IsAdminuser // IsAuthenticatedReadOnly...)
+u can copy the code of one of thet , and make ur special permission , we will make one now */
+
+// here we will try to create permission to edit post , when the only one who can edit the post is the author of this post
+// first we need to create permission.py on our app and on add this:
+
+from rest_framework import permissions
+
+class IsAuthorOrReadOnly(permissions.BasePermission):
+    def has_object_permission(self, request, view, obj):
+        if request.method in permissions.SAFE_METHODS:
+            return True
+        return obj.author ==request.user    
+
+
+
+
+
+// then on t=our view we just add this on update method :
+
+
+from .permissions import IsAuthorOrReadOnly
+
+class example():
+    permission_classes=[IsAuthorOrReadOnly]
+
+
+--------------------------------------------custom users------------------------------------------------------------------
+//first create new app and and add this on the setting :
+
+AUTH_USER_MODEL = 'appname.User'
+
+// then do that on the app models: 
+
+from typing import Iterable, Optional
+from django.db import models
+from django.contrib.auth.models import AbstractUser,BaseUserManager
+
+class User(AbstractUser):
+    class Role(models.TextChoices):
+        ADMIN = 'ADMIN', 'Admin'
+        STUDENT = 'STUDENT', 'Student'
+        TEACHER = 'TEACHER','Teacher'
+    
+    base_role=Role.ADMIN 
+    role = models.CharField(max_length=50, choices=Role.choices, blank=True)  
+    
+    def save(self, *args, **kwargs):
+        if not self.role:  
+            self.role = self.base_role  
+        super().save(*args, **kwargs)   
+# Create your models here.
+
+class StudentManager(BaseUserManager):
+    def get_queryset(self, *args, **kwargs):
+        result = super().get_queryset(*args, **kwargs)
+        return result.filter(role=User.Role.STUDENT)
+        
+class Student(User):
+    base_role = User.Role.STUDENT
+    student=StudentManager()
+    class Meta:
+        proxy = True
