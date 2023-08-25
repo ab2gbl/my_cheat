@@ -1,0 +1,267 @@
+--------------------new project-----------------------
+1/vue create PROJECTNAME 
+2/manual
+3/babel+router+linter/formatter
+4/ x2
+5/ y + ESLint with error prevention only 
+6/ lint on save
+7/ In dedicated config files 
+8/ n (or y)
+---------------------------------------------------------
+
+--------------------components-----------------------------
+template + script + style
+
+++++++++++++++++++++++++use components+++++++++++++++++++++++++
+//use components, on script:
+
+import FirstName from '@/components/FirstName.vue';
+export default {
+  components: {
+    FirstName
+  }
+}
+// then on template :
+<Firstname/>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++props+++++++++++++++++++++++++++++++
+//props, like components ,but bach jib les parametre ,par ex on script:
+export default {
+    props:{
+        msg:String
+    }
+}
+// then on template u can use this parametre like this:{{msg}}
+//and on father page, we can call it like that
+<Firstname msg="am msg"/>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++DataTypes+++++++++++++++++++++++++
+//DataTypes
+export default {
+    data(){
+        return{
+            num:100,
+            name:"mohamed",
+            country:["alg","tun","mar"]
+        }
+    }
+}
+// template u can just call them with : {{name}}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++Methods++++++++++++++++++++++++++++
+
+export default {
+    methods:{
+        methodName(){
+            return "channel test"
+        }
+    }
+}
+// template u can just call them with : {{methodName()}}
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+v-bind:class="var"(or just :class="var") 		variable like class(or href....)
+v-on:click="methodname"(or just @click="methodname") 	
+<input type="text" v-model="num">			if input changed, salary ytchanja        
+for more: https://vuejs.org/guide/essentials/event-handling.html#method-handlers			
+
++++++++++++++++++++++++++if++++++++++++++++++++++++++++
+<h3 v-if="A" > A </h3>
+<h3 v-else-if="B"> B </h3>
+<h3 v-else> C </h3>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++for++++++++++++++++++++++++++++
+// we have this objects like data:
+data(){
+        return{
+            obj:[
+                {id:1,name:"a"},
+                {id:2,name:"b"},
+                {id:3,name:"c"},
+            ]
+        }
+    }
+//so
+<li v-for="i in obj" v-bind:key="i.id">{{ i.id }} : {{ i.name }}</li>
+// we can use v-bind:key or :key 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------------------
+
+----------------------------------index--------------------------------------
++++++++++++ nrml loading +++++++++++++++++++++++++++++++ lazy loading(the best)+++++
+						+
+//hda yrj3 lprojet t9il				+//hda khfif 
+						+
+import HomeView from '../views/HomeView.vue'	+//bla import
+ 						+
+const routes = [				+const routes = [
+  {						+  {
+    path: '/',					+     path: '/',
+    name: 'home',				+     name: 'home',
+    component: HomeView				+     component: () => import('../views/AboutView.vue')
+  }]						+  }]
+						+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<router-link to="/about">About</router-link> 		like <a> without reload the page
+
++++++++++++++++++++++++++++++++++ Params(ychbh lel git) ++++++++++++++++++++++
+ // in index.js :
+{
+    path: '/user/:id',
+    ...
+  }
+
+// so the url should be par ex :aaaaaa/user/18
+// and to get this id , u can use the variables:
+
+{{ $route.params.id }}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
++++++++++++++++++++++++++++++++++ children +++++++++++++++++++++++++++++++++++
+//on index.js , we can add children like that: 
+{
+    path: '/contactus',
+    name: 'contactus',
+    component: () => import('../views/ContactUs.vue'),
+    children: [
+      {
+        path: 'details',
+        name: 'details',
+        component: () => import('../views/DetailsTest.vue')
+      }
+    ]  
+}
+// and we should add this on parent page (contactus on this example) to call the child:
+<router-view></router-view>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++ push +++++++++++++++++++++++++++++++++++
+// button send us to another page with specific data:
+
+import router from '../router';
+export default {
+    methods:{
+        details(){
+            router.push({name:'user',params:{id:50}})
+	    //router.push({path:'/user/'+'50'})	  //this is true also
+        }	
+    }
+}
+// this will send us to the site 'aaaa/user/50' , page user and id=50
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++ redirect +++++++++++++++++++++++++++++++++++
+
+{
+    path: '/user/:id',
+    redirect: '/contactus'
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------------------------------------------
+
+---------------------------------- axios --------------------------------------------------
+npm i axios vue-axios				//install axios
+
+import Vue from 'vue';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+Vue.use(VueAxios,axios)
+
+export default {
+    name: 'UserDetails',
+    data(){
+        return{
+            list: undefined 
+        }
+    },
+    created(){
+        Vue.axios.get('https://jsonplaceholder.typicode.com/posts').then(resp=>{
+            this.list=resp.data
+        })
+    }
+}
+-------------------------------------------------------------------------------------------
+
+---------------------------------- Vuex --------------------------------------------------
+// check picture on the folder
+
++++++++++++++++++++++++++++++++++++state+++++++++++++++++++++++++++++++++++++++++++++
+
+// fiha data , and ji hka :
+  state: {
+    count: 0,
+    name:'samy',
+    ...
+  },
+// u can call var from store.state by :
+this.$store.state.varname
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++ Getters +++++++++++++++++++++++++++++++++++++++++++++
+// fiha functions and filters, and ji hka
+getters: {
+    double:(state)=>{
+      return state.count*3
+    }
+  },
+// u can call func from store.getters by :
+this.$store.getters.double
+
+// if ur function need parameters, ji hka:
+    double:(state)=>(id)=>{			//id is parameter
+      return state.count*id
+    } 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++ mutations +++++++++++++++++++++++++++++++++++++++++++++
+
+// yjo fiha lfunction li ymodifiw f les variable ta3 state, wjihka:
+mutations: {
+    add(state){
+      return state.count++
+    }
+  },
+// u can call funct by store.commit :
+     this.$store.commit("add")
+
+// if ur function need parameters, ji hka: add(state,id) //id is parameter
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++ action +++++++++++++++++++++++++++++++++++++++++++++
+// kit7b tmodifier fl mutations, par ex func dir retard 1s wtmchi
+// fnrml ji hka :
+add_A ({ commit }) {
+        commit('add')
+}
+// lokan n7b ndiro  retard n5dmo b settimeout ,wji hka:
+add_A ({ commit }) {
+      setTimeout(() => {
+        commit('add')
+      }, 1000);
+}
+// u can call func by store.dispatch :
+this.$store.dispatch("add_A")
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++ modules +++++++++++++++++++++++++++++++++++++++++++++
+
+// lmodule yji 5arj store , wyji hka (kima store):
+const moduleA = {
+  state: () => ({ ... }),
+  mutations: { ... },
+  actions: { ... },
+  getters: { ... }
+}
+// wmba3d lzm declarih da5l store.modules 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-------------------------------------------------------------------------------------------
+

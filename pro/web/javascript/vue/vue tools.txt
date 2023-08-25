@@ -1,0 +1,8 @@
+--------------------------------------------calendar--------------------------
+npm install v-calendar@next @popperjs/core
+
+// on main add this:
+import { setupCalendar } from 'v-calendar';
+
+// Use calendar defaults (optional)y
+App.use(setupCalendar, {})
