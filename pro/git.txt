@@ -1,0 +1,27 @@
+
+password
+samy1234
+
+
+
+on 1
+ git config receive.denyCurrentBranch updateInstead
+//creer branch
+git branch _			//create 
+git checkout -b _		// create and use
+// affich branches
+git branch
+//use 
+git checkout _
+// delete braches
+git branch -d _
+
+
+//nwlo commit lor pas w7da :
+git reset --hard HEAD
+//nwlo commits lor
+git log --oneline
+git checkout <commit-id>
+
+// nrj3o branch master:
+

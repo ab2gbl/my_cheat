@@ -24,16 +24,16 @@ list("abcd")  تحول النص الى مصفوفة
 +++++++++++++++++++os++++++++++++++++++++++++++++++++++++
 chdir("..")       العودة الى الخلف
 getcwd()          مكان التواجد 
-mkdir("___")       ����� ��� ���� ����
+mkdir("___")       Creates a directory
 rename("__","__")
-rmdir("___")       ��� ��� ���� ����
-urandom(_)       ���� ������
-name      ���� �������
-remove("___")    ���� ��� ����
+rmdir("___")       remove directory
+urandom(size)       random size bytes suitable 
+name      Find the name of the current OS
+remove("___")    remove
 popen
 getpid()    pid
 _exit     ������
-getlogin()  ��� ��������
+getlogin()  Returns the name of the user logged in to the terminal
 +++++++++++++++++++++++++sys+++++++++++++++++++++++++++++
 .platform        ������ 
 .base_exec_perfix       ������ �������� ���
@@ -60,3 +60,21 @@ button.state(['disable'])          �� ���� ����� ���
 button.state(['!disable'])            ���� ����� ��� button
 button.instate(['disable'])          �� �� ���� ����� ��� button
 
+
+
+
+
+----------------------------------------------- scripting ----------------------------------------------
+$ cat args.py3
+#!/usr/bin/python3
+import sys
+
+print("you passed in", len(sys.argv), "argument(s)")
+print("those arguments are: ", str(sys.argv))
+
+print("hello", sys.argv[1])
+
+$ python3 args.py3 Leah
+you passed in 2 argument(s)
+those arguments are:  ['args.py3', 'Leah']
+hello Leah

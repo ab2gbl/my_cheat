@@ -1,0 +1,5 @@
+syntax on
+set number
+
+vim -O file1 file2			- 2 file in 1 vim interface
+

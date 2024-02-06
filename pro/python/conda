@@ -1,0 +1,8 @@
+#sould restart terminal after this commands
+#activate conda 
+conda config --set auto_activate_base True
+#desactive conda
+conda config --set auto_activate_base False
+
+
+source ~/.bashrc

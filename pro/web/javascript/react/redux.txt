@@ -1,0 +1,252 @@
+#install
+npm i redux react-redux
+
+// now u need to create folder "redux"
+------------------------------------------------------------------------
+// then in "redux" we should create folder "actions" , and we will do the actions in it
+// we will create in it file "types.js" : 
+export const INCREMET="INCREMET"
+export const DECREMET="DECREMET"
+
+------------------------------------------------------------------------
+// then in "redux" we should create folder "reducers" , and we will do the reducers in it
+// we will create the first reducer "counterReducer.js" (this is an example):
+
+import { DECREMET, INCREMET } from "../actions/types"
+
+const counterReducer = (state={count:0},action) => {
+    if(action.type===INCREMET)
+        return {...state,count:state.count+1}
+    else if(action.type===DECREMET)
+        return {...state,count:state.count-1}
+    else
+        return state
+} 
+export default counterReducer
+
+
+------------------------------------------------------------------------
+// in "redux" folder we have the file "store.js" like this :
+import { createStore } from "redux";
+import counterReducer from "./reducers/counterReducer";
+
+const store=createStore(counterReducer)
+export default store
+
+------------------------------------------------------------------------
+
+// then to use the store on your app or compnentes u should do this :
+import { Provider } from 'react-redux'
+import store from '@/redux/store'
+
+export default function Home() {
+  return (
+    <Provider store={store}>
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <Counter/>
+      </main>
+    </Provider>
+  )
+}
+------------------------------------------------------------------------
+// now to use the store on the counter component: 
+
+import { useDispatch, useSelector } from "react-redux";
+import { INCREMET,DECREMET } from "@/redux/actions/types";
+
+export default function Counter(){
+    const count=useSelector(state => state.count)			// get the count from store
+    //or: {const} = useSelector(state => state)
+    const dispatch=useDispatch()					// importing the dispatch
+
+    function Increment(){
+        dispatch({							// dispatch the action increment
+            type: INCREMET
+        })
+    }
+    function Decrement(){
+        dispatch({							// dispatch the action decrement
+            type: DECREMET
+        })
+    }
+
+    return(
+        <div>
+            <p>{count}</p>
+            <button onClick={Increment}>Increment</button>
+            <button onClick={Decrement}>Decrement</button>
+        </div>
+    )
+}
+
+-------------------------------------------------  Action Creator ----------------------------------------------------
+//in "redux/actions" , we need to create a file "counterActions.js":
+
+import { INCREMET, DECREMET } from "./types"
+
+export const incrementAction= () =>{
+    return {
+        type: INCREMET
+    }
+}
+export const decrementAction= () =>{
+    return {
+        type: DECREMET
+    }
+}
+// now we can change dispatch on the component to be :
+
+import {incrementAction,decrementAction} from '@/redux/actions/counterActions'
+
+import {incrementAction,decrementAction} from '@/redux/actions/counterActions'
+
+export default function Counter(){
+    // rest of code
+    function Increment(){
+        //setcount( count+1);
+        dispatch(incrementAction())
+    }
+    function Decrement(){
+        //setcount( count-1);
+        dispatch(decrementAction())
+    }
+    // rest of code
+}
+-------------------------------------------------  Dynamic Action ----------------------------------------------------
+// add type on "/redux/actions/types.js":
+export const INCREMET_BY= "INCREMENT_BY"
+
+// add action on "/redux/actions/counterActions.js":
+
+export const increment_ByAction = (val) =>{
+    return {
+        type: INCREMET_BY,
+        value: val
+    }
+}
+
+// add another else if on reducer :
+
+else if(action.type===INCREMET_BY)
+        return {...state,count:state.count+action.value} 
+
+// using that on our component:
+
+function Increment_By(val){
+        dispatch(increment_ByAction(val))
+}
+
+<button onClick={()=>Increment_By(3)}>Increment_by 3</button>
+---------------------------------------------------------------------------------------------------
+----------------------------------------------- Thunk -----------------------------------------------
+// thunk ykhli dispatch ji da5l l action
+npm i redux-thunk 		//install
+
+//in the store:
+
+import { applyMiddleware } from "redux";
+import reduxThunk from 'redux-thunk';
+
+const store=createStore(counterReducer,enhancer(applyMiddleware(reduxThunk)))
+
+// now the action be like this :
+
+export const incrementAction= async(dispatch) =>{
+    return dispatch({
+        type: INCREMET
+    })
+}
+
+// and the component be like :
+
+function Increment(){
+        incrementAction(dispatch)
+    }
+
+<button onClick={Increment}>Increment</button>
+--------------------------------------------------------------------------------------------------
+------------------------------------------- multi reducer ----------------------------------------
+// in the folder "reducers" create file "index.js":
+
+import { combineReducers } from "redux";
+
+
+export default combineReducers({
+    counter: counterReducer,
+    user: userReducer
+    //...
+})
+
+// now in the store :
+
+
+import reducers from "./reducers";
+
+const store=createStore(reducers,//...)
+
+// and to use that in the component:
+
+    const countState=useSelector(state => state.counter.count)
+
+----------------------------------------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++ Redux DevTool ++++++++++++++++++++++++++++++++++++++++++++++
+
+// to use this extention we should do this on the store
+const enhancer=window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+const store=createStore(otherReducer ,enhancer())
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++ Redux Toolkit ++++++++++++++++++++++++++++++++++++++++++++++
+
+//install: npm i @reduxjs/toolkit
+
+// now the store will be :
+
+import { configureStore } from "@reduxjs/toolkit";
+const store= configureStore({
+    reducer: {
+        counter: counterSlice,
+        user: userReducer
+    }
+})
+export default store
+
+// now , we will use the slice where slice=reducer+actions
+// so we will create folder "slices" , and in it , a file "counterSlice.js":
+
+	import { createSlice } from '@reduxjs/toolkit'
+
+	export const counterSlice = createSlice({
+	  name: 'counter',
+	  initialState:{
+	    count: 0 ,
+	  },
+	  reducers: {
+	    increment: (state) => {
+	      state.count += 1
+	    },
+	    decrement: (state) => {
+	      state.count -= 1
+	    },
+	    incrementByAmount: (state, action) => {
+	      state.count += action.payload
+	    },
+	  },
+	})
+
+	export const { increment, decrement, incrementByAmount } = counterSlice.actions
+
+	export default counterSlice.reducer
+
+// now to use it in component:
+
+    import { decrement, increment,incrementByAmount } from "@/redux/slices/counterSlice";
+
+    const countState=useSelector(state => state.counter.count)
+    const dispatch=useDispatch()
+
+    function Increment(){
+        dispatch(increment())
+    }
+ 
+    <button onClick={Increment}>Increment</button>

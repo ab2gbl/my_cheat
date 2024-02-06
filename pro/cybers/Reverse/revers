@@ -1,0 +1,21 @@
+----------------------------------------- readelf ----------------------------------------
+readelf file -S				sections 
+readelf --string-dump=16 svchost.exe 
+------------------------------------------------------------------------------------------
+-------------------------------------------- gdb -----------------------------------------
+layout asm
+set disassembly-flavor intel
+break *(main+59)				add break point 
+info registers eax (or "i r eax")		print eax value
+set {long}($rbp - 0x90) = {long}($rbp - 0x70)
+set $rax=100
+x/gx $rbp-0x98
+x/s $rbp-0x110
+------------------------------------------------------------------------------------------
+
+
+https://godbolt.org/ 		online compiler
+
+#amv8
+aarch64-linux-gnu-as -o chall.o chall_3.S 
+aarch64-linux-gnu-gcc -static -o chall chall.o

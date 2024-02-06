@@ -1,0 +1,58 @@
+https://www.elastic.co/guide/en/elasticsearch/guide/master/intro.html
+
+
+
+
+PUT /employee				Create
+DELETE /employee			Delete
+
+
+
+POST  /products/_doc			#u can add /100 to put the id 100 for ex	
+{
+  "name":"Coffee",
+  "price":120,
+  "in_staock":10
+}
+
+
+GET  /products/_doc/100
+
+#update:
+POST  /products/_update/100
+{
+  "doc":{
+    "in_staock":11
+  }
+}
+
+#script1: to do in_staock--:
+POST  /products/_update/100
+{
+  "script":{
+    "source":"ctx._source.in_staock--"
+  }
+}
+
+#script2: to do in_staock=params.quantity
+POST  /products/_update/100
+{
+  "script":{
+    "source":"ctx._source.in_staock=params.quantity",			#or replace = by += , -= ...
+    "params": {
+      "quantity":4
+    }
+  }
+}
+
+# to write complicated script do :
+POST  /products/_update/100
+{
+  "script":
+    """
+	if(ctx._source.in_staock>0){
+	    ctx._source.in_staock--;
+	}
+    """
+  
+}
