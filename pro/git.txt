@@ -25,3 +25,38 @@ git checkout <commit-id>
 
 // nrj3o branch master:
 
+
+------------------------------------------------------ course ---------------------------------------------------
+
+git config --global user.name "ab2gbl" 				config glolbal username ( or user.email )
+git config user.name 						display that
+
+
+git init "ProjectName"						create repostry
+git status 							file status 
+git add file1.txt file2.txt					add
+git commit -m "message" file.txt				commit
+git log								last commits info 
+git checkout CommitId						back to a commit
+
+++++++++ branch ++++++++++++++++
+
+git branch 							display branches
+git branch branchName						create new branch 
+git checkout branchName						go to branch 
+
+// to merge , go to master and do 
+git 
+
++++++++++++++ github +++++++++++++++++++++
+
+git remote -v							check if there's remote or connection to an online repo in github
+
+// first create reposetry on github account and copy the url of it then this command :
+git remote add origin https://github.com/ab2gbl/project.git
+git remote set-url origin https://( Token classic )@github.com/ab2gbl/e-commerce_nextjs.git
+
+// then
+git push -u origin master					push
+
+git pull origin master 						pull

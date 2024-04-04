@@ -12,6 +12,8 @@ python manage.py createsuperuser		create admin
 
 python manage.py runserver			start server
 
+pip3 freeze > requirements.txt 			make requirements
+pip install -r requirements.txt 		install requirements
 ------------------------------------------create app-------------------------------------------------
 python manage.py startapp appname		create app on our project
 // than we should add this app to our project, in project/setting.py ,on installed app add:
