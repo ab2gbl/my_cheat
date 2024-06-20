@@ -1,7 +1,4 @@
 
-password
-samy1234
-
 
 
 on 1
@@ -44,9 +41,19 @@ git checkout CommitId						back to a commit
 git branch 							display branches
 git branch branchName						create new branch 
 git checkout branchName						go to branch 
+git branch -m master main    rename master to main
+
 
 // to merge , go to master and do 
-git 
+git merge branchName
+
+++++++++++ ignore ++++++++++++++++++
+
+// in the repo
+touch .gitignore
+// then add directories and files in like this :
+dossier/
+dossier2/file.txt
 
 +++++++++++++ github +++++++++++++++++++++
 
