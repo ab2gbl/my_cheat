@@ -317,6 +317,16 @@ class MovieSerializer(serializers.ModelSerializer):
 
     #def get_instructor(self, instance):
     #   return instance.instructor.username
+// this is an read or write only examples:
+class AdminSerializer(serializers.ModelSerializer):
+	class Meta:
+	        model = Admin
+        	fields = ['id', 'username', 'email', 'password','role','is_staff']
+        	extra_kwargs = {'password': {'write_only': True},
+                	        'role': {"read_only": True},
+                        	'is_staff': {'write_only': True},
+                    	}
+
 // now we can work on view
 
 from rest_framework.decorators import api_view
