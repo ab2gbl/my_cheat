@@ -1,0 +1,35 @@
+
+
++++++++++++++ Redirection +++++++++++++++++++++++++++
+
+    Data Stream for Input
+        STDIN – 0
+    Data Stream for Output
+        STDOUT – 1
+    Data Stream for Output that relates to an error occurring.
+        STDERR – 2
+
+        > override
+        >> dont overide
+  
+___ ___ 2>/dev/null                     discare error 
+___ ___ 2>/dev/null > results.txt       output in results.txt
+___ ___ 2> stderr.txt 1> stdout.txt     error in stderr.txt and result in stdout.txt 
+cat < stdout.txt                        stdout.txt as input to the command cat 
+___ ___ >> stdout.txt                   add the result in the end of stdout.txt without DISCARE ( without OVERIDE )
+___ ___ | ___ ___                       first result is the input of the second command
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++ Filter Contents +++++++++++++++++++++
+
+cat ___ | grep "test"                            search for test in ___
+cat ____ | sort                                  sort lines by alaphabic
+cat ____ | Cut -d":" -f1                         take first part before the : in each line
+cat ____ | tr ":" " "                            replace every ":" by " "
+cat ____ | tr ":" " " | column -t                display the result as table
+cat ____ | tr ":" " " | awk '{print $1, $NF}'    display first and last one
+cat ____ | sed 's/bin/HTB/g'                     replace every bin by HTB (s and g are like options)
+cat ____ | wc -l                                 count lines
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
