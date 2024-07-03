@@ -1,0 +1,120 @@
+npx create-react-app ./projectName                Create React app
+
+-------------------------  /src/index.js -------------------------------------
+// React <18
+
+import React from "react";
+import ReactDOM from "react-dom";
+ReactDOM.render("Hello World", document.getElementById("root"));
+
+// React >=18
+
+import ReactDOM from "react-dom/client";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render("hello world from react 18!");
+-------------------------------------------------------------------------
+
+
+for bootstrap u can just add the link and script in the public/index
+
+-------------------- Components -------------------------------------
+
+/project
+├── /src
+│   ├── /components                    # Reusable React components
+│   │   └──/header                     # First Comp Folder (Header)
+│   │   │  └──Header.jsx               # export default Header;
+│   │   │  └──Header.css               
+│   │   └──index.js                    # export { default as Header } from "./header/Header";
+|   └──App.jsx                         # import { Header, Footer ... } from "./components";
+│   └──index.js
+
+
+++++++++++ Simple Cmponent (function) +++++++++++++++++
+// shortcut , rfce or ffc
+const App = (props) => {
+  return (
+    <div>
+      <h1> {props.name} </h1>
+      <div> {props.children} </div>
+    </div>
+  );
+};
+export default App;
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++ Simple Compenent (class) +++++++++++++++++++
+import React from "react";
+
+class App extends React.Component {
+  method() {
+    return "method";
+  }
+  render() {
+    const name = "name";
+    const method = this.method();
+
+    return <div>
+      {name + " " + method}
+      props: {this.props.name}
+    </div>;
+  
+  }
+}
+export default App;
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------------------------------
+
+----------------------------- States -------------------------------------
+// u cant change and modify the props , but u can modify the states and pass it to children too
+
+// so to create a state we will use constructor like this 
++++++++++++++++++++++++++++++++++++++
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      name: "React"
+    }
+  }
+  render() {
+    return (
+      <div>
+        {this.state.name}
+      </div>
+    );
+  }
+}
+export default App;
++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++ modify state example ++++++++++++++++++++++++++++++++++++++
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      number: 0,
+    };
+    this.clickHandler = this.clickHandler.bind(this);              # add the methode that will modfify the state here like this 
+  }
+  clickHandler = () => {                                           # methode that will modfify the state
+    this.setState({ number: this.state.number + 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        {this.state.number}
+        <button onClick={this.clickHandler}> add one</button>
+      </div>
+    );
+  }
+}
+export default App;
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+------------------------------------------------------------------------------
+
