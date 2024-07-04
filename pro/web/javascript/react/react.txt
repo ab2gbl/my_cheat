@@ -1,4 +1,6 @@
+npm create vite@latest
 npx create-react-app ./projectName                Create React app
+
 
 -------------------------  /src/index.js -------------------------------------
 // React <18
@@ -115,6 +117,171 @@ class App extends React.Component {
 export default App;
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------------------------------------
 
+------------------------------- Routing --------------------------------------
+
+
+<Link to="/">Home</Link>
+
+// this is a simple routing we will not use alo
+
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Header, Container, Footer } from "./components";
+
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Container>
+        <Routes>
+          <Route path="/about" element={<Link to="/">Home</Link>} />
+          <Route path="/" element={<Component/>} />
+        </Routes>
+      </Container>
+      <Footer />
+    </Router>
+  );
+}
+export default App;
+
++++++++++++++++++++++++++++++++ routing ++++++++++++++++++++++++++++++++++++++++++++++
+
+// this is how /src/index will look like
+
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { Container } from "./components";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/container",
+    element: <Container />,
+  },
+]);
+
+root.render(<RouterProvider router={router} />);
+
+
+******** error or page not found **** 
+
+{
+    path: "/",
+    element: <App />,
+    errorElement: <h1>404 Not Found</h1>,      #or component
+  },
+// or
+{
+    path: "*",
+    element: <h1>Not Found</h1>,
+  },
+*************************************
+******* for dynamic path: ***********
+{
+    path: "/container/:id",
+    element: <Container />,
+  }, 
+
+// and we can get that param from the container by 
+
+import { useParams } from "react-router-dom";
+...
+const params = useParams();
+...
+<h1>{params.id}</h1>
+
+*************************************
+******* children ***********
+{
+    path: "/parents",
+    element: <parents />,
+    children: [
+      {
+        path: "/parents/:id",
+        element: <child />,
+      },
+    ],
+    
+  }, 
+
+// and we can get and display that child component in the parents comp by 
+
+import { Outlet } from "react-router-dom";
+...
+<Outlet />
+
+*************************************
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+--------------------------------------------------------------------------------------------
+
+------------------------------- Hookes --------------------------------------
+// should be directly inside the component , not outside , and not in methode or if or loop ....
+
+// use State
+const [variable, setVariable] = useState(0);
+
+
+++++++++++++++++++++++++++++++ useEffect +++++++++++++++++++++++++++++++++++++++
+
+// useEffect(func,dep)
+
+// will execute it when the variable changed ( mounted )
+useEffect(()=>{
+    console.log("Component did mount");
+  },[variable])
+
+
+// we can use return to execute when the variable or the component will unmount , 
+useEffect(() => {
+    console.log("Component did mount");
+    return () => {
+      console.log("Component will unmount");
+    };
+  }, [variable]);
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++ useRef ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// useRef ndiroha bach nt7kmo fkach html elemnt , kima hmna ra7 ndiroha bah ndiro focus 3la linput ki nclicko 3la lbutton:
+
+const inputRef=useRef()
+
+const focus= () =>{
+    if(inputRef.current){
+      inputRef.current.focus()
+    }
+}
+
+<button onClick={focus}>click to focus</button>
+<input ref={inputRef} />
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++ UseMemo ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// UseMemo kima UseEffect brk trj3na l9ima ta3 lfunction (hna calculate) lelvariable (hna result)
+// useMemo will be memorized , so will not render it everytime u rerender the component 
+// so we use it with functions that take time , but dont happen everytime
+const result=useMemo(()=>{calculate()},[success])
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// hdi ki ytbdl linput utaficha flconsole , t5dm m3a onChange
+const hund=(e)=>{
+    console.log(e.target.value)
+   }
+
+<input onChange={hund} />
 ------------------------------------------------------------------------------
 
