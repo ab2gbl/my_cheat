@@ -33,3 +33,11 @@ cat ____ | sed 's/bin/HTB/g'                     replace every bin by HTB (s and
 cat ____ | wc -l                                 count lines
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++ Permitions management +++++++++++++++++++
+
+chmod a+r file                                                               add the "read" permition to file
+chown <user>:<group> <file/directory>(ex:chown root:root shell )             changing the user owner and the group 
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
