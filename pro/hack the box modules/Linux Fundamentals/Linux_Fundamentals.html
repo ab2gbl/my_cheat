@@ -1,0 +1,815 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="🖥️-system-information">🖥️ System Information</h1>
+<ul>
+<li>
+<p><code>-h</code>, <code>man</code>, <code>info</code> – Command info/help</p>
+</li>
+<li>
+<p><code>whoami</code> – Show current user</p>
+</li>
+<li>
+<p><code>id</code> – Returns user identity</p>
+</li>
+<li>
+<p><code>hostname</code> – Show system’s host-name</p>
+</li>
+<li>
+<p><code>uname</code> – Print basic info about the OS and hardware</p>
+</li>
+</ul>
+<hr>
+<h1 id="🔄-workflow">🔄 Workflow</h1>
+<h2 id="📁-navigation">📁 Navigation</h2>
+<ul>
+<li>
+<p><code>pwd</code>, <code>ls</code>, <code>cd</code> – Navigation 📁</p>
+</li>
+<li>
+<p><code>tree .</code> – Show directory structure 🌲</p>
+</li>
+<li>
+<p><code>touch</code>, <code>mkdir</code> – Create file or folder 📄</p>
+</li>
+<li>
+<p><code>cp</code>, <code>mv</code> – Copy, cut/rename files 🗄️</p>
+</li>
+<li>
+<p><code>vim</code>, <code>nano</code> – Edit files 📝</p>
+</li>
+</ul>
+<hr>
+<h2 id="🔍-find-files-and-directories">🔍 Find Files and Directories</h2>
+<h3 id="using-find">Using <code>find</code></h3>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">find</span> <span class="token operator">&lt;</span>location<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>options<span class="token operator">&gt;</span>
+</code></pre>
+<ul>
+<li><code>-type f</code> – ‘f’ stands for ‘file’</li>
+<li><code>-name *.conf</code></li>
+<li><code>-user root</code></li>
+<li><code>-size +20k</code></li>
+<li><code>-newermt 2020-03-03</code></li>
+</ul>
+<h3 id="faster-search-with-locate">Faster Search with ‘locate’</h3>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> updatedb <span class="token operator">|</span> <span class="token function">locate</span> *.conf
+</code></pre>
+<hr>
+<h2 id="🔧-file-descriptors-and-redirections">🔧 File Descriptors and Redirections</h2>
+<ul>
+<li>
+<p><strong>Input</strong>: <code>STDIN</code> – 0</p>
+</li>
+<li>
+<p><strong>Output</strong>: <code>STDOUT</code> – 1</p>
+</li>
+<li>
+<p><strong>Error</strong>: <code>STDERR</code> – 2</p>
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[command] 2&gt;/dev/null</code></td>
+<td>Redirect error to null</td>
+</tr>
+<tr>
+<td><code>[command&gt; 2&gt;/dev/null 1&gt;results.txt</code></td>
+<td>Error to null, output to file</td>
+</tr>
+<tr>
+<td><code>[command] &lt; stdout.txt</code></td>
+<td>Use file as input</td>
+</tr>
+<tr>
+<td><code>[command] &gt;&gt;results.txt</code></td>
+<td>Append output to file (no overwrite)</td>
+</tr>
+<tr>
+<td><code>[command1] | [command2]</code></td>
+<td>Pipe: use command2 on the result of command1</td>
+</tr>
+</tbody>
+</table><hr>
+<h2 id="🧹-filter-contents">🧹 Filter Contents</h2>
+<ul>
+<li>
+<p><code>cat</code>, <code>more</code>, <code>less</code> – Display content of file</p>
+</li>
+<li>
+<p><code>head</code>, <code>tail</code> – Show first/last lines of file</p>
+</li>
+<li>
+<p><code>cat &lt;file&gt; | sort</code> – Sort file lines</p>
+</li>
+<li>
+<p><code>cat &lt;file&gt; | grep "str"</code> – Find lines containing <code>str</code></p>
+</li>
+<li>
+<p><code>cat &lt;file&gt; | grep -v "false\|nolog"</code> – Exclude lines with <code>false</code> or <code>nolog</code></p>
+</li>
+</ul>
+<h3 id="cut-and-replace-examples">Cut and Replace Examples</h3>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">cat</span> <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">":"</span> -f1
+<span class="token comment"># Example:</span>
+<span class="token comment"># root:x:0:0:root:/root:/bin/bash  --&gt;  root</span>
+
+<span class="token function">cat</span> <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token function">tr</span> <span class="token string">":"</span> <span class="token string">" "</span>
+<span class="token comment"># Example:</span>
+<span class="token comment"># root:x:0:0:root:/root:/bin/bash  --&gt;  root x 0 0 root /root /bin/bash</span>
+</code></pre>
+<hr>
+<h2 id="🔐-permissions">🔐 Permissions</h2>
+<ul>
+<li>
+<p><code>chmod</code> – Change permissions</p>
+</li>
+<li>
+<p><code>chown &lt;user&gt;:&lt;group&gt; &lt;file&gt;</code> – Change owner</p>
+</li>
+</ul>
+<hr>
+<h1 id="⚙️-system-management">⚙️ System Management</h1>
+<h2 id="🧠-service-and-process-management">🧠 Service and Process Management</h2>
+<ul>
+<li>
+<p><code>systemctl start ssh</code> – Start process in the background (<code>ssh</code> here)</p>
+</li>
+<li>
+<p><code>systemctl status ssh</code> – Get status of the process</p>
+</li>
+<li>
+<p><code>systemctl enable ssh</code> – Auto-run service on startup</p>
+</li>
+<li>
+<p><code>ps -aux | grep ssh</code> – Check running process info</p>
+</li>
+<li>
+<p><code>systemctl list-units --type=service</code> – List all services</p>
+</li>
+</ul>
+<h3 id="kill-processes">Kill Processes</h3>
+<ul>
+<li>
+<p><code>kill -l</code> – Show kill signal options</p>
+</li>
+<li>
+<p><code>kill 9 &lt;PID&gt;</code> – Force kill process with signal 9</p>
+</li>
+</ul>
+<h3 id="background-jobs">Background Jobs</h3>
+<ul>
+<li>
+<p><code>[Ctrl + Z]</code> – Pause (background) current process</p>
+</li>
+<li>
+<p><code>jobs</code> – Display all background processes</p>
+</li>
+<li>
+<p><code>bg</code> – Resume a process in the background</p>
+</li>
+<li>
+<p><code>fg 1</code> – Bring process 1 to the foreground</p>
+</li>
+</ul>
+<hr>
+<h2 id="⏰-task-scheduling">⏰ Task Scheduling</h2>
+<h3 id="🔄-systemd-timers">🔄 Systemd Timers</h3>
+<p>1- Create a timer (schedules when your mytimer.service should run)<br>
+2- Create a service (executes the commands or script)<br>
+3- Activate the timer</p>
+<ol>
+<li><strong>Create a Timer</strong></li>
+</ol>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> <span class="token function">mkdir</span> /etc/systemd/system/mytimer.timer.d
+<span class="token function">sudo</span> vim /etc/systemd/system/mytimer.timer
+</code></pre>
+<blockquote>
+<p>inside <strong>mytimer.timer</strong></p>
+</blockquote>
+<pre><code>[Unit]
+Description=My Timer
+
+[Timer]
+OnBootSec=3min           # Run once after system boot
+OnUnitActiveSec=1hour    # Repeat every hour
+
+[Install]
+WantedBy=timers.target
+</code></pre>
+<ol start="2">
+<li><strong>Create a Service</strong></li>
+</ol>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> vim /etc/systemd/system/mytimer.service
+</code></pre>
+<blockquote>
+<p>inside <strong>mytimer.service</strong></p>
+</blockquote>
+<pre><code>[Unit]
+Description=My Service
+
+[Service]
+ExecStart=/full/path/to/my/script.sh
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<blockquote>
+<p><strong>Reload Systemd</strong></p>
+</blockquote>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> systemctl daemon-reload
+</code></pre>
+<ol start="3">
+<li><strong>Start the Timer &amp; Enable It</strong></li>
+</ol>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> systemctl start mytimer.timer
+<span class="token function">sudo</span> systemctl <span class="token function">enable</span> mytimer.timer
+</code></pre>
+<hr>
+<h3 id="🕰️-cron-jobs">🕰️ Cron Jobs</h3>
+<p>Cron stores tasks in a file called <code>crontab</code>.</p>
+<blockquote>
+<p><code>Minute</code> <code>Hour</code> <code>Day_of_Month</code> <code>Month</code> <code>Day_of_Week</code> <code>Command_Path</code></p>
+</blockquote>
+<pre><code># Format:
+# Minute Hour Day_of_Month Month Day_of_Week Command_Path
+
+# System Update every 6 hours
+0 */6 * * * /path/to/update_software.sh
+
+# Execute scripts on the 1st of every month
+0 0 1 * * /path/to/scripts/run_scripts.sh
+
+# Cleanup DB every Sunday at midnight
+0 0 * * 0 /path/to/scripts/clean_database.sh
+
+# Backup every Sunday at midnight
+0 0 * * 7 /path/to/scripts/backup.sh
+</code></pre>
+<hr>
+<h2 id="🌐-network-services">🌐 Network Services</h2>
+<h3 id="🔐-ssh">🔐 SSH</h3>
+<ul>
+<li>
+<p><code>ssh username@10.129.17.122</code> – Connect to SSH server</p>
+</li>
+<li>
+<p><code>/etc/ssh/sshd_config</code> – SSH configuration file</p>
+</li>
+</ul>
+<h3 id="📂-nfs-network-file-system">📂 NFS (Network File System)</h3>
+<ul>
+<li>Install NFS server:</li>
+</ul>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> nfs-kernel-server -y
+</code></pre>
+<ul>
+<li>Config file: <code>/etc/exports</code></li>
+</ul>
+<h4 id="create-nfs-share">Create NFS Share</h4>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">mkdir</span> nfs_sharing
+<span class="token keyword">echo</span> <span class="token string">'/home/&lt;user&gt;/nfs_sharing hostname(rw,sync,no_root_squash)'</span> <span class="token operator">&gt;&gt;</span> /etc/exports
+<span class="token function">cat</span> /etc/exports <span class="token operator">|</span> <span class="token function">grep</span> -v <span class="token string">"#"</span>
+</code></pre>
+<h4 id="mount-nfs-share">Mount NFS Share</h4>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">mkdir</span> ~/target_nfs
+<span class="token function">mount</span> 10.129.12.17:/home/john/dev_scripts ~/target_nfs
+tree ~/target_nfs
+</code></pre>
+<h3 id="🌐-web-server--vpn">🌐 Web Server / VPN</h3>
+<ul>
+<li>VPN:</li>
+</ul>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> openvpn --config internal.ovpn
+</code></pre>
+<hr>
+<h2 id="🛍️-working-with-web-services">🛍️ Working with Web Services</h2>
+<h3 id="🔢-apache-modules">🔢 Apache Modules</h3>
+<ul>
+<li>
+<p><code>mod_ssl</code> – Secure communication by encrypting data between browser and server</p>
+</li>
+<li>
+<p><code>mod_proxy</code> – Acts as a traffic controller, redirecting requests</p>
+</li>
+<li>
+<p><code>mod_headers</code> and <code>mod_rewrite</code> – Modify HTTP headers and rewrite URLs</p>
+</li>
+</ul>
+<blockquote>
+<p>Start Apache server</p>
+</blockquote>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> systemctl start apache2   
+</code></pre>
+<ul>
+<li>Config file: <code>/etc/apache2/ports.conf</code></li>
+</ul>
+<hr>
+<h2 id="📃-backup-and-restore">📃 Backup and Restore</h2>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token comment"># Install rsync (backup tool)</span>
+<span class="token function">sudo</span> apt <span class="token function">install</span> <span class="token function">rsync</span> -y  
+
+<span class="token comment"># Backup local directory to remote server</span>
+<span class="token function">rsync</span> -av /path/to/mydirectory user@backup_server:/path/to/backup/directory
+
+<span class="token comment"># Restore backup from remote server</span>
+<span class="token function">rsync</span> -av user@remote_host:/path/to/backup/directory /path/to/mydirectory
+
+<span class="token comment"># Secure transfer with SSH</span>
+<span class="token function">rsync</span> -avz -e <span class="token function">ssh</span> /path/to/mydirectory user@backup_server:/path/to/backup/directory
+
+<span class="token comment"># ...</span>
+</code></pre>
+<hr>
+<h2 id="📦-containerization">📦 Containerization</h2>
+<h3 id="🐳-docker">🐳 Docker</h3>
+<blockquote>
+<p>First, creating Dockerfile<br>
+Then, Build Docker image</p>
+</blockquote>
+<pre class=" language-bash"><code class="prism  language-bash">docker build -t FS_docker <span class="token keyword">.</span>                      
+</code></pre>
+<blockquote>
+<p>Run container</p>
+</blockquote>
+<pre class=" language-bash"><code class="prism  language-bash">docker run -p <span class="token operator">&lt;</span>host port<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>docker port<span class="token operator">&gt;</span> -d FS_docker  
+</code></pre>
+<blockquote>
+<p>Example:</p>
+</blockquote>
+<pre><code>docker run -p 8022:22 -p 8080:80 -d FS_docker
+</code></pre>
+<h4 id="docker-management">Docker Management</h4>
+
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker ps</code></td>
+<td># List running containers</td>
+</tr>
+<tr>
+<td><code>docker stop &lt;id&gt;</code></td>
+<td># Stop a container</td>
+</tr>
+<tr>
+<td><code>docker start &lt;id&gt;</code></td>
+<td># Start a stopped container</td>
+</tr>
+<tr>
+<td><code>docker restart &lt;id&gt;</code></td>
+<td># Restart a container</td>
+</tr>
+<tr>
+<td><code>docker rm &lt;id&gt;</code></td>
+<td># Remove a container</td>
+</tr>
+<tr>
+<td><code>docker rmi &lt;image&gt;</code></td>
+<td># Remove an image</td>
+</tr>
+<tr>
+<td><code>docker logs &lt;id&gt;</code></td>
+<td># View container logs</td>
+</tr>
+</tbody>
+</table><h3 id="🧱-linux-containers-lxc">🧱 Linux Containers (LXC)</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo apt-get install lxc lxc-utils -y</code></td>
+<td>Install LXC</td>
+</tr>
+<tr>
+<td><code>sudo lxc-create -n linuxcontainer -t ubuntu</code></td>
+<td>Create Ubuntu container</td>
+</tr>
+<tr>
+<td><code>lxc-ls</code></td>
+<td>List containers</td>
+</tr>
+<tr>
+<td><code>lxc-start -n &lt;container&gt;</code></td>
+<td>Start container</td>
+</tr>
+<tr>
+<td><code>lxc-stop -n &lt;container&gt;</code></td>
+<td>Stop container</td>
+</tr>
+<tr>
+<td><code>lxc-restart -n &lt;container&gt;</code></td>
+<td>Restart container</td>
+</tr>
+<tr>
+<td><code>lxc-config -n &lt;name&gt; -s storage</code></td>
+<td>Manage storage</td>
+</tr>
+<tr>
+<td><code>lxc-config -n &lt;name&gt; -s network</code></td>
+<td>Manage network</td>
+</tr>
+<tr>
+<td><code>lxc-config -n &lt;name&gt; -s security</code></td>
+<td>Manage security</td>
+</tr>
+<tr>
+<td><code>lxc-attach -n &lt;container&gt;</code></td>
+<td>Connect to container</td>
+</tr>
+<tr>
+<td><code>lxc-attach -n &lt;container&gt; -f /path/to/share</code></td>
+<td>Share dir/file with container</td>
+</tr>
+<tr>
+<td><code>sudo vim /usr/share/lxc/config/linuxcontainer.conf</code></td>
+<td>Config file for container</td>
+</tr>
+</tbody>
+</table><blockquote>
+<p>Example config file for container :</p>
+</blockquote>
+<pre><code>lxc.cgroup.cpu.shares = 512
+lxc.cgroup.memory.limit_in_bytes = 512M
+</code></pre>
+<hr>
+<h1 id="🌐-network-configuration">🌐 Network Configuration</h1>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ifconfig , ip addr</code></td>
+<td>Network Settings</td>
+</tr>
+<tr>
+<td><code>sudo ifconfig eth0 up</code></td>
+<td>Activate Network Interface</td>
+</tr>
+<tr>
+<td><code>sudo ip link set eth0 up</code></td>
+<td>Activate Network Interface</td>
+</tr>
+<tr>
+<td><code>sudo ifconfig eth0 192.168.1.2</code></td>
+<td>IP Address to an Interface</td>
+</tr>
+<tr>
+<td><code>sudo ifconfig eth0 netmask 255.255.255.0</code></td>
+<td>Assign a Netmask to an Interface</td>
+</tr>
+<tr>
+<td><code>sudo route add default gw 192.168.1.1 eth0</code></td>
+<td>Assign the Route to an Interface</td>
+</tr>
+<tr>
+<td><code>sudo vim /etc/resolv.conf</code></td>
+<td>Editing DNS Settings</td>
+</tr>
+<tr>
+<td><code>sudo vim /etc/network/interfaces</code></td>
+<td>Editing Interfaces</td>
+</tr>
+<tr>
+<td><code>sudo systemctl restart networking</code></td>
+<td>Restart Networking Service</td>
+</tr>
+</tbody>
+</table><h3 id="network-access-control">Network Access Control</h3>
+<ul>
+<li>
+<p>Discretionary access control (DAC)</p>
+</li>
+<li>
+<p>Mandatory access control (MAC)</p>
+</li>
+<li>
+<p>Role-based access control (RBAC)</p>
+</li>
+</ul>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<ul>
+<li>
+<p><strong>Ping</strong></p>
+</li>
+<li>
+<p><strong>Traceroute</strong> : Traces the route</p>
+</li>
+<li>
+<p><strong>Netstat</strong> : Display active network connections and ports</p>
+</li>
+<li>
+<p><strong>Tcpdump</strong></p>
+</li>
+<li>
+<p><strong>Wireshark</strong></p>
+</li>
+<li>
+<p><strong>Nmap</strong></p>
+</li>
+</ul>
+<hr>
+<h2 id="💻-remote-desktop-protocols-in-linux">💻 Remote Desktop Protocols in Linux</h2>
+<h3 id="rdp--vnc-ports">RDP &amp; VNC Ports</h3>
+<ul>
+<li>
+<p>TCP/6001-6009 (6000 = display 0)</p>
+<ul>
+<li>
+<p>RDP (Remote Desktop Protocol) – for Windows</p>
+</li>
+<li>
+<p>VNC (Virtual Network Computing) – for Linux</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="✨-xserver-forwarding-via-ssh">✨ XServer Forwarding (via SSH)</h3>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">cat</span> /etc/ssh/sshd_config <span class="token operator">|</span> <span class="token function">grep</span> X11Forwarding   <span class="token comment"># X11Forwarding yes</span>
+<span class="token function">ssh</span> -X htb-student@10.129.23.11 /usr/bin/firefox  <span class="token comment"># Start app from client</span>
+</code></pre>
+<h3 id="🔐-vnc-setup-tigervnc">🔐 VNC Setup (TigerVNC)</h3>
+<ul>
+<li>
+<p>Ports: TCP/5001-5009 (5000 = display 0)</p>
+</li>
+<li>
+<p>Tools:</p>
+<ul>
+<li>
+<p>TigerVNC</p>
+</li>
+<li>
+<p>TightVNC</p>
+</li>
+<li>
+<p>RealVNC (most used)</p>
+</li>
+<li>
+<p>UltraVNC (most used)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="install-tigervnc">Install TigerVNC</h4>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> xfce4 xfce4-goodies tigervnc-standalone-server -y
+vncpasswd
+</code></pre>
+<h4 id="configure-vnc">Configure VNC</h4>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">touch</span> ~/.vnc/xstartup ~/.vnc/config
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span>EOT <span class="token operator">&gt;&gt;</span> ~/.vnc/xstartup
+<span class="token comment">#!/bin/bash</span>
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+/usr/bin/startxfce4
+<span class="token punctuation">[</span> -x /etc/vnc/xstartup <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token function">exec</span> /etc/vnc/xstartup
+<span class="token punctuation">[</span> -r <span class="token variable">$HOME</span>/.Xresources <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> xrdb <span class="token variable">$HOME</span>/.Xresources
+x-window-manager <span class="token operator">&amp;</span>
+EOT
+<span class="token function">chmod</span> +x ~/.vnc/xstartup
+</code></pre>
+<h4 id="start-vnc-server">Start VNC Server</h4>
+<pre class=" language-bash"><code class="prism  language-bash">vncserver
+</code></pre>
+<h4 id="manage-sessions">Manage Sessions</h4>
+<pre class=" language-bash"><code class="prism  language-bash">vncserver -list
+</code></pre>
+<h4 id="ssh-tunnel-for-vnc">SSH Tunnel for VNC</h4>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">ssh</span> -L 5901:127.0.0.1:5901 -N -f -l htb-student 10.129.14.130
+</code></pre>
+<h4 id="connect-to-vnc">Connect to VNC</h4>
+<pre class=" language-bash"><code class="prism  language-bash">xtightvncviewer localhost:5901
+</code></pre>
+<h1 id="🔒-linux-hardening">🔒 Linux Hardening</h1>
+<h2 id="linux-security">Linux Security</h2>
+<h3 id="some-security-settings">Some security settings</h3>
+<ul>
+<li>
+<p>Removing or disabling all unnecessary services and software</p>
+</li>
+<li>
+<p>Removing all services that rely on unencrypted authentication mechanisms</p>
+</li>
+<li>
+<p>Ensure NTP is enabled and Syslog is running</p>
+</li>
+<li>
+<p>Ensure that each user has its own account</p>
+</li>
+<li>
+<p>Enforce the use of strong passwords</p>
+</li>
+<li>
+<p>Set up password aging and restrict the use of previous passwords</p>
+</li>
+<li>
+<p>Locking user accounts after login failures</p>
+</li>
+<li>
+<p>Disable all unwanted SUID/SGID binaries</p>
+</li>
+</ul>
+<h3 id="🔹-tcp-wrappers">🔹 TCP Wrappers</h3>
+<ul>
+<li><code>/etc/hosts.allow</code> – Services/hosts allowed access:</li>
+</ul>
+<pre><code># Allow access to SSH from the local network
+sshd : 10.129.14.0/24
+
+# Allow access to FTP from a specific host
+ftpd : 10.129.14.10
+
+# Allow access to Telnet from .inlanefreight.local domain
+telnetd : .inlanefreight.local
+</code></pre>
+<ul>
+<li><code>/etc/hosts.deny</code> – Services/hosts denied access:</li>
+</ul>
+<pre><code># Deny access to all services from .inlanefreight.com domain
+ALL : .inlanefreight.com
+
+# Deny access to SSH from a specific host
+sshd : 10.129.22.22
+
+# Deny access to FTP from IPs 10.129.22.0 - 10.129.22.255
+ftpd : 10.129.22.0/24
+</code></pre>
+<hr>
+<h2 id="firewall-setup">Firewall Setup</h2>
+<h3 id="iptables-components">Iptables Components:</h3>
+<ul>
+<li>
+<p><strong>Tables</strong> – Organize firewall rules</p>
+</li>
+<li>
+<p><strong>Chains</strong> – Group rules by traffic type</p>
+</li>
+<li>
+<p><strong>Rules</strong> – Define filtering criteria/actions</p>
+</li>
+<li>
+<p><strong>Matches</strong> – Match specific traffic conditions</p>
+</li>
+<li>
+<p><strong>Targets</strong> – Action (ACCEPT, DROP, REJECT, etc.)</p>
+</li>
+</ul>
+<p><a href="https://academy.hackthebox.com/module/18/section/2099">More Info</a></p>
+<hr>
+<h2 id="📈-logs">📈 Logs</h2>
+<ul>
+<li>
+<p><strong>Kernel Logs</strong>: <code>/var/log/kern.log</code> kernel, including hardware drivers, system calls, and kernel events.</p>
+</li>
+<li>
+<p><strong>System Logs</strong>: <code>/var/log/syslog</code> system-level events, such as service starts and stops, login attempts, and system reboots</p>
+</li>
+<li>
+<p><strong>Authentication Logs</strong>: <code>/var/log/auth.log</code> user authentication attempts, including successful and failed attempts</p>
+</li>
+<li>
+<p><strong>Application Logs</strong>: <code>/var/log/&lt;app&gt;/error.log</code> activities of specific applications running on the system</p>
+</li>
+<li>
+<p><strong>Security Logs</strong>: <code>/var/log/fail2ban.log</code>, <code>/var/log/ufw.log</code>, etc. recorded in a variety of log files, depending on the specific security application or tool in use.</p>
+</li>
+</ul>
+<hr>
+<h1 id="➕-linux-distributions-vs-solaris">➕ Linux Distributions vs Solaris</h1>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Linux</th>
+<th>Solaris</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System Information</td>
+<td><code>uname -a</code></td>
+<td><code>showrev -a</code></td>
+</tr>
+<tr>
+<td>Installing Packages</td>
+<td><code>sudo apt-get install apache2</code></td>
+<td><code>pkgadd -d SUNWapchr</code></td>
+</tr>
+<tr>
+<td>Permission Management</td>
+<td><code>find / -perm 4000</code></td>
+<td><code>find / -perm -4000</code></td>
+</tr>
+</tbody>
+</table><hr>
+<h1 id="⏩-shortcuts">⏩ Shortcuts</h1>
+<h3 id="auto-complete">Auto-Complete</h3>
+<ul>
+<li><code>[TAB]</code> – Auto-complete</li>
+</ul>
+<h3 id="cursor-movement">Cursor Movement</h3>
+<ul>
+<li>
+<p><code>[CTRL] + A</code> – Move the cursor to the beginning of the current line.</p>
+</li>
+<li>
+<p><code>[CTRL] + E</code> – Move the cursor to the end of the current line.</p>
+</li>
+<li>
+<p><code>[CTRL] + [←] / [→]</code> – Jump at the beginning/previous word.</p>
+</li>
+<li>
+<p><code>[ALT] + B / F</code> – Jump backward/forward one word.</p>
+</li>
+</ul>
+<h3 id="erase-the-current-line">Erase The Current Line</h3>
+<ul>
+<li>
+<p><code>[CTRL] + U</code> – Erase to beginning of the line.</p>
+</li>
+<li>
+<p><code>[CTRL] + K</code> – Erase to end of the line.</p>
+</li>
+<li>
+<p><code>[CTRL] + W</code> – Erase the word before the cursor.</p>
+</li>
+</ul>
+<h3 id="paste-erased-contents">Paste Erased Contents</h3>
+<ul>
+<li><code>[CTRL] + Y</code> – Paste the erased text or word.</li>
+</ul>
+<h3 id="ends-task">Ends Task</h3>
+<ul>
+<li><code>[CTRL] + C</code> – Ends the current task/process (sends SIGINT).</li>
+</ul>
+<h3 id="end-of-file-eof">End-of-File (EOF)</h3>
+<ul>
+<li><code>[CTRL] + D</code> – Closes STDIN (End-of-File).</li>
+</ul>
+<h3 id="clear-terminal">Clear Terminal</h3>
+<ul>
+<li><code>[CTRL] + L</code> – Clears terminal. (Same as <code>clear</code> command)</li>
+</ul>
+<h3 id="background-a-process">Background a Process</h3>
+<ul>
+<li><code>[CTRL] + Z</code> – Suspend current process (SIGTSTP).</li>
+</ul>
+<h3 id="search-through-command-history">Search Through Command History</h3>
+<ul>
+<li>
+<p><code>[CTRL] + R</code> – Search previous commands.</p>
+</li>
+<li>
+<p><code>[↑] / [↓]</code> – Navigate command history.</p>
+</li>
+</ul>
+<h3 id="switch-between-applications">Switch Between Applications</h3>
+<ul>
+<li><code>[ALT] + [TAB]</code> – Switch between apps.</li>
+</ul>
+<h3 id="zoom">Zoom</h3>
+<ul>
+<li>
+<p><code>[CTRL] + [+]</code> – Zoom in.</p>
+</li>
+<li>
+<p><code>[CTRL] + [-]</code> – Zoom out.</p>
+</li>
+</ul>
+<p><a href="https://academy.hackthebox.com/achievement/1084819/18">by abdessami</a></p>
+</div>
+</body>
+
+</html>
