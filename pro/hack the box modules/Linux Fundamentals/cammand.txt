@@ -1,0 +1,442 @@
+# https://gtfobins.github.io/gtfobins/journalctl/
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ System Information +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-h , man , info 				# command info
+
+whoami 					# current user
+id 					# Returns users identity
+hostname
+uname 					# Prints basic information about the operating system name and system hardware.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ workflow ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+pwd, ls, cd 				# navigation
+
+tree .					# directory structure
+touch, mkdir 				# creat file ,folder
+cp, mv					# copy, cut/rename
+
+vim, nano 				# edit file
+
+--------------------------------------- Find Files and Directories ---------------------------------------------
+find <location> <options>		
+	-type f 			# 'f' stands for 'file'.
+	-name *.conf 				
+	-user root 	
+	-size +20k 	
+	-newermt 2020-03-03 	
+
+sudo updatedb | locate *.conf		# faster search
+------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------- File Descriptors and Redirections ---------------------------------------
+
+    # Input	STDIN – 0
+    # Output 	STDOUT – 1
+    # error 	STDERR – 2
+
+[command ] 2>/dev/null			# error to null
+[command ] 2>/dev/null 1>results.txt	# error to null and result to file.txt
+[command ] < stdout.txt			# file as input
+[command ] >>results.txt		# without overwritten
+[command1 ] | [command2 ]		# use command2 on the result of command1 
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------- Filter Contents ------------------------------------------------------
+cat, more , less 			# display content of file
+head, Tail				# display first, last lines of file
+cat [file] | sort			# sort the file lines
+cat [file] | grep "str"			# find lines with str
+cat [file] | grep -v "false\|nolog"	# all lines that have "false" or "nolog"	
+
+cat [file] | cut -d":" -f1		# cut where -d is the delimiter ( : here ) and -f for position ( 1 here )
+	# example: root:x:0:0:root:/root:/bin/bash 	--> 	root
+	
+cat [file] | tr ":" " "			# replace ":" by " "
+	# example: root:x:0:0:root:/root:/bin/bash 	--> 	root x 0 0 root /root /bin/bash
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------ Permissions -----------------------------------------------------
+chmod					# Change permissions
+chown <user>:<group> <file>		# change owner
+------------------------------------------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ System Management +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-------------------------------------- Service and Process Management---------------------------------------------
+
+systemctl start ssh			# start process in the background ( ssh here )
+systemctl status ssh			# status of process
+systemctl enable ssh			# auto run with startup
+ps -aux | grep ssh			# check process
+systemctl list-units --type=service	# list all services
+
+kill -l					# kill options
+kill 9 <PID> 				# kill process with option 9
+
+[Ctrl + Z]				# background a process
+jobs					# display all background processes
+bg 					# to put the process from the background
+fg 1					# to put process 1 from the background
+
+------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------- Task Scheduling ---------------------------------------------
+
+*********************************************** Systemd ***********************************************
+    # 1- Create a timer (schedules when your mytimer.service should run)
+    # 2- Create a service (executes the commands or script)
+    # 3- Activate the timer
+
+# 1- Create a Timer
+	
+sudo mkdir /etc/systemd/system/mytimer.timer.d
+sudo vim /etc/systemd/system/mytimer.timer
+    =====================================
+	[Unit]
+	Description=My Timer
+
+	[Timer]
+	OnBootSec=3min			# run our script only once after the system boot
+	OnUnitActiveSec=1hour		# script to run regularly
+
+	[Install]
+	WantedBy=timers.target
+    =====================================	
+
+# 2- Create a Service
+
+sudo vim /etc/systemd/system/mytimer.service
+    =====================================
+	[Unit]
+	Description=My Service
+
+	[Service]
+	ExecStart=/full/path/to/my/script.sh
+
+	[Install]
+	WantedBy=multi-user.target
+    =====================================
+  
+# 2-b Reload Systemd
+sudo systemctl daemon-reload
+
+# 3- Start the Timer & Service
+sudo systemctl start mytimer.timer
+sudo systemctl enable mytimer.timer
+*******************************************************************************************************
+************************************************ Cron *************************************************
+# store the tasks in a file called crontab
+    ==========================================================================================================
+	# Minutes (0-59 , Hours (0-23) , Days of month (1-31) , Months (1-12) , Days of the week (0-7) , path 
+	# System Update
+	0 */6 * * * /path/to/update_software.sh			# every sixth hour	
+
+	# Execute scripts
+	0 0 1 * * /path/to/scripts/run_scripts.sh		# every first day of the month
+
+	# Cleanup DB
+	0 0 * * 0 /path/to/scripts/clean_database.sh		# every Sunday at midnight
+
+	# Backups
+	0 0 * * 7 /path/to/scripts/backup.sh			# every Sunday at midnight
+    ============================================================================================================
+*******************************************************************************************************
+
+------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------- Network Services ---------------------------------------------
+
+**************************************** SSH ********************************************************
+ssh username@10.129.17.122			# connect to ssg
+etc/ssh/sshd_config 				# configuration file of openssg 
+*****************************************************************************************************
+**************************************** NFS ********************************************************
+sudo apt install nfs-kernel-server -y		# Install NFS
+/etc/exports					# configuration file
+
+# Create NFS Share
+	mkdir nfs_sharing
+	echo '/home/[user]/nfs_sharing hostname(rw,sync,no_root_squash)' >> /etc/exports
+	cat /etc/exports | grep -v "#"
+	
+# Mount NFS Share
+	mkdir ~/target_nfs
+	mount 10.129.12.17:/home/john/dev_scripts ~/target_nfs
+	tree ~/target_nfs
+*****************************************************************************************************
+# Web Server ***************************************************
+# VPN:	    sudo openvpn --config internal.ovpn
+
+------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------- Working with Web Services ---------------------------------------------
+# Apache modules
+	# mod_ssl 				securing the communication between the browser and the web server by encrypting the data
+	# mod_proxy 				module is like a traffic controller, directing requests to the correct destination
+	# mod_headers and mod_rewrite 		give you fine control over the data traveling between browser and server, allowing you to modify HTTP headers and URLs on the fly
+	
+sudo systemctl start apache2 			# start the apach server on localhost
+/etc/apache2/ports.conf 			# config file
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------  Backup and Restore -------------------------------------------------
+sudo apt install rsync -y			# install rsync ( backup tool )
+rsync -av /path/to/mydirectory user@backup_server:/path/to/backup/directory		# Rsync - Backup a local Directory to our Backup-Server
+rsync -av user@remote_host:/path/to/backup/directory /path/to/mydirectory		# Rsync - Restore our Backup
+rsync -avz -e ssh /path/to/mydirectory user@backup_server:/path/to/backup/directory	# Secure Transfer of our Backup
+...
+------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------- Containerization -------------------------------------------------------------------
+******************************************** Docker **********************************************************************
+# after making Dockerfile
+docker build -t FS_docker . 								# Docker Build
+docker run -p <host port>:<docker port> -d <docker container name>			# Docker Run - Syntax
+	# ex: docker run -p 8022:22 -p 8080:80 -d FS_docker
+	
+	============================================= Docker management ================================================
+	docker ps 									# List all running containers
+	docker stop 									# Stop a running container.
+	docker start 									# Start a stopped container.
+	docker restart 									# Restart a running container.
+	docker rm 									# Remove a container.
+	docker rmi 									# Remove a Docker image.
+	docker logs 									# View the logs of a container.
+	================================================================================================================
+***************************************************************************************************************************
+******************************************** Linux Containers *************************************************************
+sudo apt-get install lxc lxc-utils -y							# install
+sudo lxc-create -n linuxcontainer -t ubuntu						# create ubuntu container
+
+lxc-ls 											# List all existing containers
+lxc-stop -n <container> 								# Stop a running container.
+lxc-start -n <container> 								# Start a stopped container.
+lxc-restart -n <container> 								# Restart a running container.
+lxc-config -n <container name> -s storage 						# Manage container storage
+lxc-config -n <container name> -s network 						# Manage container network settings
+lxc-config -n <container name> -s security 						# Manage container security settings
+lxc-attach -n <container> 								# Connect to a container.
+lxc-attach -n <container> -f /path/to/share 						# Connect to a container and share a specific directory or file.
+
+sudo vim /usr/share/lxc/config/linuxcontainer.conf					# configuration file for a container named linuxcontainer
+	# lxc.cgroup.cpu.shares = 512						
+	# lxc.cgroup.memory.limit_in_bytes = 512M
+
+***************************************************************************************************************************
+--------------------------------------------------------------------------------------------------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Network Configuration ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ifconfig , ip addr 									# Network Settings
+sudo ifconfig eth0 up	# OR	sudo ip link set eth0 up				# Activate Network Interface
+sudo ifconfig eth0 192.168.1.2								# Assign IP Address to an Interface
+sudo ifconfig eth0 netmask 255.255.255.0						# Assign a Netmask to an Interface
+sudo route add default gw 192.168.1.1 eth0						# Assign the Route to an Interface
+sudo vim /etc/resolv.conf								# Editing DNS Settings
+sudo vim /etc/network/interfaces							# Editing Interfaces
+sudo systemctl restart networking							# Restart Networking Service
+
+# Network Access Control 
+    # Discretionary access control (DAC)
+    # Mandatory access control (MAC)
+    # Role-based access control (RBAC)
+
+# Troubleshooting
+    # Ping
+    # Traceroute									# traces the route
+    # Netstat										# display active network connections and their associated ports
+    # Tcpdump
+    # Wireshark
+    # Nmap
+
+----------------------------------------------- Remote Desktop Protocols in Linux ---------------------------------------------------------------
+
+# ports TCP/6001-6009 (6000 is display 0)
+    # RDP (Remote Desktop Protocol) : for windows
+    # VNC (Virtual Network Computing) : for linux
+******************************************************** XServer *******************************************************************************
+cat /etc/ssh/sshd_config | grep X11Forwarding 		#result: X11Forwarding yes 	# X11Forwarding
+ssh -X htb-student@10.129.23.11 /usr/bin/firefox					# start the application from our client
+**************************************************************************************************************************************************
+******************************************************** VNC *******************************************************************************
+#ports TCP/5001-5009 (5000 is display 0)
+    # TigerVNC
+    # TightVNC
+    # RealVNC	(most used)
+    # UltraVNC	(most used)
+
+# TigerVNC Installation	
+	sudo apt install xfce4 xfce4-goodies tigervnc-standalone-server -y
+	vncpasswd 	
+# Configuration
+	touch ~/.vnc/xstartup ~/.vnc/config
+	cat <<EOT >> ~/.vnc/xstartup
+	=====================================================
+	#!/bin/bash
+	unset SESSION_MANAGER
+	unset DBUS_SESSION_BUS_ADDRESS
+	/usr/bin/startxfce4
+	[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+	[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+	x-window-manager &
+	EOT
+	======================================================
+	cat <<EOT >> ~/.vnc/config
+	chmod +x ~/.vnc/xstartup
+# Start the VNC server
+	vncserver
+# List Sessions
+	vncserver -list
+# Setting Up an SSH Tunnel
+	ssh -L 5901:127.0.0.1:5901 -N -f -l htb-student 10.129.14.130
+# Connecting to the VNC Server
+	xtightvncviewer localhost:5901	
+**************************************************************************************************************************************************
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Linux Hardening ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+--------------------------------------------------------------- Linux Security ----------------------------------------------------------------------
+# Some security settings
+    # Removing or disabling all unnecessary services and software
+    # Removing all services that rely on unencrypted authentication mechanisms
+    # Ensure NTP is enabled and Syslog is running
+    # Ensure that each user has its own account
+    # Enforce the use of strong passwords
+    # Set up password aging and restrict the use of previous passwords
+    # Locking user accounts after login failures
+    # Disable all unwanted SUID/SGID binaries
+# TCP Wrappers 
+    /etc/hosts.allow								# which services and hosts are allowed access to the system
+    ======================================================
+	# Allow access to SSH from the local network
+	sshd : 10.129.14.0/24
+
+	# Allow access to FTP from a specific host
+	ftpd : 10.129.14.10
+
+	# Allow access to Telnet from any host in the inlanefreight.local domain
+	telnetd : .inlanefreight.local
+    ======================================================
+    /etc/hosts.deny								# which services and hosts are not allowed access
+    ======================================================
+	# Deny access to all services from any host in the inlanefreight.com domain
+	ALL : .inlanefreight.com
+
+	# Deny access to SSH from a specific host
+	sshd : 10.129.22.22
+
+	# Deny access to FTP from hosts with IP addresses in the range of 10.129.22.0 to 10.129.22.255
+	ftpd : 10.129.22.0/24
+    ======================================================
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------- Firewall Setup ----------------------------------------------------------------------
+# Iptables components
+	# Tables 	Tables are used to organize and categorize firewall rules.
+	# Chains 	Chains are used to group a set of firewall rules applied to a specific type of network traffic.
+	# Rules 	Rules define the criteria for filtering network traffic and the actions to take for packets that match the criteria.
+	# Matches 	Matches are used to match specific criteria for filtering network traffic, such as source or destination IP addresses, ports, protocols, and more.
+	# Targets 	Targets specify the action for packets that match a specific rule. For example, targets can be used to accept, drop, or reject packets or modify the packets in another way.
+# https://academy.hackthebox.com/module/18/section/2099
+------------------------------------------------------------------------------------------------------------------------------------------------------
+# Logs
+    # Kernel Logs  			/var/log/kern.log			# kernel, including hardware drivers, system calls, and kernel events.
+    # System Logs			/var/log/syslog 			# system-level events, such as service starts and stops, login attempts, and system reboots
+    # Authentication Logs		/var/log/auth.log 			# user authentication attempts, including successful and failed attempts
+    # Application Logs			/var/log/[app]/error.log		# activities of specific applications running on the system
+    # Security Logs			/var/log/fail2ban.log || ufw.log ...  	# recorded in a variety of log files, depending on the specific security application or tool in use. 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Linux Distributions vs Solaris ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ 					Linux 							Solaris
+ System Information:			uname -a  			==>			showrev -a
+Installing Packages: 			sudo apt-get install apache2	==>			pkgadd -d SUNWapchr
+Permission Management:			find / -perm 4000		==>			find / -perm -4000
+...
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Shortcuts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+===================================    Auto-Complete 	===================================
+
+[TAB] 					auto-complet
+
+===================================   Cursor Movement 	===================================
+
+[CTRL] + A 				Move the cursor to the beginning of the current line.
+[CTRL] + E 				Move the cursor to the end of the current line.
+[CTRL] + [←] / [→] 			Jump at the beginning of the current/previous word.
+[ALT] + B / F				Jump backward/forward one word.
+
+=================================== Erase The Current Line ===================================
+
+[CTRL] + U				Erase everything from the current position of the cursor to the beginning of the line.
+[Ctrl] + K				Erase everything from the current position of the cursor to the end of the line.
+[Ctrl] + W				Erase the word preceding the cursor position.
+
+=================================== Paste Erased Contents ===================================
+
+[Ctrl] + Y 				Pastes the erased text or word.
+
+===================================       Ends Task	===================================
+
+[CTRL] + C 				Ends the current task/process by sending the SIGINT signal. 
+
+For example, this can be a scan that is running by a tool. 
+If we are watching the scan, we can stop it / kill this process by using this shortcut.
+While not configured and developed by the tool we are using.
+The process will be killed without asking us for confirmation.
+
+=================================== End-of-File (EOF) 	===================================
+
+[CTRL] + D 				Close STDIN pipe that is also known as End-of-File (EOF) or End-of-Transmission.
+=================================== Clear Terminal	===================================
+
+[CTRL] + L 				Clears the terminal. An alternative to this shortcut is the clear command you can type to clear our terminal.
+
+=================================== Background a Process ===================================
+
+[CTRL] + Z 				Suspend the current process by sending the SIGTSTP signal.
+
+=================================== Search Through Command History ===================================
+
+[CTRL] + R 				Search through command history for commands we typed previously that match our search patterns.
+[↑] / [↓] 				Go to the previous/next command in the command history.
+
+=================================== Switch Between Applications ===================================
+
+[ALT] + [TAB] 				Switch between opened applications.
+
+=================================== 	    Zoom	===================================
+
+[CTRL] + [+]				Zoom in.
+[CTRL] + [-] 				Zoom out.
+
+===========================================================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+https://academy.hackthebox.com/achievement/1084819/18
