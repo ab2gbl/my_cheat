@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome file</title>
+  <title>Linux_Fundamentals.md</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 
@@ -47,7 +47,6 @@
 <p><code>vim</code>, <code>nano</code> – Edit files 📝</p>
 </li>
 </ul>
-<hr>
 <h2 id="🔍-find-files-and-directories">🔍 Find Files and Directories</h2>
 <h3 id="using-find">Using <code>find</code></h3>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">find</span> <span class="token operator">&lt;</span>location<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>options<span class="token operator">&gt;</span>
@@ -62,7 +61,6 @@
 <h3 id="faster-search-with-locate">Faster Search with ‘locate’</h3>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> updatedb <span class="token operator">|</span> <span class="token function">locate</span> *.conf
 </code></pre>
-<hr>
 <h2 id="🔧-file-descriptors-and-redirections">🔧 File Descriptors and Redirections</h2>
 <ul>
 <li>
@@ -105,8 +103,7 @@
 <td>Pipe: use command2 on the result of command1</td>
 </tr>
 </tbody>
-</table><hr>
-<h2 id="🧹-filter-contents">🧹 Filter Contents</h2>
+</table><h2 id="🧹-filter-contents">🧹 Filter Contents</h2>
 <ul>
 <li>
 <p><code>cat</code>, <code>more</code>, <code>less</code> – Display content of file</p>
@@ -133,7 +130,6 @@
 <span class="token comment"># Example:</span>
 <span class="token comment"># root:x:0:0:root:/root:/bin/bash  --&gt;  root x 0 0 root /root /bin/bash</span>
 </code></pre>
-<hr>
 <h2 id="🔐-permissions">🔐 Permissions</h2>
 <ul>
 <li>
@@ -187,7 +183,6 @@
 <p><code>fg 1</code> – Bring process 1 to the foreground</p>
 </li>
 </ul>
-<hr>
 <h2 id="⏰-task-scheduling">⏰ Task Scheduling</h2>
 <h3 id="🔄-systemd-timers">🔄 Systemd Timers</h3>
 <p>1- Create a timer (schedules when your mytimer.service should run)<br>
@@ -240,7 +235,6 @@ WantedBy=multi-user.target
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> systemctl start mytimer.timer
 <span class="token function">sudo</span> systemctl <span class="token function">enable</span> mytimer.timer
 </code></pre>
-<hr>
 <h3 id="🕰️-cron-jobs">🕰️ Cron Jobs</h3>
 <p>Cron stores tasks in a file called <code>crontab</code>.</p>
 <blockquote>
@@ -261,7 +255,6 @@ WantedBy=multi-user.target
 # Backup every Sunday at midnight
 0 0 * * 7 /path/to/scripts/backup.sh
 </code></pre>
-<hr>
 <h2 id="🌐-network-services">🌐 Network Services</h2>
 <h3 id="🔐-ssh">🔐 SSH</h3>
 <ul>
@@ -297,7 +290,6 @@ tree ~/target_nfs
 </ul>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> openvpn --config internal.ovpn
 </code></pre>
-<hr>
 <h2 id="🛍️-working-with-web-services">🛍️ Working with Web Services</h2>
 <h3 id="🔢-apache-modules">🔢 Apache Modules</h3>
 <ul>
@@ -319,7 +311,6 @@ tree ~/target_nfs
 <ul>
 <li>Config file: <code>/etc/apache2/ports.conf</code></li>
 </ul>
-<hr>
 <h2 id="📃-backup-and-restore">📃 Backup and Restore</h2>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token comment"># Install rsync (backup tool)</span>
 <span class="token function">sudo</span> apt <span class="token function">install</span> <span class="token function">rsync</span> -y  
@@ -335,7 +326,6 @@ tree ~/target_nfs
 
 <span class="token comment"># ...</span>
 </code></pre>
-<hr>
 <h2 id="📦-containerization">📦 Containerization</h2>
 <h3 id="🐳-docker">🐳 Docker</h3>
 <blockquote>
@@ -539,7 +529,6 @@ lxc.cgroup.memory.limit_in_bytes = 512M
 <p><strong>Nmap</strong></p>
 </li>
 </ul>
-<hr>
 <h2 id="💻-remote-desktop-protocols-in-linux">💻 Remote Desktop Protocols in Linux</h2>
 <h3 id="rdp--vnc-ports">RDP &amp; VNC Ports</h3>
 <ul>
@@ -665,7 +654,6 @@ sshd : 10.129.22.22
 # Deny access to FTP from IPs 10.129.22.0 - 10.129.22.255
 ftpd : 10.129.22.0/24
 </code></pre>
-<hr>
 <h2 id="firewall-setup">Firewall Setup</h2>
 <h3 id="iptables-components">Iptables Components:</h3>
 <ul>
@@ -686,7 +674,6 @@ ftpd : 10.129.22.0/24
 </li>
 </ul>
 <p><a href="https://academy.hackthebox.com/module/18/section/2099">More Info</a></p>
-<hr>
 <h2 id="📈-logs">📈 Logs</h2>
 <ul>
 <li>
