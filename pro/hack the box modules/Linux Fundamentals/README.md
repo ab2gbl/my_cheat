@@ -17,7 +17,7 @@
 - `cp`, `mv` – Copy, cut/rename files 🗄️
 
 - `vim`, `nano` – Edit files 📝
-
+----------
 ## 🔍 Find Files and Directories
 ### Using `find`
 ```bash
@@ -32,6 +32,7 @@ find <location> <options>
 ```bash
 sudo updatedb | locate *.conf
 ```
+----------
 ## 🔧 File Descriptors and Redirections
 
 -   **Input**: `STDIN` – 0
@@ -48,6 +49,7 @@ sudo updatedb | locate *.conf
 |  `[command] >>results.txt`|Append output to file (no overwrite)  |
 |  `[command1] | [command2]`|Pipe: use command2 on the result of command1  |
 
+----------
 ## 🧹 Filter Contents
 
 -   `cat`, `more`, `less` – Display content of file
@@ -73,6 +75,7 @@ cat <file> | tr ":" " "
 # root:x:0:0:root:/root:/bin/bash  -->  root x 0 0 root /root /bin/bash
 ```
 
+----------
 ## 🔐 Permissions
 
 -   `chmod` – Change permissions
@@ -111,7 +114,7 @@ cat <file> | tr ":" " "
 -   `bg` – Resume a process in the background
     
 -   `fg 1` – Bring process 1 to the foreground
-
+----------
 ## ⏰ Task Scheduling
 
 ### 🔄 Systemd Timers
@@ -174,6 +177,8 @@ sudo systemctl start mytimer.timer
 sudo systemctl enable mytimer.timer
 ```
 
+----------
+
 ### 🕰️ Cron Jobs
 Cron stores tasks in a file called `crontab`.
 
@@ -194,7 +199,7 @@ Cron stores tasks in a file called `crontab`.
 # Backup every Sunday at midnight
 0 0 * * 7 /path/to/scripts/backup.sh
 ```
-
+----------
 ## 🌐 Network Services
 
 ### 🔐 SSH
@@ -238,6 +243,7 @@ tree ~/target_nfs
 ```bash
 sudo openvpn --config internal.ovpn
 ```
+----------
 ## 🛍️ Working with Web Services
 
 ### 🔢 Apache Modules
@@ -257,6 +263,7 @@ sudo systemctl start apache2
 -   Config file: `/etc/apache2/ports.conf`
     
 
+----------
 
 ## 📃 Backup and Restore
 
@@ -275,6 +282,7 @@ rsync -avz -e ssh /path/to/mydirectory user@backup_server:/path/to/backup/direct
 
 # ...
 ```
+----------
 ## 📦 Containerization
 
 ### 🐳 Docker
@@ -326,7 +334,8 @@ docker run -p 8022:22 -p 8080:80 -d FS_docker
 lxc.cgroup.cpu.shares = 512
 lxc.cgroup.memory.limit_in_bytes = 512M
 ```
----
+
+----------
 # 🌐 Network Configuration
 
 |  |  |
@@ -365,6 +374,8 @@ lxc.cgroup.memory.limit_in_bytes = 512M
     
 -   **Nmap**
     
+
+----------
 
 ## 💻 Remote Desktop Protocols in Linux
 
@@ -497,6 +508,7 @@ sshd : 10.129.22.22
 ftpd : 10.129.22.0/24
 ```
 
+----------
 
 ## Firewall Setup
 ### Iptables Components:
@@ -514,6 +526,7 @@ ftpd : 10.129.22.0/24
 
 [More Info](https://academy.hackthebox.com/module/18/section/2099)
 
+----------
 
 ## 📈 Logs
 
@@ -528,7 +541,7 @@ ftpd : 10.129.22.0/24
 -   **Security Logs**: `/var/log/fail2ban.log`, `/var/log/ufw.log`, etc. recorded in a variety of log files, depending on the specific security application or tool in use. 
 
     
----
+----------
 
 # ➕ Linux Distributions vs Solaris
 |  |Linux |Solaris|
@@ -537,7 +550,7 @@ ftpd : 10.129.22.0/24
 | Installing Packages | `sudo apt-get install apache2` | `pkgadd -d SUNWapchr` |
 | Permission Management | `find / -perm 4000` | `find / -perm -4000` |
 
----
+----------
 
 # ⏩ Shortcuts
 
@@ -609,4 +622,12 @@ ftpd : 10.129.22.0/24
     
 -   `[CTRL] + [-]` – Zoom out.
 
+# 📄 License
+
+This cheat sheet is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You may use and modify this freely, but please give credit. 🙏
+
 [by abdessami](https://academy.hackthebox.com/achievement/1084819/18)
+![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
+

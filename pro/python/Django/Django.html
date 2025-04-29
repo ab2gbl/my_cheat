@@ -1,0 +1,918 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  </head>
+
+  <body class="stackedit">
+    <div class="stackedit__html">
+      <h1 id="🌐-django-project-setup--development-guide">
+        🌐 Django Project Setup &amp; Development Guide
+      </h1>
+      <h1 id="django-project-setup">Django Project Setup</h1>
+      <h2 id="🧱-environment-setup">🧱 Environment Setup</h2>
+      <pre
+        class="language-bash"
+      ><code class="prism  language-bash">python.exe -m pip <span class="token function">install</span> --upgrade pip <span class="token comment"># upgrade pip</span>
+pip <span class="token function">install</span> virtualenv <span class="token comment"># install virtualenv </span>
+virtualenv <span class="token function">env</span>  <span class="token comment"># Create virtual environment</span>
+env\Scripts\activate  <span class="token comment"># Activate environment</span>
+pip <span class="token function">install</span> django  <span class="token comment"># Install Django in venv</span>
+</code></pre>
+      <h2 id="📁-project-initialization">📁 Project Initialization</h2>
+      <pre
+        class="language-bash"
+      ><code class="prism  language-bash">django-admin startproject projectname <span class="token comment"># making django project </span>
+python manage.py migrate <span class="token comment"># migrate</span>
+code <span class="token keyword">.</span>  <span class="token comment"># Open with VSCode</span>
+python manage.py createsuperuser  <span class="token comment"># Create admin</span>
+python manage.py runserver  <span class="token comment"># Start development server</span>
+</code></pre>
+      <h2 id="📦-requirements">📦 Requirements</h2>
+      <pre
+        class="language-bash"
+      ><code class="prism  language-bash">pip freeze <span class="token operator">&gt;</span> requirements.txt  <span class="token comment"># Save dependencies</span>
+pip <span class="token function">install</span> -r requirements.txt  <span class="token comment"># Install dependencies</span>
+</code></pre>
+      <h1 id="⚙️-app-creation">⚙️ App Creation</h1>
+      <pre
+        class="language-bash"
+      ><code class="prism  language-bash">python manage.py startapp appname
+</code></pre>
+      <h3 id="🔌-connect-app-to-project">🔌 Connect App to Project</h3>
+      <ul>
+        <li>In <code>project/settings.py</code>, add:</li>
+      </ul>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token string">'appname.apps.AppnameConfig'</span>
+<span class="token comment"># Example: 'test.apps.TestConfig'</span>
+</code></pre>
+      <ul>
+        <li>Create <code>urls.py</code> inside your app folder:</li>
+      </ul>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path<span class="token punctuation">,</span> include
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">'appname/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'appname.urls'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+      <h1 id="📄-views">📄 Views</h1>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+
+<span class="token keyword">def</span> <span class="token function">example</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">'hello world'</span><span class="token punctuation">)</span>
+</code></pre>
+      <h3 id="in-apps-urls.py">In app’s <code>urls.py</code>:</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>example<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'appname'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+      <h2 id="using-templates">Using Templates:</h2>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+
+<span class="token keyword">def</span> <span class="token function">product</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'products/product.html'</span><span class="token punctuation">)</span>
+</code></pre>
+      <h3 id="passing-data-to-templates">Passing Data to Templates:</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">product</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'products/product.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'Ali'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+      <p>In HTML:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token punctuation">{</span><span class="token punctuation">{</span> name <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+      <h1 id="🗂️-template-configuration">🗂️ Template Configuration</h1>
+      <ol>
+        <li>
+          <p>Create a <code>templates</code> folder.</p>
+        </li>
+        <li>
+          <p>In <code>settings.py</code>:</p>
+        </li>
+      </ol>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">import</span> os
+<span class="token string">'DIRS'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">'templates'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre>
+      <h2 id="sample-template-usage">Sample Template Usage</h2>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token punctuation">{</span><span class="token operator">%</span> extends <span class="token string">'base.html'</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> block content <span class="token operator">%</span><span class="token punctuation">}</span>HTML content<span class="token punctuation">{</span><span class="token operator">%</span> endblock content <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> include <span class="token string">'example.html'</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">if</span> condition <span class="token operator">%</span><span class="token punctuation">}</span>YES<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">else</span> <span class="token operator">%</span><span class="token punctuation">}</span>NO<span class="token punctuation">{</span><span class="token operator">%</span> endif <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">for</span> item <span class="token keyword">in</span> <span class="token builtin">list</span> <span class="token operator">%</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> item <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token operator">%</span> endfor <span class="token operator">%</span><span class="token punctuation">}</span>
+</code></pre>
+      <h3 id="static-files--import-css-or-js-or-picture-">
+        Static Files ( import css or js or picture )
+      </h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token punctuation">{</span><span class="token operator">%</span> load static <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"{% static 'css/style.css' %}"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{% url 'about' %}"</span><span class="token operator">&gt;</span>About<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+</code></pre>
+      <h2 id="🎨-static-files-setup">🎨 Static Files Setup</h2>
+      <ol>
+        <li>
+          Create <code>static</code> folder and subfolders like
+          <code>css</code>, <code>js</code>.
+        </li>
+        <li>In <code>settings.py</code>:</li>
+      </ol>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">STATIC_ROOT <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">'static'</span><span class="token punctuation">)</span>
+STATICFILES_DIRS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">'projectname/static'</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</code></pre>
+      <ol start="3">
+        <li>Run the command:</li>
+      </ol>
+      <pre
+        class="language-bash"
+      ><code class="prism  language-bash">python manage.py collectstatic
+</code></pre>
+      <h1 id="🧩-models">🧩 Models</h1>
+      <h2 id="create-model">Create model</h2>
+      <ol>
+        <li>Create your class</li>
+      </ol>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Product</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+    content <span class="token operator">=</span> models<span class="token punctuation">.</span>TextField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    price <span class="token operator">=</span> models<span class="token punctuation">.</span>DecimalField<span class="token punctuation">(</span>max_digits<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span> decimal_places<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+    image <span class="token operator">=</span> models<span class="token punctuation">.</span>ImageField<span class="token punctuation">(</span>upload_to<span class="token operator">=</span><span class="token string">'photos/%y/%m/%d'</span><span class="token punctuation">)</span>
+    active <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    guest <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span>Guest<span class="token punctuation">,</span> related_name<span class="token operator">=</span><span class="token string">'reservation'</span><span class="token punctuation">,</span> on_delete<span class="token operator">=</span>models<span class="token punctuation">.</span>CASCADE<span class="token punctuation">)</span> <span class="token comment"># foreign key</span>
+</code></pre>
+      <ol start="2">
+        <li>Run the command</li>
+      </ol>
+      <pre
+        class="language-bash"
+      ><code class="prism  language-bash">python manage.py makemigrations
+python manage.py migrate
+</code></pre>
+      <h2 id="👤-integration-into-admin-panel">
+        👤 Integration into Admin panel
+      </h2>
+      <p>on app/admin</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Product
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Product<span class="token punctuation">)</span>
+</code></pre>
+      <h2 id="👁️-views-display--querying">👁️ Views: Display &amp; Querying</h2>
+      <p>you cab use it in the next way :</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Product
+
+<span class="token keyword">def</span> <span class="token function">products</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'products/products.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'pro'</span><span class="token punctuation">:</span> Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+      <p>and you can use the next filters</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># Filters</span>
+Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>price<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>price<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>exclude<span class="token punctuation">(</span>price<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">"price"</span><span class="token punctuation">)</span>
+<span class="token builtin">str</span><span class="token punctuation">(</span>Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+      <h2 id="🧾-templates--rendering-data">
+        🧾 Templates &amp; Rendering Data
+      </h2>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> pro <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span> i<span class="token punctuation">.</span>name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> endfor <span class="token operator">%</span><span class="token punctuation">}</span>
+</code></pre>
+      <h2 id="👁️-display--querying-in-views">
+        👁️ Display &amp; Querying in Views
+      </h2>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Product
+
+<span class="token keyword">def</span> <span class="token function">products</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'products/products.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'pro'</span><span class="token punctuation">:</span> Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Filters</span>
+Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>price<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>price<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>exclude<span class="token punctuation">(</span>price<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">"price"</span><span class="token punctuation">)</span>
+<span class="token builtin">str</span><span class="token punctuation">(</span>Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+      <h2 id="🧾-templates--rendering-data-1">
+        🧾 Templates &amp; Rendering Data
+      </h2>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> pro <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span> i<span class="token punctuation">.</span>name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> endfor <span class="token operator">%</span><span class="token punctuation">}</span>
+</code></pre>
+      <h2 id="📌-model-customization">📌 Model Customization</h2>
+      <p>this function to select what can u display in admin page</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> self<span class="token punctuation">.</span>name
+</code></pre>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+    verbose_name <span class="token operator">=</span> <span class="token string">'ModelName'</span> <span class="token comment"># to change model (or class) name 	</span>
+    ordering <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token comment"># to order objects with name </span>
+</code></pre>
+      <h3 id="field-customization">Field customization</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">category <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+choices <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">(</span><span class="token string">'phone'</span><span class="token punctuation">,</span> <span class="token string">'phone'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'computer'</span><span class="token punctuation">,</span> <span class="token string">'computer'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+category <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>choices<span class="token operator">=</span>choices<span class="token punctuation">)</span>
+</code></pre>
+      <h1 id="🖼️-media-files--images">🖼️ Media (Files &amp; Images)</h1>
+      <h3 id="📌-settings-configuration">📌 Settings Configuration</h3>
+      <p>Add the following in your <code>settings.py</code>:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">MEDIA_URL <span class="token operator">=</span> <span class="token string">'media/'</span>
+MEDIA_ROOT <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">'media'</span><span class="token punctuation">)</span>
+</code></pre>
+      <h3 id="📌-url-configuration">📌 URL Configuration</h3>
+      <p>Update <code>urls.py</code> of your project:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>conf <span class="token keyword">import</span> settings
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls<span class="token punctuation">.</span>static <span class="token keyword">import</span> static
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">]</span> <span class="token operator">+</span> static<span class="token punctuation">(</span>settings<span class="token punctuation">.</span>MEDIA_URL<span class="token punctuation">,</span> document_root<span class="token operator">=</span>settings<span class="token punctuation">.</span>MEDIA_ROOT<span class="token punctuation">)</span>
+</code></pre>
+      <h1 id="🧾-forms--requests">🧾 Forms &amp; Requests</h1>
+      <p>you can directly use</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">example</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	x <span class="token operator">=</span> request<span class="token punctuation">.</span>POST<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">)</span>
+	y <span class="token operator">=</span> request<span class="token punctuation">.</span>POST<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'password'</span><span class="token punctuation">)</span>
+	data <span class="token operator">=</span> user<span class="token punctuation">(</span>username<span class="token operator">=</span>x<span class="token punctuation">,</span>username<span class="token operator">=</span>y<span class="token punctuation">)</span>
+	data<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span><span class="token string">'pages/signin.html'</span><span class="token punctuation">)</span> 
+</code></pre>
+      <p>or using Form</p>
+      <h2 id="using-form">using Form</h2>
+      <h3 id="creating-a-form">Creating a Form</h3>
+      <p>create file <code>forms.py</code> :</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django <span class="token keyword">import</span> forms
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Product
+
+<span class="token keyword">class</span> <span class="token class-name">ProductForm</span><span class="token punctuation">(</span>forms<span class="token punctuation">.</span>ModelForm<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+        model <span class="token operator">=</span> Product
+        fields <span class="token operator">=</span> <span class="token string">'__all__'</span>
+</code></pre>
+      <h3 id="views-with-form-handling">Views with Form Handling</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span>forms <span class="token keyword">import</span> ProductForm
+
+<span class="token keyword">def</span> <span class="token function">add_product</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    form <span class="token operator">=</span> ProductForm<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span><span class="token punctuation">:</span>
+        form <span class="token operator">=</span> ProductForm<span class="token punctuation">(</span>request<span class="token punctuation">.</span>POST<span class="token punctuation">,</span> request<span class="token punctuation">.</span>FILES<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> form<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            form<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'products/add_product.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'form'</span><span class="token punctuation">:</span> form<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+      <h3 id="updating-and-deleting">Updating and Deleting</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">update_product</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    product <span class="token operator">=</span> Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token builtin">id</span><span class="token operator">=</span><span class="token builtin">id</span><span class="token punctuation">)</span>
+    form <span class="token operator">=</span> ProductForm<span class="token punctuation">(</span>instance<span class="token operator">=</span>product<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span><span class="token punctuation">:</span>
+        form <span class="token operator">=</span> ProductForm<span class="token punctuation">(</span>request<span class="token punctuation">.</span>POST<span class="token punctuation">,</span> request<span class="token punctuation">.</span>FILES<span class="token punctuation">,</span> instance<span class="token operator">=</span>product<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> form<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            form<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'products/update_product.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'form'</span><span class="token punctuation">:</span> form<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">delete_product</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    product <span class="token operator">=</span> Product<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token builtin">id</span><span class="token operator">=</span><span class="token builtin">id</span><span class="token punctuation">)</span>
+    product<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span><span class="token string">'products'</span><span class="token punctuation">)</span>
+</code></pre>
+      <h1 id="⚙️-apis--application-programming-interface-">
+        ⚙️ APIs ( Application Programming Interface )
+      </h1>
+      <h2 id="🟠-method-1-basic-json-response">
+        🟠 Method 1: Basic JSON Response
+      </h2>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> JsonResponse
+
+<span class="token keyword">def</span> <span class="token function">no_rest_no_model</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    guests <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token string">'id'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'omar'</span><span class="token punctuation">,</span> <span class="token string">'mobile'</span><span class="token punctuation">:</span> <span class="token number">666666</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token string">'id'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'samy'</span><span class="token punctuation">,</span> <span class="token string">'mobile'</span><span class="token punctuation">:</span> <span class="token number">555555</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+    <span class="token keyword">return</span> JsonResponse<span class="token punctuation">(</span>guests<span class="token punctuation">,</span> safe<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+</code></pre>
+      <h2 id="🟡-method-2-json-response-using-django-models">
+        🟡 Method 2: JSON Response Using Django Models
+      </h2>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> JsonResponse
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Guest
+
+<span class="token keyword">def</span> <span class="token function">no_rest_from_model</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    response <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'guest'</span><span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'mobile'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> JsonResponse<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+</code></pre>
+      <h2 id="🟢-method-3-using-django-rest-framework">
+        🟢 Method 3: Using Django REST Framework
+      </h2>
+      <h1 id="⚙️-rest-framework-drf">⚙️ REST Framework (DRF)</h1>
+      <h2 id="📦-installation">📦 Installation</h2>
+      <p>To use the Django REST Framework (DRF), install it via pip:</p>
+      <pre
+        class="language-bash"
+      ><code class="prism  language-bash">pip <span class="token function">install</span> djangorestframework
+</code></pre>
+      <p>
+        Then, add it to your <code>INSTALLED_APPS</code> in
+        <code>settings.py</code>:
+      </p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">'rest_framework'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+      <h2 id="🧰-serializers-in-drf">🧰 Serializers in DRF</h2>
+      <p>
+        Serializers allow complex data types such as querysets and model
+        instances to be converted to native Python datatypes that can then be
+        easily rendered into JSON.
+      </p>
+      <h3 id="🔹-basic-serializer-example">🔹 Basic Serializer Example</h3>
+      <p>
+        Create a <code>serializers.py</code> file in your app folder (e.g.,
+        <code>tickets/serializers.py</code>):
+      </p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework <span class="token keyword">import</span> serializers
+<span class="token keyword">from</span> tickets<span class="token punctuation">.</span>models <span class="token keyword">import</span> Guest<span class="token punctuation">,</span> Movie<span class="token punctuation">,</span> Reservation
+
+<span class="token keyword">class</span> <span class="token class-name">MovieSerializer</span><span class="token punctuation">(</span>serializers<span class="token punctuation">.</span>ModelSerializer<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+        model <span class="token operator">=</span> Movie
+        fields <span class="token operator">=</span> <span class="token string">'__all__'</span>
+</code></pre>
+      <h3 id="🔸-advanced-serializer-with-extra-fields">
+        🔸 Advanced Serializer with Extra Fields
+      </h3>
+      <p>
+        DRF allows adding computed or related fields and marking them as
+        read/write only.
+      </p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">MovieSerializer</span><span class="token punctuation">(</span>serializers<span class="token punctuation">.</span>ModelSerializer<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Example extras:</span>
+    <span class="token comment"># test = serializers.IntegerField(default=1)</span>
+    <span class="token comment"># courses = CoursesSerializer(many=True, read_only=True, source='fk_related_name')</span>
+    <span class="token comment"># instructor = serializers.SerializerMethodField()</span>
+
+    <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+        model <span class="token operator">=</span> Movie
+        fields <span class="token operator">=</span> <span class="token string">'__all__'</span>
+
+    <span class="token comment"># def get_instructor(self, instance):</span>
+    <span class="token comment">#     return instance.instructor.username</span>
+</code></pre>
+      <h3 id="🔐-read-only--write-only-fields">
+        🔐 Read-Only / Write-Only Fields
+      </h3>
+      <p>
+        You can restrict fields in your serializers using
+        <code>extra_kwargs</code>:
+      </p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">AdminSerializer</span><span class="token punctuation">(</span>serializers<span class="token punctuation">.</span>ModelSerializer<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+        model <span class="token operator">=</span> Admin
+        fields <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">,</span> <span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token string">'email'</span><span class="token punctuation">,</span> <span class="token string">'password'</span><span class="token punctuation">,</span> <span class="token string">'role'</span><span class="token punctuation">,</span> <span class="token string">'is_staff'</span><span class="token punctuation">]</span>
+        extra_kwargs <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">'password'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'write_only'</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token string">'role'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'read_only'</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token string">'is_staff'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'write_only'</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+</code></pre>
+      <h2 id="🧭-based-views-bv-in-drf">🧭 Based Views (BV) in DRF</h2>
+      <h3 id="🧪-function-based-views-fbv">🧪 Function-Based Views (FBV)</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>decorators <span class="token keyword">import</span> api_view
+<span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>response <span class="token keyword">import</span> Response
+<span class="token keyword">from</span> rest_framework <span class="token keyword">import</span> status
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Guest
+<span class="token keyword">from</span> <span class="token punctuation">.</span>serializers <span class="token keyword">import</span> GuestSerializer
+</code></pre>
+      <h4 id="📌-get-and-post-—-list--create">
+        📌 GET and POST — List &amp; Create
+      </h4>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL: path('FBV_List/', views.FBV_List),</span>
+@api_view<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'POST'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">FBV_List</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'GET'</span><span class="token punctuation">:</span>
+        guests <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        serializer <span class="token operator">=</span> GuestSerializer<span class="token punctuation">(</span>guests<span class="token punctuation">,</span> many<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+
+    <span class="token keyword">elif</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span><span class="token punctuation">:</span>
+        serializer <span class="token operator">=</span> GuestSerializer<span class="token punctuation">(</span>data<span class="token operator">=</span>request<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> serializer<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            serializer<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">,</span> status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_201_CREATED<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>errors<span class="token punctuation">,</span> status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_400_BAD_REQUEST<span class="token punctuation">)</span>
+</code></pre>
+      <h4 id="📌-get-put-delete-—-single-item">
+        📌 GET, PUT, DELETE — Single Item
+      </h4>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL: path('FBV_pk/&lt;int:pk&gt;/', views.FBV_pk),</span>
+@api_view<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'PUT'</span><span class="token punctuation">,</span> <span class="token string">'DELETE'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">FBV_pk</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        guest <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pk<span class="token operator">=</span>pk<span class="token punctuation">)</span>
+    <span class="token keyword">except</span> Guest<span class="token punctuation">.</span>DoesNotExist<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_404_NOT_FOUND<span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'GET'</span><span class="token punctuation">:</span>
+        serializer <span class="token operator">=</span> GuestSerializer<span class="token punctuation">(</span>guest<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+
+    <span class="token keyword">elif</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'PUT'</span><span class="token punctuation">:</span>
+        serializer <span class="token operator">=</span> GuestSerializer<span class="token punctuation">(</span>guest<span class="token punctuation">,</span> data<span class="token operator">=</span>request<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> serializer<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            serializer<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">,</span> status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_202_ACCEPTED<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>errors<span class="token punctuation">,</span> status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_400_BAD_REQUEST<span class="token punctuation">)</span>
+
+    <span class="token keyword">elif</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'DELETE'</span><span class="token punctuation">:</span>
+        guest<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_200_OK<span class="token punctuation">)</span>
+</code></pre>
+      <h3 id="🧱-class-based-views-cbv">🧱 Class-Based Views (CBV)</h3>
+      <pre class="language-python"><code class="prism  language-python">
+<span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>views <span class="token keyword">import</span> APIView
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> Http404
+</code></pre>
+      <h4 id="📌-get-and-post-—-list--create-1">
+        📌 GET and POST — List &amp; Create
+      </h4>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL: path('CBV_List/', views.CBV_List.as_view()),</span>
+
+<span class="token keyword">class</span> <span class="token class-name">CBV_List</span><span class="token punctuation">(</span>APIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        guests <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        serializer <span class="token operator">=</span> GuestSerializer<span class="token punctuation">(</span>guests<span class="token punctuation">,</span> many<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">post</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        serializer <span class="token operator">=</span> GuestSerializer<span class="token punctuation">(</span>data<span class="token operator">=</span>request<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> serializer<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            serializer<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">,</span> status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_201_CREATED<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>errors<span class="token punctuation">,</span> status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_400_BAD_REQUEST<span class="token punctuation">)</span>
+</code></pre>
+      <h4 id="📌-get-put-delete-—-single-item-1">
+        📌 GET, PUT, DELETE — Single Item
+      </h4>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL: path('CBV_pk/&lt;int:pk&gt;/', views.CBV_pk.as_view()),</span>
+<span class="token keyword">class</span> <span class="token class-name">CBV_pk</span><span class="token punctuation">(</span>APIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get_object</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pk<span class="token operator">=</span>pk<span class="token punctuation">)</span>
+        <span class="token keyword">except</span> Guest<span class="token punctuation">.</span>DoesNotExist<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> Http404
+
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        guest <span class="token operator">=</span> self<span class="token punctuation">.</span>get_object<span class="token punctuation">(</span>pk<span class="token punctuation">)</span>
+        serializer <span class="token operator">=</span> GuestSerializer<span class="token punctuation">(</span>guest<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">put</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        guest <span class="token operator">=</span> self<span class="token punctuation">.</span>get_object<span class="token punctuation">(</span>pk<span class="token punctuation">)</span>
+        serializer <span class="token operator">=</span> GuestSerializer<span class="token punctuation">(</span>guest<span class="token punctuation">,</span> data<span class="token operator">=</span>request<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> serializer<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            serializer<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">,</span> status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_202_ACCEPTED<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>errors<span class="token punctuation">,</span> status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_400_BAD_REQUEST<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">delete</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        guest <span class="token operator">=</span> self<span class="token punctuation">.</span>get_object<span class="token punctuation">(</span>pk<span class="token punctuation">)</span>
+        guest<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span>status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_200_OK<span class="token punctuation">)</span>
+</code></pre>
+      <h2 id="⚒️-mixins">⚒️ Mixins</h2>
+      <p>we have this:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">mixins<span class="token punctuation">.</span>ListModelMixin <span class="token comment"># get all objects </span>
+mixins<span class="token punctuation">.</span>CreateModelMixin <span class="token comment"># create new object </span>
+mixins<span class="token punctuation">.</span>RetrieveModelMixin  <span class="token comment"># get 1 object </span>
+mixins<span class="token punctuation">.</span>UpdateModelMixin <span class="token comment"># update 1 object </span>
+mixins<span class="token punctuation">.</span>DestroyModelMixin <span class="token comment"># delete 1 object </span>
+</code></pre>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework <span class="token keyword">import</span> mixins<span class="token punctuation">,</span> generics
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Guest
+<span class="token keyword">from</span> <span class="token punctuation">.</span>serializers <span class="token keyword">import</span> GuestSerializer
+</code></pre>
+      <h3 id="📌-get-and-post-—-list--create-2">
+        📌 GET and POST — List &amp; Create
+      </h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL path('mixins_list/', views.mixins_list.as_view()),</span>
+<span class="token keyword">class</span> <span class="token class-name">mixins_list</span><span class="token punctuation">(</span>mixins<span class="token punctuation">.</span>ListModelMixin<span class="token punctuation">,</span>
+                  mixins<span class="token punctuation">.</span>CreateModelMixin<span class="token punctuation">,</span>
+                  generics<span class="token punctuation">.</span>GenericAPIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    queryset <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    serializer_class <span class="token operator">=</span> GuestSerializer
+
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span><span class="token builtin">list</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">post</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>create<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+</code></pre>
+      <h3 id="📌-get-put-delete-—-single-item-2">
+        📌 GET, PUT, DELETE — Single Item
+      </h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL: path('mixins_pk/&lt;int:pk&gt;/', views.mixins_pk.as_view()),</span>
+<span class="token keyword">class</span> <span class="token class-name">mixins_pk</span><span class="token punctuation">(</span>mixins<span class="token punctuation">.</span>RetrieveModelMixin<span class="token punctuation">,</span>
+                mixins<span class="token punctuation">.</span>UpdateModelMixin<span class="token punctuation">,</span>
+                mixins<span class="token punctuation">.</span>DestroyModelMixin<span class="token punctuation">,</span>
+                generics<span class="token punctuation">.</span>GenericAPIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    queryset <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    serializer_class <span class="token operator">=</span> GuestSerializer
+
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>retrieve<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">put</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>update<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">delete</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>destroy<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+</code></pre>
+      <h2 id="🧬-generics">🧬 Generics</h2>
+      <p>we have this:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">generics<span class="token punctuation">.</span>ListAPIView <span class="token comment"># List </span>
+generics<span class="token punctuation">.</span>ListCreateAPIView <span class="token comment"># List + create </span>
+generics<span class="token punctuation">.</span>RetrieveUpdateDestroyAPIView <span class="token comment">#Retrieve + Update + Destroy</span>
+</code></pre>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework <span class="token keyword">import</span> generics
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Guest
+<span class="token keyword">from</span> <span class="token punctuation">.</span>serializers <span class="token keyword">import</span> GuestSerializer
+</code></pre>
+      <h3 id="📌-get-and-post-—-list--create-3">
+        📌 GET and POST — List &amp; Create
+      </h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL: path('generics_list/', views.generics_list.as_view()),</span>
+<span class="token keyword">class</span> <span class="token class-name">generics_list</span><span class="token punctuation">(</span>generics<span class="token punctuation">.</span>ListCreateAPIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    queryset <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    serializer_class <span class="token operator">=</span> GuestSerializer
+</code></pre>
+      <h3 id="📌-get-put-delete-—-single-item-3">
+        📌 GET, PUT, DELETE — Single Item
+      </h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL: path('generics_pk/&lt;int:pk&gt;/', views.generics_pk.as_view())</span>
+<span class="token keyword">class</span> <span class="token class-name">generics_pk</span><span class="token punctuation">(</span>generics<span class="token punctuation">.</span>RetrieveUpdateDestroyAPIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    queryset <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    serializer_class <span class="token operator">=</span> GuestSerializer
+</code></pre>
+      <h2 id="🔄-viewsets--routers">🔄 ViewSets &amp; Routers</h2>
+      <h3 id="📌-crud-in-one-class">📌 CRUD in One Class</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework <span class="token keyword">import</span> viewsets
+<span class="token keyword">class</span> <span class="token class-name">viewsets_guest</span><span class="token punctuation">(</span>viewsets<span class="token punctuation">.</span>ModelViewSet<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    queryset <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    serializer_class <span class="token operator">=</span> GuestSerializer
+</code></pre>
+      <p>and on <code>urls.py</code></p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token comment"># URL</span>
+<span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>routers <span class="token keyword">import</span> DefaultRouter
+router <span class="token operator">=</span> DefaultRouter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+router<span class="token punctuation">.</span>register<span class="token punctuation">(</span><span class="token string">'guests'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>viewsets_guest<span class="token punctuation">)</span>
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    path<span class="token punctuation">(</span><span class="token string">'viewsets/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span>router<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+      <h2 id="🎯-examples">🎯 Examples</h2>
+      <h3 id="🔍-find-movie-by-query-param">🔍 Find Movie by Query Param</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">@api_view<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'GET'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">find_movie</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    mov <span class="token operator">=</span> Movie<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    movies <span class="token operator">=</span> mov<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>
+        movie<span class="token operator">=</span>request<span class="token punctuation">.</span>query_params<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'movie'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+    serializer <span class="token operator">=</span> MovieSerializer<span class="token punctuation">(</span>movies<span class="token punctuation">,</span> many<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Response<span class="token punctuation">(</span>serializer<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+</code></pre>
+      <h3 id="📝-create-reservation">📝 Create Reservation</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">@api_view<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'POST'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">reserve</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    movie <span class="token operator">=</span> Movie<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>
+        movie<span class="token operator">=</span>request<span class="token punctuation">.</span>query_params<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'movie'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        hall<span class="token operator">=</span>request<span class="token punctuation">.</span>query_params<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'hall'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+    guest <span class="token operator">=</span> Guest<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>
+        pk<span class="token operator">=</span>request<span class="token punctuation">.</span>query_params<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'pk'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+    reservation <span class="token operator">=</span> Reservation<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    reservation<span class="token punctuation">.</span>guest <span class="token operator">=</span> guest
+    reservation<span class="token punctuation">.</span>movie <span class="token operator">=</span> movie
+    reservation<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Response<span class="token punctuation">(</span>status<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_201_CREATED<span class="token punctuation">)</span>
+</code></pre>
+      <h1 id="🔐-token-authentication-and-permissions">
+        🔐 Token Authentication and Permissions
+      </h1>
+      <h3 id="📌-setup-token-auth">📌 Setup Token Auth</h3>
+      <p>Add token authentication in <code>settings.py</code>:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">REST_FRAMEWORK <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'DEFAULT_AUTHENTICATION_CLASSES'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token string">'rest_framework.authentication.TokenAuthentication'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment"># Optional global permissions</span>
+    <span class="token comment"># 'DEFAULT_PERMISSION_CLASSES': [</span>
+    <span class="token comment">#     'rest_framework.permissions.IsAuthenticated',</span>
+    <span class="token comment"># ]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      <h3 id="📌-token-generation-via-url">📌 Token Generation via URL</h3>
+      <p>In your <code>urls.py</code>, include:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>authtoken<span class="token punctuation">.</span>views <span class="token keyword">import</span> obtain_auth_token
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    path<span class="token punctuation">(</span><span class="token string">'api-token/'</span><span class="token punctuation">,</span> obtain_auth_token<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+      <p>
+        You can now POST a username and password to <code>/api-token/</code> and
+        receive a token in response.
+      </p>
+      <h3 id="📌-token-auth-in-a-view">📌 Token Auth in a View</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>authentication <span class="token keyword">import</span> TokenAuthentication
+<span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>permissions <span class="token keyword">import</span> IsAuthenticated
+
+<span class="token keyword">class</span> <span class="token class-name">ExampleView</span><span class="token punctuation">(</span>APIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    authentication_classes <span class="token operator">=</span> <span class="token punctuation">[</span>TokenAuthentication<span class="token punctuation">]</span>
+    permission_classes <span class="token operator">=</span> <span class="token punctuation">[</span>IsAuthenticated<span class="token punctuation">]</span>
+</code></pre>
+      <h3 id="📌-use-token-in-requests">📌 Use Token in Requests</h3>
+      <p>Send the token in headers:</p>
+      <pre><code>Authorization: Token 72a9a9276f0d3a907586a832a2bbc0d3216eba89
+</code></pre>
+      <h3 id="📌-automatically-create-token-on-user-creation">
+        📌 Automatically Create Token on User Creation
+      </h3>
+      <p>In <code>models.py</code> or a <code>signals.py</code> file:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>models<span class="token punctuation">.</span>signals <span class="token keyword">import</span> post_save
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>dispatch <span class="token keyword">import</span> receiver
+<span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>authtoken<span class="token punctuation">.</span>models <span class="token keyword">import</span> Token
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf <span class="token keyword">import</span> settings
+
+@receiver<span class="token punctuation">(</span>post_save<span class="token punctuation">,</span> sender<span class="token operator">=</span>settings<span class="token punctuation">.</span>AUTH_USER_MODEL<span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">TokenCreate</span><span class="token punctuation">(</span>sender<span class="token punctuation">,</span> instance<span class="token punctuation">,</span> created<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> created<span class="token punctuation">:</span>
+        Token<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>create<span class="token punctuation">(</span>user<span class="token operator">=</span>instance<span class="token punctuation">)</span>
+</code></pre>
+      <h2 id="🔑-permissions">🔑 Permissions</h2>
+      <h3 id="📌-built-in-permissions">📌 Built-in Permissions</h3>
+      <blockquote>
+        <p>
+          Note<br />
+          if u search on google “django rest framework github” and open the
+          first result , then on<br />
+          “/rest_framework/permissions.py” u can get the code of default
+          permission (AllowAny // IsAuthenticated // IsAdminuser //
+          IsAuthenticatedReadOnly…)
+        </p>
+      </blockquote>
+      <p>DRF provides several built-in permission classes:</p>
+      <ul>
+        <li>
+          <p><code>AllowAny</code>: No restriction</p>
+        </li>
+        <li>
+          <p><code>IsAuthenticated</code>: Only authenticated users</p>
+        </li>
+        <li>
+          <p><code>IsAdminUser</code>: Only admin users</p>
+        </li>
+        <li>
+          <p>
+            <code>IsAuthenticatedOrReadOnly</code>: Read for everyone, write for
+            authenticated users
+          </p>
+        </li>
+      </ul>
+      <p>
+        You can apply one or more permission classes to individual views or
+        globally via <code>settings.py</code>.
+      </p>
+      <h3 id="📌-apply-to-a-view">📌 Apply to a View</h3>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework<span class="token punctuation">.</span>permissions <span class="token keyword">import</span> IsAuthenticated
+
+<span class="token keyword">class</span> <span class="token class-name">ProtectedView</span><span class="token punctuation">(</span>APIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    permission_classes <span class="token operator">=</span> <span class="token punctuation">[</span>IsAuthenticated<span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> Response<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"message"</span><span class="token punctuation">:</span> <span class="token string">"Authenticated access only!"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+      <h3 id="📌-custom-permissions-example">📌 Custom Permissions Example</h3>
+      <p>Create a <code>permissions.py</code> file in your app:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> rest_framework <span class="token keyword">import</span> permissions
+
+<span class="token keyword">class</span> <span class="token class-name">IsAuthorOrReadOnly</span><span class="token punctuation">(</span>permissions<span class="token punctuation">.</span>BasePermission<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">has_object_permission</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> view<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token keyword">in</span> permissions<span class="token punctuation">.</span>SAFE_METHODS<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">return</span> obj<span class="token punctuation">.</span>author <span class="token operator">==</span> request<span class="token punctuation">.</span>user
+</code></pre>
+      <p>Then apply it in your view:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span>permissions <span class="token keyword">import</span> IsAuthorOrReadOnly
+
+<span class="token keyword">class</span> <span class="token class-name">ExampleDetailView</span><span class="token punctuation">(</span>APIView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    permission_classes <span class="token operator">=</span> <span class="token punctuation">[</span>IsAuthorOrReadOnly<span class="token punctuation">]</span>
+</code></pre>
+      <h1 id="👤-custom-users-in-django">👤 Custom Users in Django</h1>
+      <h2 id="📌-step-1-create-a-new-app-and-update-settings">
+        📌 Step 1: Create a New App and Update Settings
+      </h2>
+      <p>In <code>settings.py</code>, set the custom user model:</p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python">AUTH_USER_MODEL <span class="token operator">=</span> <span class="token string">'appname.User'</span>
+</code></pre>
+      <h2 id="📌-step-2-define-user-model-in-your-app">
+        📌 Step 2: Define User Model in Your App
+      </h2>
+      <p>In <code>models.py</code></p>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Iterable<span class="token punctuation">,</span> Optional
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib<span class="token punctuation">.</span>auth<span class="token punctuation">.</span>models <span class="token keyword">import</span> AbstractUser<span class="token punctuation">,</span> BaseUserManager
+
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>AbstractUser<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">class</span> <span class="token class-name">Role</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>TextChoices<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ADMIN <span class="token operator">=</span> <span class="token string">'ADMIN'</span><span class="token punctuation">,</span> <span class="token string">'Admin'</span>
+        STUDENT <span class="token operator">=</span> <span class="token string">'STUDENT'</span><span class="token punctuation">,</span> <span class="token string">'Student'</span>
+        TEACHER <span class="token operator">=</span> <span class="token string">'TEACHER'</span><span class="token punctuation">,</span> <span class="token string">'Teacher'</span>
+
+    base_role <span class="token operator">=</span> Role<span class="token punctuation">.</span>ADMIN
+    role <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> choices<span class="token operator">=</span>Role<span class="token punctuation">.</span>choices<span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token operator">not</span> self<span class="token punctuation">.</span>role<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>role <span class="token operator">=</span> self<span class="token punctuation">.</span>base_role
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+      <h2 id="📌-step-3-create-proxy-model-for-roles">
+        📌 Step 3: Create Proxy Model for Roles
+      </h2>
+      <pre
+        class="language-python"
+      ><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">StudentManager</span><span class="token punctuation">(</span>BaseUserManager<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get_queryset</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        result <span class="token operator">=</span> <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>get_queryset<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>role<span class="token operator">=</span>User<span class="token punctuation">.</span>Role<span class="token punctuation">.</span>STUDENT<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">(</span>User<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    base_role <span class="token operator">=</span> User<span class="token punctuation">.</span>Role<span class="token punctuation">.</span>STUDENT
+    student <span class="token operator">=</span> StudentManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+        proxy <span class="token operator">=</span> <span class="token boolean">True</span>
+</code></pre>
+      <h3 id="📄-license">📄 License</h3>
+      <p>
+        This cheat sheet is licensed under the
+        <a href="https://creativecommons.org/licenses/by/4.0/"
+          >Creative Commons Attribution 4.0 International (CC BY 4.0)</a
+        >.
+      </p>
+      <p>
+        You may use and modify this freely, but please give credit. 🙏<br />
+        <img
+          src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg"
+          alt="License: CC BY 4.0"
+        />
+      </p>
+    </div>
+    <footer>
+      <p>
+        © 2024
+        <a href="https://academy.hackthebox.com/achievement/1084819/18"
+          >Ayoub Abdessami Guebli</a
+        >
+        — Licensed under
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+          >CC BY 4.0</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

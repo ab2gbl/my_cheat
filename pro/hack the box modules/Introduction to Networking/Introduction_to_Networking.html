@@ -1,0 +1,279 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction_to_Networking</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  </head>
+
+  <body class="stackedit">
+    <div class="stackedit__html">
+      <h1 id="introduction">Introduction</h1>
+      <h2 id="overview">overview</h2>
+      <ul>
+        <li><code>topologies</code> (mesh/tree/star),</li>
+        <li><code>mediums</code> (ethernet/fiber/coax/wireless),</li>
+        <li><code>protocols</code> (TCP/UDP/IPX)</li>
+      </ul>
+      <h2 id="basic-information">Basic Information</h2>
+      <ul>
+        <li>
+          <strong>website address:</strong>
+          <ul>
+            <li>
+              <strong>FQDN</strong> ( Uniform Resource Locator ) :
+              <code>www.hackthebox.eu</code>
+            </li>
+            <li>
+              <strong>URL</strong> ( Fully Qualified Domain Name ):<code
+                >https://www.hackthebox.eu/example?
+                floor=2&amp;office=dev&amp;employee=17</code
+              >
+            </li>
+          </ul>
+        </li>
+        <li><strong>Router</strong></li>
+        <li>
+          <strong>ISP</strong> ( Internet Service Provider ) : looks in
+          <code>DNS</code>
+        </li>
+        <li>
+          <strong>DNS</strong> ( Domain Name Service ) : return
+          <code>IP adress</code>
+        </li>
+      </ul>
+      <h1 id="networking-structure">Networking Structure</h1>
+      <h2 id="network-types">Network Types</h2>
+      <h3 id="common-terminology">Common Terminology</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th><strong>Network Type</strong></th>
+            <th><strong>Definition</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>WAN</strong> (Wide Area Network)</td>
+            <td>Internet</td>
+          </tr>
+          <tr>
+            <td><strong>LAN</strong> (Local Area Network)</td>
+            <td>Internal Networks (Ex: Home or Office)</td>
+          </tr>
+          <tr>
+            <td><strong>WLAN</strong> (Wireless Local Area Network)</td>
+            <td>Internal Networks accessible over Wi-Fi</td>
+          </tr>
+          <tr>
+            <td><strong>VPN</strong> (Virtual Private Network)</td>
+            <td>Connects multiple network sites to one <code>LAN</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 id="wan">WAN</h4>
+      <ul>
+        <li>routing protocol such as BGP</li>
+        <li>dont use RFC 1918 (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16).</li>
+      </ul>
+      <h4 id="lanwlan">LAN/WLAN</h4>
+      <ul>
+        <li>use RFC 1918 (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16).</li>
+        <li>rarely routable ( like some hotels or college )</li>
+      </ul>
+      <h4 id="vpn">VPN</h4>
+      <p>there’s 3 types</p>
+      <h5 id="site-to-site-vpn">Site-To-Site VPN</h5>
+      <ul>
+        <li>used to join company networks together over the Internet</li>
+      </ul>
+      <h5 id="remote-access-vpn">Remote Access VPN</h5>
+      <ul>
+        <li>like <code>HTB openVPN</code>,</li>
+        <li>
+          <code>Split-Tunnel VPN</code>: the Internet connection is not going
+          out of the VPN.
+        </li>
+        <li></li>
+      </ul>
+      <h5 id="ssl-vpn">SSL VPN</h5>
+      <ul>
+        <li>
+          stream applications or entire desktop sessions to your web browser
+        </li>
+        <li>like <code>HTB Pwnbox</code></li>
+      </ul>
+      <h3 id="book-terms">Book Terms</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th><strong>Network Type</strong></th>
+            <th><strong>Definition</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>GAN</strong> (Global Area Network)</td>
+            <td>Global network (the Internet)</td>
+          </tr>
+          <tr>
+            <td><strong>MAN</strong> (Metropolitan Area Network)</td>
+            <td>Regional network (multiple LANs)</td>
+          </tr>
+          <tr>
+            <td><strong>WPAN</strong> (Wireless Personal Area Network)</td>
+            <td>Personal network (Bluetooth)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="networking-topologies">Networking Topologies</h2>
+      <ul>
+        <li>
+          <strong>nodes - Network Interface Controller (NICs):</strong>
+          Repeaters - Hubs - Bridges - Switches - Router/Modem - Gateways -
+          Firewalls
+        </li>
+        <li>
+          <strong>Classifications:</strong> Point_to_Point - Bus - Star - Ring -
+          Mesh - Tree - Hybrid - Daisy Chain
+        </li>
+      </ul>
+      <h2 id="proxies">Proxies</h2>
+      <p>
+        A proxy is when a device or service sits in the middle of a connection
+        and acts as a <code>mediator</code>( inspect the contents of the traffic
+        ), without mediator it’s just a <code>gateway</code>.<br />
+        proxies will almost always operate at Layer 7 of the OSI Model
+      </p>
+      <ul>
+        <li><code>Dedicated Proxy</code> / <code>Forward Proxy</code></li>
+        <li><code>Reverse Proxy</code></li>
+        <li><code>Transparent Proxy</code></li>
+      </ul>
+      <h3 id="dedicated-proxy--forward-proxy">
+        Dedicated Proxy / Forward Proxy
+      </h3>
+      <ul>
+        <li><strong>Direction:</strong> Client → Proxy → Internet</li>
+        <li>
+          <strong>Purpose:</strong> Filters and controls
+          <strong>outgoing</strong> traffic from internal clients.
+        </li>
+        <li>
+          <strong>Use Cases:</strong>
+          <ul>
+            <li>Corporate networks (security &amp; access control).</li>
+            <li>Penetration testing tools like <strong>Burp Suite</strong>.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Security Note:</strong> Helps block malware C2, especially
+          when DNS or proxy awareness is involved.
+        </li>
+        <li>
+          <strong>Browser Behavior:</strong>
+          <ul>
+            <li>Chrome/Edge use system proxy settings.</li>
+            <li>
+              Firefox uses its own settings, making it harder for malware to use
+              proxies.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="reverse-proxy">Reverse Proxy</h3>
+      <ul>
+        <li><strong>Direction:</strong> Internet → Proxy → Server</li>
+        <li>
+          <strong>Purpose:</strong> Filters and protects
+          <strong>incoming</strong> traffic to internal servers.
+        </li>
+        <li>
+          <strong>Use Cases:</strong>
+          <ul>
+            <li><strong>Cloudflare</strong> for DDoS mitigation and WAF.</li>
+            <li>
+              <strong>ModSecurity</strong> for detecting and blocking web-based
+              attacks.
+            </li>
+            <li>
+              <strong>Red teamers/malware</strong> may use reverse proxies to
+              tunnel through internal networks and bypass IDS.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Security Note:</strong> Hides server details, blocks malicious
+          traffic, enables logging, and evades monitoring when misused.
+        </li>
+      </ul>
+      <h3 id="non--transparent-proxy">(Non-) Transparent Proxy</h3>
+      <ul>
+        <li>
+          <strong>Transparent Proxy:</strong>
+          <ul>
+            <li>The client doesn’t know it’s using a proxy.</li>
+            <li>Network intercepts requests automatically.</li>
+            <li>
+              Often used in public Wi-Fi or by ISPs for content filtering.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Non-Transparent Proxy:</strong>
+          <ul>
+            <li>
+              The client is explicitly configured (e.g., browser or OS
+              settings).
+            </li>
+            <li>
+              If not configured, <strong>internet access fails</strong> — proxy
+              is the only route out.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h1 id="networking-models">Networking Models</h1>
+      <p>
+        <img
+          src="https://academy.hackthebox.com/storage/modules/34/redesigned/net_models_pdu2.png"
+          alt="Comparison of OSI and TCP/IP models with PDUs: OSI has 7 layers including Application, Presentation, Session, Transport, Network, Data-Link, and Physical. TCP/IP has 4 layers: Application, Transport, Internet, and Link. PDUs are Data, Segment/Datagram, Packet, Frame, and Bit."
+        /><br />
+        <img
+          src="https://academy.hackthebox.com/storage/modules/34/packet_transfer.png"
+          alt="Diagram of packet transfer showing data encapsulation from sender to receiver through layers: Data, TCP, IP, MAC, and Binary Transmission, with corresponding headers and sequence."
+        /><br />
+        … to be continued
+      </p>
+      <h3 id="📄-license">📄 License</h3>
+      <p>
+        This cheat sheet is licensed under the
+        <a href="https://creativecommons.org/licenses/by/4.0/"
+          >Creative Commons Attribution 4.0 International (CC BY 4.0)</a
+        >.
+      </p>
+      <p>
+        You may use and modify this freely, but please give credit. 🙏<br />
+        <img
+          src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg"
+          alt="License: CC BY 4.0"
+        />
+      </p>
+    </div>
+    <footer>
+      <p>
+        © 2024
+        <a href="https://ab2gbl-portfolio.vercel.app/"
+          >Ayoub Abdessami Guebli</a
+        >
+        — Licensed under
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+          >CC BY 4.0</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
