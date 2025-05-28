@@ -62,6 +62,7 @@ git remote -v							check if there's remote or connection to an online repo in g
 // first create reposetry on github account and copy the url of it then this command :
 git remote add origin https://github.com/ab2gbl/project.git
 git remote set-url origin https://( Token classic )@github.com/ab2gbl/e-commerce_nextjs.git
+git git@github.com:ab2gbl/e-commerce_nextjs.git
 
 // then
 git push -u origin master					push
