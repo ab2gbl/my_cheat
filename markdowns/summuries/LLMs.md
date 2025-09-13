@@ -7,6 +7,8 @@ Model | Examples |Tasks
 **Encoder-decoder** | BART, T5, Marian, mBART | Summarization, translation, generative question answering
 
 ![transformers_architecture](./pics/transformers_architecture.png)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkxMzYxNDM1LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMwOT
+k4MTE2XX0=
 -->
