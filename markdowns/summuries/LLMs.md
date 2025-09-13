@@ -10,15 +10,16 @@ Model | Examples |Tasks
 
 
 ![transformers_architecture](./pics/LLMs/transformers_architecture.png)
+
 # LLM pipeline
 
 ![transformers_architecture](./pics/LLMs/full_nlp_pipeline-dark.svg)
 ![transformers_architecture](./pics/LLMs/transformer_and_head-dark.svg)
 
-> **Tokenizers** : Word-based,  character-based, 
+> **Tokenizers** : Word-based,  character-based, ## Subword tokenization
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODExOTY5MTgsLTI3MzI1NjUwOSwtMT
-k1MTE4Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2
-MTQzNSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTAzNDI3NjMxMSwtMjczMjU2NTA5LC0xOT
+UxMTgyODQyLC0xNTgxNzgwOTc2LDE1MTE4ODg5NzEsMjkxMzYx
+NDM1LDczMDk5ODExNl19
 -->
