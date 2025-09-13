@@ -1,5 +1,18 @@
 
-# LLM 
+# LLMs Architectures  
+Model
+
+Examples
+
+Tasks
+
+Encoder-only
+
+BERT, DistilBERT, ModernBERT| 
+Sentence classification, named entity recognition, extractive question answering
+Decoder-only | GPT, LLaMA, Gemma, SmolLM
+Text generation, conversational AI, creative writing 
+Encoder-decoder | BART, T5, Marian, mBART | Summarization, translation, generative question answering
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjA1Nzk2MDYsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMzE5MjU5NjEsNzMwOTk4MTE2XX0=
 -->
