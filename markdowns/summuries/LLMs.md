@@ -10,9 +10,9 @@ Model | Examples |Tasks
 
 ![transformers_architecture](./pics/LLMs/transformers_architecture.png)
 
-# Tokenizers
+> **Tokenizers** : Word-based
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzk1OTUzMzUsLTE1ODE3ODA5NzYsMT
+eyJoaXN0b3J5IjpbLTE5NTExODI4NDIsLTE1ODE3ODA5NzYsMT
 UxMTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4MTE2XX0=
 -->
