@@ -16,10 +16,10 @@ Model | Examples |Tasks
 ![transformers_architecture](./pics/LLMs/full_nlp_pipeline-dark.svg)
 ![transformers_architecture](./pics/LLMs/transformer_and_head-dark.svg)
 
-> **Tokenizers** : Word-based,  character-based, ## Subword tokenization
+> **Tokenizers** : Word-based,  character-based, Subword tokenization
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNDI3NjMxMSwtMjczMjU2NTA5LC0xOT
-UxMTgyODQyLC0xNTgxNzgwOTc2LDE1MTE4ODg5NzEsMjkxMzYx
-NDM1LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTI2MzA0NTA5NywxMDM0Mjc2MzExLC0yNz
+MyNTY1MDksLTE5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4
+ODk3MSwyOTEzNjE0MzUsNzMwOTk4MTE2XX0=
 -->
