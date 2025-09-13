@@ -14,13 +14,14 @@ Model | Examples |Tasks
 # LLM pipeline
 ## Full LLM pipeline
 ![Full LLM pipeline](./pics/LLMs/full_nlp_pipeline-dark.svg)
-> **Tokenizers** : Word-based,  Character-based, Subword tokenization
+> **Tokenizer types** : Word-based,  Character-based, Subword tokenization
 ## inside model pipe
 ![inside model pipeline](./pics/LLMs/transformer_and_head-dark.svg)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTgwMTQxMyw4MDI3MzkyNTUsMTAzND
-I3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0xNTgxNzgw
-OTc2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTE5MTY5NjEyODUsODAyNzM5MjU1LDEwMz
+QyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0MiwtMTU4MTc4
+MDk3NiwxNTExODg4OTcxLDI5MTM2MTQzNSw3MzA5OTgxMTZdfQ
+==
 -->
