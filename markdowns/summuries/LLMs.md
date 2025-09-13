@@ -7,8 +7,11 @@ Model | Examples |Tasks
 **Encoder-decoder** | BART, T5, Marian, mBART | Summarization, translation, generative question answering
 
 ![transformers_architecture](./pics/LLMs/transformers_architecture.png)
+![transformers_architecture](./pics/LLMs/full_nlp_pipeline-dark.svg)
+
+# Tokenizers
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOT
-EzNjE0MzUsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTUxNjE3NjAwMSwtMTU4MTc4MDk3NiwxNT
+ExODg4OTcxLDI5MTM2MTQzNSw3MzA5OTgxMTZdfQ==
 -->
