@@ -6,7 +6,7 @@ Model | Examples |Tasks
 **Decoder-only** | GPT, LLaMA, Gemma, SmolLM | Text generation, conversational AI, creative writing 
 **Encoder-decoder** | BART, T5, Marian, mBART | Summarization, translation, generative question answering
 
-![transformers_architecture](./pics/LLM/transformers_architecture.png)
+![transformers_architecture](./pics/transformers_architecture.png)
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMjkxMzYxNDM1LDczMDk5ODExNl19
 -->
