@@ -26,15 +26,20 @@ from transformers import AutoTokenizer
 # load token
 checkpoint = "distilbert-base-uncased-finetuned-sst-2-english"
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+
 # sentance to tokes
 sequence = "I've been waiting for a HuggingFace course my whole life."
 model_inputs = tokenizer(sequence)
 # or model_inputs = tokenizer(sequences, padding="max_length", max_length=8)
+# or model_inputs = tokenizer(sequences, max_length=8, truncation=True)
+
+# return as tensors
+model_inputs = tokenizer(sequences, padding=True, return_tensors="pt") # pt: pytorch tensors 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2Mjg4Njk0MywtMTkxNjk2MTI4NSw4MD
-I3MzkyNTUsMTAzNDI3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgy
-ODQyLC0xNTgxNzgwOTc2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LD
-czMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTEyOTkzODQzNTAsLTE5MTY5NjEyODUsOD
+AyNzM5MjU1LDEwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4
+Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2MTQzNS
+w3MzA5OTgxMTZdfQ==
 -->
