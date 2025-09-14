@@ -21,11 +21,13 @@ Model | Examples |Tasks
 ## transformers Library
 
 ```python
-from transformers import AutoTokenizer
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-# load token
+# load tokenizer and model
 checkpoint = "distilbert-base-uncased-finetuned-sst-2-english"
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+model = AutoModelForSequenceClassification.from_pretrained(checkpoint)
 
 # sentance to tokes
 sequence = "I've been waiting for a HuggingFace course my whole life."
@@ -38,8 +40,8 @@ model_inputs = tokenizer(sequences, padding=True, return_tensors="pt") # pt: pyt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTkzODQzNTAsLTE5MTY5NjEyODUsOD
-AyNzM5MjU1LDEwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4
-Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2MTQzNS
-w3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTU1MDQ1Mjk3MywtMTkxNjk2MTI4NSw4MD
+I3MzkyNTUsMTAzNDI3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgy
+ODQyLC0xNTgxNzgwOTc2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LD
+czMDk5ODExNl19
 -->
