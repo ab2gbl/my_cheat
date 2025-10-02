@@ -449,7 +449,7 @@ Method | Purpose
 ## Wireless Networks
 
 - Wireless networks use radio frequency `RF`
-- **[Wireless Access Point](https://en.wikipedia.org/wiki/Wireless_access_point) (`WAP`)
+- **Wireless Access Point(`WAP`)** : like router for ex: connects the wireless network to a wired network
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNzMwMTI0NywxNTEzMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbLTE3NTExMjA3MDAsMTUxMzIxODM1NF19
 -->
