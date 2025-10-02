@@ -459,8 +459,8 @@ Method | Purpose
 3 | `Client` | Calculates a response to the challenge string and a shared secret key and sends it back to the WAP.
 4 | `WAP` | Calculates the expected response to the challenge with the same shared secret key and sends an authentication response packet to the client.
 
-- **Cyclic Redundancy Check (`CRC`)**: is an error-detection mechanism used in the WEP protoco
+- **Cyclic Redundancy Check (`CRC`)**: error-detection mechanism in `WEP` protocot
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjMwOTM4NTcsMTEzNzYyOTI0Myw3Mj
+eyJoaXN0b3J5IjpbLTExNzM0NjU4MDQsMTEzNzYyOTI0Myw3Mj
 UzNjY1ODIsMTUxMzIxODM1NF19
 -->
