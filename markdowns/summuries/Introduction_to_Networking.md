@@ -474,8 +474,10 @@ Method | Purpose
 
 #### WPA
 - `WPA` using `AES` uses a `128-bit`
-- `WPA` more secure authentication methods
+- `WPA` more secure auth methods (`PSK` or an 802.1X auth server)
+
+### Authentication Protocols
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzcwNTg0OCwxMTM3NjI5MjQzLDcyNT
+eyJoaXN0b3J5IjpbLTcwMDY3MTAxMywxMTM3NjI5MjQzLDcyNT
 M2NjU4MiwxNTEzMjE4MzU0XX0=
 -->
