@@ -493,20 +493,15 @@ Method | Purpose
 	-  uses the ports `TCP/1723` for **Point-to-Point Tunneling Protocol**  `PPTP`
 	- and `UDP/500` for **IKEv1** and **IKEv2** VPN connections.
 - VPNs encrypt the connection between the remote device and the private network 
-**Requirement**
 
-**Description**
-
-`VPN Client`
-
-This is installed on the remote device and is used to establish and maintain a VPN connection with the VPN server. For example, this could be an OpenVPN client.
-
+**Requirement** | **Description**
+|--|--|
+`VPN Client` | This is installed on the remote device and is used to establish and maintain a VPN connection with the VPN server. For example, this could be an OpenVPN client.
 `VPN Server` | This is a computer or network device responsible for accepting VPN connections from VPN clients and routing traffic between the VPN clients and the private network.
-
-`Encryption` | VPN connections are encrypted using a variety of encryption algorithms and protocols, such as AES and IPsec, to secure the connection and protect the transmitted data.
+`Encryption` | such as AES and IPsec.
 `Authentication` | The VPN server and client must authenticate each other using a shared secret, certificate, or another authentication method to establish a secure connection.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NDU2OTg4Nyw5NTAwOTIxMjUsLTExOD
+eyJoaXN0b3J5IjpbLTUyMDIzMzM5MCw5NTAwOTIxMjUsLTExOD
 M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
 NjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ
 ==
