@@ -519,11 +519,13 @@ For example, an administrator could place a firewall in between. In order to fac
 `Internet Protocol`  (`IP`) | `UDP/50-51` | This is the primary protocol that provides the foundation for all internet communication.
 `Internet Key Exchange`  (`IKE`) | `UDP/500` | IKE is a protocol used in VPN.
 `Encapsulating Security Payload`  (`ESP`) | `UDP/4500` | ESP is also a protocol that provides encryption and auth for IP datagrams. using the keys that were negotiated with IKE.
-
-
+### PPTP
+- Point-to-Point Tunneling Protocol (`PPTP`) is a network protocol that enables the creation of VPNs 
+- PPTP is no longer considered secure
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQxMjQ4NTIwLDEyOTgxOTkzNiw5NTAwOT
-IxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3
-NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MT
-MyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbNDcyOTA4NjMsMTI5ODE5OTM2LDk1MDA5Mj
+EyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3
+Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMz
+IxODM1NF19
 -->
