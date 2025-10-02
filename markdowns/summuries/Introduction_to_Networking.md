@@ -471,7 +471,11 @@ Method | Purpose
 --|--|--
 `WEP-40`/`WEP-64` | 24-bit | 40-bit
 `WEP-104` | 24-bit | 80-bit
+
+#### WPA
+- `WPA` using `AES` uses a `128-bit`
+- `WPA` more secure authentication methods
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjMxOTg1NjksMTEzNzYyOTI0Myw3Mj
-UzNjY1ODIsMTUxMzIxODM1NF19
+eyJoaXN0b3J5IjpbLTE2NzcwNTg0OCwxMTM3NjI5MjQzLDcyNT
+M2NjU4MiwxNTEzMjE4MzU0XX0=
 -->
