@@ -482,8 +482,15 @@ Method | Purpose
 - `PEAP` uses a more secure auth method called (`TLS`) using a `digital certificate`
 ### Disassociation Attack
 `all` wireless network attack that aims to disrupt the communication between a WAP and its clients by sending disassociation frames to one or more clients.
+### Wireless Hardening
+-   Disabling broadcasting
+-   WiFi Protected Access
+-   MAC filtering
+-   Deploying EAP-TLS
+
+## VPN
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNj
-QyMzYwNjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgz
-NTRdfQ==
+eyJoaXN0b3J5IjpbLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLT
+E4MzY0MTE3NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNzI1MzY2
+NTgyLDE1MTMyMTgzNTRdfQ==
 -->
