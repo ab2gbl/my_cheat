@@ -489,8 +489,11 @@ Method | Purpose
 -   Deploying EAP-TLS
 
 ## VPN
+- **Virtual Private Network** (`VPN`)
+	-  uses the ports `TCP/1723` for **Point-to-Point Tunneling Protocol**  `PPTP`
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLT
-E4MzY0MTE3NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNzI1MzY2
-NTgyLDE1MTMyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbMjA2NDc2OTEzNSwtMTE4MzU2NTUwMSwtMT
+gyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYy
+OTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1NF19
 -->
