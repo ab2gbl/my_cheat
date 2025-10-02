@@ -506,8 +506,13 @@ Method | Purpose
 ### IPsec
 - Internet Protocol Security (`IPsec`) is a network security protocol ( combined from `AH` + `ESP` )
 - encrypting the data payload of each IP packet and adding an `authentication header` (`AH`)
+
+**Mode** | **Description**
+|--|--|
+`Transport Mode` | In this mode, IPsec encrypts and authenticates the data payload of each IP packet but does not encrypt the IP header. This is typically used to secure end-to-end communication between two hosts.
+`Tunnel Mode` | With this mode, IPsec encrypts and authenticates the entire IP packet, including the IP header. This is typically used to create a VPN tunnel between two networks.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNzQwODc2MCw5NTAwOTIxMjUsLTExOD
+eyJoaXN0b3J5IjpbMTY3NjQyNjA2NCw5NTAwOTIxMjUsLTExOD
 M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
 NjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ
 ==
