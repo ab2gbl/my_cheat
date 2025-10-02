@@ -463,7 +463,8 @@ Method | Purpose
 - **CRC** allow decrypt a single packet `without` knowing the `encryption key` (using the `plaintext`)
 - **CRC** value is recalculated by **WAP** using `received data` and compared to the original value from the **Device** to see if lose of data happened
 ### Encryption Protocols
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMzgxNjE3OCwxMTM3NjI5MjQzLDcyNT
+eyJoaXN0b3J5IjpbMTU4NjgyMzYxMiwxMTM3NjI5MjQzLDcyNT
 M2NjU4MiwxNTEzMjE4MzU0XX0=
 -->
