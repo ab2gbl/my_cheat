@@ -501,10 +501,11 @@ Method | Purpose
 `Encryption` | such as AES and IPsec.
 `Authentication` | using a shared secret, certificate, or another auth method.
 
-- At the TCP/IP layer, a VPN connection typically uses the `ESP`) protocol to encrypt and authenticate the VPN traffic
+- At the TCP/IP layer, a VPN connection typically uses the `ESP` protocol to encrypt and auth the VPN traffic
+At the TCP/IP layer, a VPN connection typically uses the [Encapsulating Security Payload](https://www.ibm.com/docs/en/i/7.4?topic=protocols-encapsulating-security-payload) (`ESP`) protocol to encrypt and authenticate the VPN traffic
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNDM3MDc3Nyw5NTAwOTIxMjUsLTExOD
-M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
-NjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ
-==
+eyJoaXN0b3J5IjpbLTE2NzMxOTk5MTQsOTUwMDkyMTI1LC0xMT
+gzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2
+MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4MiwxNTEzMjE4MzU0XX
+0=
 -->
