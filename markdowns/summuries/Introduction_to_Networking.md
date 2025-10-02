@@ -464,12 +464,14 @@ Method | Purpose
 - **CRC** value is recalculated by **WAP** using `received data` and compared to the original value from the **Device** to see if lose of data happened
 ### Encryption Protocols
 #### WEP
+- `WEP` uses a `40-bit` or `104-bit` key to encrypt data
+- `WEP` uses the `RC4 cipher` encryption algorithm, which makes it vulnerable to attacks.
 
 **Protocol** | **IV** | **Secret Key**
 --|--|--
 `WEP-40`/`WEP-64` | 24-bit | 40-bit
 `WEP-104` | 24-bit | 80-bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODE5NjkyNDMsMTEzNzYyOTI0Myw3Mj
+eyJoaXN0b3J5IjpbLTIxMjMxOTg1NjksMTEzNzYyOTI0Myw3Mj
 UzNjY1ODIsMTUxMzIxODM1NF19
 -->
