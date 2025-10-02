@@ -492,8 +492,9 @@ Method | Purpose
 - **Virtual Private Network** (`VPN`)
 	-  uses the ports `TCP/1723` for **Point-to-Point Tunneling Protocol**  `PPTP`
 	- and `UDP/500` for **IKEv1** and **IKEv2** VPN connections.
+- VPNs encrypt the connection between the remote device and the private network 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMDk1OTUxMSwtMTE4MzU2NTUwMSwtMT
-gyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYy
-OTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1NF19
+eyJoaXN0b3J5IjpbOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xOD
+IwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5
+MjQzLDcyNTM2NjU4MiwxNTEzMjE4MzU0XX0=
 -->
