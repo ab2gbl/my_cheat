@@ -505,8 +505,9 @@ Method | Purpose
 
 ### IPsec
 - Internet Protocol Security (`IPsec`) is a network security protocol
+- encrypting the data payload of each IP packet and adding an `authentication header` (`AH`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0Nzc1MzQ1Miw5NTAwOTIxMjUsLTExOD
+eyJoaXN0b3J5IjpbLTc4NTI1MTI1NCw5NTAwOTIxMjUsLTExOD
 M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
 NjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ
 ==
