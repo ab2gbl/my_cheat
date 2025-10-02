@@ -511,8 +511,31 @@ Method | Purpose
 |--|--|
 `Transport Mode` | does not encrypt the IP header. This is typically used to secure end-to-end communication between two hosts.
 `Tunnel Mode` | encrypt IP header. This is typically used to create a VPN tunnel between two networks.
+
+For example, an administrator could place a firewall in between. In order to facilitate IPsec VPN traffic from a VPN client outside a firewall to a VPN server inside, the firewall would need to allow the following protocols:
+
+**Protocol**
+
+**Port**
+
+**Description**
+
+`Internet Protocol`  (`IP`)
+
+`UDP/50-51`
+
+This is the primary protocol that provides the foundation for all internet communication. It is used to route packets of data between the VPN client and the VPN server.
+
+`Internet Key Exchange`  (`IKE`)
+
+`UDP/500`
+
+IKE is a protocol that is used to establish and maintain secure communication between the VPN client and the VPN server. It is based on the Diffie-Hellman key exchange algorithm, and it is used to negotiate and establish shared secret keys that can be used to encrypt and decrypt the VPN traffic.
+
+`Encapsulating Security Payload`  (`ESP`) | `UDP/4500` | ESP is also a protocol that provides encryption and authentication for IP datagrams. It is used to encrypt the VPN traffic between the VPN client and the VPN server, using the keys that were negotiated with IKE.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5ODE5OTM2LDk1MDA5MjEyNSwtMTE4Mz
-U2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2
-NjEsMTEzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1NF19
+eyJoaXN0b3J5IjpbLTk4Njg2MzcyNiwxMjk4MTk5MzYsOTUwMD
+kyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDEx
+Nzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4MiwxNT
+EzMjE4MzU0XX0=
 -->
