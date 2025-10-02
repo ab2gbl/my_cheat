@@ -480,8 +480,10 @@ Method | Purpose
 - **LEAP** and **PEAP** are both based on the **Extensible Auth Protocol** (`EAP`), a framework for authentication used in various networking contexts.
 -    **LEAP**  uses a  `shared key`  for authentication, which means that the  `same key`  is used for  `encryption and authentication`.
 - `PEAP` uses a more secure auth method called (`TLS`) using a `digital certificate`
-### TACACS
+### Disassociation Attack
+`all` wireless network attack that aims to disrupt the communication between a WAP and its clients by sending disassociation frames to one or more clients.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzY0MTE3NzcsNjQyMzYwNjYxLDExMz
-c2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNj
+QyMzYwNjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgz
+NTRdfQ==
 -->
