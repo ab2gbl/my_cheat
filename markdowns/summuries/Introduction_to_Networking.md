@@ -504,10 +504,10 @@ Method | Purpose
 - At the TCP/IP layer, a VPN connection typically uses the `ESP` protocol to encrypt and auth the VPN traffic
 
 ### IPsec
-- Internet Protocol Security (`IPsec`) is a network security protocol
+- Internet Protocol Security (`IPsec`) is a network security protocol ( combined from `AH` + `ESP` )
 - encrypting the data payload of each IP packet and adding an `authentication header` (`AH`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NTI1MTI1NCw5NTAwOTIxMjUsLTExOD
+eyJoaXN0b3J5IjpbMTIyNzQwODc2MCw5NTAwOTIxMjUsLTExOD
 M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
 NjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ
 ==
