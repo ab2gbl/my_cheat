@@ -460,7 +460,9 @@ Method | Purpose
 4 | `WAP` | Calculates the expected response to the challenge with the same shared secret key and sends an authentication response packet to the client.
 
 - **Cyclic Redundancy Check (`CRC`)**: error-detection mechanism in `WEP` protocot
+- **CRC** allow decrypt a single packet `without` knowing the `encryption key` (using the `plaintext`)
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzM0NjU4MDQsMTEzNzYyOTI0Myw3Mj
-UzNjY1ODIsMTUxMzIxODM1NF19
+eyJoaXN0b3J5IjpbNzg4NDAyOTgwLDExMzc2MjkyNDMsNzI1Mz
+Y2NTgyLDE1MTMyMTgzNTRdfQ==
 -->
