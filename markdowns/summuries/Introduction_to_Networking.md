@@ -522,10 +522,10 @@ For example, an administrator could place a firewall in between. In order to fac
 ### PPTP
 - Point-to-Point Tunneling Protocol (`PPTP`) is a network protocol that enables the creation of VPNs 
 - PPTP is no longer considered secure
-- 
+- Replaced by more secure VPN protocols like L2TP/IPsec, IPsec/IKEv2, and OpenVPN
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcyOTA4NjMsMTI5ODE5OTM2LDk1MDA5Mj
-EyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3
-Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMz
-IxODM1NF19
+eyJoaXN0b3J5IjpbLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMD
+kyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDEx
+Nzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4MiwxNT
+EzMjE4MzU0XX0=
 -->
