@@ -479,8 +479,9 @@ Method | Purpose
 ### Authentication Protocols
 - **LEAP** and **PEAP** are both based on the **Extensible Auth Protocol** (`EAP`), a framework for authentication used in various networking contexts.
 -    **LEAP**  uses a  `shared key`  for authentication, which means that the  `same key`  is used for  `encryption and authentication`.
+- `PEAP` uses a more secure auth method called (`TLS`)
 ### TACACS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NDEyNDAwOSwxMTM3NjI5MjQzLDcyNT
-M2NjU4MiwxNTEzMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbNjQyMzYwNjYxLDExMzc2MjkyNDMsNzI1Mz
+Y2NTgyLDE1MTMyMTgzNTRdfQ==
 -->
