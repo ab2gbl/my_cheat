@@ -477,7 +477,9 @@ Method | Purpose
 - `WPA` more secure auth methods (`PSK` or an 802.1X auth server)
 
 ### Authentication Protocols
+
+### TACACS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwMDY3MTAxMywxMTM3NjI5MjQzLDcyNT
-M2NjU4MiwxNTEzMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbNTI3NjYzNTUxLDExMzc2MjkyNDMsNzI1Mz
+Y2NTgyLDE1MTMyMTgzNTRdfQ==
 -->
