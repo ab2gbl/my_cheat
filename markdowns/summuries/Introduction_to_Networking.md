@@ -461,8 +461,9 @@ Method | Purpose
 
 - **Cyclic Redundancy Check (`CRC`)**: error-detection mechanism in `WEP` protocot
 - **CRC** allow decrypt a single packet `without` knowing the `encryption key` (using the `plaintext`)
+- **CRC** value is recalculated by **WAP** using received data and compared to the original value from the **Device** 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg4NDAyOTgwLDExMzc2MjkyNDMsNzI1Mz
-Y2NTgyLDE1MTMyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbLTE1Mzc3MTkxNzQsMTEzNzYyOTI0Myw3Mj
+UzNjY1ODIsMTUxMzIxODM1NF19
 -->
