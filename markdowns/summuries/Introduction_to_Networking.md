@@ -450,6 +450,31 @@ Method | Purpose
 
 - Wireless networks use radio frequency `RF`
 - **Wireless Access Point(`WAP`)** : like router for ex, connects the wireless network to a wired network
+**Step**
+
+**Who**
+
+**Description**
+
+1
+
+`Client`
+
+Sends an association request packet to the WAP, requesting access.
+
+2
+
+`WAP`
+
+Responds with an association response packet to the client, which includes a challenge string.
+
+3
+
+`Client`
+
+Calculates a response to the challenge string and a shared secret key and sends it back to the WAP.
+4 | `WAP` | Calculates the expected response to the challenge with the same shared secret key and sends an authentication response pa
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbMTE1NjQ5ODc4Myw3MjUzNjY1ODIsMTUxMz
+IxODM1NF19
 -->
