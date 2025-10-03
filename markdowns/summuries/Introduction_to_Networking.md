@@ -524,7 +524,7 @@ For example, an administrator could place a firewall in between. In order to fac
 - PPTP is no longer considered secure
 - Replaced by more secure VPN protocols like L2TP/IPsec, IPsec/IKEv2, and OpenVPN
 
-##  Key Exchange Mechanisms
+## Key Exchange Mechanisms
 
 **Algorithm** | **Acronym** | **Security**
 |--|--|--|
@@ -532,9 +532,12 @@ For example, an administrator could place a firewall in between. In order to fac
 `Rivest–Shamir–Adleman` | `RSA` | Widely used and considered secure, but computationally intensive
 `Elliptic Curve Diffie-Hellman` | `ECDH` | Provides enhanced security compared to traditional Diffie-Hellman
 `Elliptic Curve Digital Signature Algorithm` | `ECDSA` | Provides enhanced security and efficiency for digital signature generation
+
+### Internet Key Exchange(`IKE`)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYyOTc4MDA2LC05OTc0MjM5MDQsMTI5OD
-E5OTM2LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYx
-MSwtMTgzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3Mj
-UzNjY1ODIsMTUxMzIxODM1NF19
+eyJoaXN0b3J5IjpbMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOT
+gxOTkzNiw5NTAwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2
+MTEsLTE4MzY0MTE3NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNz
+I1MzY2NTgyLDE1MTMyMTgzNTRdfQ==
 -->
