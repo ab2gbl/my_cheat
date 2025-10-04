@@ -448,16 +448,16 @@ Method | Purpose
 
 ## 📡 Wireless Networks
 
-- Wireless networks use radio frequency `RF`
+- Use radio frequency (**RF**)
 - **Wireless Access Point(`WAP`)** : like router for ex, connects the wireless network to a wired network
 
-### WEP Challenge-Response Handshake 
+### 🔑 WEP Challenge-Response Handshake 
 **Step** | **Who** | **Description**
 |--|--|--|
-1 | `Client`| Sends an association request packet to the WAP, requesting access.
-2 | `WAP` | Responds with an association response packet to the client, which includes a challenge string.
-3 | `Client` | Calculates a response to the challenge string and a shared secret key and sends it back to the WAP.
-4 | `WAP` | Calculates the expected response to the challenge with the same shared secret key and sends an authentication response packet to the client.
+1 | `Client`| Sends association request.
+2 | `WAP` | Responds with challenge string.
+3 | `Client` | Encrypts response with shared secret, sends back.
+4 | `WAP` | Validates response and authenticates.
 
 - **Cyclic Redundancy Check (`CRC`)**: error-detection mechanism in `WEP` protocot
 - **CRC** allow decrypt a single packet `without` knowing the `encryption key` (using the `plaintext`)
@@ -623,11 +623,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5OTgxNjE3MiwxOTQyMzE1NzE2LC0yMD
-M4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4
-MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2ND
-A1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3
-MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExOD
-M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
-NjYxXX0=
+eyJoaXN0b3J5IjpbLTE1NDUwOTU2MTMsMTk0MjMxNTcxNiwtMj
+AzODYyOTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMz
+ODM5MiwyMTg2MDgwMywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNj
+QwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2
+NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMT
+gzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2
+MDY2MV19
 -->
