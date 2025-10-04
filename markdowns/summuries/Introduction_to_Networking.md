@@ -465,19 +465,18 @@ Method | Purpose
 -   **WEP** → `RC4`, weak (`40/104-bit`)
 -   **WPA** → AES, stronger auth (PSK, 802.1X) (`128-bit`)
 
-### Authentication Protocols
-- **LEAP** and **PEAP** are both based on the **Extensible Auth Protocol** (`EAP`), a framework for authentication used in various networking contexts.
--    **LEAP**  uses a  `shared key`  for authentication, which means that the  `same key`  is used for  `encryption and authentication`.
-- `PEAP` uses a more secure auth method called (`TLS`) using a `digital certificate`
-### Disassociation Attack
-`all` wireless network attack that aims to disrupt the communication between a WAP and its clients by sending disassociation frames to one or more clients.
-### Wireless Hardening
--   Disabling broadcasting
--   WiFi Protected Access
--   MAC filtering
--   Deploying EAP-TLS
 
-## VPN
+### 🔐 Authentication Protocols
+
+-   **LEAP** → Shared key
+-   **PEAP** → TLS + digital certificates
+
+### ⚡ Attacks
+
+-   **Disassociation Attack** → kick clients off WiFi
+-   **Hardening:** disable broadcast, WPA2+, MAC filtering, EAP-TLS
+
+🌍 VPN (Virtual Private Network)
 - **Virtual Private Network** (`VPN`)
 	-  uses the ports `TCP/1723` for **Point-to-Point Tunneling Protocol**  `PPTP`
 	- and `UDP/500` for **IKEv1** and **IKEv2** VPN connections.
@@ -612,11 +611,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0ODc3OTExMCwxOTQyMzE1NzE2LC0yMD
-M4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4
-MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2ND
-A1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3
-MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExOD
-M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
-NjYxXX0=
+eyJoaXN0b3J5IjpbLTIwNDIzMDUxOTgsMTk0MjMxNTcxNiwtMj
+AzODYyOTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMz
+ODM5MiwyMTg2MDgwMywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNj
+QwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2
+NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMT
+gzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2
+MDY2MV19
 -->
