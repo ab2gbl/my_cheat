@@ -542,20 +542,18 @@ Encryption/auth
 ### 📦 IP Packets
 -    Fields: Version, TTL, Checksum, Source/Dest ...
 - **Record-Route field**: logs hops, records the route to a destination device ( IP addresses )
-- 
-### Blind spoofing Attack
--   Blind spoofing forges IP/TCP header fields (source/destination addresses, ports, ISN) and sends packets without observing the target’s replies.
--   The attacker guesses or fabricates the TCP Initial Sequence Number (ISN) to make the target accept a fake connection.
--   Result: disrupted or hijacked connections and potential interception or corruption of network traffic.
-## Cryptography
-### Symmetric Encryption ( secret key encryption )
-- same key to encrypt and decrypt the data
-- examples: **`AES`** and **`DES`**
-### Asymmetric Encryption ( public-key encryption )  
-- 2 keys: 
-  - **`public key`** :  encrypt data
-  - **`private key`** : decrypt data
-- examples: **`RSA`** and **`PGP`** and  **`ECC`**
+- **Payload**: actual data
+
+### 🔴 **Blind Spoofing Attack** 
+- forged IP/TCP headers to hijack sessions
+
+## 🔑 Cryptography
+### 🟦 Symmetric (1 key)
+-   Same key for encrypt/decrypt
+-   Examples: AES, DES
+### 🟨 Asymmetric (2 keys)
+-   Public key (encrypt), Private key (decrypt)
+-   Examples: RSA, ECC, PGP
 
 E-Signatures | SSL/TLS | VPNs
 |--|--|--|
@@ -583,7 +581,7 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjQ3OTY3MDYsLTk4NDc4ODMwMywxOT
+eyJoaXN0b3J5IjpbLTE2MDU0OTg4NTYsLTk4NDc4ODMwMywxOT
 QyMzE1NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcx
 MzQyOTgsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMT
 k0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTky
