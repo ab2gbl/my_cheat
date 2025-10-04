@@ -537,9 +537,11 @@ For example, an administrator could place a firewall in between. In order to fac
 - combination of `Diffie-Hellman` key exchange algorithm +`other cryptographic techniques`
 - **main mode**: more secure
 - **aggressive mode**: faster
+- **Pre-Shared Keys (PSK)**: optional to use on IKE
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NTM5OTIxMCwxNTU3NTc1NjcwLC05OT
-c0MjM5MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwtMTE4MzU2NTUw
-MSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2NjEsMT
-EzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1NF19
+eyJoaXN0b3J5IjpbMTE5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NT
+c1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1
+LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDExNzc3LD
+Y0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4MiwxNTEzMjE4
+MzU0XX0=
 -->
