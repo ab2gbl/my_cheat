@@ -219,8 +219,8 @@ example
   - **its own layer 2 address**: 	to the higher layers.
 - **Address Resolution Protocol (`ARP`)**: is used in IPv4 to determine the MAC addresses associated with the IP addresses. 
 
-| | | | | |
-|--|--|--|--|--|--|
+| | | | | |  
+|--|--|--|--|--|--|  
 **Local Range** | 0**2**:00:00:00:00:00 | 0**6**:00:00:00:00:00 | 0**A**:00:00:00:00:00 | 0**E**:00:00:00:00:00
 
 - **The last bit of first octet** identifies the MAC address as `Unicast` (`0`) or `Multicast` (`1`). ( the packet sent will reach only `one` or `many` hosts )
@@ -579,7 +579,7 @@ CTR | Fast streams, IPsec
 GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM0NzA3MTkyLDE5NTI0MzI2NTIsLTk3OD
+eyJoaXN0b3J5IjpbNjg0NTY5NzIwLDE5NTI0MzI2NTIsLTk3OD
 Q5ODU4NiwtMjA5MDM4NDAyNiwtMjAxMzY5MDg0LC05MjM5NzA0
 MjgsLTk4NDc4ODMwMywxOTQyMzE1NzE2LC0yMDM4NjI5NDIzLC
 04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4MzkyLDIxODYw
