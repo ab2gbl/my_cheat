@@ -556,9 +556,11 @@ For example, an administrator could place a firewall in between. In order to fac
 
 ## TCP/UDP Connections
 
-
+- **TCP** normal requests, slower bcs of error recovery
+- **UDP** videos streaming and gaming, faster bcs no error recovery
+  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NDM4NDk2NywxOTQzMTEwNzQ5LDY0MD
+eyJoaXN0b3J5IjpbMTcwODU0MzMwMywxOTQzMTEwNzQ5LDY0MD
 UyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIxMCwxNTU3NTc1Njcw
 LC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwtMTE4Mz
 U2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2
