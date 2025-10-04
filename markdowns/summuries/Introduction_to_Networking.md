@@ -520,7 +520,7 @@ Encryption/auth
 -   Main mode (secure), Aggressive mode (fast)
 -   Supports PSK
 
-# 🔐 Connection Establishment
+# 🔒Connection Establishment
 ##  🔐 Auth Protocols
 
 **Protocol** | **Description**
@@ -567,8 +567,7 @@ HTTPS | SSL/TLS
 -   **3DES** → stronger, but slow
 -   **AES** → modern standard (128/192/256-bit)
 
-### Cipher Modes
-
+### 🔧 Cipher Modes
 Mode| Use
 |--|--|
 ECB | Insecure, patterns visible 
@@ -579,11 +578,11 @@ CTR | Fast streams, IPsec
 GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzM1NzE1MzAsLTk4NDc4ODMwMywxOT
-QyMzE1NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcx
-MzQyOTgsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMT
-k0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTky
-MTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NT
-AwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0
-MTE3NzddfQ==
+eyJoaXN0b3J5IjpbLTkyMzk3MDQyOCwtOTg0Nzg4MzAzLDE5ND
+IzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMTU1NzEz
+NDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOT
+QzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIx
+MCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MD
+A5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQx
+MTc3N119
 -->
