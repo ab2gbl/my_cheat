@@ -559,10 +559,13 @@ For example, an administrator could place a firewall in between. In order to fac
 - **TCP** normal requests, slower bcs of error recovery
 - **UDP** videos streaming and gaming, faster bcs no error recovery
   
+### IP Packet
+   **Internet Protocol(`IP`)** packet is the data area used by the network layer of the [Open Systems Interconnection](https://en.wikipedia.org/wiki/OSI_model) (`OSI`) model to transmit data
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwODU0MzMwMywxOTQzMTEwNzQ5LDY0MD
-UyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIxMCwxNTU3NTc1Njcw
-LC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwtMTE4Mz
-U2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2
-NjEsMTEzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1NF19
+eyJoaXN0b3J5IjpbMjY5OTcxODgzLDE3MDg1NDMzMDMsMTk0Mz
+ExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAs
+MTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOT
+IxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3
+NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MT
+MyMTgzNTRdfQ==
 -->
