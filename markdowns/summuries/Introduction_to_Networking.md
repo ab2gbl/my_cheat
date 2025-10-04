@@ -479,24 +479,22 @@ Method | Purpose
 ## 🌍 VPN (Virtual Private Network)
 -   Encrypts connection between device ↔️ private network
 -   Uses **PPTP (TCP/1723)**, **IKEv1/2 (UDP/500)**
--**Requirement** | **Description**
-- 
+
+**Requirement** | **Description** 
 |--|--|
 `VPN Client` | Installed (e.g., OpenVPN client)
 `VPN Server` | network device (computer) , Accepts VPN connections, routing traffic between.
-`Encryption` | such as AES and IPsec.
-`Authentication` | using a shared secret, certificate, or another auth method.
+`Encryption` | AES, IPsec
+`Authentication` | Shared secret / certificate
 
 - At the TCP/IP layer, a VPN connection typically uses the `ESP` protocol to encrypt and auth the VPN traffic
 
-### IPsec
-- Internet Protocol Security (`IPsec`) is a network security protocol ( combined from `AH` + `ESP` )
-- encrypting the data payload of each IP packet and adding an `authentication header` (`AH`)
 
-**Mode** | **Description**
-|--|--|
-`Transport Mode` | does not encrypt the IP header. This is typically used to secure end-to-end communication between two hosts.
-`Tunnel Mode` | encrypt IP header. This is typically used to create a VPN tunnel between two networks.
+### 🔑 IPsec
+-   Secure network protocol (`AH + ESP`)
+-   **Modes**:
+    -   Transport → encrypts payload
+    -   Tunnel → encrypts header + payload
 
 For example, an administrator could place a firewall in between. In order to facilitate IPsec VPN traffic from a VPN client outside a firewall to a VPN server inside, the firewall would need to allow the following protocols:
 
@@ -609,7 +607,7 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMTUzNjI1NCwxOTQyMzE1NzE2LC0yMD
+eyJoaXN0b3J5IjpbMTMxMzE1MTYzNCwxOTQyMzE1NzE2LC0yMD
 M4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4
 MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2ND
 A1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3
