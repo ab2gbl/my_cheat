@@ -534,10 +534,10 @@ For example, an administrator could place a firewall in between. In order to fac
 `Elliptic Curve Digital Signature Algorithm` | `ECDSA` | Provides enhanced security and efficiency for digital signature generation
 
 ### Internet Key Exchange(`IKE`)
-
+combination of the `Diffie-Hellman` key exchange algorithm and `other cryptographic techniques`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOT
-gxOTkzNiw5NTAwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2
-MTEsLTE4MzY0MTE3NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNz
-I1MzY2NTgyLDE1MTMyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbNjI0ODUwMjcwLDE1NTc1NzU2NzAsLTk5Nz
+QyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAx
+LC0xODIwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2MDY2MSwxMT
+M3NjI5MjQzLDcyNTM2NjU4MiwxNTEzMjE4MzU0XX0=
 -->
