@@ -582,11 +582,17 @@ For example, an administrator could place a firewall in between. In order to fac
 
 The  **`Record-Route field`**  in the IP header also records the route to a destination device ( IP addresses )
 #### IP Payload ( or IP Data) 
+
+### Blind spoofing Attack
+-   Blind spoofing forges IP/TCP header fields (source/destination addresses, ports, ISN) and sends packets without observing the target’s replies.
+-   The attacker guesses or fabricates the TCP Initial Sequence Number (ISN) to make the target accept a fake connection.
+-   Result: disrupted or hijacked connections and potential interception or corruption of network traffic.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTcxMzQyOTgsNjQxMzM4MzkyLDIxOD
-YwODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2NDA1MjI2MSwx
-MTk2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3MCwtOTk3ND
-IzOTA0LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExODM1NjU1MDEs
-LTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYwNjYxLDExMz
-c2MjkyNDMsNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbLTgzNDgxNDI4NywtMTU1NzEzNDI5OCw2ND
+EzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOTQzMTEwNzQ5
+LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIxMCwxNTU3NT
+c1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwt
+MTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2ND
+IzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1
+NF19
 -->
