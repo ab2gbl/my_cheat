@@ -540,7 +540,7 @@ Encryption/auth
 -   **UDP** → fast, streaming/gaming (no error recovery)
   
 ### 📦 IP Packets
-   **Internet Protocol (`IP`)** packet is the data area used by the network layer of the **`OSI`** model to transmit data
+-    Fields: Version, Internet Header Length, TTL, Checksum, Source/Dest
 #### IP header
 **Field** | **Description**
 |--|--|
@@ -603,11 +603,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5MTA5ODk4LC05ODQ3ODgzMDMsMTk0Mj
-MxNTcxNiwtMjAzODYyOTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0
-Mjk4LDY0MTMzODM5MiwyMTg2MDgwMywxNzA4NTQzMzAzLDE5ND
-MxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEw
-LDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMD
-kyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDEx
-Nzc3XX0=
+eyJoaXN0b3J5IjpbLTk3MjY5MzQzMSwtOTg0Nzg4MzAzLDE5ND
+IzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMTU1NzEz
+NDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOT
+QzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIx
+MCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MD
+A5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQx
+MTc3N119
 -->
