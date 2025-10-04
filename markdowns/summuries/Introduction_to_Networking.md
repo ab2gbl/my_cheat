@@ -581,11 +581,12 @@ For example, an administrator could place a firewall in between. In order to fac
 #### IP Record-Route Field
 
 The  **`Record-Route field`**  in the IP header also records the route to a destination device ( IP addresses )
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1ND
-MzMDMsMTk0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2
-NjUzOTkyMTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOT
-kzNiw5NTAwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEs
-LTE4MzY0MTE3NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNzI1Mz
-Y2NTgyLDE1MTMyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbLTExNTUxMDIwMiw2NDEzMzgzOTIsMjE4Nj
+A4MDMsMTcwODU0MzMwMywxOTQzMTEwNzQ5LDY0MDUyMjYxLDEx
+OTYzNjk1MzEsMTY2NTM5OTIxMCwxNTU3NTc1NjcwLC05OTc0Mj
+M5MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwt
+MTgyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNz
+YyOTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1NF19
 -->
