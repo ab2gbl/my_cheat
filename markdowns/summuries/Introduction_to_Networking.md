@@ -527,11 +527,10 @@ Encryption/auth
 |--|--|
 `Kerberos` | Ticket-based (KDC)
 `SRP` | Password + crypto
-`SSL` | A cryptographic protocol used for secure communication over a computer network.
-`TLS` | Secure comms (HTTPS)
-`OAuth` | An open standard for authorization that allows users to grant third-party access to their web resources without sharing their passwords.
-`2FA` | An authentication method that uses a combination of two different factors to verify a user's identity.
-`HTTPS` | HTTPS uses SSL/TLS to encrypt communication and provide authentication, ensuring that third parties cannot intercept and read the transmitted data. It is widely used for secure communication over the internet, particularly for web browsing.
+`SSL`/`TLS` | Secure comms (HTTPS)
+`OAuth` | Delegated web access
+`2FA` | Two factors for login
+`HTTPS` | uses SSL/TLS 
 
 … more on [hack the box course](https://academy.hackthebox.com/module/34/section/1876)
 
@@ -604,11 +603,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzczMDA0OTEsLTk4NDc4ODMwMywxOT
-QyMzE1NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcx
-MzQyOTgsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMT
-k0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTky
-MTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NT
-AwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0
-MTE3NzddfQ==
+eyJoaXN0b3J5IjpbMTU3MDc2NTc5MywtOTg0Nzg4MzAzLDE5ND
+IzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMTU1NzEz
+NDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOT
+QzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIx
+MCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MD
+A5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQx
+MTc3N119
 -->
