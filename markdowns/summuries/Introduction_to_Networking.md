@@ -607,12 +607,40 @@ SSH | PKI | Cloud
 -   **`3DES` (Triple DES)** improves security by applying DES three times (encrypt–decrypt–encrypt) with up to three different keys.
     
 -   **`AES`** has replaced `DES/3DES`, offering stronger encryption with longer key lengths and higher security.
+### AES
+-   AES uses larger key sizes (128, 192, or 256 bits) compared to DES’s 56-bit key, providing much stronger security.
+-   AES is also faster and more efficient, as its algorithm allows encryption of multiple data blocks at once, making it better suited for large-scale data encryption.
+
+### Cipher Modes
+
+**Cipher Mode**
+
+**Description**
+
+[Electronic Code Book](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)  (`ECB`) mode
+
+ECB mode is generally not recommended for use due to its susceptibility to certain types of attacks. Furthermore, it does not hide data patterns efficiently. As a result, statistical analysis can reveal elements of clear-text messages, for example, in web applications.
+
+[Cipher Block Chaining](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC)  (`CBC`) mode
+
+CBC mode is generally used to encrypt messages like disk encryption and e-mail communication. This is the default mode for AES and is also used in software like TrueCrypt, VeraCrypt, TLS, and SSL.
+
+[Cipher Feedback](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher_feedback_(CFB))  (`CFB`) mode
+
+CFB mode is well suited for real-time encryption of a data stream, e.g., network communication encryption or encryption/decryption of files in transit like Public-Key Cryptography Standards (PKCS) and Microsoft's BitLocker.
+
+[Output Feedback](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#OFB)  (`OFB`) mode
+
+OFB mode is also used to encrypt a data stream, e.g., to encrypt real-time communication. However, this mode is considered better for the data stream because of how the key stream is generated. We can find this mode in PKCS but also in the SSH protocol.
+
+[Counter)  (`CTR`) mode | CTR mode encrypts real-time data streams AES uses, e.g., network communication, disk encryption, and other real-time scenarios where data is processed. An example of this would be IPsec or Microsoft's BitLocker.
+Galois/Counter(`GCM`) mode | GCM is used in cases where confidentiality and integrity need to be protected together, such as wireless communications, VPNs, and other secure communication protocols.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTQzMjgxOTYsLTIwMzg2Mjk0MjMsLT
-gzNDgxNDI4NywtMTU1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4
-MDMsMTcwODU0MzMwMywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOT
-YzNjk1MzEsMTY2NTM5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5
-MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMT
-gyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYy
-OTI0M119
+eyJoaXN0b3J5IjpbLTk2MzkxNjQ4NSwtMjAzODYyOTQyMywtOD
+M0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgw
+MywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5Nj
+M2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkw
+NCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xOD
+IwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5
+MjQzXX0=
 -->
