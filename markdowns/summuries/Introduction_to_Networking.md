@@ -540,29 +540,9 @@ Encryption/auth
 -   **UDP** → fast, streaming/gaming (no error recovery)
   
 ### 📦 IP Packets
--    Fields: Version, Internet Header Length, TTL, Checksum, Source/Dest
-#### IP header
-**Field** | **Description**
-|--|--|
-`Version` | Indicates which version of the IP protocol is being used
-`Internet Header Length` | Indicates the size of the header in 32-bit words
-`Class of Service` | Means how important the transmission of the data is
-`Total length` | Specifies the total length of the packet in bytes
-`Identification (ID)` | Is used to identify fragments of the packet when fragmented into smaller parts
-`Flags` | Used to indicate fragmentation
-`Fragment Offset` | Indicates where the current fragment is placed in the packet
-`Time to Live` | Specifies how long the packet may remain on the network 
-`Protocol` | Specifies which protocol is used to transmit the data, such as TCP or UDP
-`Checksum` | Is used to detect errors in the header
-`Source/Destination` | Indicate where the packet was sent from and where it is being sent to
-`Options` | Contain optional information for routing
-`Padding` | Pads the packet to a full word length
-
-#### IP Record-Route Field
-
-The  **`Record-Route field`**  in the IP header also records the route to a destination device ( IP addresses )
-#### IP Payload ( or IP Data) 
-
+-    Fields: Version, TTL, Checksum, Source/Dest ...
+- **Record-Route field**: logs hops, records the route to a destination device ( IP addresses )
+- 
 ### Blind spoofing Attack
 -   Blind spoofing forges IP/TCP header fields (source/destination addresses, ports, ISN) and sends packets without observing the target’s replies.
 -   The attacker guesses or fabricates the TCP Initial Sequence Number (ISN) to make the target accept a fake connection.
@@ -603,11 +583,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MjY5MzQzMSwtOTg0Nzg4MzAzLDE5ND
-IzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMTU1NzEz
-NDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOT
-QzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIx
-MCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MD
-A5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQx
-MTc3N119
+eyJoaXN0b3J5IjpbLTE5NjQ3OTY3MDYsLTk4NDc4ODMwMywxOT
+QyMzE1NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcx
+MzQyOTgsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMT
+k0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTky
+MTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NT
+AwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0
+MTE3NzddfQ==
 -->
