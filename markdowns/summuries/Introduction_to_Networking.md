@@ -555,19 +555,20 @@ Encryption/auth
 -   Public key (encrypt), Private key (decrypt)
 -   Examples: RSA, ECC, PGP
 
-E-Signatures | SSL/TLS | VPNs
-|--|--|--|
-SSH | PKI | Cloud
+Usage | Examples
+|--|--|
+E-Signatures | PKI
+VPNs | IPsec
+HTTPS | SSL/TLS
 
-### DES
--   **`DES`** is a symmetric-key block cipher that encrypts 64-bit blocks of data using a 56-bit key (out of 64 bits, 8 are for error checking). It applies substitution and permutation operations.
+
+### 🗝️ Algorithms
+
+-   **DES** → 56-bit, outdated
     
--   **`3DES` (Triple DES)** improves security by applying DES three times (encrypt–decrypt–encrypt) with up to three different keys.
+-   **3DES** → stronger, but slow
     
--   **`AES`** has replaced `DES/3DES`, offering stronger encryption with longer key lengths and higher security.
-### AES
--   AES uses larger key sizes (128, 192, or 256 bits) compared to DES’s 56-bit key, providing much stronger security.
--   AES is also faster and more efficient, as its algorithm allows encryption of multiple data blocks at once, making it better suited for large-scale data encryption.
+-   **AES** → modern standard (128/192/256-bit)
 
 ### Cipher Modes
 
@@ -581,11 +582,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDU0OTg4NTYsLTk4NDc4ODMwMywxOT
-QyMzE1NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcx
-MzQyOTgsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMT
-k0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTky
-MTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NT
-AwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0
-MTE3NzddfQ==
+eyJoaXN0b3J5IjpbMzI4MTY1NTAzLC05ODQ3ODgzMDMsMTk0Mj
+MxNTcxNiwtMjAzODYyOTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0
+Mjk4LDY0MTMzODM5MiwyMTg2MDgwMywxNzA4NTQzMzAzLDE5ND
+MxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEw
+LDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMD
+kyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDEx
+Nzc3XX0=
 -->
