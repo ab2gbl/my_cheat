@@ -563,30 +563,27 @@ HTTPS | SSL/TLS
 
 
 ### 🗝️ Algorithms
-
 -   **DES** → 56-bit, outdated
-    
 -   **3DES** → stronger, but slow
-    
 -   **AES** → modern standard (128/192/256-bit)
 
 ### Cipher Modes
 
-**Cipher Mode** | **Description**
+Mode| Use
 |--|--|
-Electronic Code Book  (`ECB`) mode | Not recommended; reveals data patterns and is vulnerable to attacks.
-Cipher Block Chaining  (`CBC`) mode | Common for disk/email encryption; used in AES, TLS/SSL, VeraCrypt.
-Cipher Feedbackack  (`CFB`) mode | Good for real-time streams; used in PKCS and BitLocker.
-Output Feedback (`OFB`) | Stream encryption; used in PKCS and SSH, better key stream handling.
-Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
-Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
+ECB | Insecure, patterns visible 
+CBC | Disk/email encryption
+CFB | Streams
+OFB | Streams, SSH
+CTR | Fast streams, IPsec 
+GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI4MTY1NTAzLC05ODQ3ODgzMDMsMTk0Mj
-MxNTcxNiwtMjAzODYyOTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0
-Mjk4LDY0MTMzODM5MiwyMTg2MDgwMywxNzA4NTQzMzAzLDE5ND
-MxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEw
-LDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMD
-kyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDEx
-Nzc3XX0=
+eyJoaXN0b3J5IjpbLTExNzM1NzE1MzAsLTk4NDc4ODMwMywxOT
+QyMzE1NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcx
+MzQyOTgsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMT
+k0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTky
+MTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NT
+AwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0
+MTE3NzddfQ==
 -->
