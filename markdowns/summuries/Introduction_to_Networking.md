@@ -562,12 +562,26 @@ For example, an administrator could place a firewall in between. In order to fac
 ### IP Packet
    **Internet Protocol (`IP`)** packet is the data area used by the network layer of the **`OSI`** model to transmit data
 #### IP header
-
+**Field** | **Description**
+|--|--|
+`Version` | Indicates which version of the IP protocol is being used
+`Internet Header Length` | Indicates the size of the header in 32-bit words
+`Class of Service` | Means how important the transmission of the data is
+`Total length` | Specifies the total length of the packet in bytes
+`Identification (ID)` | Is used to identify fragments of the packet when fragmented into smaller parts
+`Flags` | Used to indicate fragmentation
+`Fragment Offset` | Indicates where the current fragment is placed in the packet
+`Time to Live` | Specifies how long the packet may remain on the network 
+`Protocol` | Specifies which protocol is used to transmit the data, such as TCP or UDP
+`Checksum` | Is used to detect errors in the header
+`Source/Destination` | Indicate where the packet was sent from and where it is being sent to
+`Options` | Contain optional information for routing
+`Padding` | Pads the packet to a full word length
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1OTM0MDk4NSwxNzA4NTQzMzAzLDE5ND
-MxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEw
-LDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMD
-kyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDEx
-Nzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4MiwxNT
-EzMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbMjE4NjA4MDMsMTcwODU0MzMwMywxOTQzMT
+EwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIxMCwx
+NTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MDA5Mj
+EyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3
+Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMz
+IxODM1NF19
 -->
