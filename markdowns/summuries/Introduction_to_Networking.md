@@ -578,11 +578,14 @@ For example, an administrator could place a firewall in between. In order to fac
 `Options` | Contain optional information for routing
 `Padding` | Pads the packet to a full word length
 
+#### IP Record-Route Field
+
+The  **`Record-Route field`**  in the IP header also records the route to a destination device ( IP addresses )
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2Njk4MDkxMywyMTg2MDgwMywxNzA4NT
-QzMzAzLDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwx
-NjY1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MT
-k5MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjEx
-LC0xODM2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNT
-M2NjU4MiwxNTEzMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1ND
+MzMDMsMTk0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2
+NjUzOTkyMTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOT
+kzNiw5NTAwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEs
+LTE4MzY0MTE3NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNzI1Mz
+Y2NTgyLDE1MTMyMTgzNTRdfQ==
 -->
