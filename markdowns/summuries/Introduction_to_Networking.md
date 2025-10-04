@@ -615,15 +615,15 @@ SSH | PKI | Cloud
 
 **Cipher Mode** | **Description**
 |--|--|
-Electronic Code Book  (`ECB`) mode | ECB mode is generally not recommended for use due to its susceptibility to certain types of attacks. Furthermore, it does not hide data patterns efficiently. As a result, statistical analysis can reveal elements of clear-text messages, for example, in web applications.
-Cipher Block Chaining  (`CBC`) mode | CBC mode is generally used to encrypt messages like disk encryption and e-mail communication. This is the default mode for AES and is also used in software like TrueCrypt, VeraCrypt, TLS, and SSL.
-Cipher Feedbackack  (`CFB`) mode |
+Electronic Code Book  (`ECB`) mode | Not recommended; reveals data patterns and is vulnerable to attacks.
+Cipher Block Chaining  (`CBC`) mode | Common for disk/email encryption; used in AES, TLS/SSL, VeraCrypt.
+Cipher Feedbackack  (`CFB`) mode | Good for real-time streams; used in PKCS and BitLocker.
 Output Feedback (`OFB`) | Stream encryption; used in PKCS and SSH, better key stream handling.
 Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
-Galois/Counter(`GCM`) | 
+Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MzU3MDI0OCwtMjAzODYyOTQyMywtOD
+eyJoaXN0b3J5IjpbMTk0MjMxNTcxNiwtMjAzODYyOTQyMywtOD
 M0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgw
 MywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5Nj
 M2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkw
