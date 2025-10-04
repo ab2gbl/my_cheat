@@ -591,8 +591,12 @@ The  **`Record-Route field`**  in the IP header also records the route to a dest
 ### Symmetric Encryption ( secret key encryption )
 - same key to encrypt and decrypt the data
 - examples: **`AES`** and **`DES`**
+### Asymmetric Encryption ( public-key encryption )  
+- 2 keys: 
+  - `public key` : 
+  - `private key`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0OTAwODU1MiwtODM0ODE0Mjg3LC0xNT
+eyJoaXN0b3J5IjpbMjExNTUxOTQ0OCwtODM0ODE0Mjg3LC0xNT
 U3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgwMywxNzA4NTQzMzAz
 LDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mz
 k5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYs
