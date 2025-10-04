@@ -146,7 +146,7 @@ Common Protocols: `IPv4`, `IPv6`, `ICMP`, `IPSec`, `RIP`, `OSPF`, `IGMP`
 ### 🧩 IP Classes
 
 **Network Address** | **First Address** | **Last Address** | **Subnetmask**  | **CIDR**  |  **Subnets** | **IPs**  
-|--|--|--|--|--|--|--|--|  
+--|--|--|--|--|--|--|--  
 `A` | 1.0.0.0 | 1.0.0.1 | 127.255.255.255 | 255.0.0.0 | /8 | 127 | 16,777,214 + 2  
 `B` | 128.0.0.0 | 128.0.0.1 | 191.255.255.255 | 255.255.0.0 | /16 | 16,384 | 65,534 + 2  
 `C` | 192.0.0.0 | 192.0.0.1 | 223.255.255.255 | 255.255.255.0 | /24 | 2,097,152 | 254 + 2  
@@ -579,7 +579,7 @@ CTR | Fast streams, IPsec
 GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NzMyMDgwNiwtMjA5MDM4NDAyNiwtMj
+eyJoaXN0b3J5IjpbLTk3ODQ5ODU4NiwtMjA5MDM4NDAyNiwtMj
 AxMzY5MDg0LC05MjM5NzA0MjgsLTk4NDc4ODMwMywxOTQyMzE1
 NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOT
 gsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzEx
