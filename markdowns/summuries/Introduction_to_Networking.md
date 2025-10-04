@@ -541,12 +541,19 @@ For example, an administrator could place a firewall in between. In order to fac
 
 ## Authentication Protocols
 
+**Protocol** | **Description**
+|--|--|
+`Kerberos` | Key Distribution Center (KDC) based authentication protocol that uses tickets in domain environments.
+`SRP` | This is a password-based authentication protocol that uses cryptography to protect against eavesdropping and man-in-the-middle attacks.
+`SSL` | A cryptographic protocol used for secure communication over a computer network.
+`TLS` | TLS is a cryptographic protocol that provides communication security over the internet. It is the successor to SSL.
+`OAuth` | An open standard for authorization that allows users to grant third-party access to their web resources without sharing their passwords.
 
 … more on [hack the box course](https://academy.hackthebox.com/module/34/section/1876)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyNjk4MTM2LDExOTYzNjk1MzEsMTY2NT
-M5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2
-LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMT
-gzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1
-ODIsMTUxMzIxODM1NF19
+eyJoaXN0b3J5IjpbLTE5MjM4ODQ4NTYsMTE5NjM2OTUzMSwxNj
+Y1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5
+MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC
+0xODM2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2
+NjU4MiwxNTEzMjE4MzU0XX0=
 -->
