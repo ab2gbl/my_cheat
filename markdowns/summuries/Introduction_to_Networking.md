@@ -538,10 +538,12 @@ For example, an administrator could place a firewall in between. In order to fac
 - **main mode**: more secure
 - **aggressive mode**: faster
 - **Pre-Shared Keys (PSK)**: optional to use on IKE
+
+## Authentication Protocols
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NT
-c1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1
-LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDExNzc3LD
-Y0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4MiwxNTEzMjE4
-MzU0XX0=
+eyJoaXN0b3J5IjpbNTYwNTgxMjU4LDExOTYzNjk1MzEsMTY2NT
+M5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2
+LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMT
+gzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1
+ODIsMTUxMzIxODM1NF19
 -->
