@@ -476,16 +476,14 @@ Method | Purpose
 -   **Disassociation Attack** → kick clients off WiFi
 -   **Hardening:** disable broadcast, WPA2+, MAC filtering, EAP-TLS
 
-🌍 VPN (Virtual Private Network)
-- **Virtual Private Network** (`VPN`)
-	-  uses the ports `TCP/1723` for **Point-to-Point Tunneling Protocol**  `PPTP`
-	- and `UDP/500` for **IKEv1** and **IKEv2** VPN connections.
-- VPNs encrypt the connection between the remote device and the private network 
-
-**Requirement** | **Description**
+## 🌍 VPN (Virtual Private Network)
+-   Encrypts connection between device ↔️ private network
+-   Uses **PPTP (TCP/1723)**, **IKEv1/2 (UDP/500)**
+-**Requirement** | **Description**
+- 
 |--|--|
-`VPN Client` | This is installed on the remote device like  OpenVPN client.
-`VPN Server` | network device (computer)  responsible for accepting VPN connections from VPN clients and routing traffic from them.
+`VPN Client` | Installed (e.g., OpenVPN client)
+`VPN Server` | network device (computer) , Accepts VPN connections, routing traffic between.
 `Encryption` | such as AES and IPsec.
 `Authentication` | using a shared secret, certificate, or another auth method.
 
@@ -611,11 +609,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDIzMDUxOTgsMTk0MjMxNTcxNiwtMj
-AzODYyOTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMz
-ODM5MiwyMTg2MDgwMywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNj
-QwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2
-NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMT
-gzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2
-MDY2MV19
+eyJoaXN0b3J5IjpbMjExMTUzNjI1NCwxOTQyMzE1NzE2LC0yMD
+M4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4
+MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2ND
+A1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3
+MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExOD
+M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
+NjYxXX0=
 -->
