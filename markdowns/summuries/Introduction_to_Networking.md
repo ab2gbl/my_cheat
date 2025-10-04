@@ -600,12 +600,19 @@ The  **`Record-Route field`**  in the IP header also records the route to a dest
 E-Signatures | SSL/TLS | VPNs
 |--|--|--|
 SSH | PKI | Cloud
+
+### DES
+-   **`DES`** is a symmetric-key block cipher that encrypts 64-bit blocks of data using a 56-bit key (out of 64 bits, 8 are for error checking). It applies substitution and permutation operations.
+    
+-   **`3DES` (Triple DES)** improves security by applying DES three times (encrypt–decrypt–encrypt) with up to three different keys.
+    
+-   **`AES`** has replaced `DES/3DES`, offering stronger encryption with longer key lengths and higher security.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMT
-U1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMw
-MywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NT
-M5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2
-LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMT
-gzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1
-ODJdfQ==
+eyJoaXN0b3J5IjpbLTIwMTQzMjgxOTYsLTIwMzg2Mjk0MjMsLT
+gzNDgxNDI4NywtMTU1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4
+MDMsMTcwODU0MzMwMywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOT
+YzNjk1MzEsMTY2NTM5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5
+MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMT
+gyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYy
+OTI0M119
 -->
