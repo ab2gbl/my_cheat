@@ -540,8 +540,11 @@ For example, an administrator could place a firewall in between. In order to fac
 - **Pre-Shared Keys (PSK)**: optional to use on IKE
 
 ## Authentication Protocols
+
+
+… more on [hack the box course](https://academy.hackthebox.com/module/34/section/1876)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYwNTgxMjU4LDExOTYzNjk1MzEsMTY2NT
+eyJoaXN0b3J5IjpbMzIyNjk4MTM2LDExOTYzNjk1MzEsMTY2NT
 M5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2
 LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMT
 gzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1
