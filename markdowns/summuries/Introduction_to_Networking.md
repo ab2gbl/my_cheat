@@ -520,15 +520,15 @@ Encryption/auth
 -   Main mode (secure), Aggressive mode (fast)
 -   Supports PSK
 
-# Connection Establishment
-## Authentication Protocols
+# 🔐 Connection Establishment
+##  🔐 Auth Protocols
 
 **Protocol** | **Description**
 |--|--|
-`Kerberos` | Key Distribution Center (KDC) based authentication protocol that uses tickets in domain environments.
-`SRP` | This is a password-based authentication protocol that uses cryptography to protect against eavesdropping and man-in-the-middle attacks.
+`Kerberos` | Ticket-based (KDC)
+`SRP` | Password + crypto
 `SSL` | A cryptographic protocol used for secure communication over a computer network.
-`TLS` | TLS is a cryptographic protocol that provides communication security over the internet. It is the successor to SSL.
+`TLS` | Secure comms (HTTPS)
 `OAuth` | An open standard for authorization that allows users to grant third-party access to their web resources without sharing their passwords.
 `2FA` | An authentication method that uses a combination of two different factors to verify a user's identity.
 `HTTPS` | HTTPS uses SSL/TLS to encrypt communication and provide authentication, ensuring that third parties cannot intercept and read the transmitted data. It is widely used for secure communication over the internet, particularly for web browsing.
@@ -604,7 +604,7 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTY5NjY2ODYsLTk4NDc4ODMwMywxOT
+eyJoaXN0b3J5IjpbLTE4MzczMDA0OTEsLTk4NDc4ODMwMywxOT
 QyMzE1NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcx
 MzQyOTgsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMT
 k0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTky
