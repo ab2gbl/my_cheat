@@ -516,11 +516,9 @@ Encryption/auth
 `Elliptic Curve Diffie-Hellman` | `ECDH` | Stronger DH
 `Elliptic Curve Digital Signature Algorithm` | `ECDSA` | Efficient digital signatures
 
-### Internet Key Exchange(`IKE`)
-- combination of `Diffie-Hellman` key exchange algorithm +`other cryptographic techniques`
-- **main mode**: more secure
-- **aggressive mode**: faster
-- **Pre-Shared Keys (PSK)**: optional to use on IKE
+**IKE (Internet Key Exchange):**  DH + crypto
+-   Main mode (secure), Aggressive mode (fast)
+-   Supports PSK
 
 # Connection Establishment
 ## Authentication Protocols
@@ -606,11 +604,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1ODc2MzU0OCwtOTg0Nzg4MzAzLDE5ND
-IzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMTU1NzEz
-NDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOT
-QzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIx
-MCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MD
-A5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQx
-MTc3N119
+eyJoaXN0b3J5IjpbLTEwMTY5NjY2ODYsLTk4NDc4ODMwMywxOT
+QyMzE1NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcx
+MzQyOTgsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMT
+k0MzExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTky
+MTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NT
+AwOTIxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0
+MTE3NzddfQ==
 -->
