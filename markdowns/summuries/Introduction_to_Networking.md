@@ -536,10 +536,10 @@ For example, an administrator could place a firewall in between. In order to fac
 ### Internet Key Exchange(`IKE`)
 - combination of `Diffie-Hellman` key exchange algorithm +`other cryptographic techniques`
 - **main mode**: more secure
-- aggrisive mode
+- **aggressive mode**: faster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM2Njg5MTc0LDE1NTc1NzU2NzAsLTk5Nz
-QyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAx
-LC0xODIwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2MDY2MSwxMT
-M3NjI5MjQzLDcyNTM2NjU4MiwxNTEzMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbMTY2NTM5OTIxMCwxNTU3NTc1NjcwLC05OT
+c0MjM5MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwtMTE4MzU2NTUw
+MSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2NDIzNjA2NjEsMT
+EzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1NF19
 -->
