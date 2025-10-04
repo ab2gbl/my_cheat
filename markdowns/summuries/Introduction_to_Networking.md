@@ -588,12 +588,15 @@ The  **`Record-Route field`**  in the IP header also records the route to a dest
 -   The attacker guesses or fabricates the TCP Initial Sequence Number (ISN) to make the target accept a fake connection.
 -   Result: disrupted or hijacked connections and potential interception or corruption of network traffic.
 ## Cryptography
+### Symmetric Encryption ( secret key encryption )
+- same key to encrypt and decrypt the data
+- examples: **`AES`** and **`DES`**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTU1MTY2NjMsLTgzNDgxNDI4NywtMT
-U1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMw
-MywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NT
-M5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2
-LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMT
-gzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1
-ODJdfQ==
+eyJoaXN0b3J5IjpbMTc0OTAwODU1MiwtODM0ODE0Mjg3LC0xNT
+U3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgwMywxNzA4NTQzMzAz
+LDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mz
+k5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYs
+OTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xOD
+M2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4
+Ml19
 -->
