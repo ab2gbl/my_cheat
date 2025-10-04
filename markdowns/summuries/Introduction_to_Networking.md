@@ -446,7 +446,7 @@ Method | Purpose
         
     -   Can be valuable for attackers if discovered during reconnaissance
 
-## Wireless Networks
+## 📡 Wireless Networks
 
 - Wireless networks use radio frequency `RF`
 - **Wireless Access Point(`WAP`)** : like router for ex, connects the wireless network to a wired network
@@ -623,11 +623,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MjMxNTcxNiwtMjAzODYyOTQyMywtOD
-M0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgw
-MywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5Nj
-M2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkw
-NCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xOD
-IwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5
-MjQzXX0=
+eyJoaXN0b3J5IjpbLTM5OTgxNjE3MiwxOTQyMzE1NzE2LC0yMD
+M4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4
+MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2ND
+A1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3
+MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExOD
+M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
+NjYxXX0=
 -->
