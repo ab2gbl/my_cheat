@@ -145,14 +145,14 @@ Common Protocols: `IPv4`, `IPv6`, `ICMP`, `IPSec`, `RIP`, `OSPF`, `IGMP`
 
 ### 🧩 IP Classes
 
-| **Network Address** | **First Address** | **Last Address** | **Subnetmask**  | **CIDR**  |  **Subnets** | **IPs** |
+**Network Address** | **First Address** | **Last Address** | **Subnetmask**  | **CIDR**  |  **Subnets** | **IPs**
 |--|--|--|--|--|--|--|--|
-| `A` | 1.0.0.0 | 1.0.0.1 | 127.255.255.255 | 255.0.0.0 | /8 | 127 | 16,777,214 + 2 |
-| `B` | 128.0.0.0 | 128.0.0.1 | 191.255.255.255 | 255.255.0.0 | /16 | 16,384 | 65,534 + 2|
-|`C` | 192.0.0.0 | 192.0.0.1 | 223.255.255.255 | 255.255.255.0 | /24 | 2,097,152 | 254 + 2 | 
-| `D` | 224.0.0.0 | 224.0.0.1 | 239.255.255.255 | Multicast | Multicast | Multicast | Multicast
-| `E` | 240.0.0.0 | 240.0.0.1 | 255.255.255.255 | reserved | reserved | reserved | reserved |
----
+`A` | 1.0.0.0 | 1.0.0.1 | 127.255.255.255 | 255.0.0.0 | /8 | 127 | 16,777,214 + 2 
+`B` | 128.0.0.0 | 128.0.0.1 | 191.255.255.255 | 255.255.0.0 | /16 | 16,384 | 65,534 + 2
+`C` | 192.0.0.0 | 192.0.0.1 | 223.255.255.255 | 255.255.255.0 | /24 | 2,097,152 | 254 + 2  
+`D` | 224.0.0.0 | 224.0.0.1 | 239.255.255.255 | Multicast | Multicast | Multicast | Multicast
+`E` | 240.0.0.0 | 240.0.0.1 | 255.255.255.255 | reserved | reserved | reserved | reserved 
+
  - **+2** : `network address` and the `broadcast address`
 - **default gateway**: IPv4 address of the `router` , common `first` or `last` IPv4 in a subnet.
 - **broadcast IP address**: allows one device to talk to `all others` in its network at once , `without response`, `last IPv4`
@@ -579,11 +579,11 @@ CTR | Fast streams, IPsec
 GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDU5NzUwNzUsLTkyMzk3MDQyOCwtOT
-g0Nzg4MzAzLDE5NDIzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgx
-NDI4NywtMTU1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMT
-cwODU0MzMwMywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1
-MzEsMTY2NTM5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMT
-I5ODE5OTM2LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4
-OTYxMV19
+eyJoaXN0b3J5IjpbLTIwMTM2OTA4NCwtOTIzOTcwNDI4LC05OD
+Q3ODgzMDMsMTk0MjMxNTcxNiwtMjAzODYyOTQyMywtODM0ODE0
+Mjg3LC0xNTU3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgwMywxNz
+A4NTQzMzAzLDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUz
+MSwxNjY1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMj
+k4MTk5MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5
+NjExXX0=
 -->
