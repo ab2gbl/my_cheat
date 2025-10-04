@@ -145,7 +145,7 @@ Common Protocols: `IPv4`, `IPv6`, `ICMP`, `IPSec`, `RIP`, `OSPF`, `IGMP`
 
 ### 🧩 IP Classes
 
-**Network Address** | **First Address** | **Last Address** | **Subnetmask**  | **CIDR**  |  **Subnets** | **IPs**  
+**`Class`**| **Network Address** | **First Address** | **Last Address** | **Subnetmask**  | **CIDR**  |  **Subnets** | **IPs**  
 --|--|--|--|--|--|--|--  
 `A` | 1.0.0.0 | 1.0.0.1 | 127.255.255.255 | 255.0.0.0 | /8 | 127 | 16,777,214 + 2  
 `B` | 128.0.0.0 | 128.0.0.1 | 191.255.255.255 | 255.255.0.0 | /16 | 16,384 | 65,534 + 2  
@@ -579,11 +579,11 @@ CTR | Fast streams, IPsec
 GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3ODQ5ODU4NiwtMjA5MDM4NDAyNiwtMj
-AxMzY5MDg0LC05MjM5NzA0MjgsLTk4NDc4ODMwMywxOTQyMzE1
-NzE2LC0yMDM4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOT
-gsNjQxMzM4MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzEx
-MDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAsMT
-U1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOTIx
-MjVdfQ==
+eyJoaXN0b3J5IjpbMTk1MjQzMjY1MiwtOTc4NDk4NTg2LC0yMD
+kwMzg0MDI2LC0yMDEzNjkwODQsLTkyMzk3MDQyOCwtOTg0Nzg4
+MzAzLDE5NDIzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgxNDI4Ny
+wtMTU1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0
+MzMwMywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMT
+Y2NTM5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5
+OTM2XX0=
 -->
