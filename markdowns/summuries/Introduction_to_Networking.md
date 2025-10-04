@@ -560,12 +560,14 @@ For example, an administrator could place a firewall in between. In order to fac
 - **UDP** videos streaming and gaming, faster bcs no error recovery
   
 ### IP Packet
-   **Internet Protocol(`IP`)** packet is the data area used by the network layer of the [Open Systems Interconnection](https://en.wikipedia.org/wiki/OSI_model) (`OSI`) model to transmit data
+   **Internet Protocol (`IP`)** packet is the data area used by the network layer of the **`OSI`** model to transmit data
+#### IP header
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY5OTcxODgzLDE3MDg1NDMzMDMsMTk0Mz
-ExMDc0OSw2NDA1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAs
-MTU1NzU3NTY3MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOT
-IxMjUsLTExODM1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3
-NzcsNjQyMzYwNjYxLDExMzc2MjkyNDMsNzI1MzY2NTgyLDE1MT
-MyMTgzNTRdfQ==
+eyJoaXN0b3J5IjpbLTM1OTM0MDk4NSwxNzA4NTQzMzAzLDE5ND
+MxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEw
+LDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMD
+kyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDEx
+Nzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4MiwxNT
+EzMjE4MzU0XX0=
 -->
