@@ -142,8 +142,9 @@ Common Protocols: `IPv4`, `IPv6`, `ICMP`, `IPSec`, `RIP`, `OSPF`, `IGMP`
 -   **MAC** - describes the exact floor and apartment of the receiver.
 
 **host part** and a **network part**. The `router` assigns the **host part** of the IP address at home or by an administrator. The respective `network administrator` assigns the **network part**. On the Internet, this is **IANA**
+
 ### 🧩 IP Classes
----
+
 | **Network Address** | **First Address** | **Last Address** | **Subnetmask**  | **CIDR**  |  **Subnets** | **IPs** |
 |--|--|--|--|--|--|--|--|
 | `A` | 1.0.0.0 | 1.0.0.1 | 127.255.255.255 | 255.0.0.0 | /8 | 127 | 16,777,214 + 2 |
@@ -578,11 +579,11 @@ CTR | Fast streams, IPsec
 GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMzk3MDQyOCwtOTg0Nzg4MzAzLDE5ND
-IzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMTU1NzEz
-NDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOT
-QzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIx
-MCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MD
-A5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQx
-MTc3N119
+eyJoaXN0b3J5IjpbLTE5NDU5NzUwNzUsLTkyMzk3MDQyOCwtOT
+g0Nzg4MzAzLDE5NDIzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgx
+NDI4NywtMTU1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMT
+cwODU0MzMwMywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1
+MzEsMTY2NTM5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMT
+I5ODE5OTM2LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4
+OTYxMV19
 -->
