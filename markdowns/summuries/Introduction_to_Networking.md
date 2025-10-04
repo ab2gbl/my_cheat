@@ -587,12 +587,13 @@ The  **`Record-Route field`**  in the IP header also records the route to a dest
 -   Blind spoofing forges IP/TCP header fields (source/destination addresses, ports, ISN) and sends packets without observing the target’s replies.
 -   The attacker guesses or fabricates the TCP Initial Sequence Number (ISN) to make the target accept a fake connection.
 -   Result: disrupted or hijacked connections and potential interception or corruption of network traffic.
+## Cryptography
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNDgxNDI4NywtMTU1NzEzNDI5OCw2ND
-EzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOTQzMTEwNzQ5
-LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIxMCwxNTU3NT
-c1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MDA5MjEyNSwt
-MTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQxMTc3Nyw2ND
-IzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1ODIsMTUxMzIxODM1
-NF19
+eyJoaXN0b3J5IjpbLTE1MTU1MTY2NjMsLTgzNDgxNDI4NywtMT
+U1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMw
+MywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NT
+M5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2
+LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMT
+gzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1
+ODJdfQ==
 -->
