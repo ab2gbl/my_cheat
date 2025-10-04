@@ -462,7 +462,7 @@ Method | Purpose
 - **Cyclic Redundancy Check (`CRC`)**: error-detection mechanism in `WEP` protocot
 - **CRC** allow decrypt a single packet `without` knowing the `encryption key` (using the `plaintext`)
 - **CRC** value is recalculated by **WAP** using `received data` and compared to the original value from the **Device** to see if lose of data happened
-### Encryption Protocols
+###  🔒 Encryption Protocols
 #### WEP
 - `WEP` uses a `40-bit` or `104-bit` key to encrypt data
 - `WEP` uses the `RC4 cipher` encryption algorithm, which makes it vulnerable to attacks.
@@ -623,7 +623,7 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDUwOTU2MTMsMTk0MjMxNTcxNiwtMj
+eyJoaXN0b3J5IjpbLTIxMDU2ODgxMzYsMTk0MjMxNTcxNiwtMj
 AzODYyOTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMz
 ODM5MiwyMTg2MDgwMywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNj
 QwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2
