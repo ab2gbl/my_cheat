@@ -459,22 +459,11 @@ Method | Purpose
 3 | `Client` | Encrypts response with shared secret, sends back.
 4 | `WAP` | Validates response and authenticates.
 
-- **Cyclic Redundancy Check (`CRC`)**: error-detection mechanism in `WEP` protocot
-- **CRC** allow decrypt a single packet `without` knowing the `encryption key` (using the `plaintext`)
-- **CRC** value is recalculated by **WAP** using `received data` and compared to the original value from the **Device** to see if lose of data happened
-###  🔒 Encryption Protocols
-#### WEP
-- `WEP` uses a `40-bit` or `104-bit` key to encrypt data
-- `WEP` uses the `RC4 cipher` encryption algorithm, which makes it vulnerable to attacks.
+**CRC (Cyclic Redundancy Check):** error detection, can allow decrypting without key
 
-**Protocol** | **IV** | **Secret Key**
---|--|--
-`WEP-40`/`WEP-64` | 24-bit | 40-bit
-`WEP-104` | 24-bit | 80-bit
-
-#### WPA
-- `WPA` using `AES` uses a `128-bit`
-- `WPA` more secure auth methods (`PSK` or an 802.1X auth server)
+### 🔒 Encryption Protocols
+-   **WEP** → `RC4`, weak (`40/104-bit`)
+-   **WPA** → AES, stronger auth (PSK, 802.1X) (`128-bit`)
 
 ### Authentication Protocols
 - **LEAP** and **PEAP** are both based on the **Extensible Auth Protocol** (`EAP`), a framework for authentication used in various networking contexts.
@@ -623,11 +612,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDU2ODgxMzYsMTk0MjMxNTcxNiwtMj
-AzODYyOTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMz
-ODM5MiwyMTg2MDgwMywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNj
-QwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2
-NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMT
-gzNTY1NTAxLC0xODIwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2
-MDY2MV19
+eyJoaXN0b3J5IjpbMTY0ODc3OTExMCwxOTQyMzE1NzE2LC0yMD
+M4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4
+MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2ND
+A1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3
+MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExOD
+M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
+NjYxXX0=
 -->
