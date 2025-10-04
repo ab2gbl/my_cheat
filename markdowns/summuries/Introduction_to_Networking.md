@@ -539,6 +539,7 @@ For example, an administrator could place a firewall in between. In order to fac
 - **aggressive mode**: faster
 - **Pre-Shared Keys (PSK)**: optional to use on IKE
 
+# Connection Establishment
 ## Authentication Protocols
 
 **Protocol** | **Description**
@@ -552,10 +553,12 @@ For example, an administrator could place a firewall in between. In order to fac
 `HTTPS` | HTTPS uses SSL/TLS to encrypt communication and provide authentication, ensuring that third parties cannot intercept and read the transmitted data. It is widely used for secure communication over the internet, particularly for web browsing.
 
 … more on [hack the box course](https://academy.hackthebox.com/module/34/section/1876)
+
+## TCP/UDP Connections
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mz
-k5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYs
-OTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xOD
-M2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4
-MiwxNTEzMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbMTk0MzExMDc0OSw2NDA1MjI2MSwxMTk2Mz
+Y5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0
+LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExODM1NjU1MDEsLTE4Mj
+AxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYwNjYxLDExMzc2Mjky
+NDMsNzI1MzY2NTgyLDE1MTMyMTgzNTRdfQ==
 -->
