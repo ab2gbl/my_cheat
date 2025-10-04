@@ -513,8 +513,8 @@ Encryption/auth
 |--|--|--|
 `Diffie-Hellman` | `DH` | Efficient, widely used
 `Rivest–Shamir–Adleman` | `RSA` | Secure, heavy
-`Elliptic Curve Diffie-Hellman` | `ECDH` | Provides enhanced security compared to traditional Diffie-Hellman
-`Elliptic Curve Digital Signature Algorithm` | `ECDSA` | Provides enhanced security and efficiency for digital signature generation
+`Elliptic Curve Diffie-Hellman` | `ECDH` | Stronger DH
+`Elliptic Curve Digital Signature Algorithm` | `ECDSA` | Efficient digital signatures
 
 ### Internet Key Exchange(`IKE`)
 - combination of `Diffie-Hellman` key exchange algorithm +`other cryptographic techniques`
@@ -606,11 +606,11 @@ Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
 Galois/Counter(`GCM`) | Provides both confidentiality and integrity; used in VPNs, wireless, secure protocols.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NDc4ODMwMywxOTQyMzE1NzE2LC0yMD
-M4NjI5NDIzLC04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4
-MzkyLDIxODYwODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2ND
-A1MjI2MSwxMTk2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3
-MCwtOTk3NDIzOTA0LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExOD
-M1NjU1MDEsLTE4MjAxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYw
-NjYxXX0=
+eyJoaXN0b3J5IjpbMTI1ODc2MzU0OCwtOTg0Nzg4MzAzLDE5ND
+IzMTU3MTYsLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMTU1NzEz
+NDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMwMywxOT
+QzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NTM5OTIx
+MCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2LDk1MD
+A5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMTgzNjQx
+MTc3N119
 -->
