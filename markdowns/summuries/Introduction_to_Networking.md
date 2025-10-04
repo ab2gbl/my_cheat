@@ -219,7 +219,7 @@ example
   - **its own layer 2 address**: 	to the higher layers.
 - **Address Resolution Protocol (`ARP`)**: is used in IPv4 to determine the MAC addresses associated with the IP addresses. 
 
-||||||
+| | | | | |
 |--|--|--|--|--|--|
 **Local Range** | 0**2**:00:00:00:00:00 | 0**6**:00:00:00:00:00 | 0**A**:00:00:00:00:00 | 0**E**:00:00:00:00:00
 
@@ -579,11 +579,11 @@ CTR | Fast streams, IPsec
 GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MjQzMjY1MiwxOTUyNDMyNjUyLC05Nz
-g0OTg1ODYsLTIwOTAzODQwMjYsLTIwMTM2OTA4NCwtOTIzOTcw
-NDI4LC05ODQ3ODgzMDMsMTk0MjMxNTcxNiwtMjAzODYyOTQyMy
-wtODM0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMzODM5MiwyMTg2
-MDgwMywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNjQwNTIyNjEsMT
-E5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQy
-MzkwNF19
+eyJoaXN0b3J5IjpbOTM0NzA3MTkyLDE5NTI0MzI2NTIsLTk3OD
+Q5ODU4NiwtMjA5MDM4NDAyNiwtMjAxMzY5MDg0LC05MjM5NzA0
+MjgsLTk4NDc4ODMwMywxOTQyMzE1NzE2LC0yMDM4NjI5NDIzLC
+04MzQ4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4MzkyLDIxODYw
+ODAzLDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2NDA1MjI2MSwxMT
+k2MzY5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3MCwtOTk3NDIz
+OTA0XX0=
 -->
