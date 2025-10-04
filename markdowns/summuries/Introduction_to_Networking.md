@@ -617,22 +617,17 @@ SSH | PKI | Cloud
 |--|--|
 Electronic Code Book  (`ECB`) mode | ECB mode is generally not recommended for use due to its susceptibility to certain types of attacks. Furthermore, it does not hide data patterns efficiently. As a result, statistical analysis can reveal elements of clear-text messages, for example, in web applications.
 Cipher Block Chaining  (`CBC`) mode | CBC mode is generally used to encrypt messages like disk encryption and e-mail communication. This is the default mode for AES and is also used in software like TrueCrypt, VeraCrypt, TLS, and SSL.
+Cipher Feedbackack  (`CFB`) mode |
+Output Feedback (`OFB`) | Stream encryption; used in PKCS and SSH, better key stream handling.
+Counter (`CTR`) | Fast stream encryption; used in IPsec and BitLocker.
+Galois/Counter(`GCM`) | 
 
-Cipher Feedbackack  (`CFB`) mode
-
-CFB mode is well suited for real-time encryption of a data stream, e.g., network communication encryption or encryption/decryption of files in transit like Public-Key Cryptography Standards (PKCS) and Microsoft's BitLocker.
-
-[Output Feedback](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#OFB)  (`OFB`) mode
-
-OFB mode is also used to encrypt a data stream, e.g., to encrypt real-time communication. However, this mode is considered better for the data stream because of how the key stream is generated. We can find this mode in PKCS but also in the SSH protocol.
-Counter (`CTR`) mode | CTR mode encrypts real-time data streams AES uses, e.g., network communication, disk encryption, and other real-time scenarios where data is processed. An example of this would be IPsec or Microsoft's BitLocker.
-Galois/Counter(`GCM`) mode | GCM is used in cases where confidentiality and integrity need to be protected together, such as wireless communications, VPNs, and other secure communication protocols.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc4ODM2NTMxLC0yMDM4NjI5NDIzLC04Mz
-Q4MTQyODcsLTE1NTcxMzQyOTgsNjQxMzM4MzkyLDIxODYwODAz
-LDE3MDg1NDMzMDMsMTk0MzExMDc0OSw2NDA1MjI2MSwxMTk2Mz
-Y5NTMxLDE2NjUzOTkyMTAsMTU1NzU3NTY3MCwtOTk3NDIzOTA0
-LDEyOTgxOTkzNiw5NTAwOTIxMjUsLTExODM1NjU1MDEsLTE4Mj
-AxODk2MTEsLTE4MzY0MTE3NzcsNjQyMzYwNjYxLDExMzc2Mjky
-NDNdfQ==
+eyJoaXN0b3J5IjpbMTA0MzU3MDI0OCwtMjAzODYyOTQyMywtOD
+M0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgw
+MywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5Nj
+M2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkw
+NCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xOD
+IwMTg5NjExLC0xODM2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5
+MjQzXX0=
 -->
