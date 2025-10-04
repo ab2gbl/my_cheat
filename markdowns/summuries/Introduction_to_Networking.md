@@ -548,12 +548,14 @@ For example, an administrator could place a firewall in between. In order to fac
 `SSL` | A cryptographic protocol used for secure communication over a computer network.
 `TLS` | TLS is a cryptographic protocol that provides communication security over the internet. It is the successor to SSL.
 `OAuth` | An open standard for authorization that allows users to grant third-party access to their web resources without sharing their passwords.
+`2FA` | An authentication method that uses a combination of two different factors to verify a user's identity.
+`HTTPS` | HTTPS uses SSL/TLS to encrypt communication and provide authentication, ensuring that third parties cannot intercept and read the transmitted data. It is widely used for secure communication over the internet, particularly for web browsing.
 
 … more on [hack the box course](https://academy.hackthebox.com/module/34/section/1876)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjM4ODQ4NTYsMTE5NjM2OTUzMSwxNj
-Y1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5
-MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC
-0xODM2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2
-NjU4MiwxNTEzMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mz
+k5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYs
+OTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xOD
+M2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4
+MiwxNTEzMjE4MzU0XX0=
 -->
