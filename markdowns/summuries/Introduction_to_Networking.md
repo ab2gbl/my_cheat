@@ -147,10 +147,10 @@ Common Protocols: `IPv4`, `IPv6`, `ICMP`, `IPSec`, `RIP`, `OSPF`, `IGMP`
 
 **Network Address** | **First Address** | **Last Address** | **Subnetmask**  | **CIDR**  |  **Subnets** | **IPs**
 |--|--|--|--|--|--|--|--|
-`A` | 1.0.0.0 | 1.0.0.1 | 127.255.255.255 | 255.0.0.0 | /8 | 127 | 16,777,214 + 2 
-`B` | 128.0.0.0 | 128.0.0.1 | 191.255.255.255 | 255.255.0.0 | /16 | 16,384 | 65,534 + 2
+`A` | 1.0.0.0 | 1.0.0.1 | 127.255.255.255 | 255.0.0.0 | /8 | 127 | 16,777,214 + 2  
+`B` | 128.0.0.0 | 128.0.0.1 | 191.255.255.255 | 255.255.0.0 | /16 | 16,384 | 65,534 + 2  
 `C` | 192.0.0.0 | 192.0.0.1 | 223.255.255.255 | 255.255.255.0 | /24 | 2,097,152 | 254 + 2  
-`D` | 224.0.0.0 | 224.0.0.1 | 239.255.255.255 | Multicast | Multicast | Multicast | Multicast
+`D` | 224.0.0.0 | 224.0.0.1 | 239.255.255.255 | Multicast | Multicast | Multicast | Multicast  
 `E` | 240.0.0.0 | 240.0.0.1 | 255.255.255.255 | reserved | reserved | reserved | reserved 
 
  - **+2** : `network address` and the `broadcast address`
@@ -579,11 +579,11 @@ CTR | Fast streams, IPsec
 GCM | Encryption + integrity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTM2OTA4NCwtOTIzOTcwNDI4LC05OD
-Q3ODgzMDMsMTk0MjMxNTcxNiwtMjAzODYyOTQyMywtODM0ODE0
-Mjg3LC0xNTU3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgwMywxNz
-A4NTQzMzAzLDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUz
-MSwxNjY1Mzk5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMj
-k4MTk5MzYsOTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5
-NjExXX0=
+eyJoaXN0b3J5IjpbLTIwOTAzODQwMjYsLTIwMTM2OTA4NCwtOT
+IzOTcwNDI4LC05ODQ3ODgzMDMsMTk0MjMxNTcxNiwtMjAzODYy
+OTQyMywtODM0ODE0Mjg3LC0xNTU3MTM0Mjk4LDY0MTMzODM5Mi
+wyMTg2MDgwMywxNzA4NTQzMzAzLDE5NDMxMTA3NDksNjQwNTIy
+NjEsMTE5NjM2OTUzMSwxNjY1Mzk5MjEwLDE1NTc1NzU2NzAsLT
+k5NzQyMzkwNCwxMjk4MTk5MzYsOTUwMDkyMTI1LC0xMTgzNTY1
+NTAxXX0=
 -->
