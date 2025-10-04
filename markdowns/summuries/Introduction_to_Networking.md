@@ -596,12 +596,16 @@ The  **`Record-Route field`**  in the IP header also records the route to a dest
   - **`public key`** :  encrypt data
   - **`private key`** : decrypt data
 - examples: **`RSA`** and **`PGP`** and  **`ECC`**
+
+E-Signatures | SSL/TLS | VPNs
+|--|--|--|
+SSH | PKI | Cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTE5Njg3MiwtODM0ODE0Mjg3LC0xNT
-U3MTM0Mjk4LDY0MTMzODM5MiwyMTg2MDgwMywxNzA4NTQzMzAz
-LDE5NDMxMTA3NDksNjQwNTIyNjEsMTE5NjM2OTUzMSwxNjY1Mz
-k5MjEwLDE1NTc1NzU2NzAsLTk5NzQyMzkwNCwxMjk4MTk5MzYs
-OTUwMDkyMTI1LC0xMTgzNTY1NTAxLC0xODIwMTg5NjExLC0xOD
-M2NDExNzc3LDY0MjM2MDY2MSwxMTM3NjI5MjQzLDcyNTM2NjU4
-Ml19
+eyJoaXN0b3J5IjpbLTIwMzg2Mjk0MjMsLTgzNDgxNDI4NywtMT
+U1NzEzNDI5OCw2NDEzMzgzOTIsMjE4NjA4MDMsMTcwODU0MzMw
+MywxOTQzMTEwNzQ5LDY0MDUyMjYxLDExOTYzNjk1MzEsMTY2NT
+M5OTIxMCwxNTU3NTc1NjcwLC05OTc0MjM5MDQsMTI5ODE5OTM2
+LDk1MDA5MjEyNSwtMTE4MzU2NTUwMSwtMTgyMDE4OTYxMSwtMT
+gzNjQxMTc3Nyw2NDIzNjA2NjEsMTEzNzYyOTI0Myw3MjUzNjY1
+ODJdfQ==
 -->
