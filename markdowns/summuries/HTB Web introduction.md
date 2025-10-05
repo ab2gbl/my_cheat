@@ -21,6 +21,17 @@ three main categories:
 	- Presentation Layer: frontend
 	- Application Layer: backend
 	- Data Layer: database
+# [OWASP Top 10](https://owasp.org/www-project-top-ten/) vulnerabilities
+1. Broken Access Control
+2. Cryptographic Failures 
+3. Injection
+4. Insecure Design
+5. Security Misconfiguration
+6. Vulnerable and Outdated Components
+7. Identification and Authentication Failures
+8. Software and Data Integrity Failures
+9. Security Logging and Monitoring Failures
+10. Server-Side Request Forgery (SSRF)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE0MzY4MDIzXX0=
+eyJoaXN0b3J5IjpbMTk2NTg1Njg2Miw3MTQzNjgwMjNdfQ==
 -->
