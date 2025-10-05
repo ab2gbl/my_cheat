@@ -17,7 +17,10 @@ three main categories:
 	    -   3rd Party Integrations
 	    -   Web Application Integrations
 	4.  `Functions`  (Serverless) 
-- Web Application Architecture: 
+- Web Application Architecture: three layers
+	- Presentation Layer: frontend
+	- Application Layer: backend
+	- Data Layer: database
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODIwMDMxMzhdfQ==
+eyJoaXN0b3J5IjpbNzE0MzY4MDIzXX0=
 -->
