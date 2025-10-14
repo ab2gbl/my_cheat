@@ -41,10 +41,11 @@ model_inputs = tokenizer(sequences, padding=True, return_tensors="pt") # pt: pyt
 # pass input to model 
 output = model(**tokens)
 ```
-
+# Fine-tuning 
+## Processing the data
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4MD
-I3MzkyNTUsMTAzNDI3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgy
-ODQyLC0xNTgxNzgwOTc2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LD
-czMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOT
+E2OTYxMjg1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1
+MDksLTE5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MS
+wyOTEzNjE0MzUsNzMwOTk4MTE2XX0=
 -->
