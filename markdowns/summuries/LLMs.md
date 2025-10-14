@@ -50,20 +50,24 @@ output = model(**tokens)
 ```python
 from datasets import load_dataset
 from transformers import AutoTokenizer, DataCollatorWithPadding
+
 # loading tokenizer and dataset
 raw_datasets = load_dataset("glue", "mrpc")
 checkpoint = "bert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+
 # tokenizing func
 def tokenize_function(example):
     return tokenizer(example["sentence1"], example["sentence2"], truncation=True)
-# run with map for 
+    
+# run with map and batched for processes multiple examples at once, making tokenization much faster. 
 tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
+# padding for max leght in batch
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODA0NDMwMjcsMTg4Nzk5MDEwNCwxND
-U0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1NSwxMDM0Mjc2
-MzExLC0yNzMyNTY1MDksLTE5NTExODI4NDIsLTE1ODE3ODA5Nz
-YsMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMjI0NTY1NzUxLDE4ODc5OTAxMDQsMTQ1ND
+QyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMTAzNDI3NjMx
+MSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0xNTgxNzgwOTc2LD
+E1MTE4ODg5NzEsMjkxMzYxNDM1LDczMDk5ODExNl19
 -->
