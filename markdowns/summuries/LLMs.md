@@ -43,9 +43,27 @@ output = model(**tokens)
 ```
 # Fine-tuning 
 ## Processing the data
+-   Use  `batched=True`  with  `Dataset.map()`  for significantly faster preprocessing
+-   Dynamic padding with  `DataCollatorWithPadding`  is more efficient than fixed-length padding
+-   Always preprocess your data to match what your model expects (numerical tensors, correct column names)
+-   The 🤗 Datasets library provides powerful tools for efficient data processing at scale
+```python
+from datasets import load_dataset
+from transformers import AutoTokenizer, DataCollatorWithPadding
+# loading tokenizer and dataset
+raw_datasets = load_dataset("glue", "mrpc")
+checkpoint = "bert-base-uncased"
+tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+# tokenizing func
+def tokenize_function(example):
+    return tokenizer(example["sentence1"], example["sentence2"], truncation=True)
+# run with map for 
+tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
+data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOT
-E2OTYxMjg1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1
-MDksLTE5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MS
-wyOTEzNjE0MzUsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE4ODA0NDMwMjcsMTg4Nzk5MDEwNCwxND
+U0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1NSwxMDM0Mjc2
+MzExLC0yNzMyNTY1MDksLTE5NTExODI4NDIsLTE1ODE3ODA5Nz
+YsMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4MTE2XX0=
 -->
