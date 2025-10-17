@@ -60,7 +60,7 @@ three main categories:
 - SQL Injection (SQLi)
 - CVEs
 
-## ## cURL
+# cURL
 
 **Command** | **Description**
 |--|--|
@@ -91,5 +91,5 @@ three main categories:
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MTUzNjE1MCwxOTY1ODU2ODYyXX0=
+eyJoaXN0b3J5IjpbLTE3NDk4ODg2MTUsMTk2NTg1Njg2Ml19
 -->
