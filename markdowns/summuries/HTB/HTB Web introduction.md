@@ -40,6 +40,7 @@ three main categories:
 ```
 ## Cross-Site Request Forgery (CSRF)
 - caused by unfiltered user input
+- common `CSRF` attack:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzY4MjM3MzQsMTk2NTg1Njg2Ml19
+eyJoaXN0b3J5IjpbODQxNTkzMzU2LDE5NjU4NTY4NjJdfQ==
 -->
