@@ -32,6 +32,12 @@ three main categories:
 8. Software and Data Integrity Failures
 9. Security Logging and Monitoring Failures
 10. Server-Side Request Forgery (SSRF)
+# FrontEnd 
+## Cross-Site Scripting (XSS)
+- **3 types**:
+```javascript
+#"><img src=/ onerror=alert(document.cookie)>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NTg1Njg2Ml19
+eyJoaXN0b3J5IjpbLTE2NDMyODgwNzUsMTk2NTg1Njg2Ml19
 -->
