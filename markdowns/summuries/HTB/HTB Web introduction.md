@@ -49,7 +49,10 @@ three main categories:
 ```
 
 # BackEnd Vulnerabilities
-
+## Broken Auth/Access Control (Bypass login)
+## Malicious File Upload
+## Command Injection
+## SQL Injection (SQLi)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM4MjY3NjE3LDE5NjU4NTY4NjJdfQ==
+eyJoaXN0b3J5IjpbLTEwODQwMTM4NjQsMTk2NTg1Njg2Ml19
 -->
