@@ -38,6 +38,8 @@ three main categories:
 ```javascript
 #"><img src=/ onerror=alert(document.cookie)>
 ```
+## Cross-Site Request Forgery (CSRF)
+- caused by unfiltered user input
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODgwMTQwNjgsMTk2NTg1Njg2Ml19
+eyJoaXN0b3J5IjpbLTE1NzY4MjM3MzQsMTk2NTg1Njg2Ml19
 -->
