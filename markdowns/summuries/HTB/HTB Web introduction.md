@@ -63,9 +63,11 @@ three main categories:
 # cURL
 ## curl
 curl url					
-- -o 												to save in a file 
-- -s 												for silent mode
-- -k 												skip the certificate check
+option | desc
+|--|--|
+-o | save in a file 
+-s | for silent mode
+-k |skip the certificate check
 - -v 												print both the request and response
 - -I 												display response header
 - -i 												display response header and body
@@ -108,6 +110,6 @@ curl url
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMzEyNjExNiwtMTc0OTg4ODYxNSwxOT
+eyJoaXN0b3J5IjpbLTM3NTcxOTM3OCwtMTc0OTg4ODYxNSwxOT
 Y1ODU2ODYyXX0=
 -->
