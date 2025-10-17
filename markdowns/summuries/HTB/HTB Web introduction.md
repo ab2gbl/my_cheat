@@ -70,16 +70,16 @@ option | desc
 -k |skip the certificate check
 -v | print both the request and response
 -I |	display response header
--i 	|	display response header and body
--A | to set our User-Agent from header
--u admin:admin url | 
--H 'Authorization: Basic YWRtaW46YWRtaW4=' |
--X POST -d 'username=admin&password=admin' | 							-X for method and -d for data
--L | follow redirect link
--b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' | set cookies
-- post ex: curl -X POST -d '{"search":"f"}' -b 'PHPSESSID=9501nu5f74kqgohjh4ogu6debb' -H 'Content-Type: application/json' http://94.237.51.163:42040/search.php| 
-- -s | jq											for good json structer
+`-i 	|	display response header and body
+`-A` | to set our User-Agent from header
+`-u admin:admin url` | 
+`-H 'Authorization: Basic YWRtaW46YWRtaW4='` |
+`-X POST -d 'username=admin&password=admin'` | 							-X for method and -d for data
+`-L` | follow redirect link
+`-b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1'` | set cookies 
+`-s` | jq |for good json structer
 	
+ post ex: `curl -X POST -d '{"search":"f"}' -b 'PHPSESSID=9501nu5f74kqgohjh4ogu6debb' -H 'Content-Type: application/json' http://94.237.51.163:42040/search.php`
 **Command** | **Description**
 |--|--|
 `curl -h` | cURL help menu
@@ -109,6 +109,6 @@ option | desc
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE2OTE3ODUsLTE3NDk4ODg2MTUsMTk2NT
-g1Njg2Ml19
+eyJoaXN0b3J5IjpbLTE3NTQ0NDg2NjEsLTE3NDk4ODg2MTUsMT
+k2NTg1Njg2Ml19
 -->
