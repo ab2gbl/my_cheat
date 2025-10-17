@@ -71,36 +71,14 @@ three main categories:
 `curl inlanefreight.com -v` | Print full HTTP request/response details
 `curl -I https://www.inlanefreight.com` | Send HEAD request (only prints response headers)
 `curl -i https://www.inlanefreight.com` | Print response headers and response body 
-`curl https://www.inlanefreight.com -A 'Mozilla/5.0'`
-Set User-Agent header
-
-`curl -u admin:admin http://<SERVER_IP>:<PORT>/`
-
-Set HTTP basic authorization credentials
-
-`curl http://admin:admin@<SERVER_IP>:<PORT>/`
-
-Pass HTTP basic authorization credentials in the URL
-
-`curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' http://<SERVER_IP>:<PORT>/`
-
-Set request header
-
-`curl 'http://<SERVER_IP>:<PORT>/search.php?search=le'`
-
-Pass GET parameters
-
-`curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/`
-
-Send POST request with POST data
-
-`curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>/`
-
-Set request cookies
-
-`curl -X POST -d '{"search":"london"}' -H 'Content-Type: application/json' http://<SERVER_IP>:<PORT>/search.php`
-
-Send POST request with JSON data
+`curl https://www.inlanefreight.com -A 'Mozilla/5.0'` | Set User-Agent header
+`curl -u admin:admin http://<SERVER_IP>:<PORT>/` | Set HTTP basic authorization credentials
+`curl http://admin:admin@<SERVER_IP>:<PORT>/` | Pass HTTP basic authorization credentials in the URL
+`curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' http://<SERVER_IP>:<PORT>/` | Set request header
+`curl 'http://<SERVER_IP>:<PORT>/search.php?search=le'` | Pass GET parameters
+`curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/` | Send POST request with POST data
+`curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>/` | Set request cookies
+`curl -X POST -d '{"search":"london"}' -H 'Content-Type: application/json' http://<SERVER_IP>:<PORT>/search.php` | Send POST request with JSON data
 
 ## APIs
 
@@ -113,5 +91,5 @@ Send POST request with JSON data
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNTUzNjg1MCwxOTY1ODU2ODYyXX0=
+eyJoaXN0b3J5IjpbMjA0MTUzNjE1MCwxOTY1ODU2ODYyXX0=
 -->
