@@ -53,6 +53,7 @@ three main categories:
 ## Malicious File Upload
 ## Command Injection
 ## SQL Injection (SQLi)
+## CVEs
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQwMTM4NjQsMTk2NTg1Njg2Ml19
+eyJoaXN0b3J5IjpbMTMzODgwMzA1MywxOTY1ODU2ODYyXX0=
 -->
