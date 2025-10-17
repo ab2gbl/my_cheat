@@ -34,10 +34,10 @@ three main categories:
 10. Server-Side Request Forgery (SSRF)
 # FrontEnd 
 ## Cross-Site Scripting (XSS)
-- **3 types**:
+- **3 types**: `Reflected XSS`, `Stored XSS`, `DOM XSS`
 ```javascript
 #"><img src=/ onerror=alert(document.cookie)>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDMyODgwNzUsMTk2NTg1Njg2Ml19
+eyJoaXN0b3J5IjpbLTE0ODgwMTQwNjgsMTk2NTg1Njg2Ml19
 -->
