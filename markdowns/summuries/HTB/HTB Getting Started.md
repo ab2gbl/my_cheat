@@ -11,7 +11,8 @@
 - **Banner Grabbing** 
 ## Service Scanning
 ### Nmap
+- `-sC` for more details `-sV` for version
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYyODQ4OTQsLTU3ODMyMTE5MCw4MTEwNj
-kwMTUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTc1NzE2MDY3LC01NzgzMjExOTAsODExMD
+Y5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
