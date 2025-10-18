@@ -9,8 +9,9 @@
 ### Netcat
 - interacting with TCP/UDP ports.
 - **Banner Grabbing** 
-### Vim
+## Service Scanning
+### Nmap
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3ODMyMTE5MCw4MTEwNjkwMTUsLTIwOD
-g3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNzYyODQ4OTQsLTU3ODMyMTE5MCw4MTEwNj
+kwMTUsLTIwODg3NDY2MTJdfQ==
 -->
