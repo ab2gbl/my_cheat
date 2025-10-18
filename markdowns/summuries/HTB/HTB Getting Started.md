@@ -11,8 +11,8 @@
 - **Banner Grabbing** 
 ## Service Scanning
 ### Nmap
-- `-sC` for more details `-sV` for version
+- `-sC` for more details `-sV` for version `-p-` to scan all ports 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NzE2MDY3LC01NzgzMjExOTAsODExMD
+eyJoaXN0b3J5IjpbNjgyNzAyNjU4LC01NzgzMjExOTAsODExMD
 Y5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
