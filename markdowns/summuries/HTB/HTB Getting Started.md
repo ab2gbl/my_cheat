@@ -6,10 +6,11 @@
 `Bind shell` | "Binds" to a specific port on the target host and waits for a connection from our attack box.
 `Web shell` | Runs operating system commands via the web browser, typically not interactive or semi-interactive. It can also be used to run single commands (i.e., leveraging a file upload vulnerability and uploading a `PHP` script to run a single command.
 
-# Netcat
+### Netcat
 - interacting with TCP/UDP ports.
-- Banner Grabbing 
+- **Banner Grabbing** 
+### Vim
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MjY5MTk1Myw4MTEwNjkwMTUsLTIwOD
+eyJoaXN0b3J5IjpbLTU3ODMyMTE5MCw4MTEwNjkwMTUsLTIwOD
 g3NDY2MTJdfQ==
 -->
