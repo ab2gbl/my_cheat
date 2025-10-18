@@ -12,7 +12,8 @@
 ## Service Scanning
 ### Nmap
 - `-sC` for more details `-sV` for version `-p-` to scan all ports 
+- to run custom script `nmap --script <script name> -p<port> <host>`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgyNzAyNjU4LC01NzgzMjExOTAsODExMD
-Y5MDE1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC01Nz
+gzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
