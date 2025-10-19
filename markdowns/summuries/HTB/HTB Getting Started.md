@@ -41,10 +41,10 @@ git clone https://github.com/danielmiessler/SecLists
 gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.tx
 ```
 ### Web Enumeration Tips
-
+- **Banner Grabbing / Web Server Headers**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjMzOTExNTgsNDA4NDI4OTg1LC0xND
-c0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4Mjcw
-MjY1OCwtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl
-19
+eyJoaXN0b3J5IjpbMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0Nz
+QyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAy
+NjU4LC01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX
+0=
 -->
