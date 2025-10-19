@@ -13,12 +13,13 @@
 ### Nmap
 - `-sC` for more details `-sV` for version `-p-` to scan all ports 
 - to run custom script `nmap --script <script name> -p<port> <host>`.
+### Attacking Network Services
 - **Banner Grabbing** `nmap -sV --script=banner <target>`  
 - **FTP**: Nmap scan anonymous authentication is enabled
-### SMB (Server Message Block)
+#### SMB (Server Message Block)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTUxMjY2ODUsLTEwMDEzNzAwNDIsLT
+eyJoaXN0b3J5IjpbLTExNDIwNDQ1MDUsLTEwMDEzNzAwNDIsLT
 E1OTM5MDQyMzIsNjgyNzAyNjU4LC01NzgzMjExOTAsODExMDY5
 MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
