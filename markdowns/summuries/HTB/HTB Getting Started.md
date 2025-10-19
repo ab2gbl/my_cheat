@@ -14,8 +14,9 @@
 - `-sC` for more details `-sV` for version `-p-` to scan all ports 
 - to run custom script `nmap --script <script name> -p<port> <host>`.
 - **Banner Grabbing** `nmap -sV --script=banner <target>`  
+- **FTP**: Nmap scan anonymous authentication is enabled
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODUxMzUxODIsLTE1OTM5MDQyMzIsNj
+eyJoaXN0b3J5IjpbLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNj
 gyNzAyNjU4LC01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2
 NjEyXX0=
 -->
