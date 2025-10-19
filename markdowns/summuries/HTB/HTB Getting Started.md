@@ -20,8 +20,11 @@
 - a prevalent protocol on Windows machines
 - some SMB versions may be vulnerable to RCE exploits such as [EternalBlue](https://www.avast.com/c-eternalblue).
 - `nmap --script smb-os-discovery.nse -p445 10.10.10.40`
+##### Shares
+
+SMB allows users and administrators to share folders and make them accessible remotely by other users
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzOTY4NTA3MSwtMTAwMTM3MDA0MiwtMT
-U5MzkwNDIzMiw2ODI3MDI2NTgsLTU3ODMyMTE5MCw4MTEwNjkw
-MTUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTIwMDY0MTYyOTUsLTEwMDEzNzAwNDIsLT
+E1OTM5MDQyMzIsNjgyNzAyNjU4LC01NzgzMjExOTAsODExMDY5
+MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
