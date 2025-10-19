@@ -30,14 +30,21 @@
 ## Web Enumeration
 ### Gobuster (or ffuf)
 - for dirs/files
-```shell-session
+```bash
 gobuster dir -u http://10.10.10.121/ -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
 - for subdomains
-
+```bash
+# we can use this repo to dowload wordList
+git clone https://github.com/danielmiessler/SecLists
+# now Gobuster
+```shell-session
+gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.tx
+```
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTYxODM3OTYsNDA4NDI4OTg1LC0xND
-c0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4Mjcw
-MjY1OCwtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl
-19
+eyJoaXN0b3J5IjpbODI4NDcwMzIzLDQwODQyODk4NSwtMTQ3ND
+IwMzYyOSwtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3MDI2
+NTgsLTU3ODMyMTE5MCw4MTEwNjkwMTUsLTIwODg3NDY2MTJdfQ
+==
 -->
