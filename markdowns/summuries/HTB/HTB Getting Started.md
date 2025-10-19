@@ -42,9 +42,11 @@ gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.
 ```
 ### Web Enumeration Tips
 - **Banner Grabbing / Web Server Headers**
+- **Whatweb**: by comma`shell-session
+ whatweb 10.10.10.121`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0Nz
-QyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAy
-NjU4LC01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX
-0=
+eyJoaXN0b3J5IjpbMjAyOTk3NjE3MiwxNTM1MjM0OTYxLDQwOD
+QyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5Mzkw
+NDIzMiw2ODI3MDI2NTgsLTU3ODMyMTE5MCw4MTEwNjkwMTUsLT
+IwODg3NDY2MTJdfQ==
 -->
