@@ -12,8 +12,10 @@
 ## Service Scanning
 ### Nmap
 - `-sC` for more details `-sV` for version `-p-` to scan all ports 
-- to run custom script `nmap --script <script name> -p<port> <host>`. 
+- to run custom script `nmap --script <script name> -p<port> <host>`.
+- **Banner Grabbing** `nmap -sV --script=banner <target>`  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC01Nz
-gzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE1ODUxMzUxODIsLTE1OTM5MDQyMzIsNj
+gyNzAyNjU4LC01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2
+NjEyXX0=
 -->
