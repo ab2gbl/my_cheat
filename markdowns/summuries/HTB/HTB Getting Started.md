@@ -45,9 +45,10 @@ gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.
 - **Whatweb**: by command `shell-session
  whatweb 10.10.10.121`
  - **Certificates**
- - **robots.txt**: 
+ - **robots.txt**: instruct search engine like google
+ - **source code**: by `ctrl+u`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2OTM3Mjk1MCwxNTM1MjM0OTYxLDQwOD
+eyJoaXN0b3J5IjpbLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwOD
 QyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5Mzkw
 NDIzMiw2ODI3MDI2NTgsLTU3ODMyMTE5MCw4MTEwNjkwMTUsLT
 IwODg3NDY2MTJdfQ==
