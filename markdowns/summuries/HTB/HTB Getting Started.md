@@ -28,9 +28,10 @@
 	- `smbclient -U bob \\\\10.129.42.253\\users` connect as user bob
 
 ## Web Enumeration
-
+### Gobuster (or fuff)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMD
-AxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OCwtNTc4MzIx
-MTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE2NDQ4NzY2MjYsNDA4NDI4OTg1LC0xND
+c0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4Mjcw
+MjY1OCwtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl
+19
 -->
