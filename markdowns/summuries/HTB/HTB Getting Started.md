@@ -38,7 +38,7 @@ gobuster dir -u http://10.10.10.121/ -w /usr/share/seclists/Discovery/Web-Conten
 # we can use this repo to dowload wordList
 git clone https://github.com/danielmiessler/SecLists
 # now Gobuster
-gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.tx
+gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.tx
 ```
 ### Web Enumeration Tips (info sources)
 - **Banner Grabbing / Web Server Headers**
@@ -48,8 +48,8 @@ gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.
  - **robots.txt**: instruct search engine like google
  - **source code**: by `ctrl+u`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwOD
-QyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5Mzkw
-NDIzMiw2ODI3MDI2NTgsLTU3ODMyMTE5MCw4MTEwNjkwMTUsLT
-IwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1Mz
+UyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMDAxMzcw
+MDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OCwtNTc4MzIxMTkwLD
+gxMTA2OTAxNSwtMjA4ODc0NjYxMl19
 -->
