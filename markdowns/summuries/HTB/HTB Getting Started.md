@@ -47,9 +47,11 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
  - **Certificates**
  - **robots.txt**: instruct search engine like google
  - **source code**: by `ctrl+u`
+## Public Exploits
+### Finding Public Exploits
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1Mz
-UyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMDAxMzcw
-MDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OCwtNTc4MzIxMTkwLD
-gxMTA2OTAxNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTU0NDQzMTY2OCwxNDE2NTk5MDcyLC01Nz
+I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
+MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC
+01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
