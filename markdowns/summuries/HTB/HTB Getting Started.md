@@ -59,8 +59,10 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 	- reconnaissance/verification scripts
 	- the Meterpreter shell
 	- post-exploit/pivoting utilities.
+- `msfconsole` command to run **Metasploit**
+	- `search exploit SMB` command to for SMB val  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMjQ3ODc0MCwxNDE2NTk5MDcyLC01Nz
+eyJoaXN0b3J5IjpbLTc0NzM3MTYzNywxNDE2NTk5MDcyLC01Nz
 I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
 MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC
 01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
