@@ -5,9 +5,9 @@
 	- Reverse Shell
 	- Bind Shell
 	- Web Shell
-### Netcat
-- interacting with TCP/UDP ports.
-- **Banner Grabbing** 
+- **Netcat**
+	- interacting with TCP/UDP ports.
+	- **Banner Grabbing** 
 
 ## Service Scanning
 ### Nmap
@@ -67,10 +67,23 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 	6- `run` or `exploit` to run the exploit in the end	
 
 # Types of Shells
-- remote access: `ssh` for linux and `WinRm` for windows 
+- to remote access: `ssh` for linux and `WinRm` for windows 
+Type of Shell | Method of Communication
+|--|--|
+`Reverse Shell`
+
+Connects back to our system and gives us control through a reverse connection.
+
+`Bind Shell`
+
+Waits for us to connect to it and gives us control once we do.
+
+`Web Shell`
+
+Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTg3MDg5NTMsMTQxNjU5OTA3MiwtNT
-cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
-NjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OC
-wtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTQ1NTc5MTEwOSwxNDE2NTk5MDcyLC01Nz
+I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
+MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC
+01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
