@@ -1,7 +1,10 @@
 # Pentesting Basics
 
 ## Getting a shell
-
+- **types of shell**
+	- Reverse Shell
+	- Bind Shell
+	- Web Shell
 ### Netcat
 - interacting with TCP/UDP ports.
 - **Banner Grabbing** 
@@ -66,8 +69,8 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 # Types of Shells
 - remote access: `ssh` for linux and `WinRm` for windows 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMDMxOTc5MiwxNDE2NTk5MDcyLC01Nz
-I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
-MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC
-01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTEwNTg3MDg5NTMsMTQxNjU5OTA3MiwtNT
+cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
+NjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OC
+wtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
 -->
