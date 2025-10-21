@@ -50,10 +50,11 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 ## Public Exploits
 ### Finding Public Exploits
 - using google with `exploit`  word
-- **searchsploit**
+- **searchsploit (from exploitDb)**, or other databases like: [Exploit DB](https://www.exploit-db.com/), [Rapid7 DB](https://www.rapid7.com/db/),, [Vulnerability Lab](https://www.vulnerability-lab.com/).
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDY1NTY4OTEsMTQxNjU5OTA3MiwtNT
-cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
-NjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OC
-wtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTUzOTQ1ODEwMywxNDE2NTk5MDcyLC01Nz
+I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
+MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC
+01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
