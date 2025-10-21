@@ -53,11 +53,15 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 - using google with `exploit`  word
 - **searchsploit (from exploitDb)**, or other databases like: [Exploit DB](https://www.exploit-db.com/), [Rapid7 DB](https://www.rapid7.com/db/),, [Vulnerability Lab](https://www.vulnerability-lab.com/).
 
-### Metasploit Primer
-
+### Metasploit Primer (`msfconsole`)
+- Metasploit is a powerful pentesting framework with 
+	- built-in exploits
+	- reconnaissance/verification scripts
+	- the Meterpreter shell
+	- post-exploit/pivoting utilities.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTgxNjUwMDAsMTQxNjU5OTA3MiwtNT
-cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
-NjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OC
-wtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTUyMjQ3ODc0MCwxNDE2NTk5MDcyLC01Nz
+I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
+MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC
+01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
