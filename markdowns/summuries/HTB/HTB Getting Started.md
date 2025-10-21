@@ -68,8 +68,9 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 	6- `run` or `exploit` to run the exploit in the end	
 
 # Types of Shells
+- remote access: `ssh` for linux and `WinRm` for windows 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTA1NDk1NTMsMTQxNjU5OTA3MiwtNT
+eyJoaXN0b3J5IjpbLTIxMzk4ODk2ODksMTQxNjU5OTA3MiwtNT
 cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
 NjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OC
 wtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
