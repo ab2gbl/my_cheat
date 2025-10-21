@@ -68,22 +68,15 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 
 # Types of Shells
 - to remote access: `ssh` for linux and `WinRm` for windows 
+
 Type of Shell | Method of Communication
 |--|--|
-`Reverse Shell`
-
-Connects back to our system and gives us control through a reverse connection.
-
-`Bind Shell`
-
-Waits for us to connect to it and gives us control once we do.
-
-`Web Shell`
-
-Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
+`Reverse Shell` |Connects back to our system and gives us control through a reverse connection.
+`Bind Shell` | Waits for us to connect to it and gives us control once we do.
+`Web Shell`  | Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NTc5MTEwOSwxNDE2NTk5MDcyLC01Nz
-I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
-MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC
-01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLTU3Mj
+g0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIwMzYy
+OSwtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3MDI2NTgsLT
+U3ODMyMTE5MCw4MTEwNjkwMTUsLTIwODg3NDY2MTJdfQ==
 -->
