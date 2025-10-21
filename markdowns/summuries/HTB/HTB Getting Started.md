@@ -66,8 +66,10 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 	4 - `set RHOSTS 10.10.10.40` to set params (**RHost** for target and **LHost** of our attacker like `eth0`)
 	5- `check` to check if our target is vulnerable
 	6- `run` or `exploit` to run the exploit in the end	
+
+# Types of Shells
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTQ1NDI4NDcsMTQxNjU5OTA3MiwtNT
+eyJoaXN0b3J5IjpbLTIxMTA1NDk1NTMsMTQxNjU5OTA3MiwtNT
 cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
 NjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OC
 wtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
