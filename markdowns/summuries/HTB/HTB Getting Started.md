@@ -63,10 +63,12 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 	1 - `search exploit SMB` command to for SMB vuln  
 	2 - `use exploit/windows/...` use the exploit 
 	3 - `show options` to display and config exploit options
-	4 - `set RHOSTS 10.10.10.40` to set params (RHost for target and LHost of our attacker like `eth0`)
+	4 - `set RHOSTS 10.10.10.40` to set params (**RHost** for target and **LHost** of our attacker like `eth0`)
+	5- `check` to check if our target is vulnerable
+	6- `run` or `exploit` to run the exploit in the end	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMyMjY1MjExLDE0MTY1OTkwNzIsLTU3Mj
-g0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIwMzYy
-OSwtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3MDI2NTgsLT
-U3ODMyMTE5MCw4MTEwNjkwMTUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE3NTQ1NDI4NDcsMTQxNjU5OTA3MiwtNT
+cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
+NjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OC
+wtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
 -->
