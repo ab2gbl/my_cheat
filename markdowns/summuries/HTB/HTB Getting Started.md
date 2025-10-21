@@ -1,11 +1,7 @@
 # Pentesting Basics
 
 ## Getting a shell
-**Shell Type** | **Description**
-|--|--|
-`Reverse shell` | Initiates a connection back to a "listener" on our attack box.
-`Bind shell` | "Binds" to a specific port on the target host and waits for a connection from our attack box.
-`Web shell` | Runs operating system commands via the web browser, typically not interactive or semi-interactive. It can also be used to run single commands (i.e., leveraging a file upload vulnerability and uploading a `PHP` script to run a single command.
+
 ### Netcat
 - interacting with TCP/UDP ports.
 - **Banner Grabbing** 
@@ -70,8 +66,8 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 # Types of Shells
 - remote access: `ssh` for linux and `WinRm` for windows 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIwOTIzOTg4LDE0MTY1OTkwNzIsLTU3Mj
-g0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIwMzYy
-OSwtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3MDI2NTgsLT
-U3ODMyMTE5MCw4MTEwNjkwMTUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTIzMDMxOTc5MiwxNDE2NTk5MDcyLC01Nz
+I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
+MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC
+01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
