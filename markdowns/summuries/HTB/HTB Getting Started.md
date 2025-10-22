@@ -7,7 +7,7 @@
 	- Web Shell
 - **Netcat**
 	- interacting with TCP/UDP ports.
-	- **Banner Grabbing** 
+	- **Banner Grabbing** `nc -nv 10.129.42.253 21` or `nmap -sV --script=banner <target>`
 
 ## Service Scanning
 ### Nmap
@@ -75,8 +75,9 @@ Type of Shell | Method of Communication
 `Bind Shell` | Waits for us to connect to it and gives us control once we do.
 `Web Shell`  | Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLTU3Mj
-g0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIwMzYy
-OSwtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3MDI2NTgsLT
-U3ODMyMTE5MCw4MTEwNjkwMTUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNjgxMzMxNzQ5LDkyMjI0NTUwNywxNDE2NT
+k5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUs
+LTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNj
+gyNzAyNjU4LC01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2
+NjEyXX0=
 -->
