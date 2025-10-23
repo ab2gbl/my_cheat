@@ -27,6 +27,7 @@
 	- `smbclient -U bob \\\\10.129.42.253\\users` connect as user bob
 
 ## Web Enumeration
+- we can start using the command `whatweb 10.129.117.36` 
 ### Gobuster (or ffuf)
 - for dirs/files
 ```bash
@@ -75,9 +76,9 @@ Type of Shell | Method of Communication
 `Bind Shell` | Waits for us to connect to it and gives us control once we do.
 `Web Shell`  | Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgxMzMxNzQ5LDkyMjI0NTUwNywxNDE2NT
-k5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUs
-LTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5MDQyMzIsNj
-gyNzAyNjU4LC01NzgzMjExOTAsODExMDY5MDE1LC0yMDg4NzQ2
-NjEyXX0=
+eyJoaXN0b3J5IjpbLTIxNDUxMDEyNzksNjgxMzMxNzQ5LDkyMj
+I0NTUwNywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2
+MSw0MDg0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLT
+E1OTM5MDQyMzIsNjgyNzAyNjU4LC01NzgzMjExOTAsODExMDY5
+MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
