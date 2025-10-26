@@ -152,11 +152,11 @@ Web Server | Default Webroot
 - **Vulnerable Software**:  `dpkg -l` or look for `C:\Program Files`
 ##  **User Privileges**
 - **`sudo -l`** : what `sudo` privileges we have
-	- sometimes we find result `(user : user) NOPASSWD: /bin/echo` , means this user can run `echo` as **root** without password
+	- sometimes we find result `(user : user) NOPASSWD: /bin/echo` , means we can run `echo` as **user** without his password
 	- we can use that `sudo -u user /bin/echo Hello World!` 
 - `**sudo su -**`: enter root mode
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxOTU5MjE4NiwyNTQ4NTY1MywtMTU4MT
+eyJoaXN0b3J5IjpbMTEyNDYyMTI4OCwyNTQ4NTY1MywtMTU4MT
 IzNjc1NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2
 LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLT
 E5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1
