@@ -147,12 +147,13 @@ Web Server | Default Webroot
 - **Windows:** [Seatbelt](https://github.com/GhostPack/Seatbelt) and [JAWS](https://github.com/411Hall/JAWS).
 - **Derver enumeration**: the [Privilege Escalation Awesome Scripts SUITE (PEASS)](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite),
 > Note: this scripts may trigger anti-virus, better do manual enumeration
+## Kernel Exploits
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTIyMTA1MzgsMjU0ODU2NTMsLTE1OD
-EyMzY3NTUsMzI5NzMyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUx
-NiwtMTExODIyMDQzMywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC
-0xOTY0OTQzODg4LDE0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1
-NTA3LDE0MTY1OTkwNzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLD
-QwODQyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5
-MzkwNDIzMl19
+eyJoaXN0b3J5IjpbMTc4NzE1ODkzNywyNTQ4NTY1MywtMTU4MT
+IzNjc1NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2
+LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLT
+E5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1
+MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsND
+A4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkz
+OTA0MjMyXX0=
 -->
