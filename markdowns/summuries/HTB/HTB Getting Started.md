@@ -103,11 +103,16 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 - click `Enter`
 - fixing size:
 	- on our local 
-	 ```bash
-	
-	 ``` 
+		 ```bash
+		ab2gbl1@htb[/htb]$ echo $TERM
+		xterm-256color
+		
+		ab2gbl1@htb[/htb]$ stty size
+		67 318
+		 ``` 
+	- then on th
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NjgyMzY4OCwxODk3OTI4NTE2LC0xMT
+eyJoaXN0b3J5IjpbLTIxMjcwOTcwNywxODk3OTI4NTE2LC0xMT
 E4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5
 NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMT
 QxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4
