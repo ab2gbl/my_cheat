@@ -93,11 +93,13 @@ Type of Shell | Method of Communication
 - use **netcat** to connect ` nc 10.10.10.1 1234 `
 
 ## Upgrading TTY
+- we will use the `python/stty`
 ```bash
 python -c 'import pty; pty.spawn("/bin/bash")'
 ```
+- `ctrl+z` to background our shell and get back on our local terminal
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNTM3NzYzOCwtMTE3OTc1MTIxNSwtMT
+eyJoaXN0b3J5IjpbMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMT
 k2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUw
 NywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MD
 g0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5
