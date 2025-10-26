@@ -147,10 +147,11 @@ Web Server | Default Webroot
 	- **Windows:** [Seatbelt](https://github.com/GhostPack/Seatbelt) and [JAWS](https://github.com/411Hall/JAWS).
 	- **Derver enumeration**: the [Privilege Escalation Awesome Scripts SUITE (PEASS)](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite),
 		> Note: this scripts may trigger anti-virus, better do manual enumeration
-- Kernel Exploits
-## Vulnerable Software 
+
+- **Kernel Exploits**
+- **Vulnerable Software**:  `dpkg -l` or look for `C:\Program Files`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MTM3MDc2NSwyNTQ4NTY1MywtMTU4MT
+eyJoaXN0b3J5IjpbMTM1Nzc5NTY0OCwyNTQ4NTY1MywtMTU4MT
 IzNjc1NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2
 LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLT
 E5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1
