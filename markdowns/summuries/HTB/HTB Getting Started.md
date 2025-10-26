@@ -77,7 +77,7 @@ Type of Shell | Method of Communication
 `Web Shell`  | Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
 ## Reverse Shell
 - most used
-- target connects to us
+- target connects to us on the listening port
 - **netcat** listener on our machine  `nc -lvnp 1234`
 - [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) : reverse shell commands, example :
 	```bash
@@ -86,11 +86,12 @@ Type of Shell | Method of Communication
 - **lose connection:** have to use the initial exploit again
 ## Bind Shell
 - we connect to the target on the listening port.
+- [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) : Bind shell commands, example :
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwOTc0NDMxMSwtMTE3OTc1MTIxNSwtMT
-k2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUw
-NywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MD
-g0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5
-MDQyMzIsNjgyNzAyNjU4LC01NzgzMjExOTAsODExMDY5MDE1LC
-0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNzM2NzE5NTY5LC0xMTc5NzUxMjE1LC0xOT
+Y0OTQzODg4LDE0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3
+LDE0MTY1OTkwNzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwOD
+QyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5Mzkw
+NDIzMiw2ODI3MDI2NTgsLTU3ODMyMTE5MCw4MTEwNjkwMTUsLT
+IwODg3NDY2MTJdfQ==
 -->
