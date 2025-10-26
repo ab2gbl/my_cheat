@@ -140,14 +140,17 @@ Web Server | Default Webroot
 	curl http://SERVER_IP:PORT/shell.php?cmd=id
 	```
 # Privilege Escalation
-## PrivEsc Checklists/Enum
+## PrivEsc Checklists
 - [HackTricks](https://book.hacktricks.xyz/) and [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+## Enumeration Scripts
+- **Linux:** [LinEnum](https://github.com/rebootuser/LinEnum.git) and [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker), 
+- **Windows:** [Seatbelt](https://github.com/GhostPack/Seatbelt) and [JAWS](https://github.com/411Hall/JAWS).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODEyMzY3NTUsMzI5NzMyNTUxLC05Mj
-g3NzA1NTUsMTg5NzkyODUxNiwtMTExODIyMDQzMywxMTM1MDUy
-Njg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIxNTE5My
-w2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLTU3Mjg0
-ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIwMzYyOS
-wtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3MDI2NTgsLTU3
-ODMyMTE5MF19
+eyJoaXN0b3J5IjpbMTQwMDU0NDIwNSwtMTU4MTIzNjc1NSwzMj
+k3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIw
+NDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4OD
+gsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMTQxNjU5
+OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC
+0xNDc0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4
+MjcwMjY1OF19
 -->
