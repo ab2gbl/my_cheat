@@ -152,13 +152,15 @@ Web Server | Default Webroot
 - **Vulnerable Software**:  `dpkg -l` or look for `C:\Program Files`
 ##  **User Privileges**
 - **`sudo -l`** : what `sudo` privileges we have
+	- sometimes we find res 
+	- `sudo -u user /bin/echo Hello World!` 
 - `**sudo su -**`: enter root mode
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTUyNjYxLDI1NDg1NjUzLC0xNTgxMj
-M2NzU1LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYs
-LTExMTgyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMT
-k2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUw
-NywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MD
-g0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5
-MDQyMzJdfQ==
+eyJoaXN0b3J5IjpbMTQ1NTg1MzI3NywyNTQ4NTY1MywtMTU4MT
+IzNjc1NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2
+LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLT
+E5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1
+MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsND
+A4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkz
+OTA0MjMyXX0=
 -->
