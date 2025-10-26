@@ -77,15 +77,12 @@ Type of Shell | Method of Communication
 `Web Shell`  | Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
 ## Reverse Shell
 - most used
-- `netcat` listener on our machine 
-	```bash
-	nc -lvnp 1234
-	```
+- **netcat** listener on our machine  `nc -lvnp 1234`
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzODM4Mzg3MiwxNDYyMTUxOTMsNjgxMz
-MxNzQ5LDkyMjI0NTUwNywxNDE2NTk5MDcyLC01NzI4NDgwNDEs
-MTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMD
-EzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC01NzgzMjEx
-OTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MT
+MzMTc0OSw5MjIyNDU1MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQx
+LDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMD
+AxMzcwMDQyLC0xNTkzOTA0MjMyLDY4MjcwMjY1OCwtNTc4MzIx
+MTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl19
 -->
