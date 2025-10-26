@@ -102,7 +102,7 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 - input the command `fg` 
 - click `Enter`
 - fixing size:
-	- on our local 
+	- on our local shell
 		 ```bash
 		ab2gbl1@htb[/htb]$ echo $TERM
 		xterm-256color
@@ -110,9 +110,13 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 		ab2gbl1@htb[/htb]$ stty size
 		67 318
 		 ``` 
-	- then on th
+	- then on the victim shell
+		```bash
+		www-data@remotehost$ export TERM=xterm-256color
+		www-data@remotehost$ stty rows 67 columns 318
+		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjcwOTcwNywxODk3OTI4NTE2LC0xMT
+eyJoaXN0b3J5IjpbLTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMT
 E4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5
 NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMT
 QxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4
