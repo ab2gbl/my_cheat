@@ -145,12 +145,13 @@ Web Server | Default Webroot
 ## Enumeration Scripts
 - **Linux:** [LinEnum](https://github.com/rebootuser/LinEnum.git) and [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker), 
 - **Windows:** [Seatbelt](https://github.com/GhostPack/Seatbelt) and [JAWS](https://github.com/411Hall/JAWS).
+- **Derver enumeration**: the [Privilege Escalation Awesome Scripts SUITE (PEASS)](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite),
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMDU0NDIwNSwtMTU4MTIzNjc1NSwzMj
-k3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIw
-NDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4OD
-gsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMTQxNjU5
-OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC
-0xNDc0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4
-MjcwMjY1OF19
+eyJoaXN0b3J5IjpbMjU0ODU2NTMsLTE1ODEyMzY3NTUsMzI5Nz
+MyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExODIyMDQz
+MywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LD
+E0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkw
+NzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMT
+Q3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3
+MDI2NThdfQ==
 -->
