@@ -99,12 +99,14 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 ```
 - `ctrl+z` to background our shell and get back on our local terminal
 - input the command `stty raw -echo`
-- input the command `fg`
+- input the command `fg` 
+- click `Enter`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTgyMjA0MzMsMTEzNTA1MjY4NCwtMT
-E3OTc1MTIxNSwtMTk2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMx
-NzQ5LDkyMjI0NTUwNywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMT
-UzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEz
-NzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC01NzgzMjExOT
-AsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTg5NzkyODUxNiwtMTExODIyMDQzMywxMT
+M1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIx
+NTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLT
+U3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIw
+MzYyOSwtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3MDI2NT
+gsLTU3ODMyMTE5MCw4MTEwNjkwMTUsLTIwODg3NDY2MTJdfQ==
+
 -->
