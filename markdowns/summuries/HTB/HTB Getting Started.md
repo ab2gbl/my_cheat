@@ -148,8 +148,9 @@ Web Server | Default Webroot
 - **Derver enumeration**: the [Privilege Escalation Awesome Scripts SUITE (PEASS)](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite),
 > Note: this scripts may trigger anti-virus, better do manual enumeration
 ## Kernel Exploits
+## Vulnerable Software 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NzE1ODkzNywyNTQ4NTY1MywtMTU4MT
+eyJoaXN0b3J5IjpbLTEzNDQ4NDAyMCwyNTQ4NTY1MywtMTU4MT
 IzNjc1NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2
 LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLT
 E5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1
