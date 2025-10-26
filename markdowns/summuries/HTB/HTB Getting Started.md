@@ -78,12 +78,12 @@ Type of Shell | Method of Communication
 ## Reverse Shell
 - most used
 - **netcat** listener on our machine  `nc -lvnp 1234`
-- [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) 
+- [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) : reverse shell commands
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMT
-Q2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMTQxNjU5OTA3
-MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xND
-c0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0MjMyLDY4Mjcw
-MjY1OCwtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4ODc0NjYxMl
-19
+eyJoaXN0b3J5IjpbLTIwODUxNTM5OTUsLTExNzk3NTEyMTUsLT
+E5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1
+MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsND
+A4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkz
+OTA0MjMyLDY4MjcwMjY1OCwtNTc4MzIxMTkwLDgxMTA2OTAxNS
+wtMjA4ODc0NjYxMl19
 -->
