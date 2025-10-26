@@ -75,10 +75,17 @@ Type of Shell | Method of Communication
 `Reverse Shell` |Connects back to our system and gives us control through a reverse connection.
 `Bind Shell` | Waits for us to connect to it and gives us control once we do.
 `Web Shell`  | Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
+## Reverse Shell
+- most used
+- `netcat` listener on our machine 
+	```bash
+	nc -lvnp 1234
+	```
+	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyND
-U1MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEs
-NDA4NDI4OTg1LC0xNDc0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNT
-kzOTA0MjMyLDY4MjcwMjY1OCwtNTc4MzIxMTkwLDgxMTA2OTAx
-NSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTAzODM4Mzg3MiwxNDYyMTUxOTMsNjgxMz
+MxNzQ5LDkyMjI0NTUwNywxNDE2NTk5MDcyLC01NzI4NDgwNDEs
+MTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMD
+EzNzAwNDIsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC01NzgzMjEx
+OTAsODExMDY5MDE1LC0yMDg4NzQ2NjEyXX0=
 -->
