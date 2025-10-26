@@ -146,12 +146,13 @@ Web Server | Default Webroot
 - **Linux:** [LinEnum](https://github.com/rebootuser/LinEnum.git) and [linuxprivchecker](https://github.com/sleventyeleven/linuxprivchecker), 
 - **Windows:** [Seatbelt](https://github.com/GhostPack/Seatbelt) and [JAWS](https://github.com/411Hall/JAWS).
 - **Derver enumeration**: the [Privilege Escalation Awesome Scripts SUITE (PEASS)](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite),
+> Note: this scripts may trigger anti-virus, better do manual enumeration
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU0ODU2NTMsLTE1ODEyMzY3NTUsMzI5Nz
-MyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExODIyMDQz
-MywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LD
-E0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkw
-NzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMT
-Q3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5MzkwNDIzMiw2ODI3
-MDI2NThdfQ==
+eyJoaXN0b3J5IjpbLTExMTIyMTA1MzgsMjU0ODU2NTMsLTE1OD
+EyMzY3NTUsMzI5NzMyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUx
+NiwtMTExODIyMDQzMywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC
+0xOTY0OTQzODg4LDE0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1
+NTA3LDE0MTY1OTkwNzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLD
+QwODQyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3MDA0MiwtMTU5
+MzkwNDIzMl19
 -->
