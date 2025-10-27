@@ -121,7 +121,7 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 		www-data@remotehost$ stty rows 67 columns 318
 		```
 
-## Web Shell
+## 🌐 Web Shell
 
 ```bash 
 # php
@@ -144,7 +144,7 @@ Web Server | Default Webroot
 	```bash
 	curl http://SERVER_IP:PORT/shell.php?cmd=id
 	```
-# Privilege Escalation
+# 🛡️ Privilege Escalation
 - **PrivEsc Checklists**
 	- [HackTricks](https://book.hacktricks.xyz/) and [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - **Enumeration Scripts**
@@ -195,7 +195,7 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4OTY4MDc5MCwxNDI5MTY5MDEyLC00Mz
+eyJoaXN0b3J5IjpbLTIyMjU3OTcwMywxNDI5MTY5MDEyLC00Mz
 M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
 LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
 gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
