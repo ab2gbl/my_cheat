@@ -159,12 +159,18 @@ Web Server | Default Webroot
 ## Scheduled Tasks 
 1.  Add new scheduled tasks/cron jobs
 2.  Trick them to execute a malicious software
+- specific folders:
+	1.  `/etc/crontab`
+	2.  `/etc/cron.d`
+	3.  `/var/spool/cron/crontabs/root`
+
+## Exposed Credentials
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMzg1Njk4MSwtNzQxNzk2MDgsMjU0OD
-U2NTMsLTE1ODEyMzY3NTUsMzI5NzMyNTUxLC05Mjg3NzA1NTUs
-MTg5NzkyODUxNiwtMTExODIyMDQzMywxMTM1MDUyNjg0LC0xMT
-c5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIxNTE5Myw2ODEzMzE3
-NDksOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLTU3Mjg0ODA0MSwxNT
-M1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3
-MDA0Ml19
+eyJoaXN0b3J5IjpbMTQ0MjA4NzQ2OSwtNDMzODU2OTgxLC03ND
+E3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1NSwzMjk3MzI1NTEs
+LTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIwNDMzLDExMz
+UwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1
+MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMTQxNjU5OTA3MiwtNT
+cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
+NjI5XX0=
 -->
