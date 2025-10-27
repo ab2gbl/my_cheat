@@ -190,15 +190,15 @@ Web Server | Default Webroot
 - **Using wget:** `python3 -m http.server 8000` then `wget` or `curl`
 - **Using SCP:** `scp linenum.sh user@remotehost:/tmp/linenum.sh
 `
-- **Using Base64:**: encode file , copy paste and decode
+- **Using Base64:** encode file , copy paste and decode
 - Validating File Transfers: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDQzNDg0NiwxNDI5MTY5MDEyLC00Mz
-M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
-LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
-gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
-Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUwNywxND
-E2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5
-ODVdfQ==
+eyJoaXN0b3J5IjpbOTU4NjQxNTQ0LDEzNDA0MzQ4NDYsMTQyOT
+E2OTAxMiwtNDMzODU2OTgxLC03NDE3OTYwOCwyNTQ4NTY1Mywt
+MTU4MTIzNjc1NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OT
+I4NTE2LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEy
+MTUsLTE5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5Mj
+IyNDU1MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5
+NjFdfQ==
 -->
