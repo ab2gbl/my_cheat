@@ -77,8 +77,9 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 
 Type of Shell | Method of Communication
 |--|--|
-`Reverse Shell` | Target connects back to attacker (listener) 🔁`Bind Shell` | Waits for us to connect to it and gives us control once we do.
-`Web Shell`  | Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
+`Reverse Shell` | Target connects back to attacker (listener) 
+`Bind Shell` | Target binds a port; attacker connects to it
+`Web Shell`  | Commands via HTTP params, executed on web server 
 ## 🔁 Reverse Shell
 - most used
 - target connects to us on the listening port
@@ -194,7 +195,7 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDcwODk0NCwxNDI5MTY5MDEyLC00Mz
+eyJoaXN0b3J5IjpbLTQwNjE2OTIxNiwxNDI5MTY5MDEyLC00Mz
 M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
 LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
 gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
