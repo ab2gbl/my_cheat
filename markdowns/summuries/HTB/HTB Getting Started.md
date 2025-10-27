@@ -1,18 +1,15 @@
 # 🕵️ Pentesting Basics
 
 ## 🖥️ Getting a Shell
-
 ### 🔹 Types of Shells
-
 -   **Reverse Shell** 🔁
-    
 -   **Bind Shell** ⚓
 -   **Web Shell** 🌐
+- 
 ### 🛠️ Netcat
-
 -   Interacts with TCP/UDP ports
-    
 -   **Banner grabbing**: `nc -nv 10.129.42.253 21` or `nmap -sV --script=banner <target>`
+- 
 ## Service Scanning
 ### Nmap
 - `-sC` for more details `-sV` for version `-p-` to scan all ports 
@@ -194,7 +191,7 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY3Nzk0MTgxLDE0MjkxNjkwMTIsLTQzMz
+eyJoaXN0b3J5IjpbNjg4MDY1ODU1LDE0MjkxNjkwMTIsLTQzMz
 g1Njk4MSwtNzQxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUs
 MzI5NzMyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExOD
 IyMDQzMywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQz
