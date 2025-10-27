@@ -35,9 +35,9 @@
 - `nmap --script smb-os-discovery.nse -p445 10.10.10.40`
 ##### Shares
 - SMB allows users and administrators to share folders and make them accessible remotely by other users
-- `smbclient -N -L \\\\10.129.42.253` when `-L` fir list and `-N` suppresses the password prompt
-	- `smbclient \\\\10.129.42.253\\users` connect as guest
-	- `smbclient -U bob \\\\10.129.42.253\\users` connect as user bob
+-   List shares: `smbclient -N -L \\\\10.129.42.253`
+-   Connect as guest: `smbclient \\\\10.129.42.253\\users`
+-   Connect as user: `smbclient -U bob \\\\10.129.42.253\\users`
 
 ## Web Enumeration
 - `whatweb 10.129.117.36` 
@@ -203,7 +203,7 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NTI4NTAzMSwxNDI5MTY5MDEyLC00Mz
+eyJoaXN0b3J5IjpbMTkzNTE2NDg5MywxNDI5MTY5MDEyLC00Mz
 M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
 LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
 gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
