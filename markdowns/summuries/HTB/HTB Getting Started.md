@@ -150,28 +150,29 @@ Web Server | Default Webroot
 
 - **Kernel Exploits**
 - **Vulnerable Software**:  `dpkg -l` or look for `C:\Program Files`
-##  **User Privileges**
-- **`sudo -l`** : what `sudo` privileges we have
-	- sometimes we find result `(user : user) NOPASSWD: /bin/echo` , means we can run `echo` as **user** without his password
-	- we can use that `sudo -u user /bin/echo Hello World!` 
-- **`sudo su -`**: enter root mode
-- [GTFOBins](https://gtfobins.github.io/) and [LOLBAS](https://lolbas-project.github.io/#)
-## Scheduled Tasks 
-1.  Add new scheduled tasks/cron jobs
-2.  Trick them to execute a malicious software
-- specific folders:
-	1.  `/etc/crontab`
-	2.  `/etc/cron.d`
-	3.  `/var/spool/cron/crontabs/root`
+-   **User Privileges**
+	- **`sudo -l`** : what `sudo` privileges we have
+		- sometimes we find result `(user : user) NOPASSWD: /bin/echo` , means we can run `echo` as **user** without his password
+		- we can use that `sudo -u user /bin/echo Hello World!` 
+	- **`sudo su -`**: enter root mode
+	- [GTFOBins](https://gtfobins.github.io/) and [LOLBAS](https://lolbas-project.github.io/#)
+- **Scheduled Tasks** 
+	1.  Add new scheduled tasks/cron jobs
+	2.  Trick them to execute a malicious software
+	- specific folders:
+		1.  `/etc/crontab`
+		2.  `/etc/cron.d`
+		3.  `/var/spool/cron/crontabs/root`
 
 ## Exposed Credentials
 - common with `configuration` files, `log` files, and user history files (`bash_history` in Linux and `PSReadLine` in Windows)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNjgxMTQ3MywtNDMzODU2OTgxLC03ND
-E3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1NSwzMjk3MzI1NTEs
-LTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIwNDMzLDExMz
-UwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1
-MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMTQxNjU5OTA3MiwtNT
-cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
-NjI5XX0=
+eyJoaXN0b3J5IjpbLTE2ODE4MTYxNzUsLTQzMzg1Njk4MSwtNz
+QxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUsMzI5NzMyNTUx
+LC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExODIyMDQzMywxMT
+M1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIx
+NTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLT
+U3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIw
+MzYyOV19
 -->
