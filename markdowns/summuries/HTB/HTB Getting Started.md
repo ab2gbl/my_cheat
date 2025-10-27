@@ -178,10 +178,12 @@ Web Server | Default Webroot
 	- if we have write access to a users **`/.ssh/`**	
 		- we can place our public key in the user's ssh directory at `/home/user/.ssh/authorized_keys`
 		- create on local a new key with **ssh-keygen**: `ssh-keygen -f key` 
-		- give us two files: `key` (which we will use with `ssh -i`) and `key.pub`
-		- , which we will copy to the remote machine. Let us copy `key.pub`, then on the remote machine, we will add it into `/root/.ssh/authorized_keys`
+		- give us two files: **`key`** (which we will use with `ssh -i`) and **`key.pub`**
+		-  copy `key.pub` to the remote machine **`/root/.ssh/authorized_keys`**
+		- Now, the remote server should allow us to log in as that user by using our private key:
+`ssh root@10.10.10.10 -i key`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzgyODYxNiwtNDMzODU2OTgxLC03ND
+eyJoaXN0b3J5IjpbMTQ4MDczNTU4NCwtNDMzODU2OTgxLC03ND
 E3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1NSwzMjk3MzI1NTEs
 LTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIwNDMzLDExMz
 UwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1
