@@ -72,7 +72,7 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 	5- `check` to check if our target is vulnerable
 	6- `run` or `exploit` to run the exploit in the end	
 
-## 🧾 Types of Shells 
+# 🧾 Types of Shells 
 - to remote access: `ssh` for linux and `WinRm` for windows 
 
 Type of Shell | Method of Communication
@@ -195,11 +195,11 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNzAzNzE1MSwxNDI5MTY5MDEyLC00Mz
-M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
-LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
-gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
-Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUwNywxND
-E2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5
-ODVdfQ==
+eyJoaXN0b3J5IjpbLTIwMzgxNzkxMzQsMTQyOTE2OTAxMiwtND
+MzODU2OTgxLC03NDE3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1
+NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMT
+E4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5
+NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMT
+QxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4
+OTg1XX0=
 -->
