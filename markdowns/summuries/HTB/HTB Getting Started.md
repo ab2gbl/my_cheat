@@ -165,8 +165,9 @@ Web Server | Default Webroot
 	3.  `/var/spool/cron/crontabs/root`
 
 ## Exposed Credentials
+- common with `configuration` files, `log` files, and user history files (`bash_history` in Linux and `PSReadLine` in Windows)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MjA4NzQ2OSwtNDMzODU2OTgxLC03ND
+eyJoaXN0b3J5IjpbLTYzNjgxMTQ3MywtNDMzODU2OTgxLC03ND
 E3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1NSwzMjk3MzI1NTEs
 LTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIwNDMzLDExMz
 UwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1
