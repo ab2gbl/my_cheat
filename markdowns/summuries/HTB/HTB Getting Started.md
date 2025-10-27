@@ -44,7 +44,7 @@ git clone https://github.com/danielmiessler/SecLists
 # now Gobuster
 gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.tx
 ```
-### 🧾 Web Enumeration Tips (info sources)
+## 🧾 Web Enumeration Tips (info sources)
 - **Banner Grabbing / Web Server Headers**
 - **Whatweb**: by command `shell-session
  whatweb 10.10.10.121`
@@ -53,12 +53,12 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
  - **source code**: by `ctrl+u`
  
  
-## 🗃️ Public Exploits
-### Finding Public Exploits
+# 🗃️ Public Exploits
+## Finding Public Exploits
 - -   Search with Google + `exploit` or use databases:
     -   Exploit DB, Rapid7, Vulnerability Lab.
 - `searchsploit` (Exploit-DB local search)
-### 🧨 Metasploit (`msfconsole`) Primer
+## 🧨 Metasploit (`msfconsole`) Primer
 - Metasploit is a powerful pentesting framework with 
 	- built-in exploits
 	- reconnaissance/verification scripts
@@ -77,10 +77,9 @@ gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist
 
 Type of Shell | Method of Communication
 |--|--|
-`Reverse Shell` |Connects back to our system and gives us control through a reverse connection.
-`Bind Shell` | Waits for us to connect to it and gives us control once we do.
+`Reverse Shell` | Target connects back to attacker (listener) 🔁`Bind Shell` | Waits for us to connect to it and gives us control once we do.
 `Web Shell`  | Communicates through a web server, accepts our commands through HTTP parameters, executes them, and prints back the output.
-## Reverse Shell
+## 🔁 Reverse Shell
 - most used
 - target connects to us on the listening port
 - **netcat** listener on our machine  `nc -lvnp 1234`
@@ -195,11 +194,11 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTMyMjE2NjAsMTQyOTE2OTAxMiwtND
-MzODU2OTgxLC03NDE3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1
-NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMT
-E4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5
-NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMT
-QxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4
-OTg1XX0=
+eyJoaXN0b3J5IjpbLTE4NDcwODk0NCwxNDI5MTY5MDEyLC00Mz
+M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
+LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
+gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
+Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUwNywxND
+E2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5
+ODVdfQ==
 -->
