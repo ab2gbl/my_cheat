@@ -1,28 +1,28 @@
 # 🕵️ Pentesting Basics
 
-## 🖥️ Getting a Shell
-### 🔹 Types of Shells
+# 🖥️ Getting a Shell
+## 🔹 Types of Shells
 -   **Reverse Shell** 🔁
 -   **Bind Shell** ⚓
 -   **Web Shell** 🌐
 - 
-### 🛠️ Netcat
+## 🛠️ Netcat
 -   Interacts with TCP/UDP ports
 -   **Banner grabbing**: `nc -nv 10.129.42.253 21` or `nmap -sV --script=banner <target>`
 
 
-## 🔍 Service Scanning
+# 🔍 Service Scanning
 
-### 🧭 Nmap
+## 🧭 Nmap
 -   Common flags: `-sC` (default scripts), `-sV` (version), `-p-` (all ports)
 -   Run custom NSE scripts: `nmap --script <script.nse> -p<port> <host>`
     
-### ⚠️ Attacking Network Services
+## ⚠️ Attacking Network Services
 -   Banner grabbing: `nmap -sV --script=banner <target>`
-#### 🗂️ SMB (Server Message Block)
+### 🗂️ SMB (Server Message Block)
 -   Common on Windows; may be vulnerable to RCE (e.g., EternalBlue)
 -   Discovery: `nmap --script smb-os-discovery.nse -p445 10.10.10.40`
-##### Shares
+#### Shares
 - SMB allows users and administrators to share folders and make them accessible remotely by other users
 -   List shares: `smbclient -N -L \\\\10.129.42.253`
 -   Connect as guest: `smbclient \\\\10.129.42.253\\users`
@@ -30,9 +30,9 @@
 
 
 
-## 🌐 Web Enumeration
+# 🌐 Web Enumeration
 - `whatweb 10.129.117.36` 
-### 🧰 Gobuster / ffuf
+## 🧰 Gobuster / ffuf
 - Directories/files:
 ```bash
 gobuster dir -u http://10.10.10.121/ -w /usr/share/seclists/Discovery/Web-Content/common.txt
@@ -195,7 +195,7 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzgxNzkxMzQsMTQyOTE2OTAxMiwtND
+eyJoaXN0b3J5IjpbLTEyNTMyMjE2NjAsMTQyOTE2OTAxMiwtND
 MzODU2OTgxLC03NDE3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1
 NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMT
 E4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5
