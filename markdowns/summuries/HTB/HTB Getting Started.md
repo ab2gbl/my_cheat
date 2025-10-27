@@ -32,8 +32,8 @@
 
 ## 🌐 Web Enumeration
 - `whatweb 10.129.117.36` 
-### Gobuster (or ffuf)
-- for dirs/files
+### 🧰 Gobuster / ffuf
+- Directories/files:
 ```bash
 gobuster dir -u http://10.10.10.121/ -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
@@ -44,14 +44,15 @@ git clone https://github.com/danielmiessler/SecLists
 # now Gobuster
 gobuster dns -do inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.tx
 ```
-### Web Enumeration Tips (info sources)
+### 🧾 Web Enumeration Tips (info sources)
 - **Banner Grabbing / Web Server Headers**
 - **Whatweb**: by command `shell-session
  whatweb 10.10.10.121`
  - **Certificates**
  - **robots.txt**: instruct search engine like google
  - **source code**: by `ctrl+u`
- - 
+ 
+ 
 ## Public Exploits
 ### Finding Public Exploits
 - using google with `exploit`  word
@@ -194,11 +195,11 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU4MzczMjczLDE0MjkxNjkwMTIsLTQzMz
-g1Njk4MSwtNzQxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUs
-MzI5NzMyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExOD
-IyMDQzMywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQz
-ODg4LDE0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MT
-Y1OTkwNzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4
-NV19
+eyJoaXN0b3J5IjpbMTczMjE0Mjc0MSwxNDI5MTY5MDEyLC00Mz
+M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
+LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
+gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
+Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUwNywxND
+E2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5
+ODVdfQ==
 -->
