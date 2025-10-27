@@ -180,10 +180,10 @@ Web Server | Default Webroot
 		- create on local a new key with **ssh-keygen**: `ssh-keygen -f key` 
 		- give us two files: **`key`** (which we will use with `ssh -i`) and **`key.pub`**
 		-  copy `key.pub` to the remote machine **`/root/.ssh/authorized_keys`**
-		- Now, the remote server should allow us to log in as that user by using our private key:
-`ssh root@10.10.10.10 -i key`
+		- Now, we have access using the command: **`ssh root@10.10.10.10 -i key`**
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MDczNTU4NCwtNDMzODU2OTgxLC03ND
+eyJoaXN0b3J5IjpbLTc3Mzc0OTA2NCwtNDMzODU2OTgxLC03ND
 E3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1NSwzMjk3MzI1NTEs
 LTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIwNDMzLDExMz
 UwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1
