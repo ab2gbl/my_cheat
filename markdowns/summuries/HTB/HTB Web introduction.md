@@ -87,7 +87,9 @@
 ```bash
 curl -X POST -d '{"search":"f"}' -b 'PHPSESSID=9501nu5f74kqgohjh4ogu6debb' -H 'Content-Type: application/json' http://94.237.51.163:42040/search.php
 ```
- ## HTB CHEAT SHEET
+
+
+## 🧾 HTB cURL Cheat Sheet
 **Command** | **Description**
 |--|--|
 `curl -h` | cURL help menu
@@ -117,6 +119,6 @@ curl -X POST -d '{"search":"f"}' -b 'PHPSESSID=9501nu5f74kqgohjh4ogu6debb' -H 'C
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NjU0MDA2MywtMTQ0NDQ5Mjc2NCwtMT
-c0OTg4ODYxNSwxOTY1ODU2ODYyXX0=
+eyJoaXN0b3J5IjpbLTE4NDIyOTM5MjksLTE0NDQ0OTI3NjQsLT
+E3NDk4ODg2MTUsMTk2NTg1Njg2Ml19
 -->
