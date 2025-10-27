@@ -167,21 +167,22 @@ Web Server | Default Webroot
 - **Exposed Credentials**: common with `configuration` files, `log` files, and user history files (`bash_history` in Linux and `PSReadLine` in Windows)
 - **SSH Keys:** 
 	- try read read the folder **`.ssh`**
-	- ex **`/home/user/.ssh/id_rsa`** or **`/root/.ssh/id_rsa`**
-	- copy it to our machine and use the  `-i`  flag to log in with it:
-		```bash
-		ab2gbl1@htb[/htb]$ vim id_rsa
-		ab2gbl1@htb[/htb]$ chmod 600 id_rsa
-		ab2gbl1@htb[/htb]$ ssh root@10.10.10.10 -i id_rsa
-		root@10.10.10.10#
-		```
-		
+		- ex **`/home/user/.ssh/id_rsa`** or **`/root/.ssh/id_rsa`**
+		- copy it to our machine and use the  `-i`  flag to log in with it:
+			```bash
+			ab2gbl1@htb[/htb]$ vim id_rsa
+			ab2gbl1@htb[/htb]$ chmod 600 id_rsa
+			ab2gbl1@htb[/htb]$ ssh root@10.10.10.10 -i id_rsa
+			root@10.10.10.10#
+			```
+	- if we have write access to a users **`/.ssh/`**	
+		- we can place our public key in the user's ssh directory at `/home/user/.ssh/authorized_keys` 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjg2OTc1NDQsLTQzMzg1Njk4MSwtNz
-QxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUsMzI5NzMyNTUx
-LC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExODIyMDQzMywxMT
-M1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIx
-NTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLT
-U3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIw
-MzYyOV19
+eyJoaXN0b3J5IjpbNzg5MTcyMjU0LC00MzM4NTY5ODEsLTc0MT
+c5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1LDMyOTczMjU1MSwt
+OTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMTgyMjA0MzMsMTEzNT
+A1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0Mzg4OCwxNDYyMTUx
+OTMsNjgxMzMxNzQ5LDkyMjI0NTUwNywxNDE2NTk5MDcyLC01Nz
+I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
+MjldfQ==
 -->
