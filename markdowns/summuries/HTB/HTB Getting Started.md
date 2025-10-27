@@ -188,9 +188,9 @@ Web Server | Default Webroot
 `
 - **Using Base64:**: **encode** the file `base64 shell -w 0` then copy and **decode** `echo f0V...wU | base64 -d > shell`  
 - **Validating File Transfers**: using `file shell` and 
-# Resources
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTk2NzQ2NCwtNDMzODU2OTgxLC03ND
+eyJoaXN0b3J5IjpbMTQyOTE2OTAxMiwtNDMzODU2OTgxLC03ND
 E3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1NSwzMjk3MzI1NTEs
 LTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIwNDMzLDExMz
 UwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1
