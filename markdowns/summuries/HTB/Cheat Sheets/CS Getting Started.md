@@ -19,55 +19,18 @@
 **Vim**  |
 `vim file` | vim: open  `file`  with vim
 `esc+i` | vim: enter  `insert`  mode
-
-`esc`
-
-vim: back to  `normal`  mode
-
-`x`
-
-vim: Cut character
-
-`dw`
-
-vim: Cut word
-
-`dd`
-
-vim: Cut full line
-
-`yw`
-
-vim: Copy word
-
-`yy`
-
-vim: Copy full line
-
-`p`
-
-vim: Paste
-
-`:1`
-
-vim: Go to line number 1.
-
-`:w`
-
-vim: Write the file 'i.e. save'
-
-`:q`
-
-vim: Quit
-
-`:q!`
-
-vim: Quit without saving
-
-`:wq`
-
-vim: Write and quit
-
+`esc` | vim: back to  `normal`  mode
+`x` | vim: Cut character
+`dw` | vim: Cut word
+`dd` | vim: Cut full line
+`yw` | vim: Copy word
+`yy` | vim: Copy full line
+`p` | vim: Paste
+`:1` | vim: Go to line number 1.
+`:w` | vim: Write the file 'i.e. save'
+`:q` | vim: Quit
+`:q!`  | vim: Quit without saving
+`:wq` | vim: Write and quit
 ## Pentesting
 
 **Command**
@@ -274,5 +237,5 @@ Convert a file from  `base64`  back to its orig
 
 Check the file's  `md5sum`  to ensure it converted correctly
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU4NTQyMTddfQ==
+eyJoaXN0b3J5IjpbMjExNTM0MjYwOV19
 -->
