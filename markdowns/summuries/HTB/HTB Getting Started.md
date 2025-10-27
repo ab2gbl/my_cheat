@@ -184,10 +184,14 @@ Web Server | Default Webroot
 		- 
 # Transferring Files
 - **Using wget:** `python3 -m http.server 8000` then `wget` or `curl`
-- **Using SCP:** ```scp linenum.sh user@remotehost:/tmp/linenum.sh
-```
+- **Using SCP:** `scp linenum.sh user@remotehost:/tmp/linenum.sh
+`
+- **Using Base64:**: encode the file `base64 shell -w 0` then copy and decode`
+user@remotehost$ echo f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA... <SNIP> ...lIuy9iaW4vc2gAU0iJ51JXSInmDwU | base64 -d > shell
+
+```  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDIwOTg1OTMsLTQzMzg1Njk4MSwtNz
+eyJoaXN0b3J5IjpbLTEyNzg5NDQxMjYsLTQzMzg1Njk4MSwtNz
 QxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUsMzI5NzMyNTUx
 LC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExODIyMDQzMywxMT
 M1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIx
