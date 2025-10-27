@@ -191,10 +191,10 @@ Web Server | Default Webroot
 - **Using SCP:** `scp linenum.sh user@remotehost:/tmp/linenum.sh
 `
 - **Using Base64:**: **encode** the file `base64 shell -w 0` then copy and **decode** `echo f0V...wU | base64 -d > shell`  
-- **Validating File Transfers**: using `file shell` and 
+- Validating File Transfers: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ3NzkzODY3LDE0MjkxNjkwMTIsLTQzMz
+eyJoaXN0b3J5IjpbMTgwMDY1MTYzLDE0MjkxNjkwMTIsLTQzMz
 g1Njk4MSwtNzQxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUs
 MzI5NzMyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExOD
 IyMDQzMywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQz
