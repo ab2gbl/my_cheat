@@ -22,20 +22,24 @@
     -   ⚙️ Application Layer: Backend
     -   💾 Data Layer: Database
     
-# [OWASP Top 10](https://owasp.org/www-project-top-ten/) vulnerabilities
-1. Broken Access Control
-2. Cryptographic Failures 
-3. Injection
-4. Insecure Design
-5. Security Misconfiguration
-6. Vulnerable and Outdated Components
-7. Identification and Authentication Failures
-8. Software and Data Integrity Failures
-9. Security Logging and Monitoring Failures
-10. Server-Side Request Forgery (SSRF)
-# FrontEnd Vulnerabilities
-## Cross-Site Scripting (XSS)
-- **3 types**: `Reflected XSS`, `Stored XSS`, `DOM XSS`
+# 🧱 [OWASP Top 10](https://owasp.org/www-project-top-ten/) Vulnerabilities
+
+1.  🚫 Broken Access Control
+2.  🔐 Cryptographic Failures
+3.  💉 Injection
+4.  ⚠️ Insecure Design
+5.  ⚙️ Security Misconfiguration
+6.  🧩 Vulnerable & Outdated Components
+7.  🧍 Identification & Authentication Failures
+8.  🧱 Software & Data Integrity Failures
+9.  📜 Security Logging & Monitoring Failures
+10.  🌐 Server-Side Request Forgery (SSRF)
+
+
+# 🎨 Frontend Vulnerabilities
+## 💥 Cross-Site Scripting (XSS)
+
+-   **3 types:**  `Reflected`, `Stored`, `DOM`
 ```javascript
 #"><img src=/ onerror=alert(document.cookie)>
 ```
@@ -111,6 +115,6 @@ curl url
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI5NzcwOTE3LC0xNDQ0NDkyNzY0LC0xNz
-Q5ODg4NjE1LDE5NjU4NTY4NjJdfQ==
+eyJoaXN0b3J5IjpbLTgyNDA0MTAyMCwtMTQ0NDQ5Mjc2NCwtMT
+c0OTg4ODYxNSwxOTY1ODU2ODYyXX0=
 -->
