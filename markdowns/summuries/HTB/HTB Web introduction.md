@@ -2,25 +2,26 @@
 # 🌐 Web Application Layout
 
 ### 🧩 Categories
-- Web Application Infrastructure: 
-	-  `Client-Server`
-	-  `One Server`
-	-  `Many Servers - One Database`
-	-  `Many Servers - Many Databases`
-- Web Application Components: 
-	1.  `Client`
-	2.  `Server`
-	    -   Webserver
-	    -   Web Application Logic
-	    -   Database
-	3.  `Services`  (Microservices)
-	    -   3rd Party Integrations
-	    -   Web Application Integrations
-	4.  `Functions`  (Serverless) 
+-   **Web Application Infrastructure**
+    -   `Client-Server`
+    -   `One Server`
+    -   `Many Servers - One Database`
+    -   `Many Servers - Many Databases`
+-   **Web Application Components**
+    1.  `Client`
+    2.  `Server`
+        -   Webserver
+        -   Web Application Logic
+        -   Database
+    3.  `Services` (Microservices)
+        -   3rd Party Integrations
+        -   Web Application Integrations
+    4.  `Functions` (Serverless)
 -   **Web Application Architecture (3 Layers)**
     -   🖥️ Presentation Layer: Frontend
     -   ⚙️ Application Layer: Backend
     -   💾 Data Layer: Database
+    
 # [OWASP Top 10](https://owasp.org/www-project-top-ten/) vulnerabilities
 1. Broken Access Control
 2. Cryptographic Failures 
@@ -110,6 +111,6 @@ curl url
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTQ4OTUxNjEsLTE0NDQ0OTI3NjQsLT
-E3NDk4ODg2MTUsMTk2NTg1Njg2Ml19
+eyJoaXN0b3J5IjpbNzI5NzcwOTE3LC0xNDQ0NDkyNzY0LC0xNz
+Q5ODg4NjE1LDE5NjU4NTY4NjJdfQ==
 -->
