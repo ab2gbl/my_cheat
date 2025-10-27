@@ -186,7 +186,6 @@ Web Server | Default Webroot
 		- give us two files: **`key`** (which we will use with `ssh -i`) and **`key.pub`**
 		-  copy `key.pub` to the remote machine **`/root/.ssh/authorized_keys`**
 		- Now, we have access using the command: **`ssh root@10.10.10.10 -i key`**
-		- 
 # Transferring Files
 - **Using wget:** `python3 -m http.server 8000` then `wget` or `curl`
 - **Using SCP:** `scp linenum.sh user@remotehost:/tmp/linenum.sh
@@ -195,11 +194,11 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMjU3OTcwMywxNDI5MTY5MDEyLC00Mz
-M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
-LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
-gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
-Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUwNywxND
-E2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5
-ODVdfQ==
+eyJoaXN0b3J5IjpbLTE4MTU0MTgwNjAsMTQyOTE2OTAxMiwtND
+MzODU2OTgxLC03NDE3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1
+NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMT
+E4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5
+NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMT
+QxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4
+OTg1XX0=
 -->
