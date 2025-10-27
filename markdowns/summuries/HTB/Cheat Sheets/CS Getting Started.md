@@ -16,14 +16,9 @@
 `prefix shift+%` | tmux: split pane vertically
 `prefix shift+"` | tmux: split pane horizontally
 `prefix ->` | tmux: switch to the right pane
-**Vim**  
-`vim file`
-
-vim: open  `file`  with vim
-
-`esc+i`
-
-vim: enter  `insert`  mode
+**Vim**  |
+`vim file` | vim: open  `file`  with vim
+`esc+i` | vim: enter  `insert`  mode
 
 `esc`
 
@@ -279,5 +274,5 @@ Convert a file from  `base64`  back to its orig
 
 Check the file's  `md5sum`  to ensure it converted correctly
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MjY5NzQxXX0=
+eyJoaXN0b3J5IjpbNDU4NTQyMTddfQ==
 -->
