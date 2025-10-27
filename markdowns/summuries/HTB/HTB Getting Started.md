@@ -9,14 +9,19 @@
 ### 🛠️ Netcat
 -   Interacts with TCP/UDP ports
 -   **Banner grabbing**: `nc -nv 10.129.42.253 21` or `nmap -sV --script=banner <target>`
-- 
-## Service Scanning
-### Nmap
-- `-sC` for more details `-sV` for version `-p-` to scan all ports 
-- to run custom script `nmap --script <script name> -p<port> <host>`.
-### Attacking Network Services
-- **Banner Grabbing** `nmap -sV --script=banner <target>`  
-- **FTP**: Nmap scan anonymous authentication is enabled
+
+
+## 🔍 Service Scanning
+
+### 🧭 Nmap
+
+-   Common flags: `-sC` (default scripts), `-sV` (version), `-p-` (all ports)
+    
+-   Run custom NSE scripts: `nmap --script <script.nse> -p<port> <host>`
+    
+### ⚠️ Attacking Network Services
+
+-   Banner grabbing: `nmap -sV --script=banner <target>`- **FTP**: Nmap scan anonymous authentication is enabled
 #### SMB (Server Message Block)
 - a prevalent protocol on Windows machines
 - some SMB versions may be vulnerable to RCE exploits such as [EternalBlue](https://www.avast.com/c-eternalblue).
@@ -191,11 +196,11 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg4MDY1ODU1LDE0MjkxNjkwMTIsLTQzMz
-g1Njk4MSwtNzQxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUs
-MzI5NzMyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExOD
-IyMDQzMywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQz
-ODg4LDE0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MT
-Y1OTkwNzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4
-NV19
+eyJoaXN0b3J5IjpbMTAzMDExMTQ1MCwxNDI5MTY5MDEyLC00Mz
+M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
+LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
+gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
+Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUwNywxND
+E2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5
+ODVdfQ==
 -->
