@@ -64,9 +64,9 @@
 -   🧨 Command Injection
 -   💉 SQL Injection (SQLi)
 -   🧾 CVEs (Common Vulnerabilities & Exposures)
-# cURL
-## curl
-curl url					
+
+
+# 🌐 cURL Commands
 **option** | **desc**
 |--|--|
 `-o` | save in a file 
@@ -83,7 +83,10 @@ curl url
 `-b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1'` | set cookies 
 `-s` | jq |for good json structer
 	
-- post ex: `curl -X POST -d '{"search":"f"}' -b 'PHPSESSID=9501nu5f74kqgohjh4ogu6debb' -H 'Content-Type: application/json' http://94.237.51.163:42040/search.php`
+🧪 **Example:**
+```bash
+curl -X POST -d '{"search":"f"}' -b 'PHPSESSID=9501nu5f74kqgohjh4ogu6debb' -H 'Content-Type: application/json' http://94.237.51.163:42040/search.php
+```
  ## HTB CHEAT SHEET
 **Command** | **Description**
 |--|--|
@@ -114,6 +117,6 @@ curl url
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMjY3NjQ0OCwtMTQ0NDQ5Mjc2NCwtMT
+eyJoaXN0b3J5IjpbLTk1NjU0MDA2MywtMTQ0NDQ5Mjc2NCwtMT
 c0OTg4ODYxNSwxOTY1ODU2ODYyXX0=
 -->
