@@ -14,14 +14,21 @@
 ## 🔍 Service Scanning
 
 ### 🧭 Nmap
-
 -   Common flags: `-sC` (default scripts), `-sV` (version), `-p-` (all ports)
-    
 -   Run custom NSE scripts: `nmap --script <script.nse> -p<port> <host>`
     
 ### ⚠️ Attacking Network Services
+-   Banner grabbing: `nmap -sV --script=banner <target>`
+#### 🗂️ SMB (Server Message Block)
+-   Common on Windows; may be vulnerable to RCE (e.g., EternalBlue)
+-   Discovery: `nmap --script smb-os-discovery.nse -p445 10.10.10.40`
+##### Shares
+-   List shares: `smbclient -N -L \\\\10.129.42.253`
+-   Connect as guest: `smbclient \\\\10.129.42.253\\users`
+-   Connect as user: `smbclient -U bob \\\\10.129.42.253\\users`
+    
 
--   Banner grabbing: `nmap -sV --script=banner <target>`- **FTP**: Nmap scan anonymous authentication is enabled
+----------
 #### SMB (Server Message Block)
 - a prevalent protocol on Windows machines
 - some SMB versions may be vulnerable to RCE exploits such as [EternalBlue](https://www.avast.com/c-eternalblue).
@@ -196,7 +203,7 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDExMTQ1MCwxNDI5MTY5MDEyLC00Mz
+eyJoaXN0b3J5IjpbMTg5NTI4NTAzMSwxNDI5MTY5MDEyLC00Mz
 M4NTY5ODEsLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1
 LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMT
 gyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0
