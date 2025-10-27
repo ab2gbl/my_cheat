@@ -164,15 +164,14 @@ Web Server | Default Webroot
 		2.  `/etc/cron.d`
 		3.  `/var/spool/cron/crontabs/root`
 
-## Exposed Credentials
-- common with `configuration` files, `log` files, and user history files (`bash_history` in Linux and `PSReadLine` in Windows)
-
+- **Exposed Credentials**: common with `configuration` files, `log` files, and user history files (`bash_history` in Linux and `PSReadLine` in Windows)
+- **SSH Keys:** try read read the folder **`.ssh`**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODE4MTYxNzUsLTQzMzg1Njk4MSwtNz
-QxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUsMzI5NzMyNTUx
-LC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExODIyMDQzMywxMT
-M1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIx
-NTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLT
-U3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIw
-MzYyOV19
+eyJoaXN0b3J5IjpbOTQ4MzgxOTQ0LC00MzM4NTY5ODEsLTc0MT
+c5NjA4LDI1NDg1NjUzLC0xNTgxMjM2NzU1LDMyOTczMjU1MSwt
+OTI4NzcwNTU1LDE4OTc5Mjg1MTYsLTExMTgyMjA0MzMsMTEzNT
+A1MjY4NCwtMTE3OTc1MTIxNSwtMTk2NDk0Mzg4OCwxNDYyMTUx
+OTMsNjgxMzMxNzQ5LDkyMjI0NTUwNywxNDE2NTk5MDcyLC01Nz
+I4NDgwNDEsMTUzNTIzNDk2MSw0MDg0Mjg5ODUsLTE0NzQyMDM2
+MjldfQ==
 -->
