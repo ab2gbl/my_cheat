@@ -1,14 +1,18 @@
-# Pentesting Basics
+# 🕵️ Pentesting Basics
 
-## Getting a shell
-- **types of shell**
-	- Reverse Shell
-	- Bind Shell
-	- Web Shell
-- **Netcat**
-	- interacting with TCP/UDP ports.
-	- **Banner Grabbing** `nc -nv 10.129.42.253 21` or `nmap -sV --script=banner <target>`
+## 🖥️ Getting a Shell
 
+### 🔹 Types of Shells
+
+-   **Reverse Shell** 🔁
+    
+-   **Bind Shell** ⚓
+-   **Web Shell** 🌐
+### 🛠️ Netcat
+
+-   Interacts with TCP/UDP ports
+    
+-   **Banner grabbing**: `nc -nv 10.129.42.253 21` or `nmap -sV --script=banner <target>`
 ## Service Scanning
 ### Nmap
 - `-sC` for more details `-sV` for version `-p-` to scan all ports 
@@ -190,11 +194,11 @@ Web Server | Default Webroot
 - **Validating File Transfers**: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyOTE2OTAxMiwtNDMzODU2OTgxLC03ND
-E3OTYwOCwyNTQ4NTY1MywtMTU4MTIzNjc1NSwzMjk3MzI1NTEs
-LTkyODc3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIwNDMzLDExMz
-UwNTI2ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1
-MTkzLDY4MTMzMTc0OSw5MjIyNDU1MDcsMTQxNjU5OTA3MiwtNT
-cyODQ4MDQxLDE1MzUyMzQ5NjEsNDA4NDI4OTg1LC0xNDc0MjAz
-NjI5XX0=
+eyJoaXN0b3J5IjpbNTY3Nzk0MTgxLDE0MjkxNjkwMTIsLTQzMz
+g1Njk4MSwtNzQxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUs
+MzI5NzMyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExOD
+IyMDQzMywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQz
+ODg4LDE0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MT
+Y1OTkwNzIsLTU3Mjg0ODA0MSwxNTM1MjM0OTYxLDQwODQyODk4
+NV19
 -->
