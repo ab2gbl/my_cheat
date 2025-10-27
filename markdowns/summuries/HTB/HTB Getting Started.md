@@ -155,12 +155,16 @@ Web Server | Default Webroot
 	- sometimes we find result `(user : user) NOPASSWD: /bin/echo` , means we can run `echo` as **user** without his password
 	- we can use that `sudo -u user /bin/echo Hello World!` 
 - **`sudo su -`**: enter root mode
+- [GTFOBins](https://gtfobins.github.io/) and [LOLBAS](https://lolbas-project.github.io/#)
+## Scheduled Tasks 
+1.  Add new scheduled tasks/cron jobs
+2.  Trick them to execute a malicious software
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MTc5NjA4LDI1NDg1NjUzLC0xNTgxMj
-M2NzU1LDMyOTczMjU1MSwtOTI4NzcwNTU1LDE4OTc5Mjg1MTYs
-LTExMTgyMjA0MzMsMTEzNTA1MjY4NCwtMTE3OTc1MTIxNSwtMT
-k2NDk0Mzg4OCwxNDYyMTUxOTMsNjgxMzMxNzQ5LDkyMjI0NTUw
-NywxNDE2NTk5MDcyLC01NzI4NDgwNDEsMTUzNTIzNDk2MSw0MD
-g0Mjg5ODUsLTE0NzQyMDM2MjksLTEwMDEzNzAwNDIsLTE1OTM5
-MDQyMzJdfQ==
+eyJoaXN0b3J5IjpbLTQzMzg1Njk4MSwtNzQxNzk2MDgsMjU0OD
+U2NTMsLTE1ODEyMzY3NTUsMzI5NzMyNTUxLC05Mjg3NzA1NTUs
+MTg5NzkyODUxNiwtMTExODIyMDQzMywxMTM1MDUyNjg0LC0xMT
+c5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIxNTE5Myw2ODEzMzE3
+NDksOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLTU3Mjg0ODA0MSwxNT
+M1MjM0OTYxLDQwODQyODk4NSwtMTQ3NDIwMzYyOSwtMTAwMTM3
+MDA0Ml19
 -->
