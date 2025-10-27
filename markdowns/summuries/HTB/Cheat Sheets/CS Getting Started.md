@@ -1,5 +1,5 @@
   
-
+## Basic Tools
 **Command** | **Description**
 |--|--|
 **General** | 
@@ -89,5 +89,5 @@
 `echo f0VMR...SNIO...InmDwU | base64 -d > shell` | Convert a file from  `base64`  back to its orig
 `md5sum shell` | Check the file's  `md5sum`  to ensure it converted correctly
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAyMjEwNzg1XX0=
+eyJoaXN0b3J5IjpbLTE2NDYxMzExMTJdfQ==
 -->
