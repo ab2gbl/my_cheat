@@ -31,52 +31,21 @@
 `:q` | vim: Quit
 `:q!`  | vim: Quit without saving
 `:wq` | vim: Write and quit
+
 ## Pentesting
-
-**Command**
-
-**Description**
-
-**Service Scanning**
-
-`nmap 10.129.42.253`
-
-Run nmap on an IP
-
-`nmap -sV -sC -p- 10.129.42.253`
-
-Run an nmap script scan on an IP
-
-`locate scripts/citrix`
-
-List various available nmap scripts
-
-`nmap --script smb-os-discovery.nse -p445 10.10.10.40`
-
-Run an nmap script on an IP
-
-`netcat 10.10.10.10 22`
-
-Grab banner of an open port
-
-`smbclient -N -L \\\\10.129.42.253`
-
-List SMB Shares
-
-`smbclient \\\\10.129.42.253\\users`
-
-Connect to an SMB share
-
-`snmpwalk -v 2c -c public 10.129.42.253 1.3.6.1.2.1.1.5.0`
-
-Scan SNMP on an IP
-
-`onesixtyone -c dict.txt 10.129.42.254`
-
-Brute force SNMP secret string
-
-**Web Enumeration**
-
+**Command** | **Description**
+|--|--|
+**Service Scanning** |
+`nmap 10.129.42.253` | Run nmap on an IP
+`nmap -sV -sC -p- 10.129.42.253` | Run an nmap script scan on an IP
+`locate scripts/citrix` | List various available nmap scripts
+`nmap --script smb-os-discovery.nse -p445 10.10.10.40` | Run an nmap script on an IP
+`netcat 10.10.10.10 22` | Grab banner of an open port
+`smbclient -N -L \\\\10.129.42.253` | List SMB Shares
+`smbclient \\\\10.129.42.253\\users` | Connect to an SMB share
+`snmpwalk -v 2c -c public 10.129.42.253 1.3.6.1.2.1.1.5.0` | Scan SNMP on an IP
+`onesixtyone -c dict.txt 10.129.42.254` | Brute force SNMP secret string
+**Web Enumeration** |
 `gobuster dir -u http://10.10.10.121/ -w /usr/share/dirb/wordlists/common.txt`
 
 Run a directory scan on a website
@@ -237,5 +206,5 @@ Convert a file from  `base64`  back to its orig
 
 Check the file's  `md5sum`  to ensure it converted correctly
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNTM0MjYwOV19
+eyJoaXN0b3J5IjpbMTkyMzE2NTg1XX0=
 -->
