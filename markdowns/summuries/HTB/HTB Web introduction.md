@@ -108,17 +108,17 @@ curl -X POST -d '{"search":"f"}' -b 'PHPSESSID=9501nu5f74kqgohjh4ogu6debb' -H 'C
 `curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>/` | Set request cookies
 `curl -X POST -d '{"search":"london"}' -H 'Content-Type: application/json' http://<SERVER_IP>:<PORT>/search.php` | Send POST request with JSON data
 
-## APIs
+## 🔗 APIs with cURL
 
 **Command** | **Description**
 |--|--|
 `curl http://<SERVER_IP>:<PORT>/api.php/city/london` | Read entry
-`curl -s http://<SERVER_IP>:<PORT>/api.php/city/ | jq` | Read all entries
+`curl -s http://<SERVER_IP>:<PORT>/api.php/city/ \| jq` | Read all entries
 `curl -X POST http://<SERVER_IP>:<PORT>/api.php/city/ -d '{"city_name":"HTB_City", "country_name":"HTB"}' -H 'Content-Type: application/json'`|Create (add) entry
 `curl -X PUT http://<SERVER_IP>:<PORT>/api.php/city/london -d '{"city_name":"New_HTB_City", "country_name":"HTB"}' -H 'Content-Type: application/json'` | Update (modify) entry
 `curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City` | Delete entry
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDIyOTM5MjksLTE0NDQ0OTI3NjQsLT
+eyJoaXN0b3J5IjpbLTE4MDIyNjgxNDMsLTE0NDQ0OTI3NjQsLT
 E3NDk4ODg2MTUsMTk2NTg1Njg2Ml19
 -->
