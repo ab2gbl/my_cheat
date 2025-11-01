@@ -29,59 +29,61 @@ to display the documentation
 ```
 ## Documentation
 This document provides an overview of the folder structure for the Mobile Payment Project and a brief explanation of the purpose and functionality of each directory.
-- ## @fuse
+## @fuse
 Contains all features and configurations related to the Fuse template used as the base for this project.
-- ## app/
+-## app/
 The main application folder containing the core logic, modules, and components.
-- ### app/core
+### app/core
 Dedicated to the authentication process.
 - Guards – Protect routes and manage access control
 - Interceptors – Handle and modify HTTP requests/responses.
 - Services – Manage authentication-related logic.
-- ### app/modules
+### app/modules
 This folder contains the main application modules, including:
 - auth/
 - admin/
 - statistics/ 
  Each subfolder inside represents a distinct feature view within the application.
-- #### Admin Module Overview
+#### Admin Module Overview
 The admin module is the main that composed of multiple feature components, each responsible for managing a specific part of the system.
-- #### admin/accounts/
+#### admin/accounts/
 Manages bank accounts.
 Features:
 	- create/read/update account 
 	- View account details
 	- Make account as default
 
-- #### admin/payment/
+#### admin/payment/
 employee generate QR codes to do payments
 Features:
 		- Generate Qr code ( dynamic, static with/without amount )
 		- transactions history 
-- #### admin/transactions/
+#### admin/transactions/
 Displays the list of all transactions made 
 	- View transaction details and trace
 	- Filter transactions by criteria
 	- Employee can Refund transactions 
-- #### admin/stores/
+#### admin/stores/
 Lists the stores.
 Features:
 	- Full CRUD operations
 	- Filtering support
-- #### admin/employees/
+#### admin/employees/
 Lists the employees.
 Features:
 	- Full CRUD operations
 	- Filtering support
 
 
-- #### admin/roles/
+#### admin/roles/
 Manages the roles of employees.
 Features:
 	- Full CRUD operations
 	- Role has name , description and privileges groups
 	- each group has mult privileges 
-	- privilege ca
+	- privilege has 4 params:
+		- porte: same store the employee works on
+		-  
 - Suspend accounts
 - Filter merchant accounts
 
@@ -155,5 +157,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMjI2ODc0LC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbNzMyNTI0MzQzLC0zMzI0NTUzNjNdfQ==
 -->
