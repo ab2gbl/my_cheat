@@ -76,9 +76,12 @@ Features:
 
 
 - #### admin/roles/
-full merchant bank accounts.
+Manages the roles of employees.
 Features:
-- View account details
+	- Full CRUD operations
+	- Role has name , description and privileges groups
+	- each group has mult privileges 
+	- privilege ca
 - Suspend accounts
 - Filter merchant accounts
 
@@ -152,5 +155,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjQ1MjYxMTIsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMTExMjI2ODc0LC0zMzI0NTUzNjNdfQ==
 -->
