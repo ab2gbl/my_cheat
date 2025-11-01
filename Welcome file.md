@@ -57,9 +57,10 @@ Features:
 - Generate Qr code ( dynamic, static with/without amount )
 - transactions history 
 #### admin/transfer/
-Client transferting 
+Client transferring money to other user 
 Features:
-- Generate Qr code ( dynamic, static with/without amount )
+- Select a beneficiary
+- Transfer money to this beneficiary
 - transactions history 
 #### admin/transactions/
 Displays the list of all transactions made 
@@ -95,5 +96,5 @@ Features:
 	- Stores: selecting specific stores
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzY4NzM1OTgsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMTM5MjU0NDMzOCwtMzMyNDU1MzYzXX0=
 -->
