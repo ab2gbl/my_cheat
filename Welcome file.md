@@ -42,52 +42,52 @@ Dedicated to the authentication process.
 This folder contains the main application modules, including:
 - auth/
 - admin/
-- statistics/ 
  Each subfolder inside represents a distinct feature view within the application.
 #### Admin Module Overview
 The admin module is the main that composed of multiple feature components, each responsible for managing a specific part of the system.
 #### admin/accounts/
 Manages bank accounts.
 Features:
-	- create/read/update account 
-	- View account details
-	- Make account as default
-
+- create/read/update account 
+- View account details
+- Make account as default
 #### admin/payment/
 employee generate QR codes to do payments
 Features:
-		- Generate Qr code ( dynamic, static with/without amount )
-		- transactions history 
+- Generate Qr code ( dynamic, static with/without amount )
+- transactions history 
 #### admin/transactions/
 Displays the list of all transactions made 
-	- View transaction details and trace
-	- Filter transactions by criteria
-	- Employee can Refund transactions 
+- View transaction details and trace
+- Filter transactions by criteria
+- Employee can Refund transactions 
 #### admin/stores/
 Lists the stores.
 Features:
-	- Full CRUD operations
-	- Filtering support
+- Full CRUD operations
+- Filtering support
 #### admin/employees/
 Lists the employees.
 Features:
-	- Full CRUD operations
-	- Filtering support
-
-
+- Full CRUD operations
+- Filtering support
 #### admin/roles/
 Manages the roles of employees.
 Features:
 - Full CRUD operations
 - Filtering support
 - Role has name , description and privileges groups
+	- Transactions
+	- Stores
+	- Employees
+	- Accounts
+	- 
 - each group has mult privileges 
 - privilege has 4 params:
 	- Porte: same store the employee works on
 	- Descendant: stores under his store
 	- Employees: selecting specific employees
 	- Stores: selecting specific stores
-
 - #### admin/region/
 Displays regions associated with banks.
 Notes:
@@ -158,5 +158,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NjE4MDg3MSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTEyNzg4NTM3MDcsLTMzMjQ1NTM2M119
 -->
