@@ -58,9 +58,10 @@ Displays the list of all transactions made
 - Filter transactions by criteria
 
 - #### admin/paiment/
-Displays the list of all customers in the system.
+employee generate QR codes to do paiments
 Features:
-- View customer details
+		- Generate Qr code ( dynamic, static with/without amount )
+		- transactions history 
 - Suspend customers
 - Filter customers
 - #### admin/merchant/
@@ -155,5 +156,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNDU2MzAzMywtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbNTcwODU3NTczLC0zMzI0NTUzNjNdfQ==
 -->
