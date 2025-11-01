@@ -52,18 +52,17 @@ Features:
 	- create/read/update account 
 	- View account details
 	- Make account as default
-- #### admin/transactions/
-Displays the list of all transactions made 
-- View transaction details and trace
-- Filter transactions by criteria
 
 - #### admin/paiment/
 employee generate QR codes to do paiments
 Features:
 		- Generate Qr code ( dynamic, static with/without amount )
 		- transactions history 
-- Suspend customers
-- Filter customers
+- #### admin/transactions/
+Displays the list of all transactions made 
+	- View transaction details and trace
+	- Filter transactions by criteria
+
 - #### admin/merchant/
 Lists all merchants registered in the system.
 Features:
@@ -156,5 +155,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTcwODU3NTczLC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbLTE4MjU1MDYyMzcsLTMzMjQ1NTM2M119
 -->
