@@ -47,9 +47,8 @@ This folder contains the main application modules, including:
 - #### Admin Module Overview
 The admin module is composed of multiple feature components, each responsible for managing a specific part of the system.
 - #### admin/transactions/
-Displays the list of all transactions made by clients and merchants.
-Features:
-- View transaction details
+Displays the list of all transactions made 
+- View transaction details and trace
 - Filter transactions by criteria
 - #### admin/accounts/
 Manages client bank accounts.
@@ -155,5 +154,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2OTg0NjYwMywtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTUwNzM3NjU5OSwtMzMyNDU1MzYzXX0=
 -->
