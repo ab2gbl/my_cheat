@@ -45,7 +45,7 @@ This folder contains the main application modules, including:
 - statistics/ 
  Each subfolder inside represents a distinct feature view within the application.
 - #### Admin Module Overview
-The admin module is composed of multiple feature components, each responsible for managing a specific part of the system.
+The admin module is the main that composed of multiple feature components, each responsible for managing a specific part of the system.
 - #### admin/accounts/
 Manages bank accounts.
 Features:
@@ -62,6 +62,7 @@ Features:
 Displays the list of all transactions made 
 	- View transaction details and trace
 	- Filter transactions by criteria
+	- Employee can Refund transactions 
 
 - #### admin/merchant/
 Lists all merchants registered in the system.
@@ -75,16 +76,12 @@ Features:
 - View account details
 - Suspend accounts
 - Filter merchant accounts
-- #### admin/bank/
-Displays all banks in the system.
-Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/user-bank/
+- #### admin/stores/
 Lists user-linked banks.
 Features:
 - Full CRUD operations
 - Filtering support
+-
 - #### admin/region/
 Displays regions associated with banks.
 Notes:
@@ -155,5 +152,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjU1MDYyMzcsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMTExOTEzMTE4MCwtMzMyNDU1MzYzXX0=
 -->
