@@ -46,19 +46,18 @@ This folder contains the main application modules, including:
  Each subfolder inside represents a distinct feature view within the application.
 - #### Admin Module Overview
 The admin module is composed of multiple feature components, each responsible for managing a specific part of the system.
+- #### admin/accounts/
+Manages bank accounts.
+Features:
+	- create/read/update account 
+	- View account details
+	- Make account as default
 - #### admin/transactions/
 Displays the list of all transactions made 
 - View transaction details and trace
 - Filter transactions by criteria
-- #### admin/accounts/
-Manages bank accounts.
-Features:
-- create/read/update account 
-- View account details 
--  account details
-- Suspend accounts (disable activities)
-- Filter accounts
-- #### admin/customers/
+
+- #### admin/paiment/
 Displays the list of all customers in the system.
 Features:
 - View customer details
@@ -156,5 +155,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTgxMzE5NjMsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMjAxNDU2MzAzMywtMzMyNDU1MzYzXX0=
 -->
