@@ -56,6 +56,11 @@ employee generate QR codes to do payments
 Features:
 - Generate Qr code ( dynamic, static with/without amount )
 - transactions history 
+#### admin/transfer/
+Client transferting 
+Features:
+- Generate Qr code ( dynamic, static with/without amount )
+- transactions history 
 #### admin/transactions/
 Displays the list of all transactions made 
 - View transaction details and trace
@@ -81,82 +86,14 @@ Features:
 	- Stores
 	- Employees
 	- Accounts
-	- 
+	- Roles
 - each group has mult privileges 
 - privilege has 4 params:
 	- Porte: same store the employee works on
 	- Descendant: stores under his store
 	- Employees: selecting specific employees
 	- Stores: selecting specific stores
-- #### admin/region/
-Displays regions associated with banks.
-Notes:
-- Regions only exist if the bank supports them (region = true).
- Features
-- Full CRUD operations
-- Filtering support
-- #### admin/region-user/
-Manages user regions.
-Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/agencies/
-Lists bank agencies.
-Notes:
-- Exists only for non-centralized banks.
- Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/agencies-user/
-Displays user-linked agencies.
-Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/stores/
-Lists all stores linked to merchants.
-Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/employees/
-Displays store employees.
-Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/users/
-Lists all system users.
-Features:
-- Full CRUD operations
-- Activate/Deactivate users via radio button
-- Filtering support
-- #### admin/roles/
-Displays all system roles.
-Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/sessions/
-Displays login session history.
-Features:
-- Delete session entries
-- Filter sessions
-- #### admin/frauds/
-Lists all blocked users.
-Features:
-- Unblock users
-- #### admin/account-policies/
-Displays bank account policies for clients.
-Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/mcc-thresholds/
-Lists merchant thresholds defined by the bank.
-Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/notifications/
-Manages notifications sent to users, clients, and merchants.
-Features:
-- Full CRUD operations
-- Filtering support
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzg4NTM3MDcsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTIwNzY4NzM1OTgsLTMzMjQ1NTM2M119
 -->
