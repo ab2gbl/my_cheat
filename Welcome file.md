@@ -53,8 +53,8 @@ Features:
 	- View account details
 	- Make account as default
 
-- #### admin/paiment/
-employee generate QR codes to do paiments
+- #### admin/payment/
+employee generate QR codes to do payments
 Features:
 		- Generate Qr code ( dynamic, static with/without amount )
 		- transactions history 
@@ -66,17 +66,17 @@ Displays the list of all transactions made
 - #### admin/stores/
 Lists the stores.
 Features:
-- Full CRUD operations
-- Filtering support
-- #### admin/stores/
-Lists the stores.
+	- Full CRUD operations
+	- Filtering support
+- #### admin/employees/
+Lists the employees.
 Features:
-- Full CRUD operations
-- Filtering support
+	- Full CRUD operations
+	- Filtering support
 
 
-- #### admin/merchant-account/
-Manages merchant bank accounts.
+- #### admin/roles/
+full merchant bank accounts.
 Features:
 - View account details
 - Suspend accounts
@@ -152,5 +152,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM5NTQ3MTIyLC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbLTIwNjQ1MjYxMTIsLTMzMjQ1NTM2M119
 -->
