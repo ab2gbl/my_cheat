@@ -78,14 +78,15 @@ Features:
 #### admin/roles/
 Manages the roles of employees.
 Features:
-	- Full CRUD operations
-	- Role has name , description and privileges groups
-	- each group has mult privileges 
-	- privilege has 4 params:
-		- porte: same store the employee works on
-		-  
-- Suspend accounts
-- Filter merchant accounts
+- Full CRUD operations
+- Filtering support
+- Role has name , description and privileges groups
+- each group has mult privileges 
+- privilege has 4 params:
+	- Porte: same store the employee works on
+	- Descendant: stores under his store
+	- Employees: selecting specific employees
+	- Stores: selecting specific stores
 
 - #### admin/region/
 Displays regions associated with banks.
@@ -157,5 +158,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMyNTI0MzQzLC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbLTQ0NjE4MDg3MSwtMzMyNDU1MzYzXX0=
 -->
