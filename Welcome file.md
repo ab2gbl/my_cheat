@@ -51,9 +51,11 @@ Displays the list of all transactions made
 - View transaction details and trace
 - Filter transactions by criteria
 - #### admin/accounts/
-Manages client bank accounts.
+Manages bank accounts.
 Features:
-- View account details
+- create/read/update account 
+- View account details 
+-  account details
 - Suspend accounts (disable activities)
 - Filter accounts
 - #### admin/customers/
@@ -154,5 +156,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNzM3NjU5OSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTEyMTgxMzE5NjMsLTMzMjQ1NTM2M119
 -->
