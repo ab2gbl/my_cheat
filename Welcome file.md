@@ -4,14 +4,13 @@
 The Mobile Payment Client Administration system serves as the back-office platform for both system users and banking institutions. It enables the management of clients who use the Mobile Payment service, whether through the mobile application or the web version.
 This documentation provides a detailed description of each module within the system and outlines their functionalities.
 ## Acknowledgements
-To effectively work on this project, you should have solid experience with HTML, CSS, Angular, and TypeScript, as well as familiarity with asynchronous tools such as RxJS, Signals, and NgRx.
+To effectively work on this project, you should have solid experience with HTML, CSS, Angular, and TypeScript, as well as familiarity with asynchronous tools such as RxJS and Signals .
 If you are not yet proficient in any of these technologies, it is recommended that you review the following tutorials and learning resources before proceeding.
 - [HTML](https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements)
 - [CSS](https://developer.mozilla.org/fr/docs/Web/CSS)
 - [TYPESCRIPT](https://www.typescripttutorial.net/)
 - [RXJS](https://www.learnrxjs.io/)
 - [SIGNLAS](https://blog.angular-university.io/angular-signals/)
-- [NGRX](https://ngrx.io/guide/store)
 ## Environment Variables
 To run this project, you should have these environment variables to your .env file
 `apiAuthUrl` : for authentication requests
@@ -28,10 +27,10 @@ to display the documentation
  compodoc -so
 ```
 ## Documentation
-This document provides an overview of the folder structure for the Mobile Payment Project and a brief explanation of the purpose and functionality of each directory.
+This document provides an overview of the folder structure for the Mobile Payment Project Client and a brief explanation of the purpose and functionality of each directory.
 ## @fuse
 Contains all features and configurations related to the Fuse template used as the base for this project.
--## app/
+## app/
 The main application folder containing the core logic, modules, and components.
 ### app/core
 Dedicated to the authentication process.
@@ -96,5 +95,5 @@ Features:
 	- Stores: selecting specific stores
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MjU0NDMzOCwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMTQ1NTI2NzkyNSwtMzMyNDU1MzYzXX0=
 -->
