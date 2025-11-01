@@ -63,25 +63,25 @@ Displays the list of all transactions made
 	- View transaction details and trace
 	- Filter transactions by criteria
 	- Employee can Refund transactions 
-
-- #### admin/merchant/
-Lists all merchants registered in the system.
+- #### admin/stores/
+Lists the stores.
 Features:
-- View merchant details
-- Suspend merchants
-- Filter merchants
+- Full CRUD operations
+- Filtering support
+- #### admin/stores/
+Lists the stores.
+Features:
+- Full CRUD operations
+- Filtering support
+
+
 - #### admin/merchant-account/
 Manages merchant bank accounts.
 Features:
 - View account details
 - Suspend accounts
 - Filter merchant accounts
-- #### admin/stores/
-Lists user-linked banks.
-Features:
-- Full CRUD operations
-- Filtering support
--
+
 - #### admin/region/
 Displays regions associated with banks.
 Notes:
@@ -152,5 +152,5 @@ Features:
 - Full CRUD operations
 - Filtering support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExOTEzMTE4MCwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbOTM5NTQ3MTIyLC0zMzI0NTUzNjNdfQ==
 -->
