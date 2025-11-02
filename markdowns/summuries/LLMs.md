@@ -114,13 +114,15 @@ trainer = Trainer(
 training_args = TrainingArguments(
     "test-trainer",
     eval_strategy="epoch",
-    fp16=True,  # Enable mixed precision
+    # Enable mixed precision ( faster training and reduced memory usage )
+    fp16=True,
+		
 )
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyODE5Mzc4NCwtNzUxMTQ2NzEzLDIyND
-U2NTc1MSwxODg3OTkwMTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEy
-ODUsODAyNzM5MjU1LDEwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMT
-k1MTE4Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2
-MTQzNSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTExOTI0NTc4MzEsLTc1MTE0NjcxMywyMj
+Q1NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYx
+Mjg1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLT
+E5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEz
+NjE0MzUsNzMwOTk4MTE2XX0=
 -->
