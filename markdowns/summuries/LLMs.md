@@ -224,12 +224,29 @@ for epoch in range(num_epochs):
 -   **Checkpointing**: Save model checkpoints periodically to resume training if interrupted
 '''
 ```
+- **Evaluation:**
+```python
+import evaluate
+
+metric = evaluate.load("glue", "mrpc")
+model.eval()
+for batch in eval_dataloader:
+    batch = {k: v.to(device) for k, v in batch.items()}
+    with torch.no_grad():
+        outputs = model(**batch)
+
+    logits = outputs.logits
+    predictions = torch.argmax(logits, dim=-1)
+    metric.add_batch(predictions=predictions, references=batch["labels"])
+
+metric.compute()
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkxNjUzNzUyLDExOTA1NTgzNzgsMjA0ND
-I0NDYxNSwxODkxMzMxODA0LC00NTIxMzkwMiwtMjA4OTQ3MDIz
-NSwtMTk1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxOD
-g3OTkwMTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5
-MjU1LDEwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0Mi
-wtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2MTQzNSw3MzA5
-OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTIwMzk0MzI0MzEsMTE5MDU1ODM3OCwyMD
+Q0MjQ0NjE1LDE4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcw
+MjM1LC0xOTUyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLD
+E4ODc5OTAxMDQsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4MDI3
+MzkyNTUsMTAzNDI3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgyOD
+QyLC0xNTgxNzgwOTc2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LDcz
+MDk5ODExNl19
 -->
