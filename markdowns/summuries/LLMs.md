@@ -87,10 +87,32 @@ trainer = Trainer(
 # start fine-tuning
 trainer.train()
 ```
+### evaluation 
+
+```python
+def compute_metrics(eval_preds):
+    metric = evaluate.load("glue", "mrpc")
+    logits, labels = eval_preds
+    predictions = np.argmax(logits, axis=-1)
+    return metric.compute(predictions=predictions, references=labels)
+
+training_args = TrainingArguments("test-trainer", eval_strategy="epoch")
+model = AutoModelForSequenceClassification.from_pretrained(checkpoint, num_labels=2)
+
+trainer = Trainer(
+    model,
+    training_args,
+    train_dataset=tokenized_datasets["train"],
+    eval_dataset=tokenized_datasets["validation"],
+    data_collator=data_collator,
+    processing_class=tokenizer,
+    compute_metrics=compute_metrics,
+)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MTE0NjcxMywyMjQ1NjU3NTEsMTg4Nz
-k5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1
-NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTExODI4NDIsLT
-E1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4
-MTE2XX0=
+eyJoaXN0b3J5IjpbLTIyNTIyNjQ3NywtNzUxMTQ2NzEzLDIyND
+U2NTc1MSwxODg3OTkwMTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEy
+ODUsODAyNzM5MjU1LDEwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMT
+k1MTE4Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2
+MTQzNSw3MzA5OTgxMTZdfQ==
 -->
