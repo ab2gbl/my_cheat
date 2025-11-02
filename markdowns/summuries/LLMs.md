@@ -163,8 +163,10 @@ result: {'attention_mask': torch.Size([8, 65]),
  'token_type_ids': torch.Size([8, 65])}
 '''
 ```
+3. define model:
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQzNDQ1MTkzLC0yMDg5NDcwMjM1LC0xOT
+eyJoaXN0b3J5IjpbLTcxOTMwNjY4LC0yMDg5NDcwMjM1LC0xOT
 UyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4ODc5OTAx
 MDQsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMT
 AzNDI3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0xNTgx
