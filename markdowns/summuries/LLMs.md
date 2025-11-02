@@ -188,7 +188,13 @@ lr_scheduler = get_scheduler(
     num_warmup_steps=0,
     num_training_steps=num_training_steps,
 )
+
 ```
+**Modern Optimization Tips**: For even better performance, you can try:
+
+	-   **AdamW with weight decay**:  `AdamW(model.parameters(), lr=5e-5, weight_decay=0.01)`
+	-   **8-bit Adam**: Use  `bitsandbytes`  for memory-efficient optimization
+	-   **Different learning rates**: Lower learning rates (1e-5 to 3e-5) often work better for large models
 5. **Define training:**
 ```python
 from tqdm.auto import tqdm
@@ -209,10 +215,10 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NDI0NDYxNSwxODkxMzMxODA0LC00NT
-IxMzkwMiwtMjA4OTQ3MDIzNSwtMTk1MjEyMDY5MiwtNzUxMTQ2
-NzEzLDIyNDU2NTc1MSwxODg3OTkwMTA0LDE0NTQ0Mjk5NTcsLT
-E5MTY5NjEyODUsODAyNzM5MjU1LDEwMzQyNzYzMTEsLTI3MzI1
-NjUwOSwtMTk1MTE4Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OT
-cxLDI5MTM2MTQzNSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTE5MDU1ODM3OCwyMDQ0MjQ0NjE1LDE4OT
+EzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcwMjM1LC0xOTUyMTIw
+NjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4ODc5OTAxMDQsMT
+Q1NDQyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMTAzNDI3
+NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0xNTgxNzgwOT
+c2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LDczMDk5ODExNl19
 -->
