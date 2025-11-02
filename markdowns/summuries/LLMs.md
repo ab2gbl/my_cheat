@@ -65,8 +65,8 @@ tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
 # padding for max leght in batch
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
-## Fine-tuning a model with the Trainer API
-
+## Fine-tuning a model
+###  With the Trainer API
 -   The  `Trainer`  API provides a high-level interface that handles most training complexity
 -   Use  `processing_class`  to specify your tokenizer for proper data handling
 -   `TrainingArguments`  controls all aspects of training: learning rate, batch size, evaluation strategy, and optimizations
@@ -92,7 +92,7 @@ trainer = Trainer(
 # start fine-tuning
 trainer.train()
 ```
-### evaluation 
+#### evaluation 
 
 ```python
 def compute_metrics(eval_preds):
@@ -114,7 +114,7 @@ trainer = Trainer(
     compute_metrics=compute_metrics,
 )
 ```
-### Advanced features
+#### Advanced features
 ```python
 training_args = TrainingArguments(
 	"test-trainer",
@@ -129,10 +129,12 @@ training_args = TrainingArguments(
 	lr_scheduler_type="cosine",  
 )
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODk0NzAyMzUsLTE5NTIxMjA2OTIsLT
-c1MTE0NjcxMywyMjQ1NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5
-OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC
-0yNzMyNTY1MDksLTE5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUx
-MTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE3OTE3MDE4MCwtMjA4OTQ3MDIzNSwtMT
+k1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkw
+MTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5MjU1LD
+EwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0MiwtMTU4
+MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2MTQzNSw3MzA5OTgxMT
+ZdfQ==
 -->
