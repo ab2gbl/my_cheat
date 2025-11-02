@@ -65,9 +65,27 @@ tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
 # padding for max leght in batch
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
+## Fine-tuning a model with the Trainer API
+- after doing preprocess like last section
+```python
+from transformers import Trainer
+from transformers import AutoModelForSequenceClassification
+
+model = AutoModelForSequenceClassification.from_pretrained(checkpoint, num_labels=2)
+
+trainer = Trainer(
+    model,
+    training_args,
+    train_dataset=tokenized_datasets["train"],
+    eval_dataset=tokenized_datasets["validation"],
+    data_collator=data_collator,
+    processing_class=tokenizer,
+)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI0NTY1NzUxLDE4ODc5OTAxMDQsMTQ1ND
-QyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMTAzNDI3NjMx
-MSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0xNTgxNzgwOTc2LD
-E1MTE4ODg5NzEsMjkxMzYxNDM1LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTM4MDk5NzAzNCwyMjQ1NjU3NTEsMTg4Nz
+k5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1
+NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTExODI4NDIsLT
+E1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4
+MTE2XX0=
 -->
