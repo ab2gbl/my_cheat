@@ -179,6 +179,12 @@ from torch.optim import AdamW
 from transformers import get_scheduler
 # optimzer
 optimizer = AdamW(model.parameters(), lr=5e-5)
+'''
+**Modern Optimization Tips**: For even better performance, you can try:
+-   **AdamW with weight decay**:  `AdamW(model.parameters(), lr=5e-5, weight_decay=0.01)`
+-   **8-bit Adam**: Use  `bitsandbytes`  for memory-efficient optimization
+-   **Different learning rates**: Lower learning rates (1e-5 to 3e-5) often work better for large models
+'''
 # learning rate scheduler
 num_epochs = 3
 num_training_steps = num_epochs * len(train_dataloader)
@@ -190,11 +196,6 @@ lr_scheduler = get_scheduler(
 )
 
 ```
-**Modern Optimization Tips**: For even better performance, you can try:
-
-	-   **AdamW with weight decay**:  `AdamW(model.parameters(), lr=5e-5, weight_decay=0.01)`
-	-   **8-bit Adam**: Use  `bitsandbytes`  for memory-efficient optimization
-	-   **Different learning rates**: Lower learning rates (1e-5 to 3e-5) often work better for large models
 5. **Define training:**
 ```python
 from tqdm.auto import tqdm
@@ -215,10 +216,11 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MDU1ODM3OCwyMDQ0MjQ0NjE1LDE4OT
-EzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcwMjM1LC0xOTUyMTIw
-NjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4ODc5OTAxMDQsMT
-Q1NDQyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMTAzNDI3
-NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0xNTgxNzgwOT
-c2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTY3Njc1Mzg0MCwxMTkwNTU4Mzc4LDIwND
+QyNDQ2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0NzAy
+MzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1NjU3NTEsMT
+g4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjcz
+OTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTExODI4ND
+IsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMw
+OTk4MTE2XX0=
 -->
