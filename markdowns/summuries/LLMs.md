@@ -66,11 +66,16 @@ tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
 ## Fine-tuning a model with the Trainer API
-- after doing preprocess like last section
+
+-   The  `Trainer`  API provides a high-level interface that handles most training complexity
+-   Use  `processing_class`  to specify your tokenizer for proper data handling
+-   `TrainingArguments`  controls all aspects of training: learning rate, batch size, evaluation strategy, and optimizations
+-   `compute_metrics`  enables custom evaluation metrics beyond just training loss
+-   Modern features like mixed precision (`fp16=True`) and gradient accumulation can significantly improve training efficiency
 ```python
 from transformers import Trainer
 from transformers import AutoModelForSequenceClassification
-
+# after doing preprocess like last section
 # making the  model from checkpoint
 model = AutoModelForSequenceClassification.from_pretrained(checkpoint, num_labels=2)
 
@@ -125,9 +130,9 @@ training_args = TrainingArguments(
 )
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMj
-Q1NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYx
-Mjg1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLT
-E5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEz
-NjE0MzUsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTIwODk0NzAyMzUsLTE5NTIxMjA2OTIsLT
+c1MTE0NjcxMywyMjQ1NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5
+OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC
+0yNzMyNTY1MDksLTE5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUx
+MTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4MTE2XX0=
 -->
