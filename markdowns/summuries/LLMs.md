@@ -130,7 +130,8 @@ training_args = TrainingArguments(
 )
 ```
 ### Manually with full training loop:
-#### post 
+1. **pre process:** like last section
+2. **post process:**
 ```python
 # postProcessiong dataset to fit our training
 tokenized_datasets = tokenized_datasets.remove_columns(["sentence1", "sentence2", "idx"]) # Remove the columns corresponding to values the model does not expect
@@ -138,14 +139,23 @@ tokenized_datasets = tokenized_datasets.rename_column("label", "labels") # The m
 tokenized_datasets.set_format("torch") # return PyTorch tensors instead of lists
 tokenized_datasets["train"].column_names
 # ["attention_mask", "input_ids", "labels", "token_type_ids"]
+```
+3. **define our dataloaders:**
+```python
+from torch.utils.data import DataLoader
 
-
+train_dataloader = DataLoader(
+    tokenized_datasets["train"], shuffle=True, batch_size=8, collate_fn=data_collator
+)
+eval_dataloader = DataLoader(
+    tokenized_datasets["validation"], batch_size=8, collate_fn=data_collator
+)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NTE5NTE4LC0yMDg5NDcwMjM1LC0xOT
-UyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4ODc5OTAx
-MDQsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMT
-AzNDI3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0xNTgx
-NzgwOTc2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LDczMDk5ODExNl
-19
+eyJoaXN0b3J5IjpbLTEwMTQ3MjIxMiwtMjA4OTQ3MDIzNSwtMT
+k1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkw
+MTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5MjU1LD
+EwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0MiwtMTU4
+MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2MTQzNSw3MzA5OTgxMT
+ZdfQ==
 -->
