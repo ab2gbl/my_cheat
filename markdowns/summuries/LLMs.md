@@ -173,11 +173,28 @@ outputs = model(**batch)
 print(outputs.loss, outputs.logits.shape)
 # tensor(0.5441, grad_fn=<NllLossBackward>) torch.Size([8, 2])
 ```
+4. define the **optimiser** and a **learning rate scheduler**: 
+```python
+from torch.optim import AdamW
+from transformers import get_scheduler
+# optimzer
+optimizer = AdamW(model.parameters(), lr=5e-5)
+# 
+num_epochs = 3
+num_training_steps = num_epochs * len(train_dataloader)
+lr_scheduler = get_scheduler(
+    "linear",
+    optimizer=optimizer,
+    num_warmup_steps=0,
+    num_training_steps=num_training_steps,
+)
+print(num_training_steps)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MjEzOTAyLC0yMDg5NDcwMjM1LC0xOT
-UyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4ODc5OTAx
-MDQsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMT
-AzNDI3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0xNTgx
-NzgwOTc2LDE1MTE4ODg5NzEsMjkxMzYxNDM1LDczMDk5ODExNl
-19
+eyJoaXN0b3J5IjpbLTM5MzE3MDA2NCwtNDUyMTM5MDIsLTIwOD
+k0NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1NjU3
+NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LD
+gwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTEx
+ODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEzNjE0Mz
+UsNzMwOTk4MTE2XX0=
 -->
