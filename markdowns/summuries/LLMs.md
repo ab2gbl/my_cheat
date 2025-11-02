@@ -214,13 +214,22 @@ for epoch in range(num_epochs):
         lr_scheduler.step()
         optimizer.zero_grad()
         progress_bar.update(1)
+
+'''
+💡  **Modern Training Optimizations**: To make your training loop even more efficient, consider:
+
+-   **Gradient Clipping**: Add  `torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)`  before  `optimizer.step()`
+-   **Mixed Precision**: Use  `torch.cuda.amp.autocast()`  and  `GradScaler`  for faster training
+-   **Gradient Accumulation**: Accumulate gradients over multiple batches to simulate larger batch sizes
+-   **Checkpointing**: Save model checkpoints periodically to resume training if interrupted
+'''
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3Njc1Mzg0MCwxMTkwNTU4Mzc4LDIwND
-QyNDQ2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0NzAy
-MzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1NjU3NTEsMT
-g4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjcz
-OTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTExODI4ND
-IsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMw
-OTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNDkxNjUzNzUyLDExOTA1NTgzNzgsMjA0ND
+I0NDYxNSwxODkxMzMxODA0LC00NTIxMzkwMiwtMjA4OTQ3MDIz
+NSwtMTk1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxOD
+g3OTkwMTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5
+MjU1LDEwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0Mi
+wtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2MTQzNSw3MzA5
+OTgxMTZdfQ==
 -->
