@@ -129,9 +129,10 @@ training_args = TrainingArguments(
 	lr_scheduler_type="cosine",  
 )
 ```
+### Manually with full training loop:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTE3MDE4MCwtMjA4OTQ3MDIzNSwtMT
+eyJoaXN0b3J5IjpbMTI0OTQyMjIyMywtMjA4OTQ3MDIzNSwtMT
 k1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkw
 MTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5MjU1LD
 EwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0MiwtMTU4
