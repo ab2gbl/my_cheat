@@ -131,8 +131,15 @@ training_args = TrainingArguments(
 ```
 ### Manually with full training loop:
 
+```
+
+# post
+tokenized_datasets = tokenized_datasets.remove_columns(["sentence1", "sentence2", "idx"])
+tokenized_datasets = tokenized_datasets.rename_column("label", "labels")
+tokenized_datasets.set_format("torch")
+tokenized_datasets["train"].column_names
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0OTQyMjIyMywtMjA4OTQ3MDIzNSwtMT
+eyJoaXN0b3J5IjpbLTM0NzA0OTY1MCwtMjA4OTQ3MDIzNSwtMT
 k1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkw
 MTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5MjU1LD
 EwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0MiwtMTU4
