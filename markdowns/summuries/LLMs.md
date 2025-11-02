@@ -189,11 +189,30 @@ lr_scheduler = get_scheduler(
     num_training_steps=num_training_steps,
 )
 ```
+5. **Define training:**
+```python
+from tqdm.auto import tqdm
+
+progress_bar = tqdm(range(num_training_steps))
+
+model.train()
+for epoch in range(num_epochs):
+    for batch in train_dataloader:
+        batch = {k: v.to(device) for k, v in batch.items()}
+        outputs = model(**batch)
+        loss = outputs.loss
+        loss.backward()
+
+        optimizer.step()
+        lr_scheduler.step()
+        optimizer.zero_grad()
+        progress_bar.update(1)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwOD
-k0NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1NjU3
-NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LD
-gwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTEx
-ODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEzNjE0Mz
-UsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMjA0NDI0NDYxNSwxODkxMzMxODA0LC00NT
+IxMzkwMiwtMjA4OTQ3MDIzNSwtMTk1MjEyMDY5MiwtNzUxMTQ2
+NzEzLDIyNDU2NTc1MSwxODg3OTkwMTA0LDE0NTQ0Mjk5NTcsLT
+E5MTY5NjEyODUsODAyNzM5MjU1LDEwMzQyNzYzMTEsLTI3MzI1
+NjUwOSwtMTk1MTE4Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OT
+cxLDI5MTM2MTQzNSw3MzA5OTgxMTZdfQ==
 -->
