@@ -109,8 +109,16 @@ trainer = Trainer(
     compute_metrics=compute_metrics,
 )
 ```
+### Advanced features
+```python
+training_args = TrainingArguments(
+    "test-trainer",
+    eval_strategy="epoch",
+    fp16=True,  # Enable mixed precision
+)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNTIyNjQ3NywtNzUxMTQ2NzEzLDIyND
+eyJoaXN0b3J5IjpbMTUyODE5Mzc4NCwtNzUxMTQ2NzEzLDIyND
 U2NTc1MSwxODg3OTkwMTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEy
 ODUsODAyNzM5MjU1LDEwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMT
 k1MTE4Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2
