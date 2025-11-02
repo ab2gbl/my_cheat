@@ -119,14 +119,15 @@ training_args = TrainingArguments(
 	# Effective batch size = 4 * 4 = 16
 	per_device_train_batch_size=4,
 	gradient_accumulation_steps=4,  
-  learning_rate=2e-5,
-    lr_scheduler_type="cosine",  
+	# Try different schedulers  
+	learning_rate=2e-5,
+	lr_scheduler_type="cosine",  
 )
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0Mjg0Mzk1OSwtNzUxMTQ2NzEzLDIyND
-U2NTc1MSwxODg3OTkwMTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEy
-ODUsODAyNzM5MjU1LDEwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMT
-k1MTE4Mjg0MiwtMTU4MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2
-MTQzNSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMj
+Q1NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYx
+Mjg1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLT
+E5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEz
+NjE0MzUsNzMwOTk4MTE2XX0=
 -->
