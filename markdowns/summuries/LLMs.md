@@ -78,12 +78,12 @@ trainer = Trainer(
     training_args,
     train_dataset=tokenized_datasets["train"],
     eval_dataset=tokenized_datasets["validation"],
-    data_collator=data_collator,
+    data_collator=data_collator, # default is DataCollatorWithPadding
     processing_class=tokenizer,
 )
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MDk5NzAzNCwyMjQ1NjU3NTEsMTg4Nz
+eyJoaXN0b3J5IjpbLTQ4ODg4MTE3MSwyMjQ1NjU3NTEsMTg4Nz
 k5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1
 NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTExODI4NDIsLT
 E1ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4
