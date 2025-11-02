@@ -150,12 +150,22 @@ train_dataloader = DataLoader(
 eval_dataloader = DataLoader(
     tokenized_datasets["validation"], batch_size=8, collate_fn=data_collator
 )
+# quick check 
+for batch in train_dataloader:
+    break
+{k: v.shape for k, v in batch.items()}
+'''
+result: {'attention_mask': torch.Size([8, 65]),
+ 'input_ids': torch.Size([8, 65]),
+ 'labels': torch.Size([8]),
+ 'token_type_ids': torch.Size([8, 65])}
+'''
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTQ3MjIxMiwtMjA4OTQ3MDIzNSwtMT
-k1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkw
-MTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5MjU1LD
-EwMzQyNzYzMTEsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0MiwtMTU4
-MTc4MDk3NiwxNTExODg4OTcxLDI5MTM2MTQzNSw3MzA5OTgxMT
-ZdfQ==
+eyJoaXN0b3J5IjpbLTIwNTgyNTc0NjMsLTIwODk0NzAyMzUsLT
+E5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1NjU3NTEsMTg4Nzk5
+MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1NS
+wxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTExODI4NDIsLTE1
+ODE3ODA5NzYsMTUxMTg4ODk3MSwyOTEzNjE0MzUsNzMwOTk4MT
+E2XX0=
 -->
