@@ -233,7 +233,7 @@ for epoch in range(num_epochs):
 -   **Checkpointing**: Save model checkpoints periodically to resume training if interrupted
 '''
 ```
-- **Evaluation:**
+7. **Evaluation:**
 ```python
 import evaluate
 
@@ -250,11 +250,11 @@ for batch in eval_dataloader:
 
 metric.compute()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM5ODA4ODMwLC01NzkyMzE1MDYsMTA0ND
-g3ODY0OCwxOTA5MTQxOTg4LDE3NzQxNTE4MjksLTIwMzk0MzI0
-MzEsMTE5MDU1ODM3OCwyMDQ0MjQ0NjE1LDE4OTEzMzE4MDQsLT
-Q1MjEzOTAyLC0yMDg5NDcwMjM1LC0xOTUyMTIwNjkyLC03NTEx
-NDY3MTMsMjI0NTY1NzUxLDE4ODc5OTAxMDQsMTQ1NDQyOTk1Ny
-wtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMTAzNDI3NjMxMSwtMjcz
-MjU2NTA5XX0=
+eyJoaXN0b3J5IjpbMTA5NDI0ODk1OCwtNTc5MjMxNTA2LDEwND
+Q4Nzg2NDgsMTkwOTE0MTk4OCwxNzc0MTUxODI5LC0yMDM5NDMy
+NDMxLDExOTA1NTgzNzgsMjA0NDI0NDYxNSwxODkxMzMxODA0LC
+00NTIxMzkwMiwtMjA4OTQ3MDIzNSwtMTk1MjEyMDY5MiwtNzUx
+MTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkwMTA0LDE0NTQ0Mjk5NT
+csLTE5MTY5NjEyODUsODAyNzM5MjU1LDEwMzQyNzYzMTEsLTI3
+MzI1NjUwOV19
 -->
