@@ -94,6 +94,7 @@ trainer.train()
 #### evaluation 
 
 ```python
+import evaluate # pip install evaluate
 def compute_metrics(eval_preds):
     metric = evaluate.load("glue", "mrpc")
     logits, labels = eval_preds
@@ -240,11 +241,11 @@ for batch in eval_dataloader:
 
 metric.compute()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTE0MTk4OCwxNzc0MTUxODI5LC0yMD
-M5NDMyNDMxLDExOTA1NTgzNzgsMjA0NDI0NDYxNSwxODkxMzMx
-ODA0LC00NTIxMzkwMiwtMjA4OTQ3MDIzNSwtMTk1MjEyMDY5Mi
-wtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkwMTA0LDE0NTQ0
-Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5MjU1LDEwMzQyNzYzMT
-EsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0MiwtMTU4MTc4MDk3Niwx
-NTExODg4OTcxXX0=
+eyJoaXN0b3J5IjpbNTI4MzkyMzU4LDE5MDkxNDE5ODgsMTc3ND
+E1MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4Mzc4LDIwNDQyNDQ2
+MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0NzAyMzUsLT
+E5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1NjU3NTEsMTg4Nzk5
+MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LDgwMjczOTI1NS
+wxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5NTExODI4NDIsLTE1
+ODE3ODA5NzZdfQ==
 -->
