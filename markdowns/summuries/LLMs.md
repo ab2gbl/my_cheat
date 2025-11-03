@@ -95,6 +95,7 @@ trainer.train()
 
 ```python
 import evaluate # pip install evaluate
+import numpy as np
 
 def compute_metrics(eval_preds):
     metric = evaluate.load("glue", "mrpc")
@@ -242,11 +243,11 @@ for batch in eval_dataloader:
 
 metric.compute()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NDg3ODY0OCwxOTA5MTQxOTg4LDE3Nz
-QxNTE4MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OCwyMDQ0MjQ0
-NjE1LDE4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcwMjM1LC
-0xOTUyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4ODc5
-OTAxMDQsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNT
-UsMTAzNDI3NjMxMSwtMjczMjU2NTA5LC0xOTUxMTgyODQyLC0x
-NTgxNzgwOTc2XX0=
+eyJoaXN0b3J5IjpbLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MD
+kxNDE5ODgsMTc3NDE1MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4
+Mzc4LDIwNDQyNDQ2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLT
+IwODk0NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1
+NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMj
+g1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5
+NTExODI4NDJdfQ==
 -->
