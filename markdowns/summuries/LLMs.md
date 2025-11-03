@@ -175,7 +175,14 @@ outputs = model(**batch)
 print(outputs.loss, outputs.logits.shape)
 # tensor(0.5441, grad_fn=<NllLossBackward>) torch.Size([8, 2])
 ```
-4. define the **optimiser** and a **learning rate scheduler**: 
+4. **model to GPU:**
+```python
+import torch
+
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+model.to(device)
+```
+5. define the **optimiser** and a **learning rate scheduler**: 
 ```python
 from torch.optim import AdamW
 from transformers import get_scheduler
@@ -198,7 +205,7 @@ lr_scheduler = get_scheduler(
 )
 
 ```
-5. **Define training:**
+6. **Define training:**
 ```python
 from tqdm.auto import tqdm
 
@@ -243,11 +250,11 @@ for batch in eval_dataloader:
 
 metric.compute()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MD
-kxNDE5ODgsMTc3NDE1MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4
-Mzc4LDIwNDQyNDQ2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLT
-IwODk0NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1
-NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMj
-g1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MDksLTE5
-NTExODI4NDJdfQ==
+eyJoaXN0b3J5IjpbOTM5ODA4ODMwLC01NzkyMzE1MDYsMTA0ND
+g3ODY0OCwxOTA5MTQxOTg4LDE3NzQxNTE4MjksLTIwMzk0MzI0
+MzEsMTE5MDU1ODM3OCwyMDQ0MjQ0NjE1LDE4OTEzMzE4MDQsLT
+Q1MjEzOTAyLC0yMDg5NDcwMjM1LC0xOTUyMTIwNjkyLC03NTEx
+NDY3MTMsMjI0NTY1NzUxLDE4ODc5OTAxMDQsMTQ1NDQyOTk1Ny
+wtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMTAzNDI3NjMxMSwtMjcz
+MjU2NTA5XX0=
 -->
