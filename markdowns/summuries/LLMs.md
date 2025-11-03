@@ -73,8 +73,7 @@ data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 -   `compute_metrics`  enables custom evaluation metrics beyond just training loss
 -   Modern features like mixed precision (`fp16=True`) and gradient accumulation can significantly improve training efficiency
 ```python
-from transformers import Trainer
-from transformers import AutoModelForSequenceClassification
+from transformers import Trainer, AutoModelForSequenceClassification, TrainingArguments
 # after doing preprocess like last section
 # making the  model from checkpoint
 model = AutoModelForSequenceClassification.from_pretrained(checkpoint, num_labels=2)
@@ -241,11 +240,11 @@ for batch in eval_dataloader:
 
 metric.compute()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDE1MTgyOSwtMjAzOTQzMjQzMSwxMT
-kwNTU4Mzc4LDIwNDQyNDQ2MTUsMTg5MTMzMTgwNCwtNDUyMTM5
-MDIsLTIwODk0NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMy
-wyMjQ1NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2
-OTYxMjg1LDgwMjczOTI1NSwxMDM0Mjc2MzExLC0yNzMyNTY1MD
-ksLTE5NTExODI4NDIsLTE1ODE3ODA5NzYsMTUxMTg4ODk3MSwy
-OTEzNjE0MzVdfQ==
+eyJoaXN0b3J5IjpbMTkwOTE0MTk4OCwxNzc0MTUxODI5LC0yMD
+M5NDMyNDMxLDExOTA1NTgzNzgsMjA0NDI0NDYxNSwxODkxMzMx
+ODA0LC00NTIxMzkwMiwtMjA4OTQ3MDIzNSwtMTk1MjEyMDY5Mi
+wtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkwMTA0LDE0NTQ0
+Mjk5NTcsLTE5MTY5NjEyODUsODAyNzM5MjU1LDEwMzQyNzYzMT
+EsLTI3MzI1NjUwOSwtMTk1MTE4Mjg0MiwtMTU4MTc4MDk3Niwx
+NTExODg4OTcxXX0=
 -->
