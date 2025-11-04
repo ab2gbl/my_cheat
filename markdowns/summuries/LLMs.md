@@ -299,12 +299,48 @@ for epoch in range(num_epochs):
 ```bash
 $ accelerate config
 $ accelerate launch train.py
+```
+
+## 3.3 Learning Curves:
+```python
+# Example of tracking loss during training with the Trainer
+from transformers import Trainer, TrainingArguments
+import wandb
+
+# Initialize Weights & Biases for experiment tracking
+wandb.init(project="transformer-fine-tuning", name="bert-mrpc-analysis")
+
+training_args = TrainingArguments(
+    output_dir="./results",
+    eval_strategy="steps",
+    eval_steps=50,
+    save_steps=100,
+    logging_steps=10,  # Log metrics every 10 steps
+    num_train_epochs=3,
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=16,
+    report_to="wandb",  # Send logs to Weights & Biases
+)
+
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_datasets["train"],
+    eval_dataset=tokenized_datasets["validation"],
+    data_collator=data_collator,
+    processing_class=tokenizer,
+    compute_metrics=compute_metrics,
+)
+
+# Train and automatically log metrics
+trainer.train()
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjIxODg2MjgsMjA3MDg2MjUyNCwtOD
-g1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5MDA1MiwtMTM1NzI0
-Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NTgsLTU3OTIzMTUwNi
-wxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3NDE1MTgyOSwtMjAz
-OTQzMjQzMSwxMTkwNTU4Mzc4LDIwNDQyNDQ2MTUsMTg5MTMzMT
-gwNCwtNDUyMTM5MDIsLTIwODk0NzAyMzUsLTE5NTIxMjA2OTIs
-LTc1MTE0NjcxM119
+eyJoaXN0b3J5IjpbLTE2Njg1MTQ2MjYsLTE5MjIxODg2MjgsMj
+A3MDg2MjUyNCwtODg1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5
+MDA1MiwtMTM1NzI0Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NT
+gsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3
+NDE1MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4Mzc4LDIwNDQyND
+Q2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0NzAyMzUs
+LTE5NTIxMjA2OTJdfQ==
 -->
