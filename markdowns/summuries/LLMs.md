@@ -66,6 +66,7 @@ tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
 ## 3.2 Fine-tuning a model
+- steps: Forward pass → Backward pass → Optimizer step → Scheduler step → Zero gradients
 ###  3.2.1 With the Trainer API
 -   The  `Trainer`  API provides a high-level interface that handles most training complexity
 -   Use  `processing_class`  to specify your tokenizer for proper data handling
@@ -278,11 +279,11 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTcyNDc4NDcsLTk0MzA0NTkyOSwxMD
-k0MjQ4OTU4LC01NzkyMzE1MDYsMTA0NDg3ODY0OCwxOTA5MTQx
-OTg4LDE3NzQxNTE4MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OC
-wyMDQ0MjQ0NjE1LDE4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5
-NDcwMjM1LC0xOTUyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1Nz
-UxLDE4ODc5OTAxMDQsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4
-MDI3MzkyNTVdfQ==
+eyJoaXN0b3J5IjpbMTU3NzY5MDA1MiwtMTM1NzI0Nzg0NywtOT
+QzMDQ1OTI5LDEwOTQyNDg5NTgsLTU3OTIzMTUwNiwxMDQ0ODc4
+NjQ4LDE5MDkxNDE5ODgsMTc3NDE1MTgyOSwtMjAzOTQzMjQzMS
+wxMTkwNTU4Mzc4LDIwNDQyNDQ2MTUsMTg5MTMzMTgwNCwtNDUy
+MTM5MDIsLTIwODk0NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0Nj
+cxMywyMjQ1NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0x
+OTE2OTYxMjg1XX0=
 -->
