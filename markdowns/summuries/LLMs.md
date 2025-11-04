@@ -267,25 +267,15 @@ train_dl, eval_dl, model, optimizer = accelerator.prepare(
     train_dataloader, eval_dataloader, model, optimizer
 )
 
-num_epochs = 3
-num_training_steps = num_epochs * len(train_dl)
-lr_scheduler = get_scheduler(
-    "linear",
-    optimizer=optimizer,
-    num_warmup_steps=0,
-    num_training_steps=num_training_steps,
-)
-
-progress_bar = tqdm(range(num_training_steps))
 
 model.train()
 for epoch in range(num_epochs):
     for batch in train_dl:
-		    # - batch =  {k: v.to(device)  for k, v in batch.items()} # removed
+		# - batch =  {k: v.to(device)  for k, v in batch.items()} # removed
         outputs = model(**batch)
         loss = outputs.loss
         # - loss.backward() # removed
-        accelerator.backward(loss)
+        accelerator.backward(loss) # added
 
         optimizer.step()
         lr_scheduler.step()
@@ -293,7 +283,7 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNjI5OTE0MiwtOTQzMDQ1OTI5LDEwOT
+eyJoaXN0b3J5IjpbMTIyODg1NzgwOSwtOTQzMDQ1OTI5LDEwOT
 QyNDg5NTgsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5
 ODgsMTc3NDE1MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4Mzc4LD
 IwNDQyNDQ2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0
