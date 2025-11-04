@@ -336,7 +336,7 @@ trainer = Trainer(
 trainer.train()
 ```
  
-### 3.3.1 During Training
+### A- During Training
 
 During the training process (after you’ve hit  `trainer.train()`), you can monitor these key indicators:
 
@@ -345,7 +345,7 @@ During the training process (after you’ve hit  `trainer.train()`), you can mon
 3.  **Learning rate**: Are the curves too erratic (LR too high) or too flat (LR too low)?
 4.  **Stability**: Are there sudden spikes or drops that indicate problems?
 
-### 3.3.2 After Training
+### B- After Training
 
 After the training process is complete, you can analyze the complete curves to understand the model’s performance.
 
@@ -354,7 +354,7 @@ After the training process is complete, you can analyze the complete curves to u
 3.  **Generalization**: How close are training and validation performance?
 4.  **Trends**: Would additional training likely improve performance?
 
-### 3.3.3 Overfitting
+### 3.3.1 Overfitting
 **Symptoms:**
 
 -   Training loss continues to decrease while validation loss increases or plateaus
@@ -367,12 +367,18 @@ After the training process is complete, you can analyze the complete curves to u
 -   **Early stopping**: Stop training when validation performance stops improving
 -   **Data augmentation**: Increase training data diversity
 -   **Reduce model complexity**: Use a smaller model or fewer parameters
+#### 3.3.2 Underfitting
+**reasons:**
+-   The model is too small or lacks capacity to learn the patterns
+-   The learning rate is too low, causing slow learning
+-   The dataset is too small or not representative of the problem
+-   The model is not properly regularized
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc1MTk3MDYsLTE5MjIxODg2MjgsMjA3MD
-g2MjUyNCwtODg1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5MDA1
-MiwtMTM1NzI0Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NTgsLT
-U3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3NDE1
-MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4Mzc4LDIwNDQyNDQ2MT
-UsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0NzAyMzUsLTE5
-NTIxMjA2OTJdfQ==
+eyJoaXN0b3J5IjpbLTE5NzMwMDI0MTEsLTE5MjIxODg2MjgsMj
+A3MDg2MjUyNCwtODg1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5
+MDA1MiwtMTM1NzI0Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NT
+gsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3
+NDE1MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4Mzc4LDIwNDQyND
+Q2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0NzAyMzUs
+LTE5NTIxMjA2OTJdfQ==
 -->
