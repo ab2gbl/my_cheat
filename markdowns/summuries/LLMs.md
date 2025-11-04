@@ -267,15 +267,23 @@ metric.compute()
 from accelerate import Accelerator
 
 accelerator = Accelerator()
-
+# accelator
 train_dl, eval_dl, model, optimizer = accelerator.prepare(
     train_dataloader, eval_dataloader, model, optimizer
 )
-
+# learning rate scheduler
+num_epochs = 3
+num_training_steps = num_epochs * len(train_dl) # train_dl instead of train_dataloader  
+lr_scheduler = get_scheduler(
+    "linear",
+    optimizer=optimizer,
+    num_warmup_steps=0,
+    num_training_steps=num_training_steps,
+)
 
 model.train()
 for epoch in range(num_epochs):
-    for batch in train_dl:
+    for batch in train_dl: # train_dl instead of train_dataloader  
 		# - batch =  {k: v.to(device)  for k, v in batch.items()} # removed
         outputs = model(**batch)
         loss = outputs.loss
@@ -288,11 +296,11 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NTcyNDUzMywtNjg2MjcyMDkzLDE1Nz
-c2OTAwNTIsLTEzNTcyNDc4NDcsLTk0MzA0NTkyOSwxMDk0MjQ4
-OTU4LC01NzkyMzE1MDYsMTA0NDg3ODY0OCwxOTA5MTQxOTg4LD
-E3NzQxNTE4MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OCwyMDQ0
-MjQ0NjE1LDE4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcwMj
-M1LC0xOTUyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4
-ODc5OTAxMDRdfQ==
+eyJoaXN0b3J5IjpbMjA3MDg2MjUyNCwtODg1NzI0NTMzLC02OD
+YyNzIwOTMsMTU3NzY5MDA1MiwtMTM1NzI0Nzg0NywtOTQzMDQ1
+OTI5LDEwOTQyNDg5NTgsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LD
+E5MDkxNDE5ODgsMTc3NDE1MTgyOSwtMjAzOTQzMjQzMSwxMTkw
+NTU4Mzc4LDIwNDQyNDQ2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MD
+IsLTIwODk0NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywy
+MjQ1NjU3NTFdfQ==
 -->
