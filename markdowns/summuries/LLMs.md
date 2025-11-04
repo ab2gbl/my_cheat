@@ -335,7 +335,8 @@ trainer = Trainer(
 # Train and automatically log metrics
 trainer.train()
 ```
-#### During Training
+ 
+### 3.3.1 During Training
 
 During the training process (after you’ve hit  `trainer.train()`), you can monitor these key indicators:
 
@@ -344,7 +345,7 @@ During the training process (after you’ve hit  `trainer.train()`), you can mon
 3.  **Learning rate**: Are the curves too erratic (LR too high) or too flat (LR too low)?
 4.  **Stability**: Are there sudden spikes or drops that indicate problems?
 
-#### After Training
+### 3.3.2 After Training
 
 After the training process is complete, you can analyze the complete curves to understand the model’s performance.
 
@@ -353,7 +354,7 @@ After the training process is complete, you can analyze the complete curves to u
 3.  **Generalization**: How close are training and validation performance?
 4.  **Trends**: Would additional training likely improve performance?
 
-#### Overfitting
+### 3.3.3 Overfitting
 **Symptoms:**
 
 -   Training loss continues to decrease while validation loss increases or plateaus
@@ -367,11 +368,11 @@ After the training process is complete, you can analyze the complete curves to u
 -   **Data augmentation**: Increase training data diversity
 -   **Reduce model complexity**: Use a smaller model or fewer parameters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzA3NDYyMzEsLTE5MjIxODg2MjgsMj
-A3MDg2MjUyNCwtODg1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5
-MDA1MiwtMTM1NzI0Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NT
-gsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3
-NDE1MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4Mzc4LDIwNDQyND
-Q2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0NzAyMzUs
-LTE5NTIxMjA2OTJdfQ==
+eyJoaXN0b3J5IjpbMjc1MTk3MDYsLTE5MjIxODg2MjgsMjA3MD
+g2MjUyNCwtODg1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5MDA1
+MiwtMTM1NzI0Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NTgsLT
+U3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3NDE1
+MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4Mzc4LDIwNDQyNDQ2MT
+UsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0NzAyMzUsLTE5
+NTIxMjA2OTJdfQ==
 -->
