@@ -1,5 +1,5 @@
 
-# LLMs Architectures  
+# 1. LLMs Architectures  
 
 
 Model | Examples |Tasks
@@ -11,14 +11,14 @@ Model | Examples |Tasks
 
 ![transformers_architecture](./pics/LLMs/transformers_architecture.png)
 
-# LLM pipeline
-## Full LLM pipeline
+# 2. LLM pipeline
+## 2.1 Full LLM pipeline
 ![Full LLM pipeline](./pics/LLMs/full_nlp_pipeline-dark.svg)
 > **Tokenizer types** : Word-based,  Character-based, Subword tokenization
-## inside model pipe
+## 2.2 inside model pipe
 ![inside model pipeline](./pics/LLMs/transformer_and_head-dark.svg)
 
-## transformers Library
+## 2.3 transformers Library
 
 ```python
 import torch
@@ -41,8 +41,8 @@ model_inputs = tokenizer(sequences, padding=True, return_tensors="pt") # pt: pyt
 # pass input to model 
 output = model(**tokens)
 ```
-# Fine-tuning 
-## Processing the data
+# 3. Fine-tuning 
+## 3.1 Processing the data
 -   Use  `batched=True`  with  `Dataset.map()`  for significantly faster preprocessing
 -   Dynamic padding with  `DataCollatorWithPadding`  is more efficient than fixed-length padding
 -   Always preprocess your data to match what your model expects (numerical tensors, correct column names)
@@ -65,8 +65,8 @@ tokenized_datasets = raw_datasets.map(tokenize_function, batched=True)
 # padding for max leght in batch
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
-## Fine-tuning a model
-###  With the Trainer API
+## 3.2 Fine-tuning a model
+###  3.2.1 With the Trainer API
 -   The  `Trainer`  API provides a high-level interface that handles most training complexity
 -   Use  `processing_class`  to specify your tokenizer for proper data handling
 -   `TrainingArguments`  controls all aspects of training: learning rate, batch size, evaluation strategy, and optimizations
@@ -253,7 +253,7 @@ metric.compute()
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MjYxMTIzNiwxMDk0MjQ4OTU4LC01Nz
+eyJoaXN0b3J5IjpbLTU2NzMwNDIyMSwxMDk0MjQ4OTU4LC01Nz
 kyMzE1MDYsMTA0NDg3ODY0OCwxOTA5MTQxOTg4LDE3NzQxNTE4
 MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OCwyMDQ0MjQ0NjE1LD
 E4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcwMjM1LC0xOTUy
