@@ -242,7 +242,7 @@ metric = evaluate.load("glue", "mrpc")
 model.eval()
 for batch in eval_dataloader:
     batch = {k: v.to(device) for k, v in batch.items()}
-    with torch.no_grad():
+    with torch.no_grad(): # no_grad to save memory and speed up computation by disabling gradient tracking.
         outputs = model(**batch)
 
     logits = outputs.logits
@@ -279,11 +279,11 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NzY5MDA1MiwtMTM1NzI0Nzg0NywtOT
-QzMDQ1OTI5LDEwOTQyNDg5NTgsLTU3OTIzMTUwNiwxMDQ0ODc4
-NjQ4LDE5MDkxNDE5ODgsMTc3NDE1MTgyOSwtMjAzOTQzMjQzMS
-wxMTkwNTU4Mzc4LDIwNDQyNDQ2MTUsMTg5MTMzMTgwNCwtNDUy
-MTM5MDIsLTIwODk0NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0Nj
-cxMywyMjQ1NjU3NTEsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0x
-OTE2OTYxMjg1XX0=
+eyJoaXN0b3J5IjpbLTY4NjI3MjA5MywxNTc3NjkwMDUyLC0xMz
+U3MjQ3ODQ3LC05NDMwNDU5MjksMTA5NDI0ODk1OCwtNTc5MjMx
+NTA2LDEwNDQ4Nzg2NDgsMTkwOTE0MTk4OCwxNzc0MTUxODI5LC
+0yMDM5NDMyNDMxLDExOTA1NTgzNzgsMjA0NDI0NDYxNSwxODkx
+MzMxODA0LC00NTIxMzkwMiwtMjA4OTQ3MDIzNSwtMTk1MjEyMD
+Y5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkwMTA0LDE0
+NTQ0Mjk5NTddfQ==
 -->
