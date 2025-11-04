@@ -131,7 +131,7 @@ training_args = TrainingArguments(
 	lr_scheduler_type="cosine",  
 )
 ```
-### Manually with full training loop:
+### 3.2.2 Manually with full training loop:
 1. **pre process:** like last section
 2. **post process:**
 ```python
@@ -251,9 +251,10 @@ for batch in eval_dataloader:
 metric.compute()
 ```
 
+### 3.2.3 Supercharge your training loop with 🤗 Accelerate:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NzMwNDIyMSwxMDk0MjQ4OTU4LC01Nz
+eyJoaXN0b3J5IjpbLTk0MzA0NTkyOSwxMDk0MjQ4OTU4LC01Nz
 kyMzE1MDYsMTA0NDg3ODY0OCwxOTA5MTQxOTg4LDE3NzQxNTE4
 MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OCwyMDQ0MjQ0NjE1LD
 E4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcwMjM1LC0xOTUy
