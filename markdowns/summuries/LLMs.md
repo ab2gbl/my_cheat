@@ -281,8 +281,10 @@ progress_bar = tqdm(range(num_training_steps))
 model.train()
 for epoch in range(num_epochs):
     for batch in train_dl:
+		    # - batch =  {k: v.to(device)  for k, v in batch.items()}
         outputs = model(**batch)
         loss = outputs.loss
+        # - 
         accelerator.backward(loss)
 
         optimizer.step()
@@ -291,11 +293,11 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAyODEzMzY5LC05NDMwNDU5MjksMTA5ND
-I0ODk1OCwtNTc5MjMxNTA2LDEwNDQ4Nzg2NDgsMTkwOTE0MTk4
-OCwxNzc0MTUxODI5LC0yMDM5NDMyNDMxLDExOTA1NTgzNzgsMj
-A0NDI0NDYxNSwxODkxMzMxODA0LC00NTIxMzkwMiwtMjA4OTQ3
-MDIzNSwtMTk1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MS
-wxODg3OTkwMTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAy
-NzM5MjU1XX0=
+eyJoaXN0b3J5IjpbLTE0OTUyNTI5MjEsLTk0MzA0NTkyOSwxMD
+k0MjQ4OTU4LC01NzkyMzE1MDYsMTA0NDg3ODY0OCwxOTA5MTQx
+OTg4LDE3NzQxNTE4MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OC
+wyMDQ0MjQ0NjE1LDE4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5
+NDcwMjM1LC0xOTUyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1Nz
+UxLDE4ODc5OTAxMDQsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4
+MDI3MzkyNTVdfQ==
 -->
