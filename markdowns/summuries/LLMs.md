@@ -302,6 +302,15 @@ $ accelerate launch train.py
 ```
 
 ## 3.3 Learning Curves:
+
+💡  **Key Takeaways:**
+
+-   Learning curves are essential tools for understanding model training progress
+-   Monitor both loss and accuracy curves, but remember they have different characteristics
+-   Overfitting shows as diverging training/validation performance
+-   Underfitting shows as poor performance on both training and validation data
+-   Tools like Weights & Biases make it easy to track and analyze learning curves
+-   Early stopping and proper regularization can address most common training issues
 ```python
 # Example of tracking loss during training with the Trainer
 from transformers import Trainer, TrainingArguments
@@ -398,8 +407,15 @@ After the training process is complete, you can analyze the complete curves to u
 -   Frequent fluctuations in loss or accuracy
 -   Curves show high variance or instability
 -   Performance oscillates without clear trend
+
+**Solutions for erratic curves:**
+
+-   **Lower learning rate**: Reduce step size for more stable training
+-   **Increase batch size**: Larger batches provide more stable gradients
+-   **Gradient clipping**: Prevent exploding gradients
+-   **Better data preprocessing**: Ensure consistent data quality
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzk5OTU3MjAsLTE5MjIxODg2MjgsMj
+eyJoaXN0b3J5IjpbLTE5Mjg5NzA4MTksLTE5MjIxODg2MjgsMj
 A3MDg2MjUyNCwtODg1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5
 MDA1MiwtMTM1NzI0Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NT
 gsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3
