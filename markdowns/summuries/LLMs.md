@@ -367,14 +367,39 @@ After the training process is complete, you can analyze the complete curves to u
 -   **Early stopping**: Stop training when validation performance stops improving
 -   **Data augmentation**: Increase training data diversity
 -   **Reduce model complexity**: Use a smaller model or fewer parameters
+
 #### 3.3.2 Underfitting
 **reasons:**
 -   The model is too small or lacks capacity to learn the patterns
 -   The learning rate is too low, causing slow learning
 -   The dataset is too small or not representative of the problem
 -   The model is not properly regularized
+
+**Symptoms:**
+-   Both training and validation loss remain high
+-   Model performance plateaus early in training
+-   Training accuracy is lower than expected
+
+**Solutions for underfitting:**
+-   **Increase model capacity**: Use a larger model or more parameters
+-   **Train longer**: Increase the number of epochs
+-   **Adjust learning rate**: Try different learning rates
+-   **Check data quality**: Ensure your data is properly preprocessed
+
+#### 3.3.3 Erratic Learning Curves
+**reasons:**
+-   The learning rate is too high, causing the model to overshoot the optimal parameters
+-   The batch size is too small, causing the model to learn slowly
+-   The model is not properly regularized, causing it to overfit to the training data
+-   The dataset is not properly preprocessed, causing the model to learn from noise
+
+**Symptoms:**
+
+-   Frequent fluctuations in loss or accuracy
+-   Curves show high variance or instability
+-   Performance oscillates without clear trend
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzMwMDI0MTEsLTE5MjIxODg2MjgsMj
+eyJoaXN0b3J5IjpbLTE2Nzk5OTU3MjAsLTE5MjIxODg2MjgsMj
 A3MDg2MjUyNCwtODg1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5
 MDA1MiwtMTM1NzI0Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NT
 gsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3
