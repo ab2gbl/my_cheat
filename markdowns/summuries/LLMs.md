@@ -255,13 +255,8 @@ metric.compute()
 - training on multiple GPUs or TPUs.
 ```python
 from accelerate import Accelerator
-from torch.optim import AdamW
-from transformers import AutoModelForSequenceClassification, get_scheduler
 
 accelerator = Accelerator()
-
-model = AutoModelForSequenceClassification.from_pretrained(checkpoint, num_labels=2)
-optimizer = AdamW(model.parameters(), lr=3e-5)
 
 train_dl, eval_dl, model, optimizer = accelerator.prepare(
     train_dataloader, eval_dataloader, model, optimizer
@@ -283,11 +278,11 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyODg1NzgwOSwtOTQzMDQ1OTI5LDEwOT
-QyNDg5NTgsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5
-ODgsMTc3NDE1MTgyOSwtMjAzOTQzMjQzMSwxMTkwNTU4Mzc4LD
-IwNDQyNDQ2MTUsMTg5MTMzMTgwNCwtNDUyMTM5MDIsLTIwODk0
-NzAyMzUsLTE5NTIxMjA2OTIsLTc1MTE0NjcxMywyMjQ1NjU3NT
-EsMTg4Nzk5MDEwNCwxNDU0NDI5OTU3LC0xOTE2OTYxMjg1LDgw
-MjczOTI1NV19
+eyJoaXN0b3J5IjpbLTEzNTcyNDc4NDcsLTk0MzA0NTkyOSwxMD
+k0MjQ4OTU4LC01NzkyMzE1MDYsMTA0NDg3ODY0OCwxOTA5MTQx
+OTg4LDE3NzQxNTE4MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OC
+wyMDQ0MjQ0NjE1LDE4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5
+NDcwMjM1LC0xOTUyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1Nz
+UxLDE4ODc5OTAxMDQsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4
+MDI3MzkyNTVdfQ==
 -->
