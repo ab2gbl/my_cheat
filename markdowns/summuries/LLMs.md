@@ -335,8 +335,39 @@ trainer = Trainer(
 # Train and automatically log metrics
 trainer.train()
 ```
+#### During Training
+
+During the training process (after you’ve hit  `trainer.train()`), you can monitor these key indicators:
+
+1.  **Loss convergence**: Is the loss still decreasing or has it plateaued?
+2.  **Overfitting signs**: Is validation loss starting to increase while training loss decreases?
+3.  **Learning rate**: Are the curves too erratic (LR too high) or too flat (LR too low)?
+4.  **Stability**: Are there sudden spikes or drops that indicate problems?
+
+#### After Training
+
+After the training process is complete, you can analyze the complete curves to understand the model’s performance.
+
+1.  **Final performance**: Did the model reach acceptable performance levels?
+2.  **Efficiency**: Could the same performance be achieved with fewer epochs?
+3.  **Generalization**: How close are training and validation performance?
+4.  **Trends**: Would additional training likely improve performance?
+
+#### Overfitting
+**Symptoms:**
+
+-   Training loss continues to decrease while validation loss increases or plateaus
+-   Large gap between training and validation accuracy
+-   Training accuracy much higher than validation accuracy
+
+**Solutions for overfitting:**
+
+-   **Regularization**: Add dropout, weight decay, or other regularization techniques
+-   **Early stopping**: Stop training when validation performance stops improving
+-   **Data augmentation**: Increase training data diversity
+-   **Reduce model complexity**: Use a smaller model or fewer parameters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Njg1MTQ2MjYsLTE5MjIxODg2MjgsMj
+eyJoaXN0b3J5IjpbLTIwMzA3NDYyMzEsLTE5MjIxODg2MjgsMj
 A3MDg2MjUyNCwtODg1NzI0NTMzLC02ODYyNzIwOTMsMTU3NzY5
 MDA1MiwtMTM1NzI0Nzg0NywtOTQzMDQ1OTI5LDEwOTQyNDg5NT
 gsLTU3OTIzMTUwNiwxMDQ0ODc4NjQ4LDE5MDkxNDE5ODgsMTc3
