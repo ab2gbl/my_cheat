@@ -133,6 +133,15 @@ training_args = TrainingArguments(
 )
 ```
 ### 3.2.2 Manually with full training loop:
+💡  **Key Takeaways:**
+
+-   Manual training loops give you complete control but require understanding of the proper sequence: forward → backward → optimizer step → scheduler step → zero gradients
+-   AdamW with weight decay is the recommended optimizer for transformer models
+-   Always use  `model.eval()`  and  `torch.no_grad()`  during evaluation for correct behavior and efficiency
+-   🤗 Accelerate makes distributed training accessible with minimal code changes
+-   Device management (moving tensors to GPU/CPU) is crucial for PyTorch operations
+-   Modern techniques like mixed precision, gradient accumulation, and gradient clipping can significantly improve training efficiency
+#### - steps
 1. **pre process:** like last section
 2. **post process:**
 ```python
@@ -279,11 +288,11 @@ for epoch in range(num_epochs):
         progress_bar.update(1)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NjI3MjA5MywxNTc3NjkwMDUyLC0xMz
-U3MjQ3ODQ3LC05NDMwNDU5MjksMTA5NDI0ODk1OCwtNTc5MjMx
-NTA2LDEwNDQ4Nzg2NDgsMTkwOTE0MTk4OCwxNzc0MTUxODI5LC
-0yMDM5NDMyNDMxLDExOTA1NTgzNzgsMjA0NDI0NDYxNSwxODkx
-MzMxODA0LC00NTIxMzkwMiwtMjA4OTQ3MDIzNSwtMTk1MjEyMD
-Y5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MSwxODg3OTkwMTA0LDE0
-NTQ0Mjk5NTddfQ==
+eyJoaXN0b3J5IjpbLTg4NTcyNDUzMywtNjg2MjcyMDkzLDE1Nz
+c2OTAwNTIsLTEzNTcyNDc4NDcsLTk0MzA0NTkyOSwxMDk0MjQ4
+OTU4LC01NzkyMzE1MDYsMTA0NDg3ODY0OCwxOTA5MTQxOTg4LD
+E3NzQxNTE4MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OCwyMDQ0
+MjQ0NjE1LDE4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcwMj
+M1LC0xOTUyMTIwNjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4
+ODc5OTAxMDRdfQ==
 -->
