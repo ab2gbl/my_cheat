@@ -252,13 +252,50 @@ metric.compute()
 ```
 
 ### 3.2.3 Supercharge your training loop with 🤗 Accelerate:
+- training on multiple GPUs or TPUs.
+```python
+from accelerate import Accelerator
+from torch.optim import AdamW
+from transformers import AutoModelForSequenceClassification, get_scheduler
 
+accelerator = Accelerator()
+
+model = AutoModelForSequenceClassification.from_pretrained(checkpoint, num_labels=2)
+optimizer = AdamW(model.parameters(), lr=3e-5)
+
+train_dl, eval_dl, model, optimizer = accelerator.prepare(
+    train_dataloader, eval_dataloader, model, optimizer
+)
+
+num_epochs = 3
+num_training_steps = num_epochs * len(train_dl)
+lr_scheduler = get_scheduler(
+    "linear",
+    optimizer=optimizer,
+    num_warmup_steps=0,
+    num_training_steps=num_training_steps,
+)
+
+progress_bar = tqdm(range(num_training_steps))
+
+model.train()
+for epoch in range(num_epochs):
+    for batch in train_dl:
+        outputs = model(**batch)
+        loss = outputs.loss
+        accelerator.backward(loss)
+
+        optimizer.step()
+        lr_scheduler.step()
+        optimizer.zero_grad()
+        progress_bar.update(1)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MzA0NTkyOSwxMDk0MjQ4OTU4LC01Nz
-kyMzE1MDYsMTA0NDg3ODY0OCwxOTA5MTQxOTg4LDE3NzQxNTE4
-MjksLTIwMzk0MzI0MzEsMTE5MDU1ODM3OCwyMDQ0MjQ0NjE1LD
-E4OTEzMzE4MDQsLTQ1MjEzOTAyLC0yMDg5NDcwMjM1LC0xOTUy
-MTIwNjkyLC03NTExNDY3MTMsMjI0NTY1NzUxLDE4ODc5OTAxMD
-QsMTQ1NDQyOTk1NywtMTkxNjk2MTI4NSw4MDI3MzkyNTUsMTAz
-NDI3NjMxMV19
+eyJoaXN0b3J5IjpbOTAyODEzMzY5LC05NDMwNDU5MjksMTA5ND
+I0ODk1OCwtNTc5MjMxNTA2LDEwNDQ4Nzg2NDgsMTkwOTE0MTk4
+OCwxNzc0MTUxODI5LC0yMDM5NDMyNDMxLDExOTA1NTgzNzgsMj
+A0NDI0NDYxNSwxODkxMzMxODA0LC00NTIxMzkwMiwtMjA4OTQ3
+MDIzNSwtMTk1MjEyMDY5MiwtNzUxMTQ2NzEzLDIyNDU2NTc1MS
+wxODg3OTkwMTA0LDE0NTQ0Mjk5NTcsLTE5MTY5NjEyODUsODAy
+NzM5MjU1XX0=
 -->
