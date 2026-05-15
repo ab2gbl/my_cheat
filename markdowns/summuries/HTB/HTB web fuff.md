@@ -14,10 +14,11 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u ht
 # after getting that the extension was php we use .php
 ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/blog/FUZZ.php
 ```
-
+- **recursive Fuzzing** 
 ```bash
+# 
 ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
-`
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY5MDU1MzY3LC0xNjYzNTI3NzY1XX0=
+eyJoaXN0b3J5IjpbMjA0NDk4NjQwNiwtMTY2MzUyNzc2NV19
 -->
