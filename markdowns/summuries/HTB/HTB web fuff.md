@@ -20,10 +20,12 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:
 ```
 - **Sub-domains**
 ```bash
-add i
-ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u https://FUZZ.inlanefreight.com/
+# add ip as domain using command: ```
+sudo sh -c 'echo "SERVER_IP  academy.htb" >> /etc/hosts'
+# then u can use this domain to find subdomains if it was public
+ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u https://FUZZ.academy.htb/
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODU0Mjg4OTQsMjA0NDk4NjQwNiwtMT
-Y2MzUyNzc2NV19
+eyJoaXN0b3J5IjpbLTgxNTkyODA0NSwyMDQ0OTg2NDA2LC0xNj
+YzNTI3NzY1XX0=
 -->
