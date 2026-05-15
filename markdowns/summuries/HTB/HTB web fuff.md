@@ -19,6 +19,9 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:
 # 
 ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
 ```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NDk4NjQwNiwtMTY2MzUyNzc2NV19
+eyJoaXN0b3J5IjpbLTE2MTkzNDI4NDYsMjA0NDk4NjQwNiwtMT
+Y2MzUyNzc2NV19
 -->
