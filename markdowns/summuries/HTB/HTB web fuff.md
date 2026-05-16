@@ -42,6 +42,8 @@ ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ 
 ## Param Fuzzing
 - **Param Fuzzing - GET**
 ```bash
+
+# or
 ffuf -w /opt/useful/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php?FUZZ=key -fs xxx
 ```
 - **Param Fuzzing - POST**
@@ -57,8 +59,8 @@ ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUwNDIxMjM5LC0xMjcwMjI2NTEwLC0xMT
-IwMDk0NCwtMTEyMDA5NDQsMTI5MDkzOTU4MiwtMTY0NDYwMjE4
-NCwtMTUxNDA4MzM4OCwtNDI1OTExODkwLC04MTU5MjgwNDUsMj
-A0NDk4NjQwNiwtMTY2MzUyNzc2NV19
+eyJoaXN0b3J5IjpbMTc3OTkzNzIzNSw2NTA0MjEyMzksLTEyNz
+AyMjY1MTAsLTExMjAwOTQ0LC0xMTIwMDk0NCwxMjkwOTM5NTgy
+LC0xNjQ0NjAyMTg0LC0xNTE0MDgzMzg4LC00MjU5MTE4OTAsLT
+gxNTkyODA0NSwyMDQ0OTg2NDA2LC0xNjYzNTI3NzY1XX0=
 -->
