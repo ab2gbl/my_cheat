@@ -20,12 +20,13 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:
 ```
 - **Sub-domains**
 ```bash
-# add ip as domain using command: ```
-sudo sh -c 'echo "SERVER_IP  academy.htb" >> /etc/hosts'
-# then u can use this domain to find subdomains if it was public
+# public domains
 ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u https://FUZZ.academy.htb/
 ```
+- **Vhost Fuzzing ** 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNTkyODA0NSwyMDQ0OTg2NDA2LC0xNj
-YzNTI3NzY1XX0=
+eyJoaXN0b3J5IjpbLTQyNTkxMTg5MCwtODE1OTI4MDQ1LDIwND
+Q5ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
 -->
