@@ -28,12 +28,13 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:
 # to access some ip using the domain academy.htb
 sudo sh -c 'echo "SERVER_IP academy.htb" >> /etc/hosts'
 ```
-- **Sub-domains**
+- **Sub-domains (public domains)**
 ```bash
-# public domains
+gobuster dns -d inlanefreight.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt
+# or
 ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u https://FUZZ.academy.htb/
 ```
-- **Vhost Fuzzing** 
+- **Vhost Fuzzing (private on same machine)** 
 ```bash
 gobuster vhost -u http://inlanefreight.htb:PORT -w /usr/share/seclists/Discovery/Web-Content/common.txt --append-domain
 # or
@@ -59,8 +60,8 @@ ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk1MDEzNjM0LDY1MDQyMTIzOSwtMTI3MD
-IyNjUxMCwtMTEyMDA5NDQsLTExMjAwOTQ0LDEyOTA5Mzk1ODIs
-LTE2NDQ2MDIxODQsLTE1MTQwODMzODgsLTQyNTkxMTg5MCwtOD
-E1OTI4MDQ1LDIwNDQ5ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
+eyJoaXN0b3J5IjpbLTQ2MjQxMjU0MCw2NTA0MjEyMzksLTEyNz
+AyMjY1MTAsLTExMjAwOTQ0LC0xMTIwMDk0NCwxMjkwOTM5NTgy
+LC0xNjQ0NjAyMTg0LC0xNTE0MDgzMzg4LC00MjU5MTE4OTAsLT
+gxNTkyODA0NSwyMDQ0OTg2NDA2LC0xNjYzNTI3NzY1XX0=
 -->
