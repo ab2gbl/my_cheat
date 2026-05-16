@@ -23,10 +23,15 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:
 # public domains
 ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u https://FUZZ.academy.htb/
 ```
-- **Vhost Fuzzing ** 
+- **Vhost Fuzzing** 
+```bash
+ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb'
+```
+- 
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNTkxMTg5MCwtODE1OTI4MDQ1LDIwND
-Q5ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
+eyJoaXN0b3J5IjpbNTA2NDYyNTcsLTQyNTkxMTg5MCwtODE1OT
+I4MDQ1LDIwNDQ5ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
 -->
