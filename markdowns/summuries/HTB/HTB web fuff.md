@@ -48,12 +48,13 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ
 ```
 - **Value Fuzzing**
 ```bash
-ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
+ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx-X
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjAwOTQ0LDEyOTA5Mzk1ODIsLTE2ND
-Q2MDIxODQsLTE1MTQwODMzODgsLTQyNTkxMTg5MCwtODE1OTI4
-MDQ1LDIwNDQ5ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
+eyJoaXN0b3J5IjpbOTAyNzg1MjQzLC0xMTIwMDk0NCwxMjkwOT
+M5NTgyLC0xNjQ0NjAyMTg0LC0xNTE0MDgzMzg4LC00MjU5MTE4
+OTAsLTgxNTkyODA0NSwyMDQ0OTg2NDA2LC0xNjYzNTI3NzY1XX
+0=
 -->
