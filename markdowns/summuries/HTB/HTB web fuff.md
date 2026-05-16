@@ -14,6 +14,8 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u ht
 - **Page Fuzzing** 
 ```bash
 # after getting that the extension was php we use .php
+ffuf -w /usr/share/seclists/Discovery/Web-Content/common.txt -u http://IP:PORT/w2ksvrus/FUZZ -e .php,.html,.txt,.bak,.js -v
+# or
 ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/blog/FUZZ.php
 ```
 - **Recursive Fuzzing** 
@@ -53,8 +55,8 @@ ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjAwOTQ0LC0xMTIwMDk0NCwxMjkwOT
-M5NTgyLC0xNjQ0NjAyMTg0LC0xNTE0MDgzMzg4LC00MjU5MTE4
-OTAsLTgxNTkyODA0NSwyMDQ0OTg2NDA2LC0xNjYzNTI3NzY1XX
-0=
+eyJoaXN0b3J5IjpbLTEyNzAyMjY1MTAsLTExMjAwOTQ0LC0xMT
+IwMDk0NCwxMjkwOTM5NTgyLC0xNjQ0NjAyMTg0LC0xNTE0MDgz
+Mzg4LC00MjU5MTE4OTAsLTgxNTkyODA0NSwyMDQ0OTg2NDA2LC
+0xNjYzNTI3NzY1XX0=
 -->
