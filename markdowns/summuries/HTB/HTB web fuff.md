@@ -26,12 +26,13 @@ ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ 
 - **Vhost Fuzzing** 
 ```bash
 ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb'
+## check the size of responses
 ```
 - 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA2NDYyNTcsLTQyNTkxMTg5MCwtODE1OT
-I4MDQ1LDIwNDQ5ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
+eyJoaXN0b3J5IjpbLTE1MTQwODMzODgsLTQyNTkxMTg5MCwtOD
+E1OTI4MDQ1LDIwNDQ5ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
 -->
