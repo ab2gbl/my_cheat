@@ -29,16 +29,18 @@ ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ 
 # check the size of responses
 # add -fs 900 to remove responses that has size 900
 ```
-- **Param Fuzzing (GET params)**
+- **Param Fuzzing - GET**
 ```bash
 ffuf -w /opt/useful/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php?FUZZ=key -fs xxx
 ```
-
-
+- **Param Fuzzing - POST**
+```bash
+ffuf -w /opt/useful/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3Njk5Njg4MiwtMTY0NDYwMjE4NCwtMT
-UxNDA4MzM4OCwtNDI1OTExODkwLC04MTU5MjgwNDUsMjA0NDk4
-NjQwNiwtMTY2MzUyNzc2NV19
+eyJoaXN0b3J5IjpbLTEwMzUyMzAxNDksLTE2NDQ2MDIxODQsLT
+E1MTQwODMzODgsLTQyNTkxMTg5MCwtODE1OTI4MDQ1LDIwNDQ5
+ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
 -->
