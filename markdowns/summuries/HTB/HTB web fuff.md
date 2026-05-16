@@ -1,4 +1,5 @@
 - `-ic` to skip comments
+## Basic Fuzzing
 - **Directory Fuzzing**
 ```bash
 # ffuf -w <SNIP> -u http://SERVER_IP:PORT/FUZZ
@@ -18,6 +19,7 @@ ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:
 ```bash
 ffuf -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
 ```
+
 - **Sub-domains**
 ```bash
 # public domains
@@ -44,7 +46,7 @@ ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MDkzOTU4MiwtMTY0NDYwMjE4NCwtMT
-UxNDA4MzM4OCwtNDI1OTExODkwLC04MTU5MjgwNDUsMjA0NDk4
-NjQwNiwtMTY2MzUyNzc2NV19
+eyJoaXN0b3J5IjpbMjAxNDcxNzU5NywxMjkwOTM5NTgyLC0xNj
+Q0NjAyMTg0LC0xNTE0MDgzMzg4LC00MjU5MTE4OTAsLTgxNTky
+ODA0NSwyMDQ0OTg2NDA2LC0xNjYzNTI3NzY1XX0=
 -->
