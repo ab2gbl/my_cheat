@@ -1,4 +1,5 @@
 - `-ic` to skip comments
+- `-fs xxx` to filter responses by size 
 ## Basic Fuzzing
 - **Directory Fuzzing**
 ```bash
@@ -52,7 +53,7 @@ ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3NTE4MzE4LDEyOTA5Mzk1ODIsLTE2ND
+eyJoaXN0b3J5IjpbLTExMjAwOTQ0LDEyOTA5Mzk1ODIsLTE2ND
 Q2MDIxODQsLTE1MTQwODMzODgsLTQyNTkxMTg5MCwtODE1OTI4
 MDQ1LDIwNDQ5ODY0MDYsLTE2NjM1Mjc3NjVdfQ==
 -->
