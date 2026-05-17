@@ -58,10 +58,12 @@ wenum -w /usr/share/seclists/Discovery/Web-Content/common.txt --hc 404 -u "http:
 ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
 ```
 
-
+## API Fuzzing
+- **API types:** RUST, SOAP, GraphQL
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MjQxMjU0MCw2NTA0MjEyMzksLTEyNz
-AyMjY1MTAsLTExMjAwOTQ0LC0xMTIwMDk0NCwxMjkwOTM5NTgy
-LC0xNjQ0NjAyMTg0LC0xNTE0MDgzMzg4LC00MjU5MTE4OTAsLT
-gxNTkyODA0NSwyMDQ0OTg2NDA2LC0xNjYzNTI3NzY1XX0=
+eyJoaXN0b3J5IjpbLTExNzA5NTQ2MywtNDYyNDEyNTQwLDY1MD
+QyMTIzOSwtMTI3MDIyNjUxMCwtMTEyMDA5NDQsLTExMjAwOTQ0
+LDEyOTA5Mzk1ODIsLTE2NDQ2MDIxODQsLTE1MTQwODMzODgsLT
+QyNTkxMTg5MCwtODE1OTI4MDQ1LDIwNDQ5ODY0MDYsLTE2NjM1
+Mjc3NjVdfQ==
 -->
