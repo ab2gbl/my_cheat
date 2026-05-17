@@ -42,7 +42,7 @@ ffuf -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ 
 # check the size of responses
 # add -fs 900 to remove responses that has size 900
 ```
-	- dont forget adding the host academy.htb and the found result 
+> dont forget adding the host `academy.htb` and the found result `FUZZ.academy.htb` to `/etc/hosts`
 ## Param Fuzzing
 - **Param Fuzzing - GET**
 ```bash
@@ -66,7 +66,7 @@ git clone https://github.com/PandaSt0rm/webfuzz_api.git
 python3 api_fuzzer.py http://IP:PORT
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNTM1OTcyMCw4ODg1MTUyMjIsLTQ2Mj
+eyJoaXN0b3J5IjpbMTkyMDczNTc4NCw4ODg1MTUyMjIsLTQ2Mj
 QxMjU0MCw2NTA0MjEyMzksLTEyNzAyMjY1MTAsLTExMjAwOTQ0
 LC0xMTIwMDk0NCwxMjkwOTM5NTgyLC0xNjQ0NjAyMTg0LC0xNT
 E0MDgzMzg4LC00MjU5MTE4OTAsLTgxNTkyODA0NSwyMDQ0OTg2
