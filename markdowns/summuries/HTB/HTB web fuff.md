@@ -60,10 +60,14 @@ ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d
 
 ## API Fuzzing
 - **API types:** RUST, SOAP, GraphQL
+``` bash
+git clone https://github.com/PandaSt0rm/webfuzz_api.git
+python3 api_fuzzer.py http://IP:PORT
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzA5NTQ2MywtNDYyNDEyNTQwLDY1MD
-QyMTIzOSwtMTI3MDIyNjUxMCwtMTEyMDA5NDQsLTExMjAwOTQ0
-LDEyOTA5Mzk1ODIsLTE2NDQ2MDIxODQsLTE1MTQwODMzODgsLT
-QyNTkxMTg5MCwtODE1OTI4MDQ1LDIwNDQ5ODY0MDYsLTE2NjM1
-Mjc3NjVdfQ==
+eyJoaXN0b3J5IjpbODg4NTE1MjIyLC00NjI0MTI1NDAsNjUwND
+IxMjM5LC0xMjcwMjI2NTEwLC0xMTIwMDk0NCwtMTEyMDA5NDQs
+MTI5MDkzOTU4MiwtMTY0NDYwMjE4NCwtMTUxNDA4MzM4OCwtND
+I1OTExODkwLC04MTU5MjgwNDUsMjA0NDk4NjQwNiwtMTY2MzUy
+Nzc2NV19
 -->
