@@ -8,14 +8,14 @@ func main() {
 	// var declaration
 	var test int
 	test = 1000
-	fmt.Println("Your SMS sending limit is", test )
 	// short var declaration
 	test2 := 1000
+	// print 
 	fmt.Println("Your SMS sending limit is", test2 )
 	
 }
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNDU0MDEwNSwtMTI2MzU0MTU5XX0=
+eyJoaXN0b3J5IjpbMTYxMjMyNjE3OCwtMTI2MzU0MTU5XX0=
 -->
