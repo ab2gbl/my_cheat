@@ -5,12 +5,17 @@
 package main
 import "fmt"
 func main() {
-	var smsSendingLimit int
-	smsSendingLimit = 1000
-	fmt.Println("Your SMS sending limit is", smsSendingLimit)
+	// var declaration
+	var test int
+	test = 1000
+	fmt.Println("Your SMS sending limit is", test )
+	// short var declaration
+	test2 := 1000
+	fmt.Println("Your SMS sending limit is", test2 )
+	
 }
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjM1NDE1OV19
+eyJoaXN0b3J5IjpbMTgwNDU0MDEwNSwtMTI2MzU0MTU5XX0=
 -->
