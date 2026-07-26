@@ -30,17 +30,14 @@ func main() {
 	switch os {
     case "linux":
         creator = "Linus Torvalds"
-    case "windows":
-        creator = "Bill Gates"
-    case "mac":
-        creator = "A Steve"
     default:
         creator = "Unknown"
   }
+  
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MTkxMjEyMSwxNjEyMzI2MTc4LC0xMj
-YzNTQxNTldfQ==
+eyJoaXN0b3J5IjpbLTE0NzU4MDQ0ODIsMTYxMjMyNjE3OCwtMT
+I2MzU0MTU5XX0=
 -->
