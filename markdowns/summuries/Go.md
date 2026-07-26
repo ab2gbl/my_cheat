@@ -14,10 +14,11 @@ func main() {
 	fmt.Println("Your SMS sending limit is", test2 )
 	// formating
 	msg := fmt.Sprintf("Hi %s, your open rate is %.1f percent\n",name,openRate)
+	
 }
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzg5MDczMDcsMTYxMjMyNjE3OCwtMT
-I2MzU0MTU5XX0=
+eyJoaXN0b3J5IjpbLTQzMDI5MDgzNywxNjEyMzI2MTc4LC0xMj
+YzNTQxNTldfQ==
 -->
