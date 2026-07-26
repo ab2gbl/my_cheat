@@ -28,16 +28,20 @@ func main() {
 	}
 	// switch
 	switch os {
-    case "linux":
-        creator = "Linus Torvalds"
-    default:
-        creator = "Unknown"
-  }
+	    case "linux":
+	        creator = "Linus Torvalds"
+	    default:
+	        creator = "Unknown"
+	}
+	// func
+	func sub(x int, y int) int {
+	    return x-y
+	}
   
-
+ 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzU4MDQ0ODIsMTYxMjMyNjE3OCwtMT
-I2MzU0MTU5XX0=
+eyJoaXN0b3J5IjpbMTk5MjIxMjU2NywtMTQ3NTgwNDQ4MiwxNj
+EyMzI2MTc4LC0xMjYzNTQxNTldfQ==
 -->
