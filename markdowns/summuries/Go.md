@@ -2,6 +2,8 @@
 
 - **syntax**
 -  create module `go mod init example.com/module` 
+- use local storage `go mod edit -replace example.com/greetings=..\greetings\`
+- sync packages `go mod tidy `
 ```go
 package main
 import "fmt"
@@ -41,6 +43,7 @@ func main() {
   
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDkyMzExODAsMTk5MjIxMjU2NywtMT
-Q3NTgwNDQ4MiwxNjEyMzI2MTc4LC0xMjYzNTQxNTldfQ==
+eyJoaXN0b3J5IjpbLTMxMTcwMDkzOSwtMTcwOTIzMTE4MCwxOT
+kyMjEyNTY3LC0xNDc1ODA0NDgyLDE2MTIzMjYxNzgsLTEyNjM1
+NDE1OV19
 -->
