@@ -1,6 +1,7 @@
 
 
 - **syntax**
+-  create module `go mod init example.com/module` 
 ```go
 package main
 import "fmt"
@@ -38,10 +39,8 @@ func main() {
 	    return x-y
 	}
   
- 
-
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MjIxMjU2NywtMTQ3NTgwNDQ4MiwxNj
-EyMzI2MTc4LC0xMjYzNTQxNTldfQ==
+eyJoaXN0b3J5IjpbLTE3MDkyMzExODAsMTk5MjIxMjU2NywtMT
+Q3NTgwNDQ4MiwxNjEyMzI2MTc4LC0xMjYzNTQxNTldfQ==
 -->
