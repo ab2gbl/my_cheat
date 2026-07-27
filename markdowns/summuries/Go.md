@@ -40,10 +40,23 @@ func main() {
 	func sub(x int, y int) int {
 	    return x-y
 	}
+	// slices pic example
+	func Pic(dx, dy int) [][]uint8 {
+		result := make([][]uint8, dy)
+
+		for y := range result {
+			result[y] = make([]uint8, dx)
+			for x := range result[y] {
+				result[y][x] = uint8(x*y)
+			}
+		}
+
+		return result
+	}
   
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMTcwMDkzOSwtMTcwOTIzMTE4MCwxOT
-kyMjEyNTY3LC0xNDc1ODA0NDgyLDE2MTIzMjYxNzgsLTEyNjM1
-NDE1OV19
+eyJoaXN0b3J5IjpbMTE3MTI1NTc1NywtMzExNzAwOTM5LC0xNz
+A5MjMxMTgwLDE5OTIyMTI1NjcsLTE0NzU4MDQ0ODIsMTYxMjMy
+NjE3OCwtMTI2MzU0MTU5XX0=
 -->
