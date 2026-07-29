@@ -10,7 +10,7 @@
         "summary": "Angular summary notes.",
         "tags": ["angular", "frontend"],
         "type": "summary",
-        "markdownPath": "/summuries/angular.md"
+        "markdownPath": "/markdowns/summuries/angular.md"
       }
     },
     {
@@ -21,7 +21,7 @@
         "summary": "Cloud summary notes.",
         "tags": ["cloud", "devops"],
         "type": "summary",
-        "markdownPath": "/summuries/Cloud.md"
+        "markdownPath": "/markdowns/summuries/Cloud.md"
       }
     },
     {
@@ -32,7 +32,7 @@
         "summary": "Django summary notes.",
         "tags": ["django", "backend", "python"],
         "type": "summary",
-        "markdownPath": "/summuries/Django.md"
+        "markdownPath": "/markdowns/summuries/Django.md"
       }
     },
     {
@@ -43,7 +43,7 @@
         "summary": "Go summary notes.",
         "tags": ["go", "backend", "programming"],
         "type": "summary",
-        "markdownPath": "/summuries/Go.md"
+        "markdownPath": "/markdowns/summuries/Go.md"
       }
     },
     {
@@ -54,7 +54,7 @@
         "summary": "LLMs summary notes.",
         "tags": ["llm", "ai", "nlp"],
         "type": "summary",
-        "markdownPath": "/summuries/LLMs.md"
+        "markdownPath": "/markdowns/summuries/LLMs.md"
       }
     },
     {
@@ -65,7 +65,7 @@
         "summary": "Hack The Box getting started notes.",
         "tags": ["hack-the-box", "pentesting", "security"],
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Getting_Started.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Getting_Started.md"
       }
     },
     {
@@ -76,7 +76,7 @@
         "summary": "Hack The Box networking notes.",
         "tags": ["hack-the-box", "networking", "security"],
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Introduction_to_Networking.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_Networking.md"
       }
     },
     {
@@ -87,7 +87,7 @@
         "summary": "Hack The Box pentest introduction notes.",
         "tags": ["hack-the-box", "pentesting", "security"],
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Introduction_to_pentest.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_pentest.md"
       }
     },
     {
@@ -98,7 +98,7 @@
         "summary": "Hack The Box Linux fundamentals notes.",
         "tags": ["hack-the-box", "linux", "security"],
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Linux_Fundamentals.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Linux_Fundamentals.md"
       }
     },
     {
@@ -109,7 +109,7 @@
         "summary": "Hack The Box web fuzzing notes.",
         "tags": ["hack-the-box", "web", "security"],
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Web_Fuzzing.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Web_Fuzzing.md"
       }
     },
     {
@@ -120,7 +120,7 @@
         "summary": "Hack The Box web introduction notes.",
         "tags": ["hack-the-box", "web", "security"],
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Web_introduction.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Web_introduction.md"
       }
     },
     {
@@ -131,7 +131,7 @@
         "summary": "Hack The Box cheat sheets getting started notes.",
         "tags": ["hack-the-box", "cheat-sheet", "security"],
         "type": "summary",
-        "markdownPath": "/summuries/HTB/Cheat_Sheets/CS_Getting_Started.md"
+        "markdownPath": "/markdowns/markdowns/summuries/HTB/Cheat_Sheets/CS_Getting_Started.md"
       }
     },
     {
@@ -142,7 +142,7 @@
         "summary": "Building a simple Perceptron model to predict university admissions based on Math and CS exam scores.",
         "tags": ["ai", "machine-learning", "perceptron"],
         "type": "blog",
-        "markdownPath": "/blogs/perceptron-admission-predictor.md"
+        "markdownPath": "/markdowns/blogs/perceptron-admission-predictor.md"
       }
     },
     {
@@ -153,7 +153,7 @@
         "summary": "A blog post about convolution concepts in AI.",
         "tags": ["ai", "computer-vision", "convolution"],
         "type": "blog",
-        "markdownPath": "/blogs/Understanding_Convolution_in_AI.md"
+        "markdownPath": "/markdowns/blogs/Understanding_Convolution_in_AI.md"
       }
     }
   ]
