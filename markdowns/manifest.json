@@ -9,7 +9,7 @@
         "publishedAt": "2026-05-10",
         "summary": "A practical intro to Linux basics.",
         "type": "blog",
-        "markdownPath": "markdowns/courses/linux-fundamentals.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Linux_Fundamentals.md"
       }
     }
   ]
