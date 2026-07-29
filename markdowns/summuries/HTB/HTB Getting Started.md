@@ -5,7 +5,7 @@
 -   **Reverse Shell** 🔁
 -   **Bind Shell** ⚓
 -   **Web Shell** 🌐
-- 
+
 ## 🛠️ Netcat
 -   Interacts with TCP/UDP ports
 -   **Banner grabbing**: `nc -nv 10.129.42.253 21` or `nmap -sV --script=banner <target>`
@@ -194,11 +194,11 @@ Web Server | Default Webroot
 - Validating File Transfers: using `file shell` and 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU4NjQxNTQ0LDEzNDA0MzQ4NDYsMTQyOT
-E2OTAxMiwtNDMzODU2OTgxLC03NDE3OTYwOCwyNTQ4NTY1Mywt
-MTU4MTIzNjc1NSwzMjk3MzI1NTEsLTkyODc3MDU1NSwxODk3OT
-I4NTE2LC0xMTE4MjIwNDMzLDExMzUwNTI2ODQsLTExNzk3NTEy
-MTUsLTE5NjQ5NDM4ODgsMTQ2MjE1MTkzLDY4MTMzMTc0OSw5Mj
-IyNDU1MDcsMTQxNjU5OTA3MiwtNTcyODQ4MDQxLDE1MzUyMzQ5
-NjFdfQ==
+eyJoaXN0b3J5IjpbLTEzODY3NjIyNDUsOTU4NjQxNTQ0LDEzND
+A0MzQ4NDYsMTQyOTE2OTAxMiwtNDMzODU2OTgxLC03NDE3OTYw
+OCwyNTQ4NTY1MywtMTU4MTIzNjc1NSwzMjk3MzI1NTEsLTkyOD
+c3MDU1NSwxODk3OTI4NTE2LC0xMTE4MjIwNDMzLDExMzUwNTI2
+ODQsLTExNzk3NTEyMTUsLTE5NjQ5NDM4ODgsMTQ2MjE1MTkzLD
+Y4MTMzMTc0OSw5MjIyNDU1MDcsMTQxNjU5OTA3MiwtNTcyODQ4
+MDQxXX0=
 -->
