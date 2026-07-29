@@ -19,7 +19,7 @@ The output (Y) is:
 - **1**: Admitted
 - **0**: Rejected
 
-![image2](./images/perceptron2.png)
+![image2](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/blogs/images/perceptron2.png)
 
 ### 🧮 Dataset
 
@@ -96,5 +96,5 @@ ab2gbl/ai-learning-projects
 
 Made by [@ab2gbl](https://ab2gbl-portfolio.vercel.app/) as part of an AI learning journey 👨‍🎓
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNzA2MzMwNCwxNzc1NzU3ODU3XX0=
+eyJoaXN0b3J5IjpbLTU5NTk2ODY1NywxNzc1NzU3ODU3XX0=
 -->
