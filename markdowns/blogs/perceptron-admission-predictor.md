@@ -5,7 +5,7 @@
 
 This project is a basic implementation of a **Perceptron model** to simulate the admission process of students into a fictional university based on their performance in **Math** and **Computer Science** exams. It was completed as part of an AI fundamentals workshop.
 
-![image](./images/perceptron1.png)
+![image](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/blogs/images/perceptron1.png)
 
 ## 📌 Overview
 
@@ -96,5 +96,5 @@ ab2gbl/ai-learning-projects
 
 Made by [@ab2gbl](https://ab2gbl-portfolio.vercel.app/) as part of an AI learning journey 👨‍🎓
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTc1Nzg1N119
+eyJoaXN0b3J5IjpbMTgzNzA2MzMwNCwxNzc1NzU3ODU3XX0=
 -->
