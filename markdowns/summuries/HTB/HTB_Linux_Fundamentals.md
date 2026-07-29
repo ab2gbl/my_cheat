@@ -1,3 +1,10 @@
+---
+title: "Linux Fundamentals"
+publishedAt: "2025-05-09"
+summary: "Understanding the core of Linux fundamentals is key to navigating the modern world of computing, from development environments to server administration."
+tag: "system"
+type: "summary"
+---
 # Used things
 **[GTFbins](https://gtfobins.github.io/)** - privileges escalation
 ` grep -r word . ` find a word in folder
@@ -632,5 +639,5 @@ ftpd : 10.129.22.0/24
 ![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMjc1MDM3Ml19
+eyJoaXN0b3J5IjpbLTEzMDUzNzY3NjgsMjExMjc1MDM3Ml19
 -->
