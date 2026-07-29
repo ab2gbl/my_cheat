@@ -3,37 +3,145 @@
   "updatedAt": "2026-07-29T00:00:00Z",
   "posts": [
     {
-      "slug": "linux-fundamentals",
+      "slug": "summuries-angular",
       "metadata": {
-        "title": "Linux Fundamentals",
-        "publishedAt": "2026-05-10",
-        "summary": "A practical intro to Linux basics.",
+        "title": "Angular",
+        "publishedAt": "2026-07-29",
+        "summary": "Angular summary notes.",
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/HTB_Linux_Fundamentals.md"
+        "markdownPath": "/summuries/angular.md"
       }
     },
     {
-      "slug": "introduction-to-networking",
+      "slug": "summuries-cloud",
       "metadata": {
-        "title": "Introduction to Networking",
-        "publishedAt": "2025-04-15",
-        "summary": "As an information security professional, a firm grasp of networking fundamentals and the required components is necessary. Without a strong foundation in networking, it will be tough to progress in any area of information security. Understanding how a network is structured and how the communication between the individual hosts and servers takes place using the various protocols allows us to understand the entire network structure and its network traffic in detail and how different communication standards are handled. This knowledge is essential to create our tools and to interact with the protocols.",
-        "tag": "security",
+        "title": "Cloud",
+        "publishedAt": "2026-07-29",
+        "summary": "Cloud summary notes.",
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_Networking.md"
+        "markdownPath": "/summuries/Cloud.md"
       }
     },
     {
-      "slug": "perceptron-admission-predictor",
+      "slug": "summuries-django",
       "metadata": {
-        "title": "Perceptron Admission Predictor 🎓🧠",
+        "title": "Django",
+        "publishedAt": "2026-07-29",
+        "summary": "Django summary notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/Django.md"
+      }
+    },
+    {
+      "slug": "summuries-go",
+      "metadata": {
+        "title": "Go",
+        "publishedAt": "2026-07-29",
+        "summary": "Go summary notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/Go.md"
+      }
+    },
+    {
+      "slug": "summuries-llms",
+      "metadata": {
+        "title": "LLMs",
+        "publishedAt": "2026-07-29",
+        "summary": "LLMs summary notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/LLMs.md"
+      }
+    },
+    {
+      "slug": "summuries-htb-getting-started",
+      "metadata": {
+        "title": "HTB Getting Started",
+        "publishedAt": "2026-07-29",
+        "summary": "Hack The Box getting started notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/HTB/HTB_Getting_Started.md"
+      }
+    },
+    {
+      "slug": "summuries-htb-introduction-to-networking",
+      "metadata": {
+        "title": "HTB Introduction to Networking",
+        "publishedAt": "2026-07-29",
+        "summary": "Hack The Box networking notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/HTB/HTB_Introduction_to_Networking.md"
+      }
+    },
+    {
+      "slug": "summuries-htb-introduction-to-pentest",
+      "metadata": {
+        "title": "HTB Introduction to Pentest",
+        "publishedAt": "2026-07-29",
+        "summary": "Hack The Box pentest introduction notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/HTB/HTB_Introduction_to_pentest.md"
+      }
+    },
+    {
+      "slug": "summuries-htb-linux-fundamentals",
+      "metadata": {
+        "title": "HTB Linux Fundamentals",
+        "publishedAt": "2026-07-29",
+        "summary": "Hack The Box Linux fundamentals notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/HTB/HTB_Linux_Fundamentals.md"
+      }
+    },
+    {
+      "slug": "summuries-htb-web-fuzzing",
+      "metadata": {
+        "title": "HTB Web Fuzzing",
+        "publishedAt": "2026-07-29",
+        "summary": "Hack The Box web fuzzing notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/HTB/HTB_Web_Fuzzing.md"
+      }
+    },
+    {
+      "slug": "summuries-htb-web-introduction",
+      "metadata": {
+        "title": "HTB Web Introduction",
+        "publishedAt": "2026-07-29",
+        "summary": "Hack The Box web introduction notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/HTB/HTB_Web_introduction.md"
+      }
+    },
+    {
+      "slug": "summuries-htb-cheat-sheets-getting-started",
+      "metadata": {
+        "title": "HTB Cheat Sheets Getting Started",
+        "publishedAt": "2026-07-29",
+        "summary": "Hack The Box cheat sheets getting started notes.",
+        "type": "summary",
+        "markdownPath": "/summuries/HTB/Cheat_Sheets/CS_Getting_Started.md"
+      }
+    },
+    {
+      "slug": "blog-perceptron-admission-predictor",
+      "metadata": {
+        "title": "Perceptron Admission Predictor",
         "publishedAt": "2025-05-06",
         "summary": "Building a simple Perceptron model to predict university admissions based on Math and CS exam scores.",
         "tag": "AI",
         "type": "blog",
-        "markdownPath": "/markdowns/blogs/perceptron-admission-predictor.md"
+        "markdownPath": "/blogs/perceptron-admission-predictor.md"
+      }
+    },
+    {
+      "slug": "blog-understanding-convolution-in-ai",
+      "metadata": {
+        "title": "Understanding Convolution in AI",
+        "publishedAt": "2026-07-29",
+        "summary": "A blog post about convolution concepts in AI.",
+        "type": "blog",
+        "markdownPath": "/blogs/Understanding_Convolution_in_AI.md"
       }
     }
   ]
 }
-
