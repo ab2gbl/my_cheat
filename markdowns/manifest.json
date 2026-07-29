@@ -8,8 +8,9 @@
         "title": "Angular",
         "publishedAt": "2026-07-29",
         "summary": "Angular summary notes.",
+        "tags": ["angular", "frontend"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/angular.md"
+        "markdownPath": "/summuries/angular.md"
       }
     },
     {
@@ -18,8 +19,9 @@
         "title": "Cloud",
         "publishedAt": "2026-07-29",
         "summary": "Cloud summary notes.",
+        "tags": ["cloud", "devops"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/Cloud.md"
+        "markdownPath": "/summuries/Cloud.md"
       }
     },
     {
@@ -28,8 +30,9 @@
         "title": "Django",
         "publishedAt": "2026-07-29",
         "summary": "Django summary notes.",
+        "tags": ["django", "backend", "python"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/Django.md"
+        "markdownPath": "/summuries/Django.md"
       }
     },
     {
@@ -38,8 +41,9 @@
         "title": "Go",
         "publishedAt": "2026-07-29",
         "summary": "Go summary notes.",
+        "tags": ["go", "backend", "programming"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/Go.md"
+        "markdownPath": "/summuries/Go.md"
       }
     },
     {
@@ -48,8 +52,9 @@
         "title": "LLMs",
         "publishedAt": "2026-07-29",
         "summary": "LLMs summary notes.",
+        "tags": ["llm", "ai", "nlp"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/LLMs.md"
+        "markdownPath": "/summuries/LLMs.md"
       }
     },
     {
@@ -58,8 +63,9 @@
         "title": "HTB Getting Started",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box getting started notes.",
+        "tags": ["hack-the-box", "pentesting", "security"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/HTB_Getting_Started.md"
+        "markdownPath": "/summuries/HTB/HTB_Getting_Started.md"
       }
     },
     {
@@ -68,8 +74,9 @@
         "title": "HTB Introduction to Networking",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box networking notes.",
+        "tags": ["hack-the-box", "networking", "security"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_Networking.md"
+        "markdownPath": "/summuries/HTB/HTB_Introduction_to_Networking.md"
       }
     },
     {
@@ -78,8 +85,9 @@
         "title": "HTB Introduction to Pentest",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box pentest introduction notes.",
+        "tags": ["hack-the-box", "pentesting", "security"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_pentest.md"
+        "markdownPath": "/summuries/HTB/HTB_Introduction_to_pentest.md"
       }
     },
     {
@@ -88,8 +96,9 @@
         "title": "HTB Linux Fundamentals",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box Linux fundamentals notes.",
+        "tags": ["hack-the-box", "linux", "security"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/HTB_Linux_Fundamentals.md"
+        "markdownPath": "/summuries/HTB/HTB_Linux_Fundamentals.md"
       }
     },
     {
@@ -98,8 +107,9 @@
         "title": "HTB Web Fuzzing",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box web fuzzing notes.",
+        "tags": ["hack-the-box", "web", "security"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/HTB_Web_Fuzzing.md"
+        "markdownPath": "/summuries/HTB/HTB_Web_Fuzzing.md"
       }
     },
     {
@@ -108,8 +118,9 @@
         "title": "HTB Web Introduction",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box web introduction notes.",
+        "tags": ["hack-the-box", "web", "security"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/HTB_Web_introduction.md"
+        "markdownPath": "/summuries/HTB/HTB_Web_introduction.md"
       }
     },
     {
@@ -118,8 +129,9 @@
         "title": "HTB Cheat Sheets Getting Started",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box cheat sheets getting started notes.",
+        "tags": ["hack-the-box", "cheat-sheet", "security"],
         "type": "summary",
-        "markdownPath": "/markdowns/summuries/HTB/Cheat_Sheets/CS_Getting_Started.md"
+        "markdownPath": "/summuries/HTB/Cheat_Sheets/CS_Getting_Started.md"
       }
     },
     {
@@ -128,9 +140,9 @@
         "title": "Perceptron Admission Predictor",
         "publishedAt": "2025-05-06",
         "summary": "Building a simple Perceptron model to predict university admissions based on Math and CS exam scores.",
-        "tag": "AI",
+        "tags": ["ai", "machine-learning", "perceptron"],
         "type": "blog",
-        "markdownPath": "/markdowns/blogs/perceptron-admission-predictor.md"
+        "markdownPath": "/blogs/perceptron-admission-predictor.md"
       }
     },
     {
@@ -139,8 +151,9 @@
         "title": "Understanding Convolution in AI",
         "publishedAt": "2026-07-29",
         "summary": "A blog post about convolution concepts in AI.",
+        "tags": ["ai", "computer-vision", "convolution"],
         "type": "blog",
-        "markdownPath": "/markdowns/blogs/Understanding_Convolution_in_AI.md"
+        "markdownPath": "/blogs/Understanding_Convolution_in_AI.md"
       }
     }
   ]
