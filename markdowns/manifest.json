@@ -9,7 +9,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Angular summary notes.",
         "type": "summary",
-        "markdownPath": "/summuries/angular.md"
+        "markdownPath": "/markdowns/summuries/angular.md"
       }
     },
     {
@@ -19,7 +19,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Cloud summary notes.",
         "type": "summary",
-        "markdownPath": "/summuries/Cloud.md"
+        "markdownPath": "/markdowns/summuries/Cloud.md"
       }
     },
     {
@@ -29,7 +29,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Django summary notes.",
         "type": "summary",
-        "markdownPath": "/summuries/Django.md"
+        "markdownPath": "/markdowns/summuries/Django.md"
       }
     },
     {
@@ -39,7 +39,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Go summary notes.",
         "type": "summary",
-        "markdownPath": "/summuries/Go.md"
+        "markdownPath": "/markdowns/summuries/Go.md"
       }
     },
     {
@@ -49,7 +49,7 @@
         "publishedAt": "2026-07-29",
         "summary": "LLMs summary notes.",
         "type": "summary",
-        "markdownPath": "/summuries/LLMs.md"
+        "markdownPath": "/markdowns/summuries/LLMs.md"
       }
     },
     {
@@ -59,7 +59,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box getting started notes.",
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Getting_Started.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Getting_Started.md"
       }
     },
     {
@@ -69,7 +69,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box networking notes.",
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Introduction_to_Networking.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_Networking.md"
       }
     },
     {
@@ -79,7 +79,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box pentest introduction notes.",
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Introduction_to_pentest.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_pentest.md"
       }
     },
     {
@@ -89,7 +89,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box Linux fundamentals notes.",
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Linux_Fundamentals.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Linux_Fundamentals.md"
       }
     },
     {
@@ -99,7 +99,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box web fuzzing notes.",
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Web_Fuzzing.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Web_Fuzzing.md"
       }
     },
     {
@@ -109,7 +109,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box web introduction notes.",
         "type": "summary",
-        "markdownPath": "/summuries/HTB/HTB_Web_introduction.md"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Web_introduction.md"
       }
     },
     {
@@ -119,7 +119,7 @@
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box cheat sheets getting started notes.",
         "type": "summary",
-        "markdownPath": "/summuries/HTB/Cheat_Sheets/CS_Getting_Started.md"
+        "markdownPath": "/markdowns/summuries/HTB/Cheat_Sheets/CS_Getting_Started.md"
       }
     },
     {
@@ -130,7 +130,7 @@
         "summary": "Building a simple Perceptron model to predict university admissions based on Math and CS exam scores.",
         "tag": "AI",
         "type": "blog",
-        "markdownPath": "/blogs/perceptron-admission-predictor.md"
+        "markdownPath": "/markdowns/blogs/perceptron-admission-predictor.md"
       }
     },
     {
@@ -140,7 +140,7 @@
         "publishedAt": "2026-07-29",
         "summary": "A blog post about convolution concepts in AI.",
         "type": "blog",
-        "markdownPath": "/blogs/Understanding_Convolution_in_AI.md"
+        "markdownPath": "/markdowns/blogs/Understanding_Convolution_in_AI.md"
       }
     }
   ]
