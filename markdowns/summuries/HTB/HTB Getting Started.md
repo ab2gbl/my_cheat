@@ -193,15 +193,19 @@ Web Server | Default Webroot
 - **Using Base64:** encode file , copy paste and decode
 - Validating File Transfers: using `file shell` and 
 
-# Vulnerability Assessment
+
+# 🛡️ Vulnerability Assessment
+
+## 🔎 Scanners
+
 - Nessus
 - OpenVAS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MDczNzc3LDk1ODY0MTU0NCwxMzQwND
-M0ODQ2LDE0MjkxNjkwMTIsLTQzMzg1Njk4MSwtNzQxNzk2MDgs
-MjU0ODU2NTMsLTE1ODEyMzY3NTUsMzI5NzMyNTUxLC05Mjg3Nz
-A1NTUsMTg5NzkyODUxNiwtMTExODIyMDQzMywxMTM1MDUyNjg0
-LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LDE0NjIxNTE5Myw2OD
-EzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkwNzIsLTU3Mjg0ODA0
-MV19
+eyJoaXN0b3J5IjpbLTExMjU5MjY5OTIsLTY4MDczNzc3LDk1OD
+Y0MTU0NCwxMzQwNDM0ODQ2LDE0MjkxNjkwMTIsLTQzMzg1Njk4
+MSwtNzQxNzk2MDgsMjU0ODU2NTMsLTE1ODEyMzY3NTUsMzI5Nz
+MyNTUxLC05Mjg3NzA1NTUsMTg5NzkyODUxNiwtMTExODIyMDQz
+MywxMTM1MDUyNjg0LC0xMTc5NzUxMjE1LC0xOTY0OTQzODg4LD
+E0NjIxNTE5Myw2ODEzMzE3NDksOTIyMjQ1NTA3LDE0MTY1OTkw
+NzJdfQ==
 -->
