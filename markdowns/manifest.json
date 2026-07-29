@@ -8,8 +8,30 @@
         "title": "Linux Fundamentals",
         "publishedAt": "2026-05-10",
         "summary": "A practical intro to Linux basics.",
-        "type": "blog",
+        "type": "summary",
         "markdownPath": "/markdowns/summuries/HTB/HTB_Linux_Fundamentals.md"
+      }
+    }
+    {
+      "slug": "introduction-to-networking",
+      "metadata": {
+        "title": "Introduction to Networking"
+        "publishedAt": "2025-04-15"
+        "summary": "As an information security professional, a firm grasp of networking fundamentals and the required components is necessary. Without a strong foundation in networking, it will be tough to progress in any area of information security. Understanding how a network is structured and how the communication between the individual hosts and servers takes place using the various protocols allows us to understand the entire network structure and its network traffic in detail and how different communication standards are handled. This knowledge is essential to create our tools and to interact with the protocols."
+        "tag": "security"
+        "type": "summary"
+        "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_Networking.md"
+      }
+    }
+    {
+      "slug": "perceptron-admission-predictor",
+      "metadata": {
+        "title": "Perceptron Admission Predictor 🎓🧠"
+        "publishedAt": "2025-05-06"
+        "summary": "Building a simple Perceptron model to predict university admissions based on Math and CS exam scores."
+        "tag": "AI"
+        "type": "blog"
+        "markdownPath": "/markdowns/blogs/perceptron-admission-predictor.md"
       }
     }
   ]
