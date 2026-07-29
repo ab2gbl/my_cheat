@@ -6,9 +6,9 @@ tag: "system"
 type: "summary"
 ---
 # Used things
-**[GTFbins](https://gtfobins.github.io/)** - privileges escalation
-` grep -r word . ` find a word in folder
-`find . -type f -exec grep word /dev/null {} +` find a word in folder
+- **[GTFbins](https://gtfobins.github.io/)** - privileges escalation
+- ` grep -r word . ` find a word in folder
+- `find . -type f -exec grep word /dev/null {} +` find a word in folder
 
 # 🖥️ System Information
 - `-h`, `man`, `info` – Command info/help
@@ -639,5 +639,6 @@ ftpd : 10.129.22.0/24
 ![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDUzNzY3NjgsMjExMjc1MDM3Ml19
+eyJoaXN0b3J5IjpbLTU4MzEyMDI1LC0xMzA1Mzc2NzY4LDIxMT
+I3NTAzNzJdfQ==
 -->
