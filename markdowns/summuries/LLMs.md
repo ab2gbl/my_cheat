@@ -9,14 +9,14 @@ Model | Examples |Tasks
 **Encoder-decoder** | BART, T5, Marian, mBART | Summarization, translation, generative question answering
 
 
-![transformers_architecture](./pics/LLMs/transformers_architecture.png)
+![transformers_architecture](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/summuries/pics/LLMs/transformers_architecture.png)
 
 # 2. LLM pipeline
 ## 2.1 Full LLM pipeline
-![Full LLM pipeline](./pics/LLMs/full_nlp_pipeline-dark.svg)
+![Full LLM pipeline](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/summuries/pics/LLMs/full_nlp_pipeline-dark.svg)
 > **Tokenizer types** : Word-based,  Character-based, Subword tokenization
 ## 2.2 inside model pipe
-![inside model pipeline](./pics/LLMs/transformer_and_head-dark.svg)
+![inside model pipeline](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/summuries/pics/LLMs/transformer_and_head-dark.svg)
 
 ## 2.3 transformers Library
 
