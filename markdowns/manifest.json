@@ -193,6 +193,120 @@
         ],
         "markdownPath": "markdowns/work/AI-agents-for-real-time-ECG-interpretation.md"
       }
+    },
+    {
+      
+      "slug": "toward-building-a-secure-competitive-learning-platform-for-computer-science-technical-challenges",
+      "metadata": {
+        "title": "Toward Building a Secure Competitive Learning Platform for Computer Science Technical Challenges",
+        "publishedAt": "2023-06",
+        "summary": "My final bachelor's thesis in Software Engineering — a full-stack web platform designed for cybersecurity training and technical evaluations. Inspired by TryHackMe and HackerRank, it empowers instructors to create gamified CTF-style challenges, recruiters to evaluate candidates, and learners to build skills through real-world scenarios.",
+        "images": [
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/frontend/vue-home.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/django/main.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/uml/use-case.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/frontend/vue-challenge.png"
+        ],
+        "team": [
+          {
+            "name": "Guebli Ayoub Abdessami",
+            "role": "AI Engineer",
+            "avatar": "/images/avatar.jpeg",
+            "linkedIn": "https://www.linkedin.com/in/ayoub-guebli-0615342b8"
+          },
+          {
+            "name": "Touati Mohamed Amine",
+            "role": "Frontend Developer"
+          },
+          {
+            "name": "Aymen Ababsa",
+            "role": "Backend Developer"
+          }
+        ],
+        "supervisors": [
+          {
+            "name": "Dr. Naila Marir",
+            "role": "Supervisor"
+          }
+        ],
+        "institution": "Abdelhamid Mehri – Constantine 2 University, Faculty of NTIC",
+        "markdownPath": "markdowns/work/Competitive-Learning-Platform.md"
+      }
+
+    },
+    {
+      "slug": "ai-learning-projects",
+      "metadata": {
+        "title": "AI Learning Projects",
+        "publishedAt": "2025-05-06",
+        "summary": "A collection of educational AI projects including convolution neural networks and perceptron models, with hands-on examples for learning machine learning concepts.",
+        "images": [
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/ai-learning-projects/perceptron-admission-predictor/perceptron1.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/ai-learning-projects/Understanding_Convolution_in_AI/2D_Convolution_Animation.gif",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/ai-learning-projects/perceptron-admission-predictor/perceptron2.png"
+        ],
+        "team": [
+          {
+            "name": "Ayoub Guebli",
+            "role": "AI Developer",
+            "avatar": "/images/avatar.jpeg",
+            "linkedIn": "https://www.linkedin.com/in/ayoub-guebli-0615342b8"
+          }
+        ],
+        "link": "https://github.com/ab2gbl/ai-learning-projects",
+        "markdownPath": "markdowns/work/AI-Learning-Projects.md"
+        
+      }
+    },
+    {
+      "slug": "threadball",
+      "metadata": {
+        "title": "ThreadBall: Multi-threaded Socket Communication",
+        "publishedAt": "2023-01-15",
+        "summary": "ThreadBall is a multi-threaded Python-based server-client application designed to demonstrate socket programming and concurrent connections. It simulates a message relay system where clients take turns sending and receiving data, offering a practical introduction to threading and socket communication in networked systems.",
+        "images": [
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/threadball/threadball1.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/threadball/threadball2.png"
+        ],
+        "team": [
+          {
+            "name": "Ayoub Guebli",
+            "role": "Software Developer",
+            "avatar": "/images/avatar.jpeg",
+            "linkedIn": "https://www.linkedin.com/in/ayoub-guebli-0615342b8"
+          }
+        ],
+        "link": "https://github.com/ab2gbl/ThreadBall",
+        "markdownPath": "markdowns/work/ThreadBall.md"
+
+      }
+    },
+    {
+      
+      "slug": "phonestore",
+      "metadata": { 
+        "title": "PhoneStore: Full-Stack eCommerce Web App",
+        "publishedAt": "2025-05-25",
+        "summary": "PhoneStore is a modern, full-featured eCommerce platform for smartphones and accessories. Built with Django REST and Next.js, it offers seamless shopping, billing, inventory tracking, and secure admin management—all fully deployed and online.",
+        "images": [
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/phonestore/home.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/phonestore/product details.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/phonestore/Cart.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/phonestore/Bills.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/phonestore/New bill.png"
+        ],
+        "team": [
+          {
+            "name": "Ayoub Guebli",
+            "role": "Full-Stack Developer",
+            "avatar": "/images/avatar.jpeg",
+            "linkedIn": "https://www.linkedin.com/in/ayoub-guebli-0615342b8"
+          }
+        ],
+        "link": "https://e-commerce-theta-seven-37.vercel.app/",
+        "markdownPath": "markdowns/work/PhoneStore.md"
+
+      }
     }
   ]
 }
