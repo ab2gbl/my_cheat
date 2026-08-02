@@ -156,5 +156,43 @@
         "markdownPath": "/markdowns/blogs/Understanding_Convolution_in_AI.md"
       }
     }
+  ],
+  "works": [
+    {
+     "slug": "ai-agents-for-real-time-ecg-interpretation",
+      "metadata": {
+        "title": "AI Agents for Real-Time ECG Interpretation",
+        "publishedAt": "2025-06-17",
+        "summary": "A real-time ECG interpretation system developed using AI agents, advanced machine learning models, and a modular web-based interface. The system enables automated segmentation and classification of ECG signals with high accuracy and live monitoring capabilities.",
+        "images": [
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/AI-agents-for-real-time-ECG-interpretation/System_Arch.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/AI-agents-for-real-time-ECG-interpretation/pic4.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/AI-agents-for-real-time-ECG-interpretation/pic2.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/AI-agents-for-real-time-ECG-interpretation/pic3.png"
+        ],
+        "team": [
+          {
+            "name": "Guebli Ayoub Abdessami",
+            "role": "AI Engineer",
+            "avatar": "/images/avatar.jpeg",
+            "linkedIn": "https://www.linkedin.com/in/ayoub-guebli-0615342b8"
+          },
+          {
+            "name": "Triai Radja",
+            "role": "AI Engineer"
+          },
+          {
+            "name": "Dr. Talbi Hassiba",
+            "role": "Supervisor"
+          },
+          {
+            "name": "Dr. Bahri Mohamed Redha",
+            "role": "Co-supervisor",
+            "institution": "Abdelhamid Mehri - Constantine 2 University, Faculty of NTIC, Department of IFA"
+          }
+        ],
+        "markdownPath": "markdowns/work/AI-agents-for-real-time-ECG-interpretation.md"
+      }
+    }
   ]
 }
