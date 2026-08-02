@@ -82,7 +82,7 @@ This was our **final-year graduation project** for a Bachelor’s degree in **So
 
 Pattern: **MVVM architecture** with separation of logic and UI.
 
-![use-case](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/uml/use-case.png)
+![use-case](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/Competitive-Learning-Platform/uml/use-case.png)
 
 ---
 
@@ -95,7 +95,7 @@ The system models include:
 - `Job`, `Interview`, `Statics`, `Badge`, `Recommendation`
 - Support for `solo` and `team` registrations
 
-![classes-diagram](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/uml/classes-diagram.png)
+![classes-diagram](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/Competitive-Learning-Platform/uml/classes-diagram.png)
 
 ---
 
@@ -131,7 +131,7 @@ The system models include:
 
 - Challenge participation interface
 
-![vue-challenge pic](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/frontend/vue-challenge.png)
+![vue-challenge pic](https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/Competitive-Learning-Platform/frontend/vue-challenge.png)
 
 ---
 

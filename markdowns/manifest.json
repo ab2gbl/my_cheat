@@ -202,10 +202,10 @@
         "publishedAt": "2023-06",
         "summary": "My final bachelor's thesis in Software Engineering — a full-stack web platform designed for cybersecurity training and technical evaluations. Inspired by TryHackMe and HackerRank, it empowers instructors to create gamified CTF-style challenges, recruiters to evaluate candidates, and learners to build skills through real-world scenarios.",
         "images": [
-          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/frontend/vue-home.png",
-          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/django/main.png",
-          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/uml/use-case.png",
-          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/frontend/vue-challenge.png"
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/Competitive-Learning-Platform/frontend/vue-home.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/Competitive-Learning-Platform/django/main.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/Competitive-Learning-Platform/uml/use-case.png",
+          "https://raw.githubusercontent.com/ab2gbl/my_cheat/refs/heads/main/markdowns/work/pics/Competitive-Learning-Platform/frontend/vue-challenge.png"
         ],
         "team": [
           {
