@@ -8,6 +8,7 @@
         "title": "Angular",
         "publishedAt": "2026-07-29",
         "summary": "Angular summary notes.",
+        "category": "Programming",
         "tags": ["angular", "frontend"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/angular.md"
@@ -19,6 +20,7 @@
         "title": "Cloud",
         "publishedAt": "2026-07-29",
         "summary": "Cloud summary notes.",
+        "category": "DevOps",
         "tags": ["cloud", "devops"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/Cloud.md"
@@ -30,6 +32,7 @@
         "title": "Django",
         "publishedAt": "2026-07-29",
         "summary": "Django summary notes.",
+        "category": "Programming",
         "tags": ["django", "backend", "python"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/Django.md"
@@ -41,6 +44,7 @@
         "title": "Go",
         "publishedAt": "2026-07-29",
         "summary": "Go summary notes.",
+        "category": "Programming",
         "tags": ["go", "backend", "programming"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/Go.md"
@@ -52,17 +56,21 @@
         "title": "LLMs",
         "publishedAt": "2026-07-29",
         "summary": "LLMs summary notes.",
+        "category": "AI",
         "tags": ["llm", "ai", "nlp"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/LLMs.md"
       }
     },
+  
     {
       "slug": "summuries-htb-getting-started",
       "metadata": {
-        "title": "HTB Getting Started",
+        "title": "Getting Started",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box getting started notes.",
+        "category": "Cybersecurity",
+        "subcategory": "HTB",
         "tags": ["hack-the-box", "pentesting", "security"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/HTB/HTB_Getting_Started.md"
@@ -71,9 +79,11 @@
     {
       "slug": "summuries-htb-introduction-to-networking",
       "metadata": {
-        "title": "HTB Introduction to Networking",
+        "title": "Introduction to Networking",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box networking notes.",
+        "category": "Cybersecurity",
+        "subcategory": "HTB",
         "tags": ["hack-the-box", "networking", "security"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_Networking.md"
@@ -82,9 +92,11 @@
     {
       "slug": "summuries-htb-introduction-to-pentest",
       "metadata": {
-        "title": "HTB Introduction to Pentest",
+        "title": "Introduction to Pentest",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box pentest introduction notes.",
+        "category": "Cybersecurity",
+        "subcategory": "HTB",
         "tags": ["hack-the-box", "pentesting", "security"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/HTB/HTB_Introduction_to_pentest.md"
@@ -93,9 +105,11 @@
     {
       "slug": "summuries-htb-linux-fundamentals",
       "metadata": {
-        "title": "HTB Linux Fundamentals",
+        "title": "Linux Fundamentals",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box Linux fundamentals notes.",
+        "category": "Cybersecurity",
+        "subcategory": "HTB",
         "tags": ["hack-the-box", "linux", "security"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/HTB/HTB_Linux_Fundamentals.md"
@@ -104,9 +118,11 @@
     {
       "slug": "summuries-htb-web-fuzzing",
       "metadata": {
-        "title": "HTB Web Fuzzing",
+        "title": "Web Fuzzing",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box web fuzzing notes.",
+        "category": "Cybersecurity",
+        "subcategory": "HTB",
         "tags": ["hack-the-box", "web", "security"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/HTB/HTB_Web_Fuzzing.md"
@@ -115,9 +131,11 @@
     {
       "slug": "summuries-htb-web-introduction",
       "metadata": {
-        "title": "HTB Web Introduction",
+        "title": "Web Introduction",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box web introduction notes.",
+        "category": "Cybersecurity",
+        "subcategory": "HTB",
         "tags": ["hack-the-box", "web", "security"],
         "type": "summary",
         "markdownPath": "/markdowns/summuries/HTB/HTB_Web_introduction.md"
@@ -126,14 +144,17 @@
     {
       "slug": "summuries-htb-cheat-sheets-getting-started",
       "metadata": {
-        "title": "HTB Cheat Sheets Getting Started",
+        "title": "Cheat Sheets Getting Started",
         "publishedAt": "2026-07-29",
         "summary": "Hack The Box cheat sheets getting started notes.",
+        "category": "Cybersecurity",
+        "subcategory": "HTB_Cheat_Sheets",
         "tags": ["hack-the-box", "cheat-sheet", "security"],
         "type": "summary",
         "markdownPath": "/markdowns/markdowns/summuries/HTB/Cheat_Sheets/CS_Getting_Started.md"
       }
     },
+  
     {
       "slug": "blog-perceptron-admission-predictor",
       "metadata": {
@@ -145,6 +166,7 @@
         "markdownPath": "/markdowns/blogs/perceptron-admission-predictor.md"
       }
     },
+  
     {
       "slug": "blog-understanding-convolution-in-ai",
       "metadata": {
@@ -156,7 +178,7 @@
         "markdownPath": "/markdowns/blogs/Understanding_Convolution_in_AI.md"
       }
     }
-  ],
+  ]
   "works": [
     {
      "slug": "ai-agents-for-real-time-ecg-interpretation",
